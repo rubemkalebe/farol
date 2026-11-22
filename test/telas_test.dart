@@ -100,18 +100,15 @@ void main() {
 
     final caixa = find.byKey(const ValueKey('marcar-agua-beber'));
     expect(
-      find.descendant(
-        of: caixa,
-        matching: find.byIcon(Icons.check_box_outline_blank),
-      ),
-      findsOneWidget,
+      find.descendant(of: caixa, matching: find.byIcon(Icons.check)),
+      findsNothing,
     );
     await tester.ensureVisible(caixa);
     await tester.pumpAndSettle();
     await tester.tap(caixa);
     await tester.pumpAndSettle();
     expect(
-      find.descendant(of: caixa, matching: find.byIcon(Icons.check_box)),
+      find.descendant(of: caixa, matching: find.byIcon(Icons.check)),
       findsOneWidget,
     );
 
@@ -122,7 +119,7 @@ void main() {
     expect(
       find.descendant(
         of: find.byKey(const ValueKey('marcar-agua-beber')),
-        matching: find.byIcon(Icons.check_box),
+        matching: find.byIcon(Icons.check),
       ),
       findsOneWidget,
     );

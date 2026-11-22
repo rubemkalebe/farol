@@ -5,6 +5,7 @@ import '../dados/emergencia.dart';
 import '../dados/secoes.dart';
 import '../tema.dart';
 import 'secoes.dart';
+import 'largura.dart';
 
 /// Ícones das opções do roteiro (campo "icone" em conteudo/emergencia.yaml).
 const iconesEmergencia = <String, IconData>{
@@ -77,77 +78,81 @@ class _TelaEmergenciaState extends State<TelaEmergencia> {
             return const Center(child: CircularProgressIndicator());
           }
           final p = snap.data![perguntaId]!;
-          return ListView(
-            padding: const EdgeInsets.only(bottom: 24),
-            children: [
-              if (perguntaId == 'inicio') ...[
-                const BotoesLigar(['192', '193']),
+          return LarguraLeitura(
+            child: ListView(
+              padding: const EdgeInsets.only(bottom: 24),
+              children: [
+                if (perguntaId == 'inicio') ...[
+                  const BotoesLigar(['192', '193']),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                    child: Text(
+                      'Em perigo de vida, ligue primeiro.',
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                  ),
+                ],
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 0),
+                  padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                   child: Text(
-                    'Em perigo de vida, ligue primeiro.',
-                    style: Theme.of(context).textTheme.bodySmall,
+                    p.texto,
+                    style: Theme.of(context).textTheme.headlineSmall
+                        ?.copyWith(fontWeight: FontWeight.w800),
                   ),
                 ),
-              ],
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
-                child: Text(
-                  p.texto,
-                  style: Theme.of(context).textTheme.headlineSmall
-                      ?.copyWith(fontWeight: FontWeight.w800),
-                ),
-              ),
-              for (final o in p.opcoes)
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                  child: Card(
-                    clipBehavior: Clip.antiAlias,
-                    child: InkWell(
-                      onTap: () => _escolher(context, o),
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
-                        child: Row(
-                          children: [
-                            Container(
-                              width: 44,
-                              height: 44,
-                              decoration: BoxDecoration(
-                                color:
-                                    (o.ligar.isNotEmpty ? corAlerta : corFeixe)
-                                        .withValues(alpha: 0.14),
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Icon(
-                                iconesEmergencia[o.icone] ??
-                                    Icons.arrow_forward,
-                                color: o.ligar.isNotEmpty
-                                    ? corAlerta
-                                    : corFeixe,
-                              ),
-                            ),
-                            const SizedBox(width: 14),
-                            Expanded(
-                              child: Text(
-                                o.texto,
-                                style: const TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w700,
-                                  height: 1.25,
+                for (final o in p.opcoes)
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      child: InkWell(
+                        onTap: () => _escolher(context, o),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
+                          child: Row(
+                            children: [
+                              Container(
+                                width: 44,
+                                height: 44,
+                                decoration: BoxDecoration(
+                                  color:
+                                      (o.ligar.isNotEmpty
+                                              ? corAlerta
+                                              : corFeixe)
+                                          .withValues(alpha: 0.14),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Icon(
+                                  iconesEmergencia[o.icone] ??
+                                      Icons.arrow_forward,
+                                  color: o.ligar.isNotEmpty
+                                      ? corAlerta
+                                      : corFeixe,
                                 ),
                               ),
-                            ),
-                            const Icon(
-                              Icons.chevron_right,
-                              color: corTextoSuave,
-                            ),
-                          ],
+                              const SizedBox(width: 14),
+                              Expanded(
+                                child: Text(
+                                  o.texto,
+                                  style: const TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.25,
+                                  ),
+                                ),
+                              ),
+                              const Icon(
+                                Icons.chevron_right,
+                                color: corTextoSuave,
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-            ],
+              ],
+            ),
           );
         },
       ),

@@ -10,6 +10,7 @@ import '../tema.dart';
 import 'capitulo.dart';
 import 'farol_logo.dart';
 import 'ficha.dart';
+import 'largura.dart';
 
 const _icones = <String, IconData>{
   'bolt': Icons.bolt,
@@ -86,48 +87,52 @@ class _TelaInicioState extends State<TelaInicio> {
               if (capitulos == null) {
                 return const Center(child: CircularProgressIndicator());
               }
-              return ListView(
-                padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
-                children: [
-                  _Cabecalho(
-                    cidade: _rotuloCidade,
-                    aoTrocarCidade: _escolherCidade,
-                  ),
-                  const SizedBox(height: 22),
-                  _BotaoEmergencia(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const TelaEmergencia()),
+              return LarguraLeitura(
+                child: ListView(
+                  padding: const EdgeInsets.fromLTRB(20, 12, 20, 32),
+                  children: [
+                    _Cabecalho(
+                      cidade: _rotuloCidade,
+                      aoTrocarCidade: _escolherCidade,
                     ),
-                  ),
-                  const SizedBox(height: 12),
-                  _CampoBusca(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const TelaBusca()),
+                    const SizedBox(height: 22),
+                    _BotaoEmergencia(
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const TelaEmergencia(),
+                        ),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 28),
-                  _Rotulo('GUIAS'),
-                  const SizedBox(height: 10),
-                  _GradeGuias(capitulos: capitulos),
-                  const SizedBox(height: 28),
-                  _Rotulo('FERRAMENTAS'),
-                  const SizedBox(height: 10),
-                  _CartaoFerramenta(
-                    icone: Icons.family_restroom,
-                    titulo: 'Ficha da família',
-                    texto: 'Tipo sanguíneo, alergias, remédios e contatos. Fica só no aparelho.',
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(builder: (_) => const TelaFicha()),
+                    const SizedBox(height: 12),
+                    _CampoBusca(
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const TelaBusca()),
+                      ),
                     ),
-                  ),
-                  const SizedBox(height: 24),
-                  Center(
-                    child: Text(
-                      'Funciona sem internet · conteúdo com fontes oficiais',
-                      style: t.bodySmall?.copyWith(color: corTextoSuave),
+                    const SizedBox(height: 28),
+                    _Rotulo('GUIAS'),
+                    const SizedBox(height: 10),
+                    _GradeGuias(capitulos: capitulos),
+                    const SizedBox(height: 28),
+                    _Rotulo('FERRAMENTAS'),
+                    const SizedBox(height: 10),
+                    _CartaoFerramenta(
+                      icone: Icons.family_restroom,
+                      titulo: 'Ficha da família',
+                      texto: 'Tipo sanguíneo, alergias, remédios e contatos. Fica só no aparelho.',
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const TelaFicha()),
+                      ),
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 24),
+                    Center(
+                      child: Text(
+                        'Funciona sem internet · conteúdo com fontes oficiais',
+                        style: t.bodySmall?.copyWith(color: corTextoSuave),
+                      ),
+                    ),
+                  ],
+                ),
               );
             },
           ),

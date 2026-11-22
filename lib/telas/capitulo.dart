@@ -134,13 +134,16 @@ class _Progresso extends StatelessWidget {
             .where((i) => marcacoes.marcado(capitulo, i))
             .length;
         final tudo = feitos == itens.length;
+        // Faixa fixa de largura total, com borda embaixo: o texto rola por
+        // baixo dela sem parecer um cartão cortado.
         return Container(
-          margin: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-          padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+          width: double.infinity,
+          padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),
           decoration: BoxDecoration(
-            color: corSuperficie,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: tudo ? corFeixe : corBorda),
+            color: corNoite,
+            border: Border(
+              bottom: BorderSide(color: tudo ? corFeixe : corBorda),
+            ),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

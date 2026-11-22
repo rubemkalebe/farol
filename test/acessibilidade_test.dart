@@ -123,4 +123,29 @@ void main() {
     expect(find.bySemanticsLabel('Ligar para 192, SAMU'), findsOneWidget);
     semantica.dispose();
   });
+
+  testWidgets('tablet deitado: conteúdo centralizado e sem estourar', (
+    tester,
+  ) async {
+    tester.view.physicalSize = const Size(2560, 1600);
+    tester.view.devicePixelRatio = 2;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+    // O botão de emergência respeita a largura de leitura.
+    expect(
+      tester.getSize(find.byKey(const ValueKey('botao-emergencia'))).width,
+      lessThanOrEqualTo(720),
+    );
+
+    await tocar(tester, find.byKey(const ValueKey('botao-emergencia')));
+    await tocar(
+      tester,
+      find.ancestor(
+        of: find.textContaining('Sangrando'),
+        matching: find.byType(InkWell),
+      ),
+    );
+    expect(find.textContaining('Sangramento forte'), findsWidgets);
+  });
 }

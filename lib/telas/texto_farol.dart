@@ -7,6 +7,7 @@ import '../dados/fontes.dart';
 import '../dados/marcacoes.dart';
 import '../tema.dart';
 import 'ficha.dart' show ligar;
+import 'largura.dart';
 
 /// Texto de um guia: Markdown com ícones de fonte, orientação geral,
 /// caixas de checklist e telefones tocáveis. Usado no capítulo inteiro, na
@@ -30,81 +31,88 @@ class TextoFarol extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final tema = Theme.of(context);
-    return Markdown(
-      data: markdown,
-      extensionSet: md.ExtensionSet(
-        md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-        [
-          SintaxeFonte(),
-          SintaxeGeral(),
-          SintaxeMarcar(),
-          ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
-        ],
-      ),
-      // tel: abre o discador e sms: abre a mensagem. Outros links não
-      // são seguidos: o app é offline e não abre páginas.
-      onTapLink: (_, href, _) {
-        if (href == null) return;
-        if (href.startsWith('tel:')) ligar(href.substring(4));
-        if (href.startsWith('sms:')) {
-          launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
-        }
-      },
-      builders: {
-        'fonte': _BotaoFonte(
-          (ids) => _mostrarFontes(context, [for (final id in ids) ?fontes[id]]),
+    return LarguraLeitura(
+      child: Markdown(
+        data: markdown,
+        extensionSet: md.ExtensionSet(
+          md.ExtensionSet.gitHubFlavored.blockSyntaxes,
+          [
+            SintaxeFonte(),
+            SintaxeGeral(),
+            SintaxeMarcar(),
+            ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
+          ],
         ),
-        'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
-        'marcar': _CaixaMarcar(capituloId, marcacoes),
-      },
-      padding: padding,
-      styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
-        p: tema.textTheme.bodyLarge?.copyWith(height: 1.5),
-        listBullet: tema.textTheme.bodyLarge?.copyWith(
-          height: 1.5,
-          color: corFeixe,
-        ),
-        a: const TextStyle(
-          color: corFeixe,
-          fontWeight: FontWeight.w800,
-          decoration: TextDecoration.underline,
-          decorationColor: corFeixeSuave,
-        ),
-        strong: const TextStyle(
-          fontWeight: FontWeight.w800,
-          color: Colors.white,
-        ),
-        h1: tema.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
-        h2: tema.textTheme.titleLarge?.copyWith(
-          fontWeight: FontWeight.w900,
-          color: corFeixe,
-          letterSpacing: -0.2,
-        ),
-        h2Padding: const EdgeInsets.only(top: 12, bottom: 4),
-        h3: tema.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
-        h3Padding: const EdgeInsets.only(top: 8),
-        blockSpacing: 12,
-        blockquotePadding: const EdgeInsets.all(14),
-        blockquoteDecoration: BoxDecoration(
-          color: corSuperficie,
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: corBorda),
-        ),
-        tableBorder: TableBorder.symmetric(
-          inside: const BorderSide(color: corBorda),
-        ),
-        tableHead: const TextStyle(
-          fontWeight: FontWeight.w800,
-          color: corFeixe,
-        ),
-        tableHeadCellsDecoration: const BoxDecoration(color: corSuperficieAlta),
-        tableCellsDecoration: const BoxDecoration(color: corSuperficie),
-        tableCellsPadding: const EdgeInsets.symmetric(
-          horizontal: 10,
-          vertical: 8,
-        ),
-        horizontalRuleDecoration: const BoxDecoration(
-          border: Border(top: BorderSide(color: corBorda)),
+        // tel: abre o discador e sms: abre a mensagem. Outros links não
+        // são seguidos: o app é offline e não abre páginas.
+        onTapLink: (_, href, _) {
+          if (href == null) return;
+          if (href.startsWith('tel:')) ligar(href.substring(4));
+          if (href.startsWith('sms:')) {
+            launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
+          }
+        },
+        builders: {
+          'fonte': _BotaoFonte(
+            (ids) =>
+                _mostrarFontes(context, [for (final id in ids) ?fontes[id]]),
+          ),
+          'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
+          'marcar': _CaixaMarcar(capituloId, marcacoes),
+        },
+        padding: padding,
+        styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
+          p: tema.textTheme.bodyLarge?.copyWith(height: 1.5),
+          listBullet: tema.textTheme.bodyLarge?.copyWith(
+            height: 1.5,
+            color: corFeixe,
+          ),
+          a: const TextStyle(
+            color: corFeixe,
+            fontWeight: FontWeight.w800,
+            decoration: TextDecoration.underline,
+            decorationColor: corFeixeSuave,
+          ),
+          strong: const TextStyle(
+            fontWeight: FontWeight.w800,
+            color: Colors.white,
+          ),
+          h1: tema.textTheme.headlineSmall?.copyWith(
+            fontWeight: FontWeight.w900,
+          ),
+          h2: tema.textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.w900,
+            color: corFeixe,
+            letterSpacing: -0.2,
+          ),
+          h2Padding: const EdgeInsets.only(top: 12, bottom: 4),
+          h3: tema.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+          h3Padding: const EdgeInsets.only(top: 8),
+          blockSpacing: 12,
+          blockquotePadding: const EdgeInsets.all(14),
+          blockquoteDecoration: BoxDecoration(
+            color: corSuperficie,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: corBorda),
+          ),
+          tableBorder: TableBorder.symmetric(
+            inside: const BorderSide(color: corBorda),
+          ),
+          tableHead: const TextStyle(
+            fontWeight: FontWeight.w800,
+            color: corFeixe,
+          ),
+          tableHeadCellsDecoration: const BoxDecoration(
+            color: corSuperficieAlta,
+          ),
+          tableCellsDecoration: const BoxDecoration(color: corSuperficie),
+          tableCellsPadding: const EdgeInsets.symmetric(
+            horizontal: 10,
+            vertical: 8,
+          ),
+          horizontalRuleDecoration: const BoxDecoration(
+            border: Border(top: BorderSide(color: corBorda)),
+          ),
         ),
       ),
     );
@@ -210,6 +218,12 @@ void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
   );
 }
 
+/// Coloca um desenho dentro da frase. O componente de Markdown só junta na
+/// mesma linha o que for texto; um widget comum cairia numa linha própria.
+Widget _naFrase(Widget desenho) => Text.rich(
+  WidgetSpan(alignment: PlaceholderAlignment.middle, child: desenho),
+);
+
 /// Etiqueta pequena no fim da frase: "fonte" ou "2 fontes".
 Widget _etiqueta({
   required Key key,
@@ -219,11 +233,31 @@ Widget _etiqueta({
   required VoidCallback onTap,
   required String rotulo,
 }) {
+  // A etiqueta é informação secundária: cresce com a letra até 1,4x, para não
+  // estourar colunas estreitas de tabela com a letra no máximo.
+  return _naFrase(
+    Builder(
+      builder: (context) => MediaQuery.withClampedTextScaling(
+        maxScaleFactor: 1.4,
+        child: _desenhoEtiqueta(key, icone, texto, cor, onTap, rotulo),
+      ),
+    ),
+  );
+}
+
+Widget _desenhoEtiqueta(
+  Key key,
+  IconData icone,
+  String texto,
+  Color cor,
+  VoidCallback onTap,
+  String rotulo,
+) {
   return Semantics(
     button: true,
     label: rotulo,
     child: Padding(
-      padding: const EdgeInsets.only(left: 4),
+      padding: const EdgeInsets.only(left: 2),
       child: InkWell(
         key: key,
         onTap: onTap,
@@ -243,13 +277,17 @@ Widget _etiqueta({
               children: [
                 Icon(icone, size: 11, color: cor),
                 const SizedBox(width: 3),
-                Text(
-                  texto,
-                  style: TextStyle(
-                    color: cor,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w700,
-                    height: 1.4,
+                Flexible(
+                  child: Text(
+                    texto,
+                    softWrap: false,
+                    overflow: TextOverflow.fade,
+                    style: TextStyle(
+                      color: cor,
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      height: 1.4,
+                    ),
                   ),
                 ),
               ],
@@ -335,40 +373,42 @@ class _CaixaMarcar extends MarkdownElementBuilder {
     TextStyle? parentStyle,
   ) {
     final item = element.textContent;
-    return ListenableBuilder(
-      listenable: marcacoes,
-      builder: (context, _) {
-        final marcado = marcacoes.marcado(capitulo, item);
-        return Semantics(
-          checked: marcado,
-          child: InkWell(
-            key: ValueKey('marcar-$item'),
-            onTap: () => marcacoes.alternar(capitulo, item),
-            borderRadius: BorderRadius.circular(6),
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(4, 4, 10, 4),
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 150),
-                width: 22,
-                height: 22,
-                decoration: BoxDecoration(
-                  color: marcado ? corFeixe : Colors.transparent,
-                  borderRadius: BorderRadius.circular(7),
-                  border: Border.all(
-                    color: marcado ? corFeixe : corTextoSuave,
-                    width: 1.6,
+    // A caixa acompanha o tamanho da letra escolhido.
+    final lado = MediaQuery.textScalerOf(context).scale(22).clamp(22.0, 40.0);
+    return _naFrase(
+      ListenableBuilder(
+        listenable: marcacoes,
+        builder: (context, _) {
+          final marcado = marcacoes.marcado(capitulo, item);
+          return Semantics(
+            checked: marcado,
+            child: InkWell(
+              key: ValueKey('marcar-$item'),
+              onTap: () => marcacoes.alternar(capitulo, item),
+              borderRadius: BorderRadius.circular(6),
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(4, 4, 10, 4),
+                child: AnimatedContainer(
+                  duration: const Duration(milliseconds: 150),
+                  width: lado,
+                  height: lado,
+                  decoration: BoxDecoration(
+                    color: marcado ? corFeixe : Colors.transparent,
+                    borderRadius: BorderRadius.circular(7),
+                    border: Border.all(
+                      color: marcado ? corFeixe : corTextoSuave,
+                      width: 1.6,
+                    ),
                   ),
-                ),
-                child: Icon(
-                  marcado ? Icons.check_box : Icons.check_box_outline_blank,
-                  size: marcado ? 16 : 0,
-                  color: corNoite,
+                  child: marcado
+                      ? Icon(Icons.check, size: lado * 0.75, color: corNoite)
+                      : null,
                 ),
               ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

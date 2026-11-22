@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/ficha.dart';
 import '../tema.dart';
+import 'largura.dart';
 
 class TelaFicha extends StatefulWidget {
   const TelaFicha({super.key});
@@ -74,105 +75,107 @@ class _TelaFichaState extends State<TelaFicha> {
           }
           final f = _ficha ??= snap.data!;
           final t = Theme.of(context).textTheme;
-          return ListView(
-            padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
-            children: [
-              Text(
-                'Fica salva só neste aparelho. Ninguém mais vê, a não ser que você compartilhe.',
-                style: t.bodySmall,
-              ),
-              const SizedBox(height: 16),
-              Text('Casa', style: t.titleLarge),
-              _Campo(
-                rotulo: 'Endereço',
-                valor: f.endereco,
-                aoMudar: (v) => f.endereco = v,
-                aoSair: _salvar,
-              ),
-              _Campo(
-                rotulo: 'Ponto de referência',
-                dica: 'Para explicar ao 192/193 como chegar',
-                valor: f.referencia,
-                aoMudar: (v) => f.referencia = v,
-                aoSair: _salvar,
-              ),
-              _Campo(
-                rotulo: 'Ponto de encontro da família',
-                valor: f.pontoEncontro,
-                aoMudar: (v) => f.pontoEncontro = v,
-                aoSair: _salvar,
-              ),
-              _Campo(
-                rotulo: 'Nº da instalação de energia',
-                dica: 'Fica na conta de luz',
-                valor: f.instalacaoEnergia,
-                aoMudar: (v) => f.instalacaoEnergia = v,
-                aoSair: _salvar,
-                teclado: TextInputType.number,
-              ),
-              const SizedBox(height: 24),
-              Row(
-                children: [
-                  Expanded(child: Text('Pessoas', style: t.titleLarge)),
-                  TextButton.icon(
-                    onPressed: () => _editarPessoa(context, null),
-                    icon: const Icon(Icons.person_add_alt),
-                    label: const Text('Adicionar'),
-                  ),
-                ],
-              ),
-              if (f.pessoas.isEmpty)
+          return LarguraLeitura(
+            child: ListView(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 32),
+              children: [
                 Text(
-                  'Nenhuma pessoa ainda. Adicione cada morador da casa.',
+                  'Fica salva só neste aparelho. Ninguém mais vê, a não ser que você compartilhe.',
                   style: t.bodySmall,
                 ),
-              for (final p in f.pessoas)
-                Card(
-                  child: ListTile(
-                    title: Text(p.nome.isEmpty ? 'Sem nome' : p.nome),
-                    subtitle: Text(_resumoPessoa(p)),
-                    trailing: const Icon(Icons.edit_outlined),
-                    onTap: () => _editarPessoa(context, p),
-                  ),
+                const SizedBox(height: 16),
+                Text('Casa', style: t.titleLarge),
+                _Campo(
+                  rotulo: 'Endereço',
+                  valor: f.endereco,
+                  aoMudar: (v) => f.endereco = v,
+                  aoSair: _salvar,
                 ),
-              const SizedBox(height: 24),
-              Row(
-                children: [
-                  Expanded(child: Text('Contatos', style: t.titleLarge)),
-                  TextButton.icon(
-                    onPressed: () => _editarContato(context, null),
-                    icon: const Icon(Icons.add_call),
-                    label: const Text('Adicionar'),
-                  ),
-                ],
-              ),
-              if (f.contatos.isEmpty)
-                Text(
-                  'Parentes, vizinhos, médico, escola. Anote também em papel.',
-                  style: t.bodySmall,
+                _Campo(
+                  rotulo: 'Ponto de referência',
+                  dica: 'Para explicar ao 192/193 como chegar',
+                  valor: f.referencia,
+                  aoMudar: (v) => f.referencia = v,
+                  aoSair: _salvar,
                 ),
-              for (final c in f.contatos)
-                Card(
-                  child: ListTile(
-                    title: Text(c.nome.isEmpty ? 'Sem nome' : c.nome),
-                    subtitle: Text(
-                      [
-                        c.relacao,
-                        c.telefone,
-                      ].where((s) => s.isNotEmpty).join(' · '),
+                _Campo(
+                  rotulo: 'Ponto de encontro da família',
+                  valor: f.pontoEncontro,
+                  aoMudar: (v) => f.pontoEncontro = v,
+                  aoSair: _salvar,
+                ),
+                _Campo(
+                  rotulo: 'Nº da instalação de energia',
+                  dica: 'Fica na conta de luz',
+                  valor: f.instalacaoEnergia,
+                  aoMudar: (v) => f.instalacaoEnergia = v,
+                  aoSair: _salvar,
+                  teclado: TextInputType.number,
+                ),
+                const SizedBox(height: 24),
+                Row(
+                  children: [
+                    Expanded(child: Text('Pessoas', style: t.titleLarge)),
+                    TextButton.icon(
+                      onPressed: () => _editarPessoa(context, null),
+                      icon: const Icon(Icons.person_add_alt),
+                      label: const Text('Adicionar'),
                     ),
-                    onLongPress: () => _editarContato(context, c),
-                    onTap: () => _editarContato(context, c),
-                    trailing: c.telefone.isEmpty
-                        ? null
-                        : IconButton(
-                            tooltip: 'Ligar',
-                            icon: const Icon(Icons.phone, color: corFeixe),
-                            onPressed: () => ligar(c.telefone),
-                          ),
-                  ),
+                  ],
                 ),
-            ],
+                if (f.pessoas.isEmpty)
+                  Text(
+                    'Nenhuma pessoa ainda. Adicione cada morador da casa.',
+                    style: t.bodySmall,
+                  ),
+                for (final p in f.pessoas)
+                  Card(
+                    child: ListTile(
+                      title: Text(p.nome.isEmpty ? 'Sem nome' : p.nome),
+                      subtitle: Text(_resumoPessoa(p)),
+                      trailing: const Icon(Icons.edit_outlined),
+                      onTap: () => _editarPessoa(context, p),
+                    ),
+                  ),
+                const SizedBox(height: 24),
+                Row(
+                  children: [
+                    Expanded(child: Text('Contatos', style: t.titleLarge)),
+                    TextButton.icon(
+                      onPressed: () => _editarContato(context, null),
+                      icon: const Icon(Icons.add_call),
+                      label: const Text('Adicionar'),
+                    ),
+                  ],
+                ),
+                if (f.contatos.isEmpty)
+                  Text(
+                    'Parentes, vizinhos, médico, escola. Anote também em papel.',
+                    style: t.bodySmall,
+                  ),
+                for (final c in f.contatos)
+                  Card(
+                    child: ListTile(
+                      title: Text(c.nome.isEmpty ? 'Sem nome' : c.nome),
+                      subtitle: Text(
+                        [
+                          c.relacao,
+                          c.telefone,
+                        ].where((s) => s.isNotEmpty).join(' · '),
+                      ),
+                      onLongPress: () => _editarContato(context, c),
+                      onTap: () => _editarContato(context, c),
+                      trailing: c.telefone.isEmpty
+                          ? null
+                          : IconButton(
+                              tooltip: 'Ligar',
+                              icon: const Icon(Icons.phone, color: corFeixe),
+                              onPressed: () => ligar(c.telefone),
+                            ),
+                    ),
+                  ),
+              ],
+            ),
           );
         },
       ),

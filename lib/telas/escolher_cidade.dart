@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../dados/locais.dart';
 import '../tema.dart';
+import 'largura.dart';
 
 /// Lista de cidades com busca. Devolve o id escolhido (ou [outraCidade]).
 class TelaEscolherCidade extends StatefulWidget {
@@ -39,55 +40,57 @@ class _TelaEscolherCidadeState extends State<TelaEscolherCidade> {
         .toList();
     return Scaffold(
       appBar: AppBar(title: const Text('Onde você está?')),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
-            child: Text(
-              'Os telefones e serviços locais mudam conforme a cidade. Dá para trocar depois na tela inicial.',
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: TextField(
-              autofocus: false,
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                hintText: 'Buscar cidade',
-                border: OutlineInputBorder(),
+      body: LarguraLeitura(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
+              child: Text(
+                'Os telefones e serviços locais mudam conforme a cidade. Dá para trocar depois na tela inicial.',
+                style: Theme.of(context).textTheme.bodySmall,
               ),
-              onChanged: (v) => setState(() => _busca = v),
             ),
-          ),
-          Expanded(
-            child: ListView(
-              children: [
-                for (final c in lista)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: TextField(
+                autofocus: false,
+                decoration: const InputDecoration(
+                  prefixIcon: Icon(Icons.search),
+                  hintText: 'Buscar cidade',
+                  border: OutlineInputBorder(),
+                ),
+                onChanged: (v) => setState(() => _busca = v),
+              ),
+            ),
+            Expanded(
+              child: ListView(
+                children: [
+                  for (final c in lista)
+                    ListTile(
+                      title: Text(c.nome),
+                      subtitle: Text(c.uf),
+                      trailing: c.id == widget.atual
+                          ? const Icon(Icons.check, color: corFeixe)
+                          : null,
+                      onTap: () => Navigator.pop(context, c.id),
+                    ),
+                  const Divider(),
                   ListTile(
-                    title: Text(c.nome),
-                    subtitle: Text(c.uf),
-                    trailing: c.id == widget.atual
+                    leading: const Icon(Icons.public),
+                    title: const Text('Outra cidade'),
+                    subtitle: const Text(
+                      'Mostra os números nacionais. Anote os locais na Ficha da família.',
+                    ),
+                    trailing: widget.atual == outraCidade
                         ? const Icon(Icons.check, color: corFeixe)
                         : null,
-                    onTap: () => Navigator.pop(context, c.id),
+                    onTap: () => Navigator.pop(context, outraCidade),
                   ),
-                const Divider(),
-                ListTile(
-                  leading: const Icon(Icons.public),
-                  title: const Text('Outra cidade'),
-                  subtitle: const Text(
-                    'Mostra os números nacionais. Anote os locais na Ficha da família.',
-                  ),
-                  trailing: widget.atual == outraCidade
-                      ? const Icon(Icons.check, color: corFeixe)
-                      : null,
-                  onTap: () => Navigator.pop(context, outraCidade),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

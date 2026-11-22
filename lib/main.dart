@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'dados/preferencias.dart';
 import 'telas/inicio.dart';
@@ -7,6 +8,16 @@ import 'tema.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await carregarTamanhoTexto();
+  // Barras do sistema escuras, combinando com o app.
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+      systemNavigationBarColor: corNoite,
+      systemNavigationBarIconBrightness: Brightness.light,
+      systemNavigationBarContrastEnforced: false,
+    ),
+  );
   runApp(const FarolApp());
 }
 
@@ -29,7 +40,12 @@ class FarolApp extends StatelessWidget {
             data: mq.copyWith(
               textScaler: TextScaler.linear(mq.textScaler.scale(1) * escala),
             ),
-            child: child!,
+            // Nada fica escondido atrás da barra de navegação do Android
+            // (botões ou gestos), que em versões novas é desenhada por cima.
+            child: ColoredBox(
+              color: corNoite,
+              child: SafeArea(top: false, child: child!),
+            ),
           );
         },
       ),

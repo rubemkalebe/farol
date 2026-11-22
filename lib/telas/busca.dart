@@ -5,6 +5,7 @@ import '../dados/busca.dart';
 import '../dados/secoes.dart';
 import '../tema.dart';
 import 'secoes.dart';
+import 'largura.dart';
 
 class TelaBusca extends StatefulWidget {
   const TelaBusca({super.key});
@@ -63,37 +64,41 @@ class _TelaBuscaState extends State<TelaBusca> {
               ),
             );
           }
-          return ListView(
-            children: [
-              for (final r in resultados)
-                ListTile(
-                  title: Text(
-                    r.secao.titulo,
-                    style: const TextStyle(fontWeight: FontWeight.w700),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        r.secao.capitulo.titulo,
-                        style: const TextStyle(color: corFeixe, fontSize: 12),
-                      ),
-                      if (r.trecho.isNotEmpty)
+          return LarguraLeitura(
+            child: ListView(
+              children: [
+                for (final r in resultados)
+                  ListTile(
+                    title: Text(
+                      r.secao.titulo,
+                      style: const TextStyle(fontWeight: FontWeight.w700),
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         Text(
-                          r.trecho,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
+                          r.secao.capitulo.titulo,
+                          style: const TextStyle(color: corFeixe, fontSize: 12),
                         ),
-                    ],
-                  ),
-                  onTap: () => Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (_) =>
-                          TelaSecoes(titulo: r.secao.titulo, secoes: [r.secao]),
+                        if (r.trecho.isNotEmpty)
+                          Text(
+                            r.trecho,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                      ],
+                    ),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => TelaSecoes(
+                          titulo: r.secao.titulo,
+                          secoes: [r.secao],
+                        ),
+                      ),
                     ),
                   ),
-                ),
-            ],
+              ],
+            ),
           );
         },
       ),
