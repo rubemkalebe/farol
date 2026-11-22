@@ -2,11 +2,15 @@ import 'package:farol/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   // O rootBundle guarda Futures entre testes; um Future criado no teste
   // anterior não completa no seguinte.
-  setUp(rootBundle.clear);
+  setUp(() {
+    rootBundle.clear();
+    SharedPreferences.setMockInitialValues({});
+  });
 
   testWidgets('início lista os capítulos e abre um', (tester) async {
     await tester.pumpWidget(const FarolApp());
@@ -52,5 +56,31 @@ void main() {
       await tester.tap(find.byType(BackButton));
       await tester.pumpAndSettle();
     }
+  });
+
+  testWidgets('item da checklist marca e continua marcado ao reabrir', (tester) async {
+    // Tela alta: o Markdown só monta o que está visível.
+    tester.view.physicalSize = const Size(1080, 6000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Antes de cair'));
+    await tester.pumpAndSettle();
+
+    final caixa = find.byKey(const ValueKey('marcar-agua-beber'));
+    expect(find.descendant(of: caixa, matching: find.byIcon(Icons.check_box_outline_blank)), findsOneWidget);
+    await tester.ensureVisible(caixa);
+    await tester.pumpAndSettle();
+    await tester.tap(caixa);
+    await tester.pumpAndSettle();
+    expect(find.descendant(of: caixa, matching: find.byIcon(Icons.check_box)), findsOneWidget);
+
+    await tester.tap(find.byType(BackButton));
+    await tester.pumpAndSettle();
+    await tester.tap(find.text('Antes de cair'));
+    await tester.pumpAndSettle();
+    expect(find.descendant(of: find.byKey(const ValueKey('marcar-agua-beber')),
+        matching: find.byIcon(Icons.check_box)), findsOneWidget);
   });
 }

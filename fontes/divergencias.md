@@ -72,3 +72,21 @@ Coleta de 2026-11-22. Regra extra para este capítulo: **em RCP e engasgo vale a
 - **Convulsão:** não há fonte de neurologia brasileira. Foi usada a SBC 2019.
 - **Sangue pelo nariz, cortes e quando dar pontos:** não há fonte brasileira. Foi usado o NHS.
 - **"Não cortar o local da picada de cobra":** nenhuma página do MS que abrimos diz isso. Entrou como orientação geral.
+
+---
+
+# Divergências: "Antes de cair"
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Lista oficial do kit | O MIDR (07/11/2026) recomenda o kit, mas não lista os itens. As listas vêm de Defesa Civil PR, SP Sempre Alerta, Maceió, Goiás e Ready.gov | Juntar as listas, citando a fonte de cada item |
+| Velas no kit | A Defesa Civil PR lista "fósforos e velas". A NFPA diz para nunca usar vela no apagão | **Fósforo ou isqueiro, sim. Vela, não**: o capítulo do apagão pede para preferir a lanterna |
+| Reserva de remédios | Ready.gov: "vários dias". Fontes brasileiras: "uso contínuo", sem número | "Alguns dias", sem inventar número |
+| Pix no apagão | Na enchente do RS, o Pix funcionou (MJ). Ready.gov: cartão e caixa eletrônico podem falhar | Ter **dinheiro em espécie**. A dependência de internet do Pix é orientação geral |
+| Garrafas congeladas | Só o CDC recomenda. As fontes brasileiras falam em comprar gelo | Entra, pelo CDC |
+
+## Lacunas
+
+- **Lista oficial de kit da Defesa Civil de BH ou de MG:** não existe. Só os canais de alerta de BH foram confirmados.
+- **Kit de primeiros socorros:** não há fonte brasileira oficial. Foi usado o Manual MSD, sem torniquete nem remédios controlados.
+- **Comida sem cozimento:** não há fonte brasileira oficial. Foi usado o Ready.gov, com exemplos adaptados ao mercado brasileiro.

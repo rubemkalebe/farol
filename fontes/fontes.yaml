@@ -79,6 +79,7 @@ fontes:
       Descartar perecíveis refrigerados após "4 hours without power or without a cold source like ice"
       "Never taste food to know if it is safe to eat." / "When in doubt, throw it out."
       Pode recongelar o que "still contains ice crystals or is at 40 °F or below"
+      Preparação: "Keep appliance thermometers in your refrigerator and freezer."; "Freeze containers of water and gel packs to help keep food at 40°F or below."; "Have a cooler and frozen gel packs ready".
 
   # ─────────────────────────── Água ────────────────────────────
 
@@ -229,6 +230,7 @@ fontes:
       Sem caixa térmica: "manter a geladeira fechada pelo maior tempo possível"
       "Se a interrupção de energia se prolongar por vários dias, procure o serviço de saúde" (UBS pode ajudar a conservar).
       "Não congelar medicamentos, exceto quando houver orientação específica do fabricante"
+      Preparação: ter em casa bolsa ou caixa térmica e gelo já congelado.
 
   - id: rs-ses-informe-insulina-sem-energia
     tema: remedios
@@ -1466,3 +1468,229 @@ fontes:
     notas: |
       "sit down and lean forward, with your head tilted forward and your mouth open"; "pinch your nose just above your nostrils for 10 to 15 minutes"; respirar pela boca.
       Não deitar. Emergência se durar mais de 10–15 min, se for muito sangue ou se veio depois de pancada na cabeça.
+
+  # ═══════════════════════ Antes de cair ═══════════════════════
+
+  - id: midr-kit-preventivo-2026-11-07
+    tema: kit
+    titulo: "MIDR esclarece que kit de emergência é medida preventiva e não tem relação com alerta nacional"
+    orgao: Ministério da Integração e do Desenvolvimento Regional / Defesa Civil Nacional
+    url: https://www.gov.br/mdr/pt-br/noticias/midr-esclarece-que-kit-de-emergencia-e-medida-preventiva-e-nao-tem-relacao-com-alerta-nacional
+    acessado: 2026-11-22
+    publicado: 2026-11-07
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      A recomendação de kit "não está relacionada a qualquer alerta nacional"; o material já tinha saído em março e abril de 2026.
+      Não lista itens. Canais: SMS 40199 com CEP; WhatsApp (61) 2034-4611; Defesa Civil Alerta; TV por assinatura; Telegram.
+
+  - id: sp-sempre-alerta-plano-familiar
+    tema: plano
+    titulo: "Plano familiar de emergência - SP Sempre Alerta"
+    orgao: Governo do Estado de São Paulo / Defesa Civil SP
+    url: https://www.spsemprealerta.sp.gov.br/orientacoes/plano-familiar-de-emergencia/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Kit para três dias: água e comida não perecível; roupas e calçados; remédios prescritos e equipamentos médicos; itens dos pets; lanternas fáceis de achar; documentos em sacos plásticos; pilhas e carregadores extras; lista de contatos com cópia para cada pessoa.
+      Conferir a validade dos itens a cada seis meses.
+      Plano: ensinar todos a desligar água, luz e gás; ensinar crianças a ligar para emergência; quem usa equipamento médico elétrico pergunta ao médico o que fazer; cadastrar o 40199; combinar ponto de encontro.
+      "A cada seis meses, reveja o seu plano de emergência e faça simulação das rotas de fuga."
+
+  - id: defesacivil-pr-o-que-fazer-desastres
+    tema: kit
+    titulo: "O que fazer em desastres? Defesa Civil orienta população sobre antes, durante e depois"
+    orgao: Defesa Civil do Paraná
+    url: https://www.defesacivil.pr.gov.br/Noticia/O-que-fazer-em-desastres-Defesa-Civil-orienta-populacao-sobre-antes-durante-e-depois
+    acessado: 2026-11-22
+    publicado: 2024-07-23
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Itens: "Água"; "Comida não perecível"; "Documentos (cópias)"; "Dinheiro"; "Remédios e receitas"; "Kit de primeiros socorros"; "Fraldas, suprimentos para bebês"; "Ração para animais"; "Fósforos e velas (guardados em invólucro à prova d´água)"; "Lanterna"; "Rádio a pilhas (guardar pilhas separadamente)"; "Celular e carregador portátil"; "Abridor de lata (manual)"; "Apito (para sinalização de ajuda)"; "Cobertor leve".
+
+  - id: maceio-defesa-civil-kit-72h
+    tema: kit
+    titulo: "Defesa Civil de Maceió reforça que orientação sobre kit de emergência não indica previsão de desastre e enfatiza caráter preventivo"
+    orgao: Prefeitura de Maceió / Defesa Civil Municipal
+    url: https://maceio.al.gov.br/noticias/defesa-civil/defesa-civil-de-maceio-reforca-que-orientacao-sobre-kit-de-emergencia-nao-indica-previsao-de-desastre-e-enfatiza-carater-preventivo
+    acessado: 2026-11-22
+    publicado: 2026-11-07
+    licenca: "© 2026 Prefeitura Municipal de Maceió. Todos os direitos reservados"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Água: "dois litros por pessoa ao dia, totalizando seis litros para três dias".
+      Comida: "enlatados, biscoitos, barras de cereais e frutas secas".
+      Remédios de uso contínuo e primeiros socorros; lanterna, pilhas extras, carregador portátil e rádio a pilha;
+      cópias de documentos e contatos em embalagem impermeável; higiene, roupas extras e "dinheiro em espécie".
+
+  - id: goias-alerta-preventivo-kit
+    tema: kit
+    titulo: "Alerta nacional da Defesa Civil tem caráter preventivo"
+    orgao: Agência Goiás / Governo de Goiás
+    url: https://agencia.go.gov.br/alerta-nacional-da-defesa-civil-tem-carater-preventivo/
+    acessado: 2026-11-22
+    publicado: 2026-11-09
+    licenca: "Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Kit para a família "por até 72 horas": água, alimentos não perecíveis, remédios de uso contínuo, documentos e higiene.
+
+  - id: pbh-periodo-chuvoso-2026-2027
+    tema: plano
+    titulo: "Período chuvoso 2026-2027"
+    orgao: Prefeitura de Belo Horizonte / Defesa Civil BH
+    url: https://prefeitura.pbh.gov.br/periodo-chuvoso-2026-2027
+    acessado: 2026-11-22
+    publicado: 2026-09-16
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao, contatos, outros-desastres]
+    notas: |
+      Defesa Civil BH: telefone 199 (24 h); WhatsApp "basta digitar defesacivilbh no aplicativo"; SMS: CEP para 40199;
+      Cell Broadcast chega "sem necessidade de internet ou cadastro"; pop-up na TV por assinatura.
+
+  - id: readygov-food
+    tema: comida
+    titulo: "Food"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/food
+    acessado: 2026-11-22
+    publicado: 2026-03-12
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Comida que "do not require refrigeration, cooking, water or special preparation."
+      "Be sure to include a manual can opener and eating utensils."
+      Exemplos: enlatados prontos; barras; cereal ou granola; pasta de amendoim; frutas secas; sucos em lata; "Non-perishable pasteurized milk".
+
+  - id: readygov-disability
+    tema: remedios
+    titulo: "People with Disabilities"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/disability
+    acessado: 2026-11-22
+    publicado: 2026-09-09
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      "Several days supply of prescription medicines"; "A list of all medications, dosage and any allergies".
+      Equipamento elétrico: conversar com o médico; "Create a support network of people who can help you in a disaster."
+
+  - id: readygov-older-adults
+    tema: remedios
+    titulo: "Older Adults"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/older-adults
+    acessado: 2026-11-22
+    publicado: 2026-03-26
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Kit com "medicines, medical supplies, batteries and chargers"; rede de apoio; pelo menos uma pessoa sabe usar o equipamento ou dar o remédio.
+
+  - id: readygov-financial-preparedness
+    tema: dinheiro
+    titulo: "Financial Preparedness"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/financial-preparedness
+    acessado: 2026-11-22
+    publicado: 2026-03-13
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      "It is important to have small bills on hand because ATMs and credit cards may not work during a disaster."
+      Guardar documentos importantes também em formato digital.
+
+  - id: mj-senacon-febraban-rs
+    tema: dinheiro
+    titulo: "Senacon e Febraban ajustam medidas excepcionais de atendimento aos consumidores gaúchos"
+    orgao: Ministério da Justiça (Senacon) com Febraban
+    url: https://www.gov.br/mj/pt-br/assuntos/noticias/senacon-e-febraban-discutem-medidas-excepcionais-de-atendimento-aos-consumidores-gauchos
+    acessado: 2026-11-22
+    publicado: 2024-05-15
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      Na enchente do RS: "O Pix, que funciona 24 horas todos os dias e feriados, poderá ser feito normalmente." Não fala de falta de internet.
+
+  - id: readygov-pets
+    tema: pets
+    titulo: "Prepare Your Pets for Disasters"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/pets
+    acessado: 2026-11-22
+    publicado: 2026-03-20
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Ração para vários dias em pote fechado e à prova d'água; água e vasilha; reserva do remédio do animal; "Collar with ID tag and a harness or leash"; cópias dos documentos do animal.
+
+  - id: cdc-ife-checklist-bebes
+    tema: bebes
+    titulo: "Emergency List for Families With Infants and Young Children"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/infant-feeding-emergencies-toolkit/php/checklist.html
+    acessado: 2026-11-22
+    publicado: 2024-05-15
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Fórmula pronta em porções individuais para vários dias; para fórmula em pó, água engarrafada, copo medidor, mamadeiras e bicos.
+      "At least one large pack of diapers."; "At least two packs of baby wipes."; "At least two extra blankets."
+      Itens que não puderem ser lavados com água segura e sabão não devem ser usados.
+
+  - id: cdc-ife-special-considerations
+    tema: bebes
+    titulo: "Special Considerations for Emergencies"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/infant-feeding-emergencies-toolkit/php/special-considerations.html
+    acessado: 2026-11-22
+    publicado: 2026-08-12
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao, durante-apagao]
+    notas: |
+      "Throw away any opened or prepared formula that was in the refrigerator if your power has been off for 4 hours or more."
+      Leite materno descongelado não pode voltar ao freezer; após 24 h, jogar fora.
+
+  - id: cofen-nt-56-2024-bebes-emergencia
+    tema: bebes
+    titulo: "Ministério da Saúde lança nota sobre alimentação de bebês em situações de emergência e calamidade"
+    orgao: Cofen, sobre a Nota Técnica 56/2024 do Ministério da Saúde
+    url: https://www.cofen.gov.br/ministerio-da-saude-lanca-nota-sobre-alimentacao-de-bebes-em-situacoes-de-emergencia-e-calamidade/
+    acessado: 2026-11-22
+    publicado: 2024-06-24
+    licenca: "© Copyright 2026 Conselho Federal de Enfermagem"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Manter a amamentação; mãe separada do bebê: extrair o leite "de 6 a 8 vezes em 24h".
+
+  - id: msd-manuals-itens-primeiros-socorros
+    tema: primeiros-socorros-kit
+    titulo: "Itens básicos de primeiros socorros"
+    orgao: Manual MSD (Merck & Co.)
+    url: "https://www.msdmanuals.com/pt-br/casa/lesões-e-envenenamentos/primeiros-socorros/itens-básicos-de-primeiros-socorros"
+    acessado: 2026-11-22
+    publicado: 2026-05
+    licenca: "© 2026 Merck & Co. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Itens: analgésico e antitérmico (paracetamol e/ou ibuprofeno); antialérgico; curativos de vários tamanhos; gaze; fita adesiva; solução estéril para os olhos; faixa elástica; termômetro; tesoura; pinça; luvas; lanterna com pilhas; sacos plásticos para descarte.
+      Conferir o kit a cada 3 a 6 meses.

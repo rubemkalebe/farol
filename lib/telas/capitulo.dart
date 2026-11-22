@@ -4,6 +4,7 @@ import 'package:markdown/markdown.dart' as md;
 
 import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
+import '../dados/marcacoes.dart';
 import '../tema.dart';
 
 class TelaCapitulo extends StatefulWidget {
@@ -18,14 +19,29 @@ class TelaCapitulo extends StatefulWidget {
 class _TelaCapituloState extends State<TelaCapitulo> {
   // Carregado uma vez só: criar o Future dentro do build refaz a leitura
   // a cada redesenho e a tela fica presa no indicador de carregamento.
-  late final Future<(String, Map<String, Fonte>)> _dados =
-      (carregarCapitulo(widget.capitulo), carregarFontes()).wait;
+  late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados =
+      (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir()).wait;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.capitulo.titulo)),
-      body: FutureBuilder<(String, Map<String, Fonte>)>(
+      appBar: AppBar(
+        title: Text(widget.capitulo.titulo),
+        actions: [
+          FutureBuilder(
+            future: _dados,
+            builder: (context, snap) {
+              if (!snap.hasData || !temMarcacoes(snap.data!.$1)) return const SizedBox.shrink();
+              return IconButton(
+                tooltip: 'Desmarcar tudo',
+                icon: const Icon(Icons.restart_alt),
+                onPressed: () => _confirmarLimpeza(snap.data!.$3),
+              );
+            },
+          ),
+        ],
+      ),
+      body: FutureBuilder<(String, Map<String, Fonte>, Marcacoes)>(
         future: _dados,
         builder: (context, snap) {
           if (snap.hasError) {
@@ -34,19 +50,20 @@ class _TelaCapituloState extends State<TelaCapitulo> {
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
           }
-          final (texto, fontes) = snap.data!;
+          final (texto, fontes, marcacoes) = snap.data!;
           final tema = Theme.of(context);
           return Markdown(
             data: texto,
             extensionSet: md.ExtensionSet(
               md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-              [SintaxeFonte(), SintaxeGeral(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
+              [SintaxeFonte(), SintaxeGeral(), SintaxeMarcar(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
             ),
             builders: {
               'fonte': _BotaoFonte(
                 (id) => fontes[id] != null ? _mostrarFonte(context, fontes[id]!) : null,
               ),
               'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
+              'marcar': _CaixaMarcar(widget.capitulo.id, marcacoes),
             },
             padding: const EdgeInsets.all(16),
             styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
@@ -62,6 +79,21 @@ class _TelaCapituloState extends State<TelaCapitulo> {
         },
       ),
     );
+  }
+
+  Future<void> _confirmarLimpeza(Marcacoes marcacoes) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Desmarcar tudo?'),
+        content: const Text('Todos os itens marcados neste capítulo voltam a ficar em branco.'),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancelar')),
+          TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Desmarcar')),
+        ],
+      ),
+    );
+    if (ok == true) await marcacoes.limpar(widget.capitulo.id);
   }
 
   void _mostrarAvisoGeral(BuildContext context) {
@@ -165,6 +197,45 @@ class _MarcaGeral extends MarkdownElementBuilder {
           child: Icon(Icons.help_outline, size: 18, color: corAviso),
         ),
       ),
+    );
+  }
+}
+
+/// Caixa de marcar no lugar de `[marcar: id]`. O estado fica salvo no aparelho.
+class _CaixaMarcar extends MarkdownElementBuilder {
+  _CaixaMarcar(this.capitulo, this.marcacoes);
+
+  final String capitulo;
+  final Marcacoes marcacoes;
+
+  @override
+  bool isBlockElement() => false;
+
+  @override
+  Widget? visitElementAfterWithContext(
+      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
+    final item = element.textContent;
+    return ListenableBuilder(
+      listenable: marcacoes,
+      builder: (context, _) {
+        final marcado = marcacoes.marcado(capitulo, item);
+        return Semantics(
+          checked: marcado,
+          child: InkWell(
+            key: ValueKey('marcar-$item'),
+            onTap: () => marcacoes.alternar(capitulo, item),
+            borderRadius: BorderRadius.circular(6),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 6),
+              child: Icon(
+                marcado ? Icons.check_box : Icons.check_box_outline_blank,
+                size: 22,
+                color: marcado ? corFeixe : corTexto,
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

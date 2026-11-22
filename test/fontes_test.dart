@@ -39,4 +39,12 @@ void main() {
       }
     }
   });
+
+  test('itens de checklist têm id único dentro do capítulo', () {
+    final marca = RegExp(r'\[marcar: ([a-z0-9-]+)\]');
+    for (final arq in Directory('conteudo/capitulos').listSync().whereType<File>()) {
+      final ids = [for (final m in marca.allMatches(arq.readAsStringSync())) m.group(1)];
+      expect(ids.toSet().length, ids.length, reason: '${arq.path} repete id de checklist');
+    }
+  });
 }
