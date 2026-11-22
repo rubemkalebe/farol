@@ -3,7 +3,7 @@
 capitulos:
   - id: durante-apagao
     titulo: Durante o apagão
-    resumo: Bateria, geladeira, água, remédios, segurança e comunicação
+    resumo: Segurança, geladeira, água, remédios, bateria, prédio e comunicação
     icone: bolt
   - id: primeiros-socorros
     titulo: Primeiros socorros

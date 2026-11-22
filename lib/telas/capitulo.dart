@@ -30,12 +30,13 @@ class TelaCapitulo extends StatelessWidget {
             data: texto,
             extensionSet: md.ExtensionSet(
               md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-              [SintaxeFonte(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
+              [SintaxeFonte(), SintaxeGeral(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
             ),
             builders: {
               'fonte': _BotaoFonte(
                 (id) => fontes[id] != null ? _mostrarFonte(context, fontes[id]!) : null,
               ),
+              'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
             },
             padding: const EdgeInsets.all(16),
             styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
@@ -49,6 +50,30 @@ class TelaCapitulo extends StatelessWidget {
             ),
           );
         },
+      ),
+    );
+  }
+
+  void _mostrarAvisoGeral(BuildContext context) {
+    showModalBottomSheet<void>(
+      context: context,
+      showDragHandle: true,
+      builder: (context) => Padding(
+        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Orientação geral',
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: corAviso)),
+            const SizedBox(height: 6),
+            Text(
+              'Não encontramos fonte oficial para este ponto. Ele foi escrito com base '
+              'em conhecimento técnico comum e pode mudar quando houver uma fonte melhor.',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -101,6 +126,33 @@ class _BotaoFonte extends MarkdownElementBuilder {
         child: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 3),
           child: Icon(Icons.info_outline, size: 18, color: corFeixe),
+        ),
+      ),
+    );
+  }
+}
+
+/// Ícone de orientação sem fonte oficial, no lugar de `[geral]`.
+class _MarcaGeral extends MarkdownElementBuilder {
+  _MarcaGeral(this.aoTocar);
+
+  final VoidCallback aoTocar;
+
+  @override
+  bool isBlockElement() => false;
+
+  @override
+  Widget? visitElementAfterWithContext(
+      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
+    return Semantics(
+      button: true,
+      label: 'Orientação geral, sem fonte oficial',
+      child: InkWell(
+        onTap: aoTocar,
+        borderRadius: BorderRadius.circular(12),
+        child: const Padding(
+          padding: EdgeInsets.symmetric(horizontal: 3),
+          child: Icon(Icons.help_outline, size: 18, color: corAviso),
         ),
       ),
     );

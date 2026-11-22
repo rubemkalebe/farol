@@ -190,7 +190,9 @@ fontes:
     notas: |
       "Store at least 1 gallon of water per person, per day for 3 days." (≈ 3,8 L; inclui higiene)
       "Consider storing more water than this for pregnant women, people who are sick, pets, or if you live in a hot climate."
-      Recipientes de grau alimentar; nunca os que tiveram produtos tóxicos. Trocar a água a cada 6 meses; local fresco, longe do sol; etiquetar com data.
+      Recipientes de grau alimentar; nunca os que tiveram produtos tóxicos. Local fresco, longe do sol; etiquetar com data.
+      "Replace water every six months." (água da torneira guardada em casa)
+      "Observe the expiration date for store-bought water."
 
   - id: cdc-make-water-safe
     tema: agua
@@ -408,6 +410,9 @@ fontes:
       "Disconnect appliances and electronics to avoid damage from electrical surges."
       "Have flashlights for every household member."
       Geladeira "about four hours"; freezer cheio "about 48 hours".
+      "Talk to your medical provider about a power outage plan for medical devices powered by electricity."
+      "Go to a community location with power if heat or cold is extreme."
+      "Do not use a gas stove or oven to heat your home."
 
   - id: ses-sc-samu-monoxido
     tema: seguranca
@@ -651,3 +656,181 @@ fontes:
       Estourar os limites de DIC/FIC/DMIC gera "compensação financeira automática", em "crédito na fatura", "no prazo de até dois meses após o período de apuração".
       Notícia de 2025-10-21 (DISE, situação de emergência): https://www.gov.br/aneel/pt-br/assuntos/noticias/2025/aneel-amplia-direitos-do-consumidor-em-interrupcoes-de-energia-em-situacoes-de-emergencia-por-eventos-climaticos
       Os prazos de 24 h urbano / 48 h rural da REN 1.137/2025 NÃO foram confirmados em fonte oficial.
+
+  # ──────────────── Segunda rodada (lacunas) ────────────────
+
+  - id: sp-manual-uso-elevadores
+    tema: predios
+    titulo: "Manual do Uso de Elevadores"
+    orgao: Prefeitura de São Paulo (CONTRU)
+    url: "https://drive.prefeitura.sp.gov.br/cidade/secretarias/upload/manual_do_uso_de_elevadores_setembro_2019(1).pdf"
+    acessado: 2026-11-22
+    publicado: 2019-09
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.2, item 5: se parar entre andares, "Manter a calma. A situação não oferece perigo."; "Acionar o botão de alarme ... e/ou usar o interfone para pedir ajuda."; chamar "a conservadora, cujo telefone está afixado no elevador, ou o Corpo de Bombeiros através do telefone 193"; "Aguardar com serenidade o resgate seguro."
+      "Em hipótese alguma forçar portas ou tentar sair por conta própria."
+      Item 4: "Em caso de incêndio, não utilizar os elevadores. O abandono do edifício deve ser feito pelas escadas."
+
+  - id: cbmgo-nt18-iluminacao-emergencia
+    tema: predios
+    titulo: "Norma Técnica 18/2022 – Iluminação de Emergência"
+    orgao: Corpo de Bombeiros Militar de Goiás
+    url: https://www.bombeiros.go.gov.br/wp-content/uploads/2021/09/NT-18_2022_-_Iluminacao_de_emergencia.pdf
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.2, 5.2: "O sistema de iluminação de emergência não pode ter autonomia menor que 1h (uma hora) de funcionamento"
+      Adota a NBR 10898. A IT 13 do CBMMG também adota a NBR 10898, mas não traz o número em horas.
+
+  - id: cbmmg-it13-iluminacao-emergencia
+    tema: predios
+    titulo: "Instrução Técnica N. 13 – Iluminação de Emergência"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: https://www.bombeiros.mg.gov.br/images/stories/dat/it/it_13_iluminacao_de_emergencia.pdf
+    acessado: 2026-11-22
+    publicado: 2005-10-25
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "2.2 Adota-se a NBR 10898 – Sistema de iluminação de emergência". Não fixa autonomia em horas.
+
+  - id: anatel-uso-seguro-celulares-acessorios
+    tema: bateria
+    titulo: "Orientações para uso Seguro de Telefones Celulares e seus Acessórios"
+    orgao: Anatel
+    url: https://www.gov.br/anatel/pt-br/regulado/certificacao-de-produtos/orientacoes-para-uso-seguro-de-telefones-celulares-e-seus-acessorios
+    acessado: 2026-11-22
+    publicado: 2021-04-15
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      "Utilizar sempre carregadores e baterias homologados pela Anatel."
+      "Não recarregue ou armazene a bateria sob o sol ou em ambientes aquecidos"
+      "Não recarregue a bateria do aparelho em ambientes confinados, como bolsas, malas, gavetas"
+      "Não armazene ou transporte a bateria em recipientes com objetos metálicos"
+      "Não utilize carregadores visivelmente danificados (incluído o cabo)"
+
+  - id: govbr-homologar-produtos-anatel
+    tema: bateria
+    titulo: "Homologar produtos de telecomunicações - ANATEL"
+    orgao: gov.br / Anatel
+    url: https://www.gov.br/pt-br/servicos/homologar-produtos-de-telecomunicacoes-anatel
+    acessado: 2026-11-22
+    publicado: 2026-09-29
+    licenca: "CC BY-ND 3.0 (portal gov.br; não conferido na página)"
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Após devidamente homologados, os produtos deverão apresentar selo com a logomarca da Anatel e número de homologação."
+      Não cita powerbank nominalmente.
+
+  - id: anatel-explica-selo
+    tema: bateria
+    titulo: "Anatel Explica – O que significa o selo da Anatel no meu celular?"
+    orgao: Anatel
+    url: https://sistemas.anatel.gov.br/anexar-api/publico/anexos/download/215cd2a29ce39302c28566637dc3e348
+    acessado: 2026-11-22
+    publicado: 2021-06
+    licenca: "CC BY-NC-ND"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      Bateria, carregador e celular com o selo "foram aprovados em testes exigidos pela Anatel que visam garantir a segurança do consumidor."
+
+  - id: cbmpr-carregadores-celular
+    tema: bateria
+    titulo: "Corpo de Bombeiros alerta para riscos de acidentes com carregadores de celular"
+    orgao: Agência Estadual de Notícias do Paraná / Corpo de Bombeiros do Paraná
+    url: https://www.parana.pr.gov.br/aen/Noticia/Corpo-de-Bombeiros-alerta-para-riscos-de-acidentes-com-carregadores-de-celular
+    acessado: 2026-11-22
+    publicado: 2025-10-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Nunca se deve deixar o celular carregando sem supervisão, principalmente ao sair de casa."
+      Não carregar sobre cama, sofá ou travesseiro: "O colchão é um material que queima muito rápido." Preferir "uma superfície firme e afastada de materiais inflamáveis".
+      Atenção se a bateria "esquenta muito durante o carregamento, ou está estufada".
+
+  - id: anker-capacidade-powerbank
+    tema: bateria
+    titulo: "Why is the Rated Capacity of Power Banks Lower Than Expected?"
+    orgao: Anker (suporte oficial do fabricante)
+    url: https://service.anker.com/article-description/Why-is-the-Rated-Capacity-of-Power-Banks-Lower-Than-Expected
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© Fantasia Trading LLC"
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      "To charge devices, a power bank must convert its 3.7V cell voltage to 5V output (or higher)."
+      Eficiência do powerbank "About 80 - 85%"; carga no aparelho "About 80 - 90%".
+      Exemplo: 20.000 mAh = 74 Wh; 74 × 0,82 = 60,7 Wh; × 0,85 ÷ 18,5 Wh ≈ "2.8 charges".
+      Conta usada no app: cerca de 2/3 da capacidade nominal chega ao celular (0,82 × 0,85 × 3,7/3,85).
+
+  - id: readygov-build-a-kit
+    tema: comunicacao
+    titulo: "Build A Kit"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/kit
+    acessado: 2026-11-22
+    publicado: 2026-07-01
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Battery-powered or hand crank radio and a NOAA Weather Radio with tone alert"
+      "Extra batteries"; "Flashlight"; "Cell phone with chargers and a backup battery"
+
+  - id: cemig-direitos-deveres-equip-vida
+    tema: eletrodependentes
+    titulo: "Cemig lista principais direitos e deveres dos clientes de energia elétrica no Brasil"
+    orgao: Agência Minas / Cemig
+    url: https://www.agenciaminas.mg.gov.br/noticia/cemig-lista-principais-direitos-e-deveres-dos-clientes-de-energia-eletrica-no-brasil/
+    acessado: 2026-11-22
+    publicado: 2024-08-01
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "O cliente deve informar à distribuidora sobre a existência de pessoa residente que use equipamentos elétricos indispensáveis à vida."
+      "Para se cadastrar, o cliente deve apresentar à companhia, por meio dos canais digitais, a declaração médica"
+      "Com o cadastro, esse cliente vai receber de forma antecipada e preferencial avisos sobre manutenções"
+      Manter o cadastro atualizado.
+
+  - id: msd-oxigenoterapia
+    tema: eletrodependentes
+    titulo: "Oxigenoterapia – Manual MSD Versão Saúde para a Família"
+    orgao: Manual MSD (Merck & Co.)
+    url: https://www.msdmanuals.com/pt/casa/distúrbios-pulmonares-e-das-vias-respiratórias/reabilitação-para-distúrbios-pulmonares-e-das-vias-respiratórias/oxigenoterapia
+    acessado: 2026-11-22
+    publicado: 2024-03
+    licenca: "© 2026 Merck & Co. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      "as pessoas devem ter um suprimento de oxigênio disponível em caso de falha da bateria ou queda de energia."
+      "é muito importante manter os cilindros longe de fontes de ignição"
+      "Não se deve jamais fumar em casa quando o oxigênio estiver sendo utilizado."
+
+  - id: agenciaminas-copasa-consumo-consciente
+    tema: agua
+    titulo: "Copasa alerta para consumo consciente de água durante onda de calor na Grande BH"
+    orgao: Agência Minas / Copasa
+    url: https://www.agenciaminas.mg.gov.br/noticia/copasa-alerta-para-consumo-consciente-de-agua-durante-onda-de-calor-na-grande-bh
+    acessado: 2026-11-22
+    publicado: 2023-11-15
+    licenca: "Agência Minas: citar a fonte ao reproduzir"
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      Dicas de economia: "Não lavar o passeio. Em vez disso, usar a vassoura"; "Tomar banhos rápidos".
+      Não fala de prédio nem de bomba d'água.

@@ -2,7 +2,7 @@
 
 > Leia primeiro a parte **O que pode matar**. O resto pode esperar.
 >
-> Este guia resume orientações oficiais. Toque no ícone de informação ao lado de cada orientação para ver de onde ela veio. Ele não substitui a bula nem o médico. **Emergência: 192 (SAMU) ou 193 (Bombeiros).**
+> Este guia resume orientações oficiais. O ícone amarelo ao lado de cada orientação mostra de onde ela veio. O ícone azul de interrogação marca orientação geral, sem fonte oficial. Ele não substitui a bula nem o médico. **Emergência: 192 (SAMU) ou 193 (Bombeiros).**
 
 ---
 
@@ -70,6 +70,8 @@ Congelado que ainda tem cristais de gelo pode voltar para o freezer. [fonte: cdc
 
 **Onde guardar:** em recipiente limpo e tampado, de plástico próprio para alimento ou galão de água. Nunca use embalagem que teve produto químico. [fonte: sesrs-guia-basico-enchentes-2024] [fonte: cdc-emergency-water-supply]
 
+**Por quanto tempo guardar:** troque a água da torneira guardada a cada **6 meses**. Água comprada vale até a data da embalagem. [fonte: cdc-emergency-water-supply]
+
 **Se não tiver certeza de que a água está boa:** filtre antes com filtro de casa, coador de papel ou pano limpo. [fonte: ms-orientacoes-populacao-enchentes-2024] Depois, escolha uma opção.
 
 **Opção 1: água sanitária**
@@ -132,9 +134,14 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 
 - **Faça um plano antes.** Veja no manual, ou pergunte ao fabricante, se o aparelho funciona com bateria ou gerador. [fonte: cdc-prepare-your-health-power-sources]
 - Tenha uma alternativa manual quando existir, como cadeira comum, andador ou bengala. [fonte: cdc-prepare-your-health-power-sources]
+- Converse com o médico sobre um plano para quando faltar energia. [fonte: ready-gov-power-outages]
 - **Cadastre a pessoa na distribuidora de energia** (em MG, a Cemig), com comprovação médica. Com o cadastro, a casa recebe aviso com **5 dias úteis** de antecedência antes de desligamentos programados. [fonte: aneel-ren-1000-2021]
+- Na Cemig, o cadastro é feito pelos canais digitais, com declaração médica. Mantenha o cadastro atualizado. [fonte: cemig-direitos-deveres-equip-vida]
 - **O cadastro não garante religamento antes dos outros num apagão.** Tenha um plano B. [fonte: aneel-ren-1000-2021]
-- Onde há oxigênio, **nada de vela**. [fonte: nfpa-candle-safety]
+- **Oxigênio:** tenha uma reserva de oxigênio para o caso de a bateria acabar ou a energia cair. [fonte: msd-oxigenoterapia] Pergunte à empresa que fornece o oxigênio sobre um cilindro reserva e quanto tempo ele dura. [geral]
+- Onde há oxigênio, **nada de vela, fogo ou cigarro**. [fonte: nfpa-candle-safety] [fonte: msd-oxigenoterapia]
+- **CPAP:** pergunte ao médico o que fazer se ficar algumas noites sem o aparelho, e ao fabricante se existe bateria para o seu modelo. [geral]
+- **Diálise em casa:** combine antes com a equipe da clínica o que fazer se faltar energia. [geral]
 - Se o aparelho parar e houver risco de vida: **192**.
 
 ---
@@ -148,6 +155,28 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 - **Carregar no carro:** só com o carro ao ar livre. Nunca na garagem, nem com a porta aberta. [fonte: epa-apagoes-qualidade-ar] [fonte: ses-sc-samu-monoxido]
 - Não deixe o celular carregando em cima de cama, sofá ou almofada. [fonte: cbmmg-autoprotecao-incendios]
 
+### Powerbank (carregador portátil)
+
+**Deixe sempre carregado.** Ele só ajuda se estiver cheio quando a luz cair. Sempre que a energia voltar, recarregue. [geral]
+
+**Quantas cargas ele dá de verdade?** O número escrito no powerbank não chega todo ao celular: parte da energia se perde na conversão. Na prática, chega **cerca de 2/3** do que está escrito. [fonte: anker-capacidade-powerbank]
+
+| Powerbank | Chega ao celular | Celular de 5.000 mAh |
+|---|---|---|
+| 5.000 mAh | ~3.300 mAh | pouco mais de meia carga |
+| 10.000 mAh | ~6.700 mAh | cerca de 1 carga e 1/3 |
+| 20.000 mAh | ~13.400 mAh | cerca de 2 cargas e meia |
+
+O tamanho da bateria do seu celular aparece nas especificações do modelo (procure o nome do modelo + "bateria mAh"). [geral]
+
+**Segurança:**
+
+- Compre powerbank, carregador e cabo **com o selo da Anatel**. O selo indica que o produto passou nos testes de segurança. [fonte: anatel-explica-selo] [fonte: anatel-uso-seguro-celulares-acessorios]
+- Não carregue dentro de bolsa, mala ou gaveta, nem no sol. [fonte: anatel-uso-seguro-celulares-acessorios]
+- Carregue numa superfície firme, longe de cama e travesseiro, e não deixe carregando sem ninguém por perto. [fonte: cbmpr-carregadores-celular]
+- **Esquentou muito ou estufou: pare de usar.** [fonte: cbmpr-carregadores-celular] Bateria estufada vai para um ponto de coleta de eletrônicos, não para o lixo comum. [geral]
+- Não guarde junto com moedas, chaves ou outros metais. [fonte: anatel-uso-seguro-celulares-acessorios]
+
 ---
 
 ## Comunicação
@@ -155,6 +184,8 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 - **Mande mensagem em vez de ligar.** A rede congestiona e o SMS passa mais fácil. [fonte: ready-gov-get-tech-ready]
 - **Combine um ponto de encontro** com a família. [fonte: ready-gov-get-tech-ready]
 - Se a sua operadora cair, o celular pode usar a rede de outra: as operadoras são obrigadas a liberar isso na área afetada. [fonte: anatel-regras-emergencia-res739]
+
+**Rádio a pilha ou de manivela:** faz parte do kit de emergência, junto com pilhas extras. [fonte: readygov-build-a-kit] Ele funciona sem internet e sem rede de celular, e é por ele que chegam as notícias locais quando o resto cai. [geral] Alguns celulares Android têm rádio FM que funciona com o fone de ouvido plugado, sem gastar internet. [geral]
 
 **Alertas da Defesa Civil:**
 
@@ -183,6 +214,24 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 
 ---
 
+## Em prédio
+
+**Elevador parado com gente dentro:**
+
+1. Calma: a situação não oferece perigo.
+2. Aperte o botão de alarme ou use o interfone.
+3. Peça para chamarem a empresa do elevador (o telefone fica afixado nele) ou os Bombeiros, **193**.
+4. **Nunca force a porta nem tente sair sozinho.** Espere o resgate.
+
+[fonte: sp-manual-uso-elevadores]
+
+- Enquanto a energia estiver instável, **prefira a escada**. [geral] Em incêndio, nunca use o elevador. [fonte: sp-manual-uso-elevadores]
+- A luz de emergência da escada dura pouco: as normas pedem **no mínimo 1 hora**. Tenha uma lanterna para usar a escada. [fonte: cbmgo-nt18-iluminacao-emergencia] [geral]
+- **A bomba d'água para.** A água que sobra é a da caixa do prédio, e ela acaba. Economize desde a primeira hora: banho rápido, nada de lavar chão ou calçada. [geral] [fonte: agenciaminas-copasa-consumo-consciente]
+- **O portão eletrônico e o interfone param.** Saiba onde fica a destrava manual ou a chave do portão, e combine com a portaria ou o síndico como as pessoas vão entrar e sair. [geral]
+
+---
+
 ## Proteger os aparelhos
 
 - Tire da tomada os aparelhos eletrônicos e os mais sensíveis. [fonte: ready-gov-power-outages] [fonte: agenciaminas-cemig-queima-equipamentos]
@@ -196,8 +245,6 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 - Nas horas mais quentes, procure lugares frescos, como centros comunitários e shoppings. [fonte: ms-ondas-de-calor]
 - Fique de olho em crianças, idosos e grávidas. [fonte: ms-ondas-de-calor]
 - Se aparecer suor demais, fraqueza, tontura, enjoo, dor de cabeça ou cãibra, procure um posto de saúde. [fonte: ms-ondas-de-calor]
+- Se o calor ou o frio estiver extremo, vá para um lugar que tenha energia. Nunca use o fogão a gás para aquecer a casa. [fonte: ready-gov-power-outages]
 - Confusão, convulsão ou desmaio podem ser **insolação**, uma emergência: **192**. [fonte: ms-ondas-de-calor]
 
----
-
-*Ainda faltam neste capítulo, por falta de fonte oficial confiável: prédios (elevador, bomba d'água, portão), powerbank, rádio a pilha e quanto tempo a água guardada dura.*

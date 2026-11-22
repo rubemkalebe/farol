@@ -45,3 +45,15 @@ class SintaxeFonte extends md.InlineSyntax {
     return true;
   }
 }
+
+/// Reconhece `[geral]`: orientação sem fonte oficial, escrita a partir de
+/// conhecimento técnico comum. Aparece com um ícone diferente do de fonte.
+class SintaxeGeral extends md.InlineSyntax {
+  SintaxeGeral() : super(r'\[geral\]');
+
+  @override
+  bool onMatch(md.InlineParser parser, Match match) {
+    parser.addNode(md.Element.text('geral', ''));
+    return true;
+  }
+}

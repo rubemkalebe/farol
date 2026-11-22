@@ -21,20 +21,22 @@ Coleta de 2026-11-22. Cada item mostra o que as fontes dizem e a decisão tomada
 | Velas | A NFPA diz para nunca usar; a EPA aceita com ventilação e supervisão | **Preferir lanterna.** Se usar vela: longe do que pega fogo, nunca no quarto ao dormir e **nunca onde houver oxigênio** |
 | Volta da energia | Cemig e FEMA: tirar aparelhos da tomada e esperar alguns minutos para religar | Igual |
 
-## Lacunas: buscar antes de publicar
+## Lacunas
 
-- **Cemig, eletrodependentes:** falta a página oficial do cadastro, porque a da Agência Minas foi removida.
-- **Cemig, telefone para quem está fora de MG:** a própria página dá dois números diferentes.
-- **ANEEL, REN 1.137/2025:** o PDF deu erro 403. Os prazos de compensação de 24 h/48 h não foram confirmados.
-- **Validade da água guardada:** sem fonte brasileira; só o CDC (6 meses).
-- **Oxigênio, CPAP e diálise em casa:** sem fonte oficial brasileira; só o CDC.
-- **Elevadores e prédios** (bomba d'água, portão): sem fonte para o cidadão.
-- **Carregar o celular no carro:** sem fonte direta. Usar as fontes de CO sobre motor ligado em garagem.
-- **Powerbank e rádio a pilha:** sem fonte oficial. A calculadora de powerbank é aritmética e não precisa de fonte.
-- **SMS contra ligação:** só a FEMA. Sem fonte brasileira.
-- **Comandos do 40199** (CONSULTAR, SAIR) e alerta tocando no modo silencioso: só aparecem na imprensa.
-- **Frio sem aquecimento:** sem fonte brasileira.
-- **Citações a conferir no PDF original** (vieram resumidas): `rs-ses-informe-insulina-sem-energia`, `copel-cadastro-equipamento-vital`.
+Segunda rodada de coleta (2026-11-22). O que ainda não tem fonte oficial entrou como **orientação geral** (`[geral]`), seguindo a regra do `README.md`:
+
+| Assunto | Situação |
+|---|---|
+| Elevador | Fonte: manual da Prefeitura de SP. "Prefira a escada" é orientação geral |
+| Luz de emergência | Mínimo de 1 h segundo a NT 18 de Goiás. A IT 13 de MG não traz número |
+| Bomba d'água, portão e interfone de prédio | Orientação geral. Não há fonte oficial |
+| Powerbank | Conta de eficiência pelo fabricante (Anker). Segurança pela Anatel e pelos Bombeiros do PR. "Deixe carregado" e o descarte da bateria estufada são orientação geral |
+| Rádio | Item de kit pela FEMA. Que o rádio funciona sem internet e o FM no celular são orientação geral |
+| Validade da água guardada | 6 meses pelo CDC. Não há fonte brasileira |
+| Oxigênio | Reserva pelo Manual MSD. O cilindro reserva com a fornecedora é orientação geral |
+| CPAP e diálise | Só orientação geral: procurar o médico, o fabricante ou a clínica |
+| Cemig, telefone para quem está fora de MG | Ainda divergente na própria página. Ficou fora do texto |
+| ANEEL, REN 1.137/2025, compensação 24 h/48 h | Não confirmado. Ficou fora do texto |
 
 ## Licenças
 

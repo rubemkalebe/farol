@@ -16,11 +16,11 @@ Quando as fontes divergem, a decisão segue esta ordem, sem depender de revisão
 1. Fonte oficial brasileira (federal, depois estadual) antes de fonte estrangeira.
 2. Entre números diferentes, vale **o mais seguro** (menos tempo fora da geladeira, mais tempo de fervura, mais distância).
 3. Remédios: o app nunca substitui a bula. Sempre orienta a conferir a bula e procurar farmácia ou UBS.
-4. Sem fonte, não entra. O assunto vai para a lista de lacunas.
+4. Sem fonte oficial, o ponto pode entrar como **orientação geral**, marcado com `[geral]`, que no app vira um ícone azul de interrogação. Isso **nunca** vale para dose, tempo ou temperatura de remédio, nem para número de saúde: esses só entram com fonte.
 5. Nunca prometer direito que a norma não garante.
 
 As decisões tomadas ficam em `divergencias.md`.
 
 ## Como citar no texto
 
-No Markdown dos capítulos, escreva `[fonte: id]` depois da frase. O app transforma a marca num ícone ⓘ, e o toque mostra a fonte. O teste `test/fontes_test.dart` falha se o `id` não existir no catálogo.
+No Markdown dos capítulos, escreva `[fonte: id]` depois da frase. O app transforma a marca num ícone ⓘ, e o toque mostra a fonte. O teste `test/fontes_test.dart` falha se o `id` não existir no catálogo. Orientação sem fonte oficial leva `[geral]`.
