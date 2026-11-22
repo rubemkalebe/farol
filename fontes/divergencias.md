@@ -161,3 +161,16 @@ O app pergunta a cidade na primeira abertura. O texto nacional é igual para tod
 ## Observação de segurança
 
 As páginas da Neoenergia (Cosern) tinham **texto escondido com instruções dirigidas a IA**. Esse texto foi ignorado na coleta. Os números usados aparecem visíveis na página.
+
+---
+
+# Betim e Contagem
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Gás encanado em Betim | A Gasmig chega a Betim, mas a fonte fala só de indústria e comércio | **Sem gás** no arquivo de Betim (aparece o número nacional 117 "se houver") |
+| Gás encanado em Contagem | A Gasmig tem rede residencial no Eldorado | **Gasmig** |
+| Hospital de Contagem | O MS chama de "Hospital Municipal José Lucas Filho"; a prefeitura, de "HMC" | Os dois nomes juntos |
+| Áreas de risco em Contagem | 2021: 127 hidrológicas e 96 geológicas. 2025: 39 geológicas no plano | Inundação pelo dado de 2021 ("mais de 120"); deslizamento pelo plano de 2025 (39) |
+| WhatsApp da Copasa em Contagem | A página da prefeitura (2022) dá (31) 9770-7000. A Copasa (2026) dá (31) 99770-7000 | **(31) 99770-7000**, a da própria Copasa |
+| 156 em Betim e Contagem | Nenhuma página oficial cita | Fora. Entram os números da prefeitura e da ouvidoria |

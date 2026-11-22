@@ -3310,3 +3310,308 @@ fontes:
     usado_em: [contatos]
     notas: |
       Disque Denúncia "181 e Whatsapp (84) 98102-5950". "SOS Mulher e Idoso: 0800 281 2336".
+
+  # ═══════════════════════ Betim e Contagem (MG) ═══════════════════════
+
+  - id: betim-telefones-uteis
+    tema: defesa-civil
+    titulo: "Prefeitura Municipal de Betim - Telefones úteis"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/telefones-uteis"
+    acessado: 2026-11-22
+    publicado: 2026-05-05
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Betim: "Defesa Civil - 199"; Bombeiros 193; "Guarda Municipal - 153"; SAMU 192; "Cemig - 116". Prefeitura: "0800 256 3236", seg–sex, 9h–17h.
+
+  - id: betim-whatsapp-defesa-civil
+    tema: defesa-civil
+    titulo: "Betim lança canal oficial da Defesa Civil no WhatsApp para ampliar o alcance de alertas e orientações à população"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/14683/betim-lanca-canal-oficial-da-defesa-civil-no-whatsapp-para-ampliar-o-alcance-de-alertas-e-orientacoes-a-populacao"
+    acessado: 2026-11-22
+    publicado: 2025-12-05
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Canal oficial da Defesa Civil de Betim no WhatsApp (só leitura, para alertas): https://whatsapp.com/channel/0029VbB7XBxDOQIUwkz6rm3X
+
+  - id: betim-sms-40199
+    tema: defesa-civil
+    titulo: "Betim implanta sistema de alertas de chuvas por SMS"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/11622/betim-implanta-sistema-de-alertas-de-chuvas-por-sms"
+    acessado: 2026-11-22
+    publicado: 2022-06-14
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Mandar o CEP, sem o hífen, para 40199 e aguardar a confirmação.
+
+  - id: betim-orientacoes-chuva-bombeiros
+    tema: riscos
+    titulo: "Prefeitura de Betim e Corpo de Bombeiros reforçam orientações de segurança para o período chuvoso"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/14672/prefeitura-de-betim-e-corpo-de-bombeiros-reforcam-orientacoes-de-seguranca-para-o-periodo-chuvoso"
+    acessado: 2026-11-22
+    publicado: 2025-12-03
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "A população deve acionar imediatamente o 193 (Corpo de Bombeiros) ou a Defesa Civil Municipal, pelo 199."
+      "apenas 20 centímetros de água podem atingir o escapamento e fazer o motor apagar".
+
+  - id: betim-chuvas-18-nov-2026
+    tema: riscos
+    titulo: "Prefeitura mobiliza equipes para atender ocorrências provocadas pelas chuvas desta quarta-feira (18)"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/15794/prefeitura-mobiliza-equipes-para-atender-ocorrencias-provocadas-pelas-chuvas-desta-quarta-feira-18/"
+    acessado: 2026-11-22
+    publicado: 2026-11-18
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Risco: acionar a Defesa Civil pelo 199. Cursos d'água citados: rio Betim (avenida Edméia Mattos Lazzarotti); riacho das Areias (avenida Marco Túlio Isaac); córregos Estiva, Guandu e o da avenida Yete.
+
+  - id: betim-desassoreamento-rios
+    tema: riscos
+    titulo: "Betim inicia conjunto de obras de desassoreamento de rios para reduzir riscos de enchentes"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/15494/betim-inicia-conjunto-de-obras-de-desassoreamento-de-rios-para-reduzir-riscos-de-enchentes"
+    acessado: 2026-11-22
+    publicado: 2026-08-14
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Obras no rio Betim, Riacho das Areias e córrego Bandeirinhas, "especialmente as regiões hospitalares e o Citrolândia"; córrego Estiva (Cruzeiro do Sul) e o da avenida Yete.
+
+  - id: betim-encostas-sete-obras
+    tema: riscos
+    titulo: "Betim investe em sete novas obras para contenção e estabilização de encostas"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/15636/betim-investe-em-sete-novas-obras-para-contencao-e-estabilizacao-de-encostas"
+    acessado: 2026-11-22
+    publicado: 2026-09-29
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "áreas suscetíveis a deslizamentos de terra", mapeadas pela Defesa Civil e pelo SGB: São João, Vila Kennedy, Parque Fernão Dias, Jardim Alterosas 2ª Seção, Riacho III, Cruzeiro, Guanabara.
+
+  - id: betim-cadastro-familias-areas-risco
+    tema: riscos
+    titulo: "Prefeitura de Betim dá seguimento ao cadastramento de famílias em áreas de risco"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/14323/prefeitura-de-betim-da-seguimento-ao-cadastramento-de-familias-em-areas-de-risco/"
+    acessado: 2026-11-22
+    publicado: 2025-09-16
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "áreas mapeadas com risco de inundação no Citrolândia"; também a região do Nossa Senhora de Fátima.
+
+  - id: betim-ondas-de-calor
+    tema: riscos
+    titulo: "Prefeitura de Betim alerta população para cuidados com a saúde durante as ondas de calor"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/noticias/0/3/12666/prefeitura-de-betim-alerta-populacao-para-cuidados-com-a-saude-durante-as-ondas-de-calor"
+    acessado: 2026-11-22
+    publicado: 2023-09-19
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      CONFERIR (resumido): mais líquidos; "Ofereça água regularmente, mesmo que eles não tenham queixa de sede."; evitar sol das 9h às 17h; roupas leves; umidificador ou bacias de água; boca seca, urina escura, tontura ou taquicardia: unidade de saúde.
+
+  - id: betim-hospital-regional-carta
+    tema: hospital
+    titulo: "Carta de Serviços (Hospital Público Regional de Betim)"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/carta-servicos/146/"
+    acessado: 2026-11-22
+    publicado: 2026-05-05
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "Hospital Público Regional Prefeito Osvaldo Rezende Franco": urgência em trauma, clínica, cirurgia, ortopedia e neurologia; "Funcionamento 24 horas"; 31-35398100.
+
+  - id: betim-ouvidoria
+    tema: prefeitura
+    titulo: "Conhecendo a Ouvidoria"
+    orgao: Prefeitura de Betim
+    url: "https://www.betim.mg.gov.br/portal/secretarias-paginas/85/conhecendo-a-ouvidoria/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Ouvidoria Geral 3512-3454; das 9h às 17h. Linha geral da prefeitura 0800 256 3236.
+
+  - id: contagem-quando-chamar-defesa-civil
+    tema: defesa-civil
+    titulo: "Quando chamar a Defesa Civil? Veja orientações para agir com segurança"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/84289/quando-chamar-a-defesa-civil-veja-orientacoes-para-agir-com-seguranca"
+    acessado: 2026-11-22
+    publicado: 2026-07-16
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "O atendimento é realizado gratuitamente pelo telefone 199"; canal "Escuta Ativa"; com vítima ou risco iminente, 193.
+      SMS: CEP para 40199. Período seco: "não realizar queimadas para limpeza de lotes ou descarte de resíduos".
+
+  - id: contagem-canais-oficiais
+    tema: defesa-civil
+    titulo: "Defesa Civil reforça uso de canais oficiais pela população"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/84346/defesa-civil-reforca-uso-de-canais-oficiais-pela-populacao"
+    acessado: 2026-11-22
+    publicado: 2026-07-23
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      CONFERIR (resumido): 199 gratuito, 24 horas, todos os dias; 193 para incêndio ou acidente com vítima; SMS 40199.
+
+  - id: contagem-sms-alertas
+    tema: defesa-civil
+    titulo: "Defesa Civil faz alertas sobre chuvas por SMS aos moradores de Contagem"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82933/defesa-civil-faz-alertas-sobre-chuvas-por-sms-aos-moradores-de-contagem"
+    acessado: 2026-11-22
+    publicado: 2025-12-15
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "basta enviar, por SMS, o CEP da rua para o número 40199."
+
+  - id: contagem-simulado-ferrugem-arrudas
+    tema: riscos
+    titulo: "Simulado de enchente prepara equipes para atuação no período chuvoso em Contagem"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82362/simulado-de-enchente-prepara-equipes-para-atuacao-no-periodo-chuvoso-em-contagem/"
+    acessado: 2026-11-22
+    publicado: 2025-09-16
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "as bacias do córrego Ferrugem e do ribeirão Arrudas se encontram, área considerada crítica em épocas de chuva"; "no encontro do Ferrugem com o Arrudas, na Vila São Paulo".
+      Período chuvoso "de novembro a março, com maior intensidade nos meses de dezembro e janeiro."
+
+  - id: contagem-mapas-risco-2021
+    tema: riscos
+    titulo: "Contagem se prepara para as chuvas: Prefeitura lança mapas de risco hidrológico e geológico"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/65999/contagem-se-prepara-para-as-chuvas-prefeitura-lanca-mapas-de-risco-hidrologico-e-geologico-e-faz-campanha-de-conscientizacao"
+    acessado: 2026-11-22
+    publicado: 2021-09-30
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "Foram mapeadas 127 áreas de risco hidrológico e 96 áreas de risco geológico." Mapa público no Google My Maps (2021).
+
+  - id: contagem-pmrr-2025
+    tema: riscos
+    titulo: "Plano Municipal de Redução de Riscos reforça protagonismo das vilas e favelas"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/82728/plano-municipal-de-reducao-de-riscos-reforca-protagonismo-das-vilas-e-favelas"
+    acessado: 2026-11-22
+    publicado: 2025-11-11
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "39 áreas" de risco geológico mapeadas nas periferias; cita Vila Epa, Vila Samag e Nascentes Imperiais.
+
+  - id: contagem-ouvidoria
+    tema: prefeitura
+    titulo: "Ouvidoria Municipal"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/ouvidoriamunicipal"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      WhatsApp "(31) 3391-1061"; "0800 031 31 88"; seg–sex, 8h–17h. Prefeitura (rodapé): (31) 3352-5000.
+
+  - id: contagem-hmc-pronto-socorro
+    tema: hospital
+    titulo: "Pronto-socorro do HMC é reformado e recebe mais leitos de assistência crítica"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/83750/pronto-socorro-do-hmc-e-reformado-e-recebe-mais-leitos-de-assistencia-critica"
+    acessado: 2026-11-22
+    publicado: 2026-05-20
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Hospital Municipal de Contagem (HMC): pronto-socorro de urgência e emergência.
+
+  - id: ms-hospitais-referencia-peconhentos-mg
+    tema: hospital
+    titulo: "Hospitais de referência para atendimento de acidentes por animais peçonhentos - Minas Gerais"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia/minas-gerais"
+    acessado: 2026-11-22
+    publicado: 2026-07
+    licenca: "desconhecida (portal gov.br)"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Betim: "Hosp. Públ. Reg. Prefeito Osvaldo Franco", "Av. Edmeia Matos Lazarotti, 3800 - Brasilia", (31) 3539-8100; soro para cobra, escorpião e aranha.
+      Contagem: "Hospital Municipal José Lucas Filho", "Av. João César Oliveira, 4495 - Cinco", "(31)3352-8827/8826/3390-5919"; soro para cobra, escorpião, aranha e lagarta.
+
+  - id: contagem-copasa-rodizio-2022
+    tema: agua
+    titulo: "Copasa realiza rodízio no fornecimento de água (Contagem)"
+    orgao: Prefeitura de Contagem
+    url: "https://portal.contagem.mg.gov.br/portal/noticias/0/3/71430/copasa-realiza-rodizio-no-fornecimento-de-agua-veja-os-bairros-afetados-nas-regioes-sede-nacional-e-ressaca-a-partir-das-22h-deste-sabado-123/"
+    acessado: 2026-11-22
+    publicado: 2022-03-12
+    licenca: "Portal Instar: Todos os direitos reservados"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      "A Copasa, responsável pelo abastecimento de água em Contagem"; contato pelo 115.
+
+  - id: copasa-contratos-betim-contagem
+    tema: agua
+    titulo: "Copasa renova contratos em Betim e Contagem e consolida 37% de sua receita"
+    orgao: Copasa
+    url: "https://news.copasa.com.br/copasa-renova-contratos-em-betim-e-contagem-e-consolida-37-de-sua-receita/"
+    acessado: 2026-11-22
+    publicado: 2026-07-31
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Copasa renovou as concessões de água e esgoto de Betim e Contagem até 2073.
+
+  - id: gasmig-eldorado-contagem
+    tema: gas
+    titulo: "Obras da rede de distribuição do bairro Eldorado avançam"
+    orgao: Gasmig
+    url: "https://gasmig.com.br/obras-da-rede-do-bairro-eldorado-em-contagem-avancam/"
+    acessado: 2026-11-22
+    publicado: 2024-07-23
+    licenca: "Gasmig ©"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
+    notas: |
+      Rede residencial e comercial no bairro Eldorado, em Contagem. "Plantão 24h - Ligue 117".

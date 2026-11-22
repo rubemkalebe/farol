@@ -1,0 +1,27 @@
+nome: Contagem
+uf: mg
+energia: cemig
+agua: copasa
+gas: gasmig
+verificado_em: 2026-11-22
+blocos:
+  alagamento-local: |
+    - Em Contagem, o encontro do **córrego Ferrugem com o ribeirão Arrudas**, na Vila São Paulo, é área crítica na chuva. O período mais forte vai de **dezembro a janeiro**. [fonte: contagem-simulado-ferrugem-arrudas]
+    - A Prefeitura tem mapeadas mais de 120 áreas com risco de alagamento ou inundação. [fonte: contagem-mapas-risco-2021]
+  alertas-locais: |
+    - **Defesa Civil de Contagem:** [**199**](tel:199), grátis, 24 horas. Os alertas de chuva chegam pelo SMS **40199**: mande o seu CEP. [fonte: contagem-canais-oficiais] [fonte: contagem-sms-alertas]
+  ar-seco-local: |
+    Em Contagem, a Defesa Civil pede: **nada de queimada** para limpar lote ou queimar lixo no tempo seco. [fonte: contagem-quando-chamar-defesa-civil]
+  cadastro-defesa-civil: |
+    - [marcar: cad-contagem] Em Contagem, a Defesa Civil atende no **199**, de graça e 24 horas [fonte: contagem-quando-chamar-defesa-civil]
+  defesa-civil-local: |
+    - **Defesa Civil de Contagem:** [**199**](tel:199), grátis, 24 horas. Com vítima, incêndio ou risco imediato, ligue [193](tel:193). [fonte: contagem-quando-chamar-defesa-civil] [fonte: contagem-canais-oficiais]
+  deslizamento-local: |
+    Em Contagem, o plano de redução de riscos mapeou **39 áreas com risco de deslizamento**, a maioria em vilas e na periferia. Viu sinal de perigo? Saia e ligue [199](tel:199). [fonte: contagem-pmrr-2025] [fonte: contagem-quando-chamar-defesa-civil]
+  hospitais: |
+    **Hospital em Contagem:** o **Hospital Municipal José Lucas Filho** (HMC), na Av. João César de Oliveira, 4495, bairro Cinco, tem pronto-socorro e soro para picada de escorpião, cobra e aranha: [(31) 3352-8827](tel:3133528827). [fonte: ms-hospitais-referencia-peconhentos-mg] [fonte: contagem-hmc-pronto-socorro]
+  peconhentos-hospital: |
+    Em Contagem: **Hospital Municipal José Lucas Filho** (HMC), Av. João César de Oliveira, 4495. [fonte: ms-hospitais-referencia-peconhentos-mg]
+  prefeitura: |
+    - Prefeitura: [(31) 3352-5000](tel:3133525000), de segunda a sexta, das 8h às 17h. [fonte: contagem-ouvidoria]
+    - Ouvidoria: [0800 031 3188](tel:08000313188) ou WhatsApp (31) 3391-1061. [fonte: contagem-ouvidoria]

@@ -8,6 +8,7 @@ dígitos do número no texto. Saída:
   OK        o número aparece numa das fontes da linha
   AUSENTE   a página abriu e o número não está lá  → precisa de revisão humana
   SEM-ACESSO a página não abriu ou é PDF (bloqueio, fora do ar) → conferir à mão
+  SEM-FONTE  o número não tem [fonte: id] na linha nem logo abaixo → erro
 
 Termina com erro só se houver AUSENTE. Uso: python3 ferramentas/conferir_telefones.py
 """
@@ -62,21 +63,36 @@ def main():
     urls = urls_das_fontes()
     ausentes = 0
     for arq in sorted(glob.glob('locais/**/*.yaml', recursive=True)):
-        for n, linha in enumerate(open(arq, encoding='utf-8'), 1):
+        linhas = open(arq, encoding='utf-8').read().split('\n')
+        for n, linha in enumerate(linhas, 1):
             numeros = [t for t in TEL.findall(linha) if t not in CURTOS]
             fontes = CITA.findall(linha)
+            # Linha de tabela sem citação: vale a citação logo abaixo da tabela
+            # (até o fim da tabela e uma linha em branco).
+            seguinte, brancas = n, 0
+            while numeros and not fontes and seguinte < len(linhas) and brancas < 2:
+                if not linhas[seguinte].strip():
+                    brancas += 1
+                fontes = CITA.findall(linhas[seguinte])
+                seguinte += 1
+            if numeros and not fontes:
+                for num in numeros:
+                    print(f'{"SEM-FONTE":10} {num:14} {arq}:{n}')
+                ausentes += len(numeros)
+                continue
             for num in numeros:
-                achou, abriu = False, False
+                achou, ilegivel = False, False
                 for f in fontes:
                     pagina = baixar(urls.get(f, ''))
                     if isinstance(pagina, Exception) or not pagina:
+                        ilegivel = True
                         continue
-                    abriu = True
                     # aceita 0800 281 7005, (84) 3232-5155, 84 3232 5155...
                     if num in so_digitos(pagina) or num[-8:] in so_digitos(pagina):
                         achou = True
                         break
-                estado = 'OK' if achou else ('AUSENTE' if abriu else 'SEM-ACESSO')
+                # Só é AUSENTE quando todas as fontes foram lidas e nenhuma tem o número.
+                estado = 'OK' if achou else ('SEM-ACESSO' if ilegivel else 'AUSENTE')
                 ausentes += estado == 'AUSENTE'
                 print(f'{estado:10} {num:14} {arq}:{n}')
     if ausentes:

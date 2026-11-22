@@ -1,0 +1,28 @@
+nome: Betim
+uf: mg
+energia: cemig
+agua: copasa
+# A Gasmig chega a Betim para indústria e comércio; rede residencial não confirmada.
+gas: null
+verificado_em: 2026-11-22
+blocos:
+  alagamento-local: |
+    - Em Betim, os pontos de atenção na chuva são o **rio Betim** (avenida Edméia Mattos Lazzarotti), o **Riacho das Areias** (avenida Marco Túlio Isaac) e os córregos **Estiva**, **Guandu**, **Bandeirinhas** e o da avenida Yete. O **Citrolândia** tem áreas mapeadas com risco de inundação. [fonte: betim-chuvas-18-nov-2026] [fonte: betim-desassoreamento-rios] [fonte: betim-cadastro-familias-areas-risco]
+    - Uns **20 cm de água** já podem apagar o motor do carro. [fonte: betim-orientacoes-chuva-bombeiros]
+  alertas-locais: |
+    - **Defesa Civil de Betim:** [**199**](tel:199). Siga também o **canal oficial da Defesa Civil de Betim no WhatsApp**, que manda alertas e orientações. [fonte: betim-telefones-uteis] [fonte: betim-whatsapp-defesa-civil]
+  ar-seco-local: |
+    Em Betim, a Prefeitura orienta evitar o sol **das 9h às 17h** nos dias muito quentes e secos, e usar umidificador ou bacias de água em casa. [fonte: betim-ondas-de-calor]
+  cadastro-defesa-civil: |
+    - [marcar: cad-betim] Em Betim, siga o **canal da Defesa Civil no WhatsApp** (procure "Defesa Civil de Betim" nos canais). O telefone é **199** [fonte: betim-whatsapp-defesa-civil] [fonte: betim-telefones-uteis]
+  defesa-civil-local: |
+    - **Defesa Civil de Betim:** [**199**](tel:199). Com vítima ou risco imediato, ligue também [193](tel:193). [fonte: betim-telefones-uteis] [fonte: betim-orientacoes-chuva-bombeiros]
+  deslizamento-local: |
+    Em Betim, há áreas mapeadas com risco de deslizamento em bairros como São João, Vila Kennedy, Parque Fernão Dias, Jardim Alterosas, Riacho III, Cruzeiro e Guanabara. Viu sinal de perigo? Saia e ligue [199](tel:199). [fonte: betim-encostas-sete-obras] [fonte: betim-orientacoes-chuva-bombeiros]
+  hospitais: |
+    **Hospital em Betim:** o **Hospital Público Regional** (Prefeito Osvaldo Rezende Franco), na Av. Edméia Mattos Lazzarotti, 3800, atende urgência e trauma 24 horas e tem soro para picada de escorpião, cobra e aranha: [(31) 3539-8100](tel:3135398100). [fonte: betim-hospital-regional-carta] [fonte: ms-hospitais-referencia-peconhentos-mg]
+  peconhentos-hospital: |
+    Em Betim: **Hospital Público Regional** (Av. Edméia Mattos Lazzarotti, 3800). [fonte: ms-hospitais-referencia-peconhentos-mg]
+  prefeitura: |
+    - Prefeitura: [0800 256 3236](tel:08002563236), de segunda a sexta, das 9h às 17h. [fonte: betim-telefones-uteis]
+    - Guarda Municipal: [**153**](tel:153). [fonte: betim-telefones-uteis]
