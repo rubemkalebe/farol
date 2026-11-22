@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../dados/conteudo.dart';
 import '../tema.dart';
 import 'capitulo.dart';
+import 'ficha.dart';
 
 const _icones = <String, IconData>{
   'bolt': Icons.bolt,
@@ -43,6 +44,21 @@ class _TelaInicioState extends State<TelaInicio> {
                 const _Cabecalho(),
                 const SizedBox(height: 16),
                 for (final c in capitulos) _CartaoCapitulo(capitulo: c),
+                const SizedBox(height: 8),
+                Text('Ferramentas', style: Theme.of(context).textTheme.titleMedium),
+                const SizedBox(height: 8),
+                Card(
+                  margin: const EdgeInsets.only(bottom: 12),
+                  child: ListTile(
+                    contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                    leading: const Icon(Icons.family_restroom, color: corFeixe, size: 32),
+                    title: const Text('Ficha da família',
+                        style: TextStyle(fontWeight: FontWeight.w700)),
+                    subtitle: const Text('Tipo sanguíneo, alergias, remédios e contatos. Fica só no aparelho.'),
+                    onTap: () => Navigator.of(context)
+                        .push(MaterialPageRoute(builder: (_) => const TelaFicha())),
+                  ),
+                ),
               ],
             );
           },

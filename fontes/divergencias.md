@@ -90,3 +90,16 @@ Coleta de 2026-11-22. Regra extra para este capítulo: **em RCP e engasgo vale a
 - **Lista oficial de kit da Defesa Civil de BH ou de MG:** não existe. Só os canais de alerta de BH foram confirmados.
 - **Kit de primeiros socorros:** não há fonte brasileira oficial. Foi usado o Manual MSD, sem torniquete nem remédios controlados.
 - **Comida sem cozimento:** não há fonte brasileira oficial. Foi usado o Ready.gov, com exemplos adaptados ao mercado brasileiro.
+
+---
+
+# Divergências: "Contatos de emergência"
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Ligar sem chip ou sem crédito | Nenhuma fonte oficial confirma. A Anatel só diz que as chamadas de emergência são gratuitas | **Não afirmar** que funciona sem chip |
+| "Não desligue primeiro" | Não aparece nas páginas oficiais abertas | Fora. Entram "responda às perguntas" e "siga as orientações" |
+| PBH, número para quem liga de fora de BH | mg.gov.br (2026): (31) 3429-0405. Página da PBH de 2018: (31) 3429-8750 | **3429-0405**, a fonte mais recente |
+| Copasa | O site oficial não abriu (JavaScript). Foram usadas as notícias da própria Copasa e a lista da Anatel e do mg.gov.br | 115 e 0800 0300 115 |
+| Emergência MG | A notícia de 2023 fala em implantação gradual | Entra, com o aviso de que depende de internet. A cobertura atual não foi confirmada |
+| CIATox-MG | Três telefones locais diferentes | (31) 3224-4000, que aparece em todas as fontes de MG |

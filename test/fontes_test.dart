@@ -47,4 +47,14 @@ void main() {
       expect(ids.toSet().length, ids.length, reason: '${arq.path} repete id de checklist');
     }
   });
+
+  test('links de telefone e SMS só têm dígitos', () {
+    final link = RegExp(r'\]\((tel|sms):([^)]*)\)');
+    for (final arq in Directory('conteudo/capitulos').listSync().whereType<File>()) {
+      for (final m in link.allMatches(arq.readAsStringSync())) {
+        expect(RegExp(r'^[0-9]+$').hasMatch(m.group(2)!), isTrue,
+            reason: '${arq.path}: ${m.group(0)}');
+      }
+    }
+  });
 }

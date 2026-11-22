@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
 import 'package:markdown/markdown.dart' as md;
+import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
 import '../dados/marcacoes.dart';
 import '../tema.dart';
+import 'ficha.dart' show ligar;
 
 class TelaCapitulo extends StatefulWidget {
   const TelaCapitulo({super.key, required this.capitulo});
@@ -58,6 +60,13 @@ class _TelaCapituloState extends State<TelaCapitulo> {
               md.ExtensionSet.gitHubFlavored.blockSyntaxes,
               [SintaxeFonte(), SintaxeGeral(), SintaxeMarcar(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
             ),
+            // tel: abre o discador e sms: abre a mensagem. Outros links não
+            // são seguidos: o app é offline e não abre páginas.
+            onTapLink: (_, href, _) {
+              if (href == null) return;
+              if (href.startsWith('tel:')) ligar(href.substring(4));
+              if (href.startsWith('sms:')) launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
+            },
             builders: {
               'fonte': _BotaoFonte(
                 (id) => fontes[id] != null ? _mostrarFonte(context, fontes[id]!) : null,
