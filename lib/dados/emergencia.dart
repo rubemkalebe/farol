@@ -1,12 +1,13 @@
 import 'package:yaml/yaml.dart';
 
 class Opcao {
-  const Opcao({required this.texto, this.vai, this.secoes = const [], this.ligar = const []});
+  const Opcao({required this.texto, this.vai, this.secoes = const [], this.ligar = const [], this.icone});
 
   final String texto;
   final String? vai;
   final List<String> secoes;
   final List<String> ligar;
+  final String? icone;
 }
 
 class Pergunta {
@@ -31,6 +32,7 @@ Map<String, Pergunta> lerRoteiro(String yamlTexto) {
               vai: o['vai'] as String?,
               secoes: [for (final s in (o['secoes'] as YamlList?) ?? YamlList()) s as String],
               ligar: [for (final t in (o['ligar'] as YamlList?) ?? YamlList()) '$t'],
+              icone: o['icone'] as String?,
             ),
         ],
       ),

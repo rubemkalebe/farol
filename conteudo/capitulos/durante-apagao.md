@@ -2,7 +2,7 @@
 
 > Leia primeiro a parte **O que pode matar**. O resto pode esperar.
 >
-> Este guia resume orientações oficiais. O ícone amarelo ao lado de cada orientação mostra de onde ela veio. O ícone azul de interrogação marca orientação geral, sem fonte oficial. Ele não substitui a bula nem o médico. **Emergência: 192 (SAMU) ou 193 (Bombeiros).**
+> Este guia resume orientações oficiais. Toque na etiqueta **fonte** no fim de cada orientação para ver de onde ela veio. A etiqueta azul **geral** marca orientação sem fonte oficial. Ele não substitui a bula nem o médico. **Emergência: 192 (SAMU) ou 193 (Bombeiros).**
 
 ---
 

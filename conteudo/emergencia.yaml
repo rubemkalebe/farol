@@ -3,70 +3,92 @@
 # no formato "id-do-capitulo/Título exato da seção". As perguntas só escolhem
 # o trecho: nenhuma orientação nova entra aqui, tudo vem dos guias com fonte.
 # "ligar" mostra botões grandes de ligação no topo da tela.
+# "icone" é um nome da lista em lib/telas/emergencia.dart.
 
 inicio:
   pergunta: O que está acontecendo?
   opcoes:
     - texto: Alguém desmaiou ou não responde
+      icone: pessoa
       vai: nao-responde
     - texto: Engasgo (não consegue respirar, tossir ou falar)
+      icone: ar
       secoes: ["primeiros-socorros/Engasgo"]
       ligar: ["192"]
     - texto: Sangrando muito
+      icone: sangue
       secoes: ["primeiros-socorros/Sangramento forte"]
       ligar: ["192"]
     - texto: Dor forte no peito
+      icone: coracao
       secoes: ["primeiros-socorros/Infarto (ataque cardíaco)"]
       ligar: ["192"]
     - texto: Boca torta, fraqueza de um lado ou fala enrolada
+      icone: cerebro
       secoes: ["primeiros-socorros/AVC (derrame)"]
       ligar: ["192"]
     - texto: Convulsão (tremendo, se debatendo)
+      icone: tremor
       secoes: ["primeiros-socorros/Convulsão", "primeiros-socorros/Posição de recuperação (de lado)"]
       ligar: ["192"]
     - texto: Choque elétrico
+      icone: raio
       secoes: ["primeiros-socorros/Choque elétrico"]
       ligar: ["193", "192"]
     - texto: Queimadura
+      icone: fogo
       secoes: ["primeiros-socorros/Queimadura"]
       ligar: ["192"]
     - texto: Picada de escorpião, cobra ou aranha
+      icone: bicho
       secoes: ["primeiros-socorros/Escorpião, cobra e aranha"]
       ligar: ["192"]
     - texto: Engoliu ou respirou produto, remédio ou veneno
+      icone: veneno
       secoes: ["primeiros-socorros/Envenenamento e intoxicação"]
       ligar: ["192"]
     - texto: Diabético passando mal (suor, tremor, confusão)
+      icone: acucar
       secoes: ["primeiros-socorros/Hipoglicemia (açúcar baixo)"]
       ligar: ["192"]
     - texto: Pancada na cabeça
+      icone: cabeca
       secoes: ["primeiros-socorros/Pancada na cabeça"]
     - texto: Osso quebrado ou torção
+      icone: osso
       secoes: ["primeiros-socorros/Fratura e torção"]
     - texto: Calor demais, pele quente e seca, confusão
+      icone: calor
       secoes: ["primeiros-socorros/Insolação e calor"]
       ligar: ["192"]
     - texto: Gerador, fogareiro ou fumaça em lugar fechado
+      icone: fumaca
       secoes: ["durante-apagao/O que pode matar"]
       ligar: ["192"]
     - texto: Cheiro de gás
+      icone: gas
       secoes: ["contatos/Energia, água e gás"]
       ligar: ["193"]
     - texto: Faltou energia
+      icone: energia
       vai: apagao
     - texto: Chuva forte, enchente, deslizamento ou tremor
+      icone: chuva
       vai: desastre
 
 nao-responde:
   pergunta: A pessoa respira normalmente?
   opcoes:
     - texto: Não respira, ou só puxa o ar de vez em quando
+      icone: urgente
       secoes: ["primeiros-socorros/Não responde e não respira: RCP"]
       ligar: ["192"]
     - texto: Não sei dizer
+      icone: duvida
       secoes: ["primeiros-socorros/Não responde e não respira: RCP"]
       ligar: ["192"]
     - texto: Respira normalmente
+      icone: ok
       secoes: ["primeiros-socorros/Desmaio", "primeiros-socorros/Posição de recuperação (de lado)"]
       ligar: ["192"]
 
@@ -74,43 +96,59 @@ apagao:
   pergunta: Faltou energia. O que você precisa agora?
   opcoes:
     - texto: Saber o que é perigoso (gerador, vela, fio caído)
+      icone: perigo
       secoes: ["durante-apagao/O que pode matar"]
     - texto: Geladeira e comida
+      icone: geladeira
       secoes: ["durante-apagao/Geladeira e comida"]
     - texto: Remédio que fica na geladeira (insulina)
+      icone: remedio
       secoes: ["durante-apagao/Remédios que ficam na geladeira"]
     - texto: Alguém depende de aparelho (oxigênio, CPAP)
+      icone: aparelho
       secoes: ["durante-apagao/Quem depende de aparelho elétrico"]
     - texto: Água para beber
+      icone: agua
       secoes: ["durante-apagao/Água"]
     - texto: Economizar a bateria do celular
+      icone: bateria
       secoes: ["durante-apagao/Bateria do celular"]
     - texto: Avisar a distribuidora de energia
+      icone: telefone
       secoes: ["durante-apagao/Avisar a distribuidora de energia"]
     - texto: Alguém preso no elevador / prédio
+      icone: predio
       secoes: ["durante-apagao/Em prédio"]
     - texto: A energia voltou
+      icone: voltou
       secoes: ["depois/Primeiros minutos", "depois/Geladeira e comida"]
 
 desastre:
   pergunta: O que está acontecendo?
   opcoes:
     - texto: Rua alagada ou água entrando em casa
+      icone: agua
       secoes: ["outros-desastres/Chuva forte e alagamento"]
       ligar: ["193", "199"]
     - texto: Rachadura, barranco cedendo, estalos na casa
+      icone: deslizamento
       secoes: ["outros-desastres/Deslizamento de terra"]
       ligar: ["199", "193"]
     - texto: Tempestade com raios
+      icone: raio
       secoes: ["outros-desastres/Raios"]
     - texto: Ventania, granizo, ciclone
+      icone: vento
       secoes: ["outros-desastres/Vendaval e granizo", "outros-desastres/Ciclone, tornado e vendaval forte (mais comum no Sul)"]
       ligar: ["199"]
     - texto: Tremor de terra
+      icone: tremor
       secoes: ["outros-desastres/Tremor de terra (terremoto)"]
       ligar: ["199"]
     - texto: Fogo no mato ou fumaça de queimada
+      icone: fogo
       secoes: ["outros-desastres/Fogo em mato ou lote", "outros-desastres/Fumaça de queimadas"]
       ligar: ["193"]
     - texto: Depois da enchente (limpeza, comida, água)
+      icone: limpeza
       secoes: ["outros-desastres/Depois da enchente"]

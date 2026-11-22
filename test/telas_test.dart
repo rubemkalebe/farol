@@ -23,10 +23,14 @@ void main() {
     expect(find.byType(AppBar), findsOneWidget);
     expect(find.textContaining('O que pode matar'), findsWidgets);
 
-    await tester.tap(find.byIcon(Icons.info_outline).first);
+    final etiqueta = find.byWidgetPredicate((w) => w.key is ValueKey<String> &&
+        (w.key! as ValueKey<String>).value.startsWith('fonte-')).first;
+    await tester.ensureVisible(etiqueta);
     await tester.pumpAndSettle();
-    expect(find.textContaining('Consultado em'), findsOneWidget);
-    Navigator.of(tester.element(find.textContaining('Consultado em'))).pop();
+    await tester.tap(etiqueta);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Consultado em'), findsWidgets);
+    Navigator.of(tester.element(find.textContaining('Consultado em').first)).pop();
     await tester.pumpAndSettle();
 
     // Orientação sem fonte oficial abre o aviso de orientação geral.

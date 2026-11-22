@@ -26,17 +26,41 @@ class BotoesLigar extends StatelessWidget {
           for (final (i, n) in numeros.indexed) ...[
             if (i > 0) const SizedBox(width: 8),
             Expanded(
-              child: FilledButton.icon(
+              child: Material(
                 key: ValueKey('ligar-$n'),
-                style: FilledButton.styleFrom(
-                  backgroundColor: corAlerta,
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 14),
-                  textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                color: Colors.transparent,
+                child: Ink(
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(colors: [corAlerta, corAlertaEscuro]),
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: InkWell(
+                    onTap: () => ligar(n),
+                    borderRadius: BorderRadius.circular(16),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Icon(Icons.phone_in_talk, color: Colors.white, size: 24),
+                          const SizedBox(width: 10),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(n,
+                                  style: const TextStyle(
+                                      color: Colors.white, fontSize: 24, fontWeight: FontWeight.w900, height: 1)),
+                              if (_nomes[n] != null)
+                                Text(_nomes[n]!,
+                                    style: const TextStyle(color: Color(0xE6FFFFFF), fontSize: 12, height: 1.3)),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-                onPressed: () => ligar(n),
-                icon: const Icon(Icons.phone),
-                label: Text(_nomes.containsKey(n) ? '$n ${_nomes[n]}' : n),
               ),
             ),
           ],

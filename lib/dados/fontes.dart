@@ -41,13 +41,17 @@ Future<Map<String, Fonte>> carregarFontes() async {
   };
 }
 
-/// Reconhece `[fonte: id]` no Markdown e gera um elemento `<fonte>` com o id.
+final _idFonte = RegExp(r'\[fonte: ([a-z0-9-]+)\]');
+
+/// Reconhece `[fonte: id]` e também várias seguidas (`[fonte: a] [fonte: b]`),
+/// que viram um único elemento `<fonte>` com os ids separados por vírgula.
 class SintaxeFonte extends md.InlineSyntax {
-  SintaxeFonte() : super(r'\[fonte: ([a-z0-9-]+)\]');
+  SintaxeFonte() : super(r'\[fonte: [a-z0-9-]+\](?:\s*\[fonte: [a-z0-9-]+\])*');
 
   @override
   bool onMatch(md.InlineParser parser, Match match) {
-    parser.addNode(md.Element.text('fonte', match.group(1)!));
+    final ids = [for (final m in _idFonte.allMatches(match.group(0)!)) m.group(1)!];
+    parser.addNode(md.Element.text('fonte', ids.join(',')));
     return true;
   }
 }

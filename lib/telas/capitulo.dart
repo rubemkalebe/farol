@@ -4,6 +4,7 @@ import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
 import '../dados/locais.dart';
 import '../dados/marcacoes.dart';
+import '../tema.dart';
 import 'texto_farol.dart';
 
 class TelaCapitulo extends StatefulWidget {
@@ -55,7 +56,16 @@ class _TelaCapituloState extends State<TelaCapitulo> {
             return const Center(child: CircularProgressIndicator());
           }
           final (texto, fontes, marcacoes) = snap.data!;
-          return TextoFarol(markdown: texto, capituloId: widget.capitulo.id, fontes: fontes, marcacoes: marcacoes);
+          final itens = itensDeChecklist(texto);
+          return Column(
+            children: [
+              if (itens.isNotEmpty) _Progresso(capitulo: widget.capitulo.id, itens: itens, marcacoes: marcacoes),
+              Expanded(
+                child: TextoFarol(
+                    markdown: texto, capituloId: widget.capitulo.id, fontes: fontes, marcacoes: marcacoes),
+              ),
+            ],
+          );
         },
       ),
     );
@@ -74,5 +84,54 @@ class _TelaCapituloState extends State<TelaCapitulo> {
       ),
     );
     if (ok == true) await marcacoes.limpar(widget.capitulo.id);
+  }
+}
+
+/// "12 de 62 prontos", com barra, no topo dos capítulos com checklist.
+class _Progresso extends StatelessWidget {
+  const _Progresso({required this.capitulo, required this.itens, required this.marcacoes});
+
+  final String capitulo;
+  final List<String> itens;
+  final Marcacoes marcacoes;
+
+  @override
+  Widget build(BuildContext context) {
+    return ListenableBuilder(
+      listenable: marcacoes,
+      builder: (context, _) {
+        final feitos = itens.where((i) => marcacoes.marcado(capitulo, i)).length;
+        final tudo = feitos == itens.length;
+        return Container(
+          margin: const EdgeInsets.fromLTRB(16, 4, 16, 4),
+          padding: const EdgeInsets.fromLTRB(14, 10, 14, 12),
+          decoration: BoxDecoration(
+            color: corSuperficie,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(color: tudo ? corFeixe : corBorda),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                tudo ? 'Tudo pronto!' : '$feitos de ${itens.length} prontos',
+                key: const ValueKey('progresso'),
+                style: const TextStyle(fontWeight: FontWeight.w800),
+              ),
+              const SizedBox(height: 8),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(6),
+                child: LinearProgressIndicator(
+                  value: feitos / itens.length,
+                  minHeight: 8,
+                  backgroundColor: corSuperficieAlta,
+                  color: corFeixe,
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
   }
 }

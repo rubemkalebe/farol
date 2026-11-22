@@ -1,40 +1,92 @@
 import 'package:flutter/material.dart';
 
-const corNoite = Color(0xFF0B1320);
-const corSuperficie = Color(0xFF16213A);
+// Paleta do Farol. Fundo quase preto: em tela OLED, pixel preto fica
+// apagado e não gasta bateria. A luz é o amarelo do feixe do farol.
+const corNoite = Color(0xFF040507);
+const corSuperficie = Color(0xFF0F131A);
+const corSuperficieAlta = Color(0xFF161B24);
+const corBorda = Color(0xFF242C3A);
 const corFeixe = Color(0xFFFFD34E);
+const corFeixeSuave = Color(0x33FFD34E);
 const corTexto = Color(0xFFE9EEF6);
+const corTextoSuave = Color(0xFF9AA5B5);
 // Orientação sem fonte oficial: cor distinta do amarelo das fontes.
 const corAviso = Color(0xFF8FB8DE);
 // Emergência: botões de ligar e o "O que está acontecendo?".
-const corAlerta = Color(0xFFE5484D);
+const corAlerta = Color(0xFFFF4D57);
+const corAlertaEscuro = Color(0xFFB3141F);
 
 final _base = ThemeData(
   useMaterial3: true,
   brightness: Brightness.dark,
   scaffoldBackgroundColor: corNoite,
-  colorScheme: ColorScheme.fromSeed(
-    seedColor: corFeixe,
-    brightness: Brightness.dark,
+  colorScheme: const ColorScheme.dark(
     primary: corFeixe,
+    onPrimary: Color(0xFF1A1300),
+    secondary: corAviso,
+    error: corAlerta,
     surface: corSuperficie,
     onSurface: corTexto,
+    surfaceContainerHighest: corSuperficieAlta,
+    outline: corBorda,
+    outlineVariant: corBorda,
   ),
+  dividerColor: corBorda,
   appBarTheme: const AppBarTheme(
     backgroundColor: corNoite,
     foregroundColor: corTexto,
+    surfaceTintColor: Colors.transparent,
+    centerTitle: false,
+    titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.w800, color: corTexto, letterSpacing: -0.2),
   ),
+  cardTheme: CardThemeData(
+    color: corSuperficie,
+    surfaceTintColor: Colors.transparent,
+    elevation: 0,
+    margin: EdgeInsets.zero,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(18),
+      side: const BorderSide(color: corBorda),
+    ),
+  ),
+  inputDecorationTheme: InputDecorationTheme(
+    filled: true,
+    fillColor: corSuperficie,
+    hintStyle: const TextStyle(color: corTextoSuave),
+    contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
+    border: OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: const BorderSide(color: corBorda)),
+    enabledBorder:
+        OutlineInputBorder(borderRadius: BorderRadius.circular(28), borderSide: const BorderSide(color: corBorda)),
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(28),
+      borderSide: const BorderSide(color: corFeixe, width: 1.5),
+    ),
+  ),
+  chipTheme: const ChipThemeData(
+    backgroundColor: corSuperficie,
+    side: BorderSide(color: corBorda),
+    shape: StadiumBorder(),
+    labelStyle: TextStyle(color: corTexto, fontWeight: FontWeight.w600),
+  ),
+  bottomSheetTheme: const BottomSheetThemeData(
+    backgroundColor: corSuperficieAlta,
+    surfaceTintColor: Colors.transparent,
+    showDragHandle: true,
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(24))),
+  ),
+  dialogTheme: const DialogThemeData(backgroundColor: corSuperficieAlta, surfaceTintColor: Colors.transparent),
+  listTileTheme: const ListTileThemeData(iconColor: corFeixe),
 );
 
-// Letra maior que o padrão: leitura em tela com brilho baixo.
 // O textTheme do ThemeData ainda não tem tamanhos; eles vêm da geometria
 // da Typography, por isso a fusão antes de aumentar.
 final _tipografia = Typography.material2021();
 
+// Letra maior que o padrão: leitura em tela com brilho baixo.
 final temaFarol = _base.copyWith(
   textTheme: _tipografia.englishLike.merge(_tipografia.white).apply(
-    fontSizeFactor: 1.15,
-    bodyColor: corTexto,
-    displayColor: corTexto,
-  ),
+        fontSizeFactor: 1.15,
+        bodyColor: corTexto,
+        displayColor: corTexto,
+      ),
 );

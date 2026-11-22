@@ -6,6 +6,19 @@ import '../dados/secoes.dart';
 import '../tema.dart';
 import 'secoes.dart';
 
+/// Ícones das opções do roteiro (campo "icone" em conteudo/emergencia.yaml).
+const iconesEmergencia = <String, IconData>{
+  'pessoa': Icons.airline_seat_flat, 'ar': Icons.air, 'sangue': Icons.water_drop, 'coracao': Icons.favorite,
+  'cerebro': Icons.psychology, 'tremor': Icons.vibration, 'raio': Icons.bolt, 'fogo': Icons.local_fire_department,
+  'bicho': Icons.pest_control, 'veneno': Icons.science, 'acucar': Icons.bloodtype, 'cabeca': Icons.face,
+  'osso': Icons.accessibility_new, 'calor': Icons.thermostat, 'fumaca': Icons.cloud, 'gas': Icons.gas_meter,
+  'energia': Icons.power_off, 'chuva': Icons.thunderstorm, 'urgente': Icons.priority_high, 'duvida': Icons.help,
+  'ok': Icons.check_circle, 'perigo': Icons.warning_amber, 'geladeira': Icons.kitchen, 'remedio': Icons.medication,
+  'aparelho': Icons.monitor_heart, 'agua': Icons.water, 'bateria': Icons.battery_alert, 'telefone': Icons.call,
+  'predio': Icons.apartment, 'voltou': Icons.power, 'deslizamento': Icons.landslide, 'vento': Icons.air,
+  'limpeza': Icons.cleaning_services,
+};
+
 Future<Map<String, Pergunta>>? _roteiro;
 Future<Map<String, Pergunta>> carregarRoteiro() =>
     _roteiro ??= rootBundle.loadString('conteudo/emergencia.yaml').then(lerRoteiro);
@@ -44,20 +57,33 @@ class TelaEmergencia extends StatelessWidget {
               for (final o in p.opcoes)
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 4, 16, 4),
-                  child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
-                      alignment: Alignment.centerLeft,
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                      side: const BorderSide(color: corFeixe, width: 1.5),
-                      foregroundColor: corTexto,
-                      textStyle: const TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
-                    ),
-                    onPressed: () => _escolher(context, o),
-                    child: Row(
-                      children: [
-                        Expanded(child: Text(o.texto)),
-                        const Icon(Icons.chevron_right, color: corFeixe),
-                      ],
+                  child: Card(
+                    clipBehavior: Clip.antiAlias,
+                    child: InkWell(
+                      onTap: () => _escolher(context, o),
+                      child: Padding(
+                        padding: const EdgeInsets.fromLTRB(12, 12, 10, 12),
+                        child: Row(
+                          children: [
+                            Container(
+                              width: 44,
+                              height: 44,
+                              decoration: BoxDecoration(
+                                color: (o.ligar.isNotEmpty ? corAlerta : corFeixe).withValues(alpha: 0.14),
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                              child: Icon(iconesEmergencia[o.icone] ?? Icons.arrow_forward,
+                                  color: o.ligar.isNotEmpty ? corAlerta : corFeixe),
+                            ),
+                            const SizedBox(width: 14),
+                            Expanded(
+                              child: Text(o.texto,
+                                  style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700, height: 1.25)),
+                            ),
+                            const Icon(Icons.chevron_right, color: corTextoSuave),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                 ),

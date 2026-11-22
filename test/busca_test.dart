@@ -4,6 +4,7 @@ import 'package:farol/dados/busca.dart';
 import 'package:farol/dados/emergencia.dart';
 import 'package:farol/dados/locais.dart';
 import 'package:farol/dados/secoes.dart';
+import 'package:farol/telas/emergencia.dart' show iconesEmergencia;
 import 'package:flutter_test/flutter_test.dart';
 
 Future<String> lerDisco(String caminho) async => File(caminho).readAsString();
@@ -79,6 +80,9 @@ void main() {
         if (o.vai != null) {
           expect(roteiro, contains(o.vai), reason: '${p.id}: "${o.texto}" vai para pergunta inexistente');
           alcancadas.add(o.vai!);
+        }
+        if (o.icone != null) {
+          expect(iconesEmergencia, contains(o.icone), reason: '${p.id}: ícone "${o.icone}" não existe');
         }
         for (final t in o.ligar) {
           expect(RegExp(r'^[0-9]+$').hasMatch(t), isTrue, reason: '${p.id}: ligar "$t"');

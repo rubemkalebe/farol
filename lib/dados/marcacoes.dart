@@ -39,6 +39,9 @@ class SintaxeMarcar extends md.InlineSyntax {
   }
 }
 
-final _marcaItem = RegExp(r'\[marcar: [a-z0-9-]+\]');
+final _marcaItem = RegExp(r'\[marcar: ([a-z0-9-]+)\]');
+
+/// Ids dos itens de checklist presentes no texto.
+List<String> itensDeChecklist(String markdown) => [for (final m in _marcaItem.allMatches(markdown)) m.group(1)!];
 
 bool temMarcacoes(String markdown) => _marcaItem.hasMatch(markdown);

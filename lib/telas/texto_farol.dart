@@ -44,19 +44,37 @@ class TextoFarol extends StatelessWidget {
         if (href.startsWith('sms:')) launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
       },
       builders: {
-        'fonte': _BotaoFonte((id) => fontes[id] != null ? _mostrarFonte(context, fontes[id]!) : null),
+        'fonte': _BotaoFonte((ids) => _mostrarFontes(context, [for (final id in ids) ?fontes[id]])),
         'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
         'marcar': _CaixaMarcar(capituloId, marcacoes),
       },
       padding: padding,
       styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
-        a: const TextStyle(color: corFeixe, fontWeight: FontWeight.w700),
+        p: tema.textTheme.bodyLarge?.copyWith(height: 1.5),
+        listBullet: tema.textTheme.bodyLarge?.copyWith(height: 1.5, color: corFeixe),
+        a: const TextStyle(color: corFeixe, fontWeight: FontWeight.w800, decoration: TextDecoration.underline,
+            decorationColor: corFeixeSuave),
+        strong: const TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+        h1: tema.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
+        h2: tema.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, color: corFeixe, letterSpacing: -0.2),
+        h2Padding: const EdgeInsets.only(top: 12, bottom: 4),
+        h3: tema.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+        h3Padding: const EdgeInsets.only(top: 8),
+        blockSpacing: 12,
+        blockquotePadding: const EdgeInsets.all(14),
         blockquoteDecoration: BoxDecoration(
           color: corSuperficie,
-          borderRadius: BorderRadius.circular(8),
-          border: const Border(left: BorderSide(color: corFeixe, width: 4)),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: corBorda),
         ),
-        tableBorder: TableBorder.all(color: tema.dividerColor),
+        tableBorder: TableBorder.symmetric(inside: const BorderSide(color: corBorda)),
+        tableHead: const TextStyle(fontWeight: FontWeight.w800, color: corFeixe),
+        tableHeadCellsDecoration: const BoxDecoration(color: corSuperficieAlta),
+        tableCellsDecoration: const BoxDecoration(color: corSuperficie),
+        tableCellsPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        horizontalRuleDecoration: const BoxDecoration(
+          border: Border(top: BorderSide(color: corBorda)),
+        ),
       ),
     );
   }
@@ -86,35 +104,89 @@ void _mostrarAvisoGeral(BuildContext context) {
     );
   }
 
-void _mostrarFonte(BuildContext context, Fonte f) {
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (context) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
+void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
+  showModalBottomSheet<void>(
+    context: context,
+    isScrollControlled: true,
+    builder: (context) => SafeArea(
+      child: ConstrainedBox(
+        constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.7),
+        child: ListView(
+          shrinkWrap: true,
+          padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
           children: [
-            Text(f.orgao, style: Theme.of(context).textTheme.labelLarge?.copyWith(color: corFeixe)),
-            const SizedBox(height: 6),
-            Text(f.titulo, style: Theme.of(context).textTheme.titleMedium),
+            Text(fontes.length == 1 ? 'De onde veio' : 'De onde veio (${fontes.length} fontes)',
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
             const SizedBox(height: 12),
-            SelectableText(f.url, style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: 4),
-            Text('Consultado em ${f.acessado}', style: Theme.of(context).textTheme.bodySmall),
+            for (final f in fontes)
+              Container(
+                margin: const EdgeInsets.only(bottom: 10),
+                padding: const EdgeInsets.all(14),
+                decoration: BoxDecoration(
+                  color: corSuperficie,
+                  borderRadius: BorderRadius.circular(14),
+                  border: Border.all(color: corBorda),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(f.orgao,
+                        style: const TextStyle(color: corFeixe, fontWeight: FontWeight.w700, fontSize: 13)),
+                    const SizedBox(height: 4),
+                    Text(f.titulo, style: const TextStyle(fontWeight: FontWeight.w600)),
+                    const SizedBox(height: 8),
+                    SelectableText(f.url, style: const TextStyle(color: corTextoSuave, fontSize: 12)),
+                    const SizedBox(height: 2),
+                    Text('Consultado em ${f.acessado}', style: const TextStyle(color: corTextoSuave, fontSize: 12)),
+                  ],
+                ),
+              ),
           ],
         ),
       ),
-    );
-  }
+    ),
+  );
+}
 
-/// Ícone de informação no lugar de `[fonte: id]`. Usa a fonte de ícones
-/// embutida no app, então aparece mesmo sem internet.
+/// Etiqueta pequena no fim da frase: "fonte" ou "2 fontes".
+Widget _etiqueta({required Key key, required IconData icone, required String texto, required Color cor,
+    required VoidCallback onTap, required String rotulo}) {
+  return Semantics(
+    button: true,
+    label: rotulo,
+    child: Padding(
+      padding: const EdgeInsets.only(left: 4),
+      child: InkWell(
+        key: key,
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+          decoration: BoxDecoration(
+            color: cor.withValues(alpha: 0.10),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(color: cor.withValues(alpha: 0.35)),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(icone, size: 11, color: cor),
+              const SizedBox(width: 3),
+              Text(texto, style: TextStyle(color: cor, fontSize: 11, fontWeight: FontWeight.w700, height: 1.4)),
+            ],
+          ),
+        ),
+      ),
+    ),
+  );
+}
+
+/// Etiqueta de fonte no lugar de `[fonte: id]` (uma ou várias seguidas).
+/// Usa a fonte de ícones embutida no app, então aparece mesmo sem internet.
 class _BotaoFonte extends MarkdownElementBuilder {
   _BotaoFonte(this.aoTocar);
 
-  final void Function(String id) aoTocar;
+  final void Function(List<String> ids) aoTocar;
 
   @override
   bool isBlockElement() => false;
@@ -122,19 +194,14 @@ class _BotaoFonte extends MarkdownElementBuilder {
   @override
   Widget? visitElementAfterWithContext(
       BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
-    final id = element.textContent;
-    return Semantics(
-      button: true,
-      label: 'Ver fonte',
-      child: InkWell(
-        key: ValueKey('fonte-$id'),
-        onTap: () => aoTocar(id),
-        borderRadius: BorderRadius.circular(12),
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
-          child: Icon(Icons.info_outline, size: 18, color: corFeixe),
-        ),
-      ),
+    final ids = element.textContent.split(',');
+    return _etiqueta(
+      key: ValueKey('fonte-${ids.first}'),
+      icone: Icons.info_outline,
+      texto: ids.length == 1 ? 'fonte' : '${ids.length} fontes',
+      cor: corFeixe,
+      rotulo: ids.length == 1 ? 'Ver fonte' : 'Ver ${ids.length} fontes',
+      onTap: () => aoTocar(ids),
     );
   }
 }
@@ -151,17 +218,13 @@ class _MarcaGeral extends MarkdownElementBuilder {
   @override
   Widget? visitElementAfterWithContext(
       BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
-    return Semantics(
-      button: true,
-      label: 'Orientação geral, sem fonte oficial',
-      child: InkWell(
-        onTap: aoTocar,
-        borderRadius: BorderRadius.circular(12),
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
-          child: Icon(Icons.help_outline, size: 18, color: corAviso),
-        ),
-      ),
+    return _etiqueta(
+      key: const ValueKey('geral'),
+      icone: Icons.help_outline,
+      texto: 'geral',
+      cor: corAviso,
+      rotulo: 'Orientação geral, sem fonte oficial',
+      onTap: aoTocar,
     );
   }
 }
@@ -191,11 +254,21 @@ class _CaixaMarcar extends MarkdownElementBuilder {
             onTap: () => marcacoes.alternar(capitulo, item),
             borderRadius: BorderRadius.circular(6),
             child: Padding(
-              padding: const EdgeInsets.only(right: 6),
-              child: Icon(
-                marcado ? Icons.check_box : Icons.check_box_outline_blank,
-                size: 22,
-                color: marcado ? corFeixe : corTexto,
+              padding: const EdgeInsets.only(right: 8),
+              child: AnimatedContainer(
+                duration: const Duration(milliseconds: 150),
+                width: 22,
+                height: 22,
+                decoration: BoxDecoration(
+                  color: marcado ? corFeixe : Colors.transparent,
+                  borderRadius: BorderRadius.circular(7),
+                  border: Border.all(color: marcado ? corFeixe : corTextoSuave, width: 1.6),
+                ),
+                child: Icon(
+                  marcado ? Icons.check_box : Icons.check_box_outline_blank,
+                  size: marcado ? 16 : 0,
+                  color: corNoite,
+                ),
               ),
             ),
           ),

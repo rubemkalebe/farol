@@ -6,7 +6,7 @@
 >
 > Antes de chegar perto, veja se o lugar é seguro para você: fio elétrico, fogo, fumaça, trânsito. Se você se machucar, ninguém socorre os dois. [geral]
 >
-> Este guia resume orientações oficiais e não substitui o atendimento. O ícone amarelo mostra a fonte; o azul de interrogação marca orientação geral.
+> Este guia resume orientações oficiais e não substitui o atendimento. A etiqueta **fonte** mostra de onde veio cada orientação; a azul **geral** marca orientação sem fonte oficial.
 
 ---
 
