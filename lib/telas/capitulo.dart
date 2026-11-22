@@ -6,7 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
 import '../dados/marcacoes.dart';
-import '../dados/regiao.dart';
+import '../dados/locais.dart';
 import '../tema.dart';
 import 'ficha.dart' show ligar;
 
@@ -25,9 +25,10 @@ class _TelaCapituloState extends State<TelaCapitulo> {
   late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados = _carregar();
 
   Future<(String, Map<String, Fonte>, Marcacoes)> _carregar() async {
-    final (bruto, fontes, marcacoes, regiao) =
-        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), lerRegiao()).wait;
-    return (filtrarRegiao(bruto, regiao ?? 'outra'), fontes, marcacoes);
+    final (bruto, fontes, marcacoes, cidade) =
+        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), lerCidade()).wait;
+    final blocos = await blocosLocais(cidade == outraCidade ? null : cidade);
+    return (aplicarLocais(bruto, blocos), fontes, marcacoes);
   }
 
   @override

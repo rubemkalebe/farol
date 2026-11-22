@@ -1,0 +1,8 @@
+nome: Copasa
+tipo: agua
+verificado_em: 2026-11-22
+blocos:
+  agua-contato: |
+    - Avise a Copasa: [115](tel:115) ou WhatsApp (31) 99770-7000. [fonte: copasa-canais-oficiais]
+  linha-agua: |
+    | **Copasa** (água) | [**115**](tel:115) ou [0800 0300 115](tel:08000300115) | WhatsApp (31) 99770-7000 [fonte: copasa-canais-oficiais] |

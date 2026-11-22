@@ -1,0 +1,34 @@
+nome: Cemig
+tipo: energia
+verificado_em: 2026-11-22
+blocos:
+  cadastro-energia: |
+    - [marcar: cad-cemig] **Cemig:** deixe um celular cadastrado para receber avisos e **anote o número da instalação**, que fica na conta de luz [fonte: cemig-plano-comunicacao-interrupcao]
+    - [marcar: cad-eletrodependente] Se alguém depende de aparelho elétrico: faça o **cadastro na Cemig** com declaração médica e combine com o médico o que fazer sem energia [fonte: cemig-direitos-deveres-equip-vida] [fonte: sp-sempre-alerta-plano-familiar]
+  energia-avisar: |
+    **Cemig**
+
+    | Canal | Como |
+    |---|---|
+    | Telefone | **116**, grátis, 24 horas |
+    | WhatsApp | (31) 3506-1160, escreva "estou sem luz" |
+    | SMS | 29810 |
+    | App ou site | Cemig Atende, opção "Estou sem luz" |
+    | Deficiência auditiva | 0800 723 8007 |
+
+    [fonte: cemig-comunicar-falta-energia]
+
+    - Tenha **anotado o número da instalação** (está na conta de luz). Ligando no 116 com ele, você fica sabendo se a falta já foi confirmada e a previsão de volta. [fonte: cemig-plano-comunicacao-interrupcao]
+    - O site da Cemig tem um mapa das áreas sem energia, atualizado a cada 30 minutos. [fonte: cemig-plano-comunicacao-interrupcao]
+    - Mantenha um celular cadastrado na Cemig para receber os avisos. [fonte: cemig-plano-comunicacao-interrupcao]
+  energia-cadastro-vital: |
+    - Na Cemig, o cadastro é feito pelos canais digitais, com declaração médica. Mantenha o cadastro atualizado. [fonte: cemig-direitos-deveres-equip-vida]
+    - **O cadastro não garante religamento antes dos outros num apagão.** A regra da ANEEL não prevê isso. Tenha um plano B. [fonte: aneel-ren-1000-2021]
+  energia-instalacao: |
+    Tenha à mão **o número da instalação**, que aparece na conta de luz. Ele agiliza o atendimento da Cemig. [fonte: cemig-plano-comunicacao-interrupcao]
+  energia-ouvidoria: |
+    - Ouvidoria da Cemig: [0800 728 3838](tel:08007283838). [fonte: cemig-faq-como-solicitar-ressarcimento]
+  energia-ressarcimento: |
+    **Como pedir (Cemig):** pelo app ou site Cemig Atende, pelo [116](tel:116) ou numa agência. [fonte: cemig-faq-como-solicitar-ressarcimento]
+  linha-energia: |
+    | **Cemig** (falta de energia) | [**116**](tel:116), grátis, 24 horas | WhatsApp (31) 3506-1160 · SMS 29810 [fonte: cemig-comunicar-falta-energia] |

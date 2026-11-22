@@ -55,15 +55,7 @@ A limpeza de rotina, com escova, é diferente e deve ser feita **a cada 6 meses*
 
 Se um aparelho queimou por causa de um problema na rede, a distribuidora tem de consertar, trocar ou pagar. **Não precisa provar culpa da empresa**: a responsabilidade dela é objetiva. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: cemig-faq-processo-ressarcimento]
 
-:::regiao bh
-**Como pedir (Cemig):** pelo app ou site Cemig Atende, pelo [116](tel:116) ou numa agência. [fonte: cemig-faq-como-solicitar-ressarcimento]
-:::
-:::regiao natal,mossoro
-**Como pedir (Cosern):** pelo [116](tel:116), pelo WhatsApp, pelo site ou presencialmente. **Não jogue o aparelho fora**: a Cosern pode pedir as peças. [fonte: cosern-ressarcimento-danos]
-:::
-:::regiao outra
-**Como pedir:** pelos canais da sua distribuidora (normalmente o [116](tel:116)). Os prazos abaixo valem para todo o Brasil. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: anatel-sup-codigos]
-:::
+{{energia-ressarcimento}}
 
 - [marcar: ress-dados] Tenha em mãos: CPF, documento com foto, **número da instalação**, data e hora aproximadas, o que aconteceu, e marca e modelo do aparelho [fonte: cemig-faq-dados-minimos-ressarcimento]
 - [marcar: ress-protocolo] **Anote o número do protocolo** [fonte: almg-noticia-concessionarias-ressarcir]
@@ -81,12 +73,7 @@ Se um aparelho queimou por causa de um problema na rede, a distribuidora tem de 
 - Você pode consertar o aparelho antes da vistoria, por sua conta, **sem perder o direito**. [fonte: arsesp-cartilha-ressarcimento-danos]
 - A comida e os remédios perdidos com a geladeira queimada também podem ser cobrados. [fonte: almg-noticia-concessionarias-ressarcir]
 - Não resolveu? Reclame na ouvidoria da distribuidora, na **ANEEL** ([167](tel:167)) ou no Consumidor.gov.br. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: aneel-reclame-da-distribuidora]
-:::regiao bh
-- Ouvidoria da Cemig: [0800 728 3838](tel:08007283838). [fonte: cemig-faq-como-solicitar-ressarcimento]
-:::
-:::regiao natal,mossoro
-- Ouvidoria da Cosern: [0800 084 0404](tel:08000840404), dias úteis, com o protocolo do primeiro pedido. [fonte: cosern-canais-atendimento]
-:::
+{{energia-ouvidoria}}
 
 ---
 

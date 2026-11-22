@@ -1,0 +1,50 @@
+name: Sugerir número ou correção
+description: Telefone, WhatsApp ou serviço local que está errado, mudou ou falta no Farol.
+title: "[Número] "
+labels: [dados-locais]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado! Num app de emergência, um número errado é perigoso, então só aceitamos números que aparecem numa **página oficial** (prefeitura, governo, empresa de energia ou água, hospital).
+  - type: input
+    id: cidade
+    attributes:
+      label: Cidade e estado
+      placeholder: "Ex.: Contagem (MG)"
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Que tipo de serviço?
+      options:
+        - Defesa Civil
+        - Energia
+        - Água
+        - Gás
+        - Hospital ou centro de intoxicação
+        - Prefeitura
+        - Polícia ou direitos
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: numero
+    attributes:
+      label: Número e para que serve
+      placeholder: "Ex.: Defesa Civil de Contagem, (31) 0000-0000, 24 horas"
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Link da página oficial onde o número aparece
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: obs
+    attributes:
+      label: Observações
+      description: O número antigo, se for uma correção. Horário de atendimento etc.

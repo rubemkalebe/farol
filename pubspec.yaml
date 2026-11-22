@@ -67,6 +67,11 @@ flutter:
     - conteudo/indice.yaml
     - conteudo/capitulos/
     - fontes/fontes.yaml
+    - locais/
+    - locais/estados/
+    - locais/empresas/
+    - locais/cidades/mg/
+    - locais/cidades/rn/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

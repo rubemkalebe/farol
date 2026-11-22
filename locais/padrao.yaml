@@ -1,0 +1,41 @@
+nome: Outra cidade
+verificado_em: 2026-11-22
+blocos:
+  agua-contato: |
+    - Avise a empresa de água: [115](tel:115). [fonte: anatel-sup-codigos]
+  alagamento-local: ""
+  alertas-locais: ""
+  ar-seco-local: ""
+  aviso-agua: ""
+  cadastro-agua: ""
+  cadastro-defesa-civil: |
+    - [marcar: cad-locais] Anote na Ficha os telefones da Defesa Civil, da empresa de água e do hospital de referência da sua cidade [geral]
+  cadastro-energia: |
+    - [marcar: cad-distribuidora] **Distribuidora de energia:** anote o número da instalação, que fica na conta de luz, e os canais de atendimento [geral]
+    - [marcar: cad-eletrodependente-outra] Se alguém depende de aparelho elétrico: faça o **cadastro de equipamento vital** na distribuidora, com comprovação médica [fonte: aneel-ren-1000-2021]
+  defesa-civil-estadual: ""
+  defesa-civil-local: ""
+  deslizamento-local: ""
+  energia-avisar: |
+    Ligue para a distribuidora da sua cidade: o número costuma ser o [**116**](tel:116). [fonte: anatel-sup-codigos] Tenha à mão o número da instalação, que está na conta de luz. [geral]
+  energia-cadastro-vital: |
+    - **O cadastro, pela regra da ANEEL, não garante religamento antes dos outros num apagão.** Pergunte à sua distribuidora e tenha um plano B. [fonte: aneel-ren-1000-2021]
+  energia-instalacao: |
+    Tenha à mão **o número da instalação**, que aparece na conta de luz. [geral]
+  energia-ouvidoria: ""
+  energia-ressarcimento: |
+    **Como pedir:** pelos canais da sua distribuidora (normalmente o [116](tel:116)). Os prazos abaixo valem para todo o Brasil. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: anatel-sup-codigos]
+  hospitais: ""
+  intoxicacao-contatos: ""
+  intoxicacao-local: ""
+  linha-agua: |
+    | **Água** | [**115**](tel:115) | Empresa de água da sua cidade [fonte: anatel-sup-codigos] |
+  linha-energia: |
+    | **Energia** (falta de luz) | [**116**](tel:116) | Distribuidora da sua região [fonte: anatel-sup-codigos] |
+  linha-gas: |
+    | **Gás encanado** (se houver) | [**117**](tel:117) | [fonte: anatel-sup-codigos] |
+  peconhentos-hospital: |
+    A lista de hospitais com soro, por estado, está no site do Ministério da Saúde. Descubra o da sua cidade **antes** de precisar e anote na Ficha. [fonte: ms-hospitais-referencia-peconhentos-rn] [geral]
+  policia-local: ""
+  prefeitura: |
+    - **156** costuma ser a prefeitura. Confira o da sua cidade e anote na Ficha. [fonte: anatel-sup-codigos]

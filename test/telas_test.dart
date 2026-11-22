@@ -9,7 +9,7 @@ void main() {
   // anterior não completa no seguinte.
   setUp(() {
     rootBundle.clear();
-    SharedPreferences.setMockInitialValues({'regiao': 'bh'});
+    SharedPreferences.setMockInitialValues({'cidade': 'mg/belo-horizonte'});
   });
 
   testWidgets('início lista os capítulos e abre um', (tester) async {
@@ -89,9 +89,20 @@ void main() {
     await tester.pumpWidget(const FarolApp());
     await tester.pumpAndSettle();
     expect(find.text('Onde você está?'), findsOneWidget);
-    await tester.tap(find.text('Natal (RN)'));
+    await tester.enterText(find.byType(TextField), 'mosso');
+    await tester.pumpAndSettle();
+    expect(find.text('Natal'), findsNothing);
+    await tester.tap(find.text('Mossoró'));
+    await tester.pumpAndSettle();
+    expect(find.text('Mossoró (RN)'), findsOneWidget);
+    expect((await SharedPreferences.getInstance()).getString('cidade'), 'rn/mossoro');
+  });
+
+  testWidgets('quem tinha a região antiga "natal" continua em Natal', (tester) async {
+    SharedPreferences.setMockInitialValues({'regiao': 'natal'});
+    await tester.pumpWidget(const FarolApp());
     await tester.pumpAndSettle();
     expect(find.text('Natal (RN)'), findsOneWidget);
-    expect((await SharedPreferences.getInstance()).getString('regiao'), 'natal');
+    expect(find.text('Onde você está?'), findsNothing);
   });
 }

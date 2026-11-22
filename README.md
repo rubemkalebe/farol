@@ -13,7 +13,9 @@ App de emergência que funciona sem internet, pensado para apagões e outros des
 | Pasta | O que tem |
 |---|---|
 | `conteudo/` | Os guias, em Markdown. O app só exibe. Para corrigir um texto, não é preciso mexer no código. |
+| `locais/` | Telefones e serviços por cidade, em camadas: padrão, estado, empresa e cidade. Veja `CONTRIBUTING.md`. |
 | `fontes/` | Catálogo das fontes oficiais usadas (`fontes.yaml`) e cópias quando a licença permite. Veja `fontes/README.md`. |
+| `ferramentas/` | `conferir_telefones.py`: confere se cada telefone aparece na fonte citada. |
 | `lib/` | O app Flutter. |
 
 ## Conteúdo
@@ -32,6 +34,10 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 Pacotes opcionais, para baixar quando houver internet: mapa offline da região (Organic Maps), Wikipédia em português sem imagens (Kiwix), manuais oficiais completos e livros em domínio público.
 
 > **Aviso:** o Farol resume orientações de órgãos oficiais e cita a fonte de cada uma. Ele não substitui atendimento médico nem as instruções das autoridades locais. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros).
+
+## Contribuir
+
+Número errado ou faltando? Abra uma issue com o formulário **"Sugerir número ou correção"**. Para adicionar uma cidade, veja `CONTRIBUTING.md`.
 
 ## Rodar
 

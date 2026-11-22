@@ -10,17 +10,7 @@
 
 - **SMS:** mande o seu **CEP** para [**40199**](sms:40199), de graça. [fonte: midr-cadastro-alertas-sms]
 - **Defesa Civil Alerta:** aparece sozinho na tela do celular, sem cadastro. [fonte: anatel-defesa-civil-alerta] [fonte: pbh-periodo-chuvoso-2026-2027]
-:::regiao bh
-- **Defesa Civil de BH:** WhatsApp "defesacivilbh" e Telegram @defesacivilbh. [fonte: pbh-periodo-chuvoso-2026-2027]
-- Os alertas de BH são **por região da cidade** e avisam de chuva forte, tempestade, granizo e vento antes que alguma coisa aconteça. [fonte: pbh-alertas-regionalizados-2026]
-- **Semáforo nos pontos de alagamento:** amarelo piscando significa atenção; **vermelho significa via fechada: não avance**. [fonte: pbh-periodo-chuvoso-2026-2027]
-:::
-:::regiao natal
-- Em Natal, a Prefeitura manda **alertas de risco pelo WhatsApp da Estela**: (84) 3232-4900. Ocorrências pelo [190](tel:190). [fonte: natal-defesa-civil-el-nino-2026]
-:::
-:::regiao mossoro
-- Em Mossoró, a Defesa Civil atende no [**199**](tel:199) durante o período de chuva. [fonte: mossoro-defesa-civil-chuvas-2026]
-:::
+{{alertas-locais}}
 
 ---
 
@@ -31,12 +21,7 @@ Uns **15 cm** de água correndo já derrubam uma pessoa, e **30 cm** arrastam um
 
 - Não deixe criança brincar em enxurrada nem perto de córrego. [fonte: pbh-esquema-fortes-chuvas-2022]
 - Respeite os bloqueios. [fonte: pbh-bloqueio-vias-chuvas]
-:::regiao bh
-- Em BH, as avenidas sobre córregos são fechadas quando a água sobe: Teresa Cristina, Francisco Sá, Silva Lobo, Prudente de Morais, Silviano Brandão, Bernardo Vasconcelos, Vilarinho e outras. [fonte: pbh-bloqueio-vias-chuvas]
-:::
-:::regiao mossoro
-- Em Mossoró, a Zona Sul e o **Alto da Conceição** (ruas Flávio Oliveira, Dr. Haroldo Galvão e Romualdo Galvão) ficam na área de cheia do rio e estão entre os pontos que mais alagam. Com chuva forte, fique de olho no rio e nos avisos da Defesa Civil. Lixo na rua entope a drenagem: descarte certo. [fonte: mossoro-areas-ribeirinhas-2026] [fonte: mossoro-elevacao-rio-2023]
-:::
+{{alagamento-local}}
 - Água da chuva barrenta e trazendo galhos é sinal de inundação. Procure um lugar alto. [fonte: cbmmg-cartilha-encosta-inundacao]
 - **Não entre na água para salvar alguém.** Ligue 193. [fonte: cbmmg-cartilha-encosta-inundacao]
 
@@ -97,12 +82,7 @@ Durante a chuva, fique longe de encostas e muros de arrimo. [fonte: pbh-periodo-
 - não plante bananeira em encosta.
 
 Rachadura no terreno: cubra com lona até a vistoria. [fonte: sedec-movimentos-de-massa]
-:::regiao bh
-Em BH, o **Disque Vistoria** é o (31) 3277-6409, em horário comercial; fora dele, ligue 199. [fonte: pbh-urbel-dicas-periodo-chuvoso-2026]
-:::
-:::regiao natal
-Em Natal, as áreas de duna e encosta ocupadas têm risco de deslizamento, como Cidade Nova (Baixa do Cão), Pião, Aparecida, África, Planalto, Passo da Pátria e Jacó. Com sinal de perigo, saia e avise pelo [190](tel:190) ou pelo WhatsApp da Estela. [fonte: natal-pmrr-2008] [fonte: natal-defesa-civil-el-nino-2026]
-:::
+{{deslizamento-local}}
 
 ---
 
@@ -158,12 +138,7 @@ Sinais de insolação e o que fazer: veja o capítulo **Primeiros socorros**.
 ## Ar seco
 
 O ideal é a umidade do ar entre 40% e 70%. [fonte: pbh-tempo-seco-cuidados]
-:::regiao bh
-Em BH, ela já ficou **abaixo de 12%**, entre agosto e setembro. [fonte: pbh-tempo-seco-cuidados]
-:::
-:::regiao mossoro
-Em Mossoró, já passou de **38 °C com umidade em torno de 15%**. [fonte: mossoro-calor-baixa-umidade-2019]
-:::
+{{ar-seco-local}}
 
 | Umidade | Estado | O que fazer |
 |---|---|---|
@@ -208,15 +183,7 @@ Em Mossoró, já passou de **38 °C com umidade em torno de 15%**. [fonte: mosso
 
 ## Falta d'água
 
-:::regiao bh
-- Avise a Copasa: [115](tel:115) ou WhatsApp (31) 99770-7000. [fonte: copasa-canais-oficiais]
-:::
-:::regiao natal,mossoro
-- Avise a Caern: [115](tel:115) ou WhatsApp (84) 98118-8400. [fonte: caern-home]
-:::
-:::regiao outra
-- Avise a empresa de água: [115](tel:115). [fonte: anatel-sup-codigos]
-:::
+{{agua-contato}}
 - **Água para beber vem primeiro.** Na dúvida sobre a água, trate com água sanitária ou ferva (veja **Durante o apagão**). [fonte: ms-noticia-pos-enchente-2024] Higiene e comida vêm depois. [geral]
 - Feche a torneira enquanto ensaboa ou escova os dentes. Use balde em vez de mangueira e vassoura em vez de água na calçada. [fonte: agenciaminas-copasa-uso-consciente-2026]
 - **Reaproveite** a água da máquina de lavar para limpar quintal e calçada, e para a descarga. [fonte: agenciaminas-copasa-uso-consciente-2026] [geral]

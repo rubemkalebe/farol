@@ -1,0 +1,26 @@
+nome: Mossoró
+uf: rn
+energia: cosern
+agua: caern
+gas: null
+verificado_em: 2026-11-22
+blocos:
+  alagamento-local: |
+    - Em Mossoró, a Zona Sul e o **Alto da Conceição** (ruas Flávio Oliveira, Dr. Haroldo Galvão e Romualdo Galvão) ficam na área de cheia do rio e estão entre os pontos que mais alagam. Com chuva forte, fique de olho no rio e nos avisos da Defesa Civil. Lixo na rua entope a drenagem: descarte certo. [fonte: mossoro-areas-ribeirinhas-2026] [fonte: mossoro-elevacao-rio-2023]
+  alertas-locais: |
+    - Em Mossoró, a Defesa Civil atende no [**199**](tel:199) durante o período de chuva. [fonte: mossoro-defesa-civil-chuvas-2026]
+  ar-seco-local: |
+    Em Mossoró, já passou de **38 °C com umidade em torno de 15%**. [fonte: mossoro-calor-baixa-umidade-2019]
+  aviso-agua: |
+    Em janeiro de 2026, o 115 da Caern estava fora do ar em Mossoró. Se não atender, use o WhatsApp da Caern ou a ouvidoria municipal de saneamento (AGRM): WhatsApp (84) 99655-6587. [fonte: agrm-mossoro-caern-115-inoperante]
+  cadastro-defesa-civil: |
+    - [marcar: cad-mossoro] Em Mossoró, a Defesa Civil atende no **199** e no Disque Segurança (84) 98631-7000 [fonte: mossoro-contatos-emergencia-2025]
+  defesa-civil-local: |
+    - **Defesa Civil de Mossoró:** [**199**](tel:199). Também atende no Disque Segurança [(84) 98631-7000](tel:84986317000). [fonte: mossoro-contatos-emergencia-2025] [fonte: mossoro-defesa-civil-chuvas-2026]
+  hospitais: |
+    **Hospital em Mossoró:** o **Regional Tarcísio Maia** é a referência de urgência, trauma e picada de animal, 24 horas: [(84) 3315-3400](tel:8433153400). [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+  peconhentos-hospital: |
+    Em Mossoró: **Hospital Regional Tarcísio Maia**. [fonte: ms-hospitais-referencia-peconhentos-rn]
+  prefeitura: |
+    - Prefeitura: [(84) 2140-6000](tel:8421406000) ou WhatsApp (84) 99655-7170, em dias úteis. [fonte: mossoro-calor-baixa-umidade-2019]
+    - Guarda Municipal [**153**](tel:153) e Trânsito [**156**](tel:156). [fonte: mossoro-contatos-emergencia-2025]

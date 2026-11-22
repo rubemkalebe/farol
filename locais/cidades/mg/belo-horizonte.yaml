@@ -1,0 +1,26 @@
+nome: Belo Horizonte
+uf: mg
+energia: cemig
+agua: copasa
+gas: gasmig
+verificado_em: 2026-11-22
+blocos:
+  alagamento-local: |
+    - Em BH, as avenidas sobre córregos são fechadas quando a água sobe: Teresa Cristina, Francisco Sá, Silva Lobo, Prudente de Morais, Silviano Brandão, Bernardo Vasconcelos, Vilarinho e outras. [fonte: pbh-bloqueio-vias-chuvas]
+  alertas-locais: |
+    - **Defesa Civil de BH:** WhatsApp "defesacivilbh" e Telegram @defesacivilbh. [fonte: pbh-periodo-chuvoso-2026-2027]
+    - Os alertas de BH são **por região da cidade** e avisam de chuva forte, tempestade, granizo e vento antes que alguma coisa aconteça. [fonte: pbh-alertas-regionalizados-2026]
+    - **Semáforo nos pontos de alagamento:** amarelo piscando significa atenção; **vermelho significa via fechada: não avance**. [fonte: pbh-periodo-chuvoso-2026-2027]
+  ar-seco-local: |
+    Em BH, ela já ficou **abaixo de 12%**, entre agosto e setembro. [fonte: pbh-tempo-seco-cuidados]
+  cadastro-defesa-civil: |
+    - [marcar: cad-bh] Em BH, a Defesa Civil também atende no WhatsApp: procure por "defesacivilbh". O telefone é **199**. [fonte: pbh-periodo-chuvoso-2026-2027]
+  defesa-civil-local: |
+    - **Defesa Civil de BH:** [**199**](tel:199), 24 horas. No WhatsApp, procure por "defesacivilbh". [fonte: pbh-periodo-chuvoso-2026-2027]
+  deslizamento-local: |
+    Em BH, o **Disque Vistoria** é o (31) 3277-6409, em horário comercial; fora dele, ligue 199. [fonte: pbh-urbel-dicas-periodo-chuvoso-2026]
+  peconhentos-hospital: |
+    Em BH, o hospital de referência é o **João XXIII**. [fonte: agenciaminas-mg-peconhentos-2026]
+  prefeitura: |
+    - [**156**](tel:156): de segunda a sexta, das 7h às 19h. Também atende pelo app BH SIM. [fonte: pbh-fale-ouvidoria]
+    - Ligando de fora de BH: [(31) 3429-0405](tel:3134290405). [fonte: mg-telefones-uteis]

@@ -1,0 +1,32 @@
+nome: Neoenergia Cosern
+tipo: energia
+verificado_em: 2026-11-22
+blocos:
+  cadastro-energia: |
+    - [marcar: cad-cosern] **Cosern:** anote o **número da Unidade Consumidora**, que fica na conta de luz, e salve o WhatsApp (84) 3215-6001 [fonte: cosern-falta-de-energia]
+    - [marcar: cad-eletrodependente-rn] Se alguém depende de aparelho elétrico: faça o **cadastro de equipamento vital na Cosern**, que é presencial e pede atestado e relatório médico, e combine com o médico o que fazer sem energia [fonte: cosern-equipamentos-vitais] [fonte: sp-sempre-alerta-plano-familiar]
+  energia-avisar: |
+    **Neoenergia Cosern**
+
+    | Canal | Como |
+    |---|---|
+    | Telefone | [**116**](tel:116), 24 horas |
+    | WhatsApp | (84) 3215-6001, opção "Falta de Energia" |
+    | App ou site | Neoenergia Cosern, "Registre sua falta de luz" |
+    | Surdos ou deficiência de fala | [0800 701 0155](tel:08007010155) |
+
+    [fonte: cosern-canais-atendimento] [fonte: cosern-falta-de-energia]
+
+    - Tenha à mão o **número da Unidade Consumidora** (está na conta de luz) e o CPF do titular. [fonte: cosern-falta-de-energia]
+    - Antes de avisar, veja se a falta não é só na sua casa, como um disjuntor desarmado. [fonte: cosern-falta-de-energia]
+  energia-cadastro-vital: |
+    - Na Cosern, o cadastro é presencial (loja de atendimento ou rede credenciada), com RG e CPF, declaração de uso do equipamento, relatório e atestado médico. Os formulários estão no site da Neoenergia. [fonte: cosern-equipamentos-vitais]
+    - A Cosern informa **prioridade no religamento** depois de quedas não programadas para quem está cadastrado. [fonte: cosern-equipamentos-vitais] Mesmo assim, num apagão grande, **tenha um plano B**. [geral]
+  energia-instalacao: |
+    Tenha à mão o **número da Unidade Consumidora**, que aparece na conta de luz. [fonte: cosern-falta-de-energia]
+  energia-ouvidoria: |
+    - Ouvidoria da Cosern: [0800 084 0404](tel:08000840404), dias úteis, com o protocolo do primeiro pedido. [fonte: cosern-canais-atendimento]
+  energia-ressarcimento: |
+    **Como pedir (Cosern):** pelo [116](tel:116), pelo WhatsApp, pelo site ou presencialmente. **Não jogue o aparelho fora**: a Cosern pode pedir as peças. [fonte: cosern-ressarcimento-danos]
+  linha-energia: |
+    | **Cosern** (falta de energia) | [**116**](tel:116), 24 horas | WhatsApp (84) 3215-6001 · surdos [0800 701 0155](tel:08007010155) [fonte: cosern-canais-atendimento] |

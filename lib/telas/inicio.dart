@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../dados/conteudo.dart';
-import '../dados/regiao.dart';
+import '../dados/locais.dart';
+import 'escolher_cidade.dart';
 import '../tema.dart';
 import 'capitulo.dart';
 import 'ficha.dart';
@@ -24,45 +25,38 @@ class TelaInicio extends StatefulWidget {
 
 class _TelaInicioState extends State<TelaInicio> {
   late final Future<List<Capitulo>> _indice = carregarIndice();
-  String? _regiao;
+  String? _cidade;
+  List<Cidade> _cidades = const [];
 
   @override
   void initState() {
     super.initState();
-    lerRegiao().then((r) {
+    (lerCidade(), carregarCidades()).wait.then((r) {
       if (!mounted) return;
-      setState(() => _regiao = r);
+      final (cidade, cidades) = r;
+      setState(() {
+        _cidade = cidade;
+        _cidades = cidades;
+      });
       // Primeira vez: pergunta a cidade para mostrar os telefones certos.
-      if (r == null) WidgetsBinding.instance.addPostFrameCallback((_) => _escolherRegiao());
+      if (cidade == null) WidgetsBinding.instance.addPostFrameCallback((_) => _escolherCidade());
     });
   }
 
-  Future<void> _escolherRegiao() async {
-    final escolhida = await showDialog<String>(
-      context: context,
-      builder: (context) => SimpleDialog(
-        title: const Text('Onde você está?'),
-        children: [
-          const Padding(
-            padding: EdgeInsets.fromLTRB(24, 0, 24, 8),
-            child: Text('Os telefones e serviços locais mudam conforme a cidade. '
-                'Dá para trocar depois na tela inicial.'),
-          ),
-          for (final r in regioes)
-            SimpleDialogOption(
-              onPressed: () => Navigator.pop(context, r.id),
-              child: Text(r.nome, style: TextStyle(fontWeight: r.id == _regiao ? FontWeight.w700 : null)),
-            ),
-        ],
-      ),
-    );
-    if (escolhida == null) {
-      if (_regiao == null) await salvarRegiao('outra');
-      setState(() => _regiao ??= 'outra');
-      return;
-    }
-    await salvarRegiao(escolhida);
-    setState(() => _regiao = escolhida);
+  String get _rotuloCidade {
+    if (_cidade == null) return 'Escolher cidade';
+    if (_cidade == outraCidade) return 'Outra cidade';
+    return _cidades.where((c) => c.id == _cidade).firstOrNull?.rotulo ?? 'Escolher cidade';
+  }
+
+  Future<void> _escolherCidade() async {
+    final escolhida = await Navigator.of(context).push<String>(MaterialPageRoute(
+      fullscreenDialog: true,
+      builder: (_) => TelaEscolherCidade(cidades: _cidades, atual: _cidade),
+    ));
+    final id = escolhida ?? _cidade ?? outraCidade;
+    await salvarCidade(id);
+    if (mounted) setState(() => _cidade = id);
   }
 
   @override
@@ -88,8 +82,8 @@ class _TelaInicioState extends State<TelaInicio> {
                   alignment: Alignment.centerLeft,
                   child: ActionChip(
                     avatar: const Icon(Icons.place_outlined, size: 18, color: corFeixe),
-                    label: Text(_regiao == null ? 'Escolher cidade' : regiaoPorId(_regiao!).nome),
-                    onPressed: _escolherRegiao,
+                    label: Text(_rotuloCidade),
+                    onPressed: _escolherCidade,
                   ),
                 ),
                 const SizedBox(height: 8),

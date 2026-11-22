@@ -1,0 +1,10 @@
+nome: Caern
+tipo: agua
+verificado_em: 2026-11-22
+blocos:
+  agua-contato: |
+    - Avise a Caern: [115](tel:115) ou WhatsApp (84) 98118-8400. [fonte: caern-home]
+  cadastro-agua: |
+    - [marcar: caixa-rn] Confira se a caixa d'água dá conta de 2 dias: 1.000 litros para até 4 pessoas, 1.500 litros para 5 ou 6 [fonte: caern-caixa-dagua-dimensionamento]
+  linha-agua: |
+    | **Caern** (água) | [**115**](tel:115) ou [0800 084 0100](tel:08000840100) | WhatsApp (84) 98118-8400 [fonte: caern-home] [fonte: caern-ouvidoria] |

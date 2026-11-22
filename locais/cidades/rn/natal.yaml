@@ -1,0 +1,22 @@
+nome: Natal
+uf: rn
+energia: cosern
+agua: caern
+gas: potigas
+verificado_em: 2026-11-22
+blocos:
+  alertas-locais: |
+    - Em Natal, a Prefeitura manda **alertas de risco pelo WhatsApp da Estela**: (84) 3232-4900. Ocorrências pelo [190](tel:190). [fonte: natal-defesa-civil-el-nino-2026]
+  cadastro-defesa-civil: |
+    - [marcar: cad-natal] Em Natal, salve o WhatsApp da **Estela**, da Prefeitura: (84) 3232-4900, para avisar ocorrências e receber alertas de risco [fonte: natal-defesa-civil-el-nino-2026]
+  defesa-civil-local: |
+    - **Defesa Civil de Natal:** atende pelo [**190**](tel:190) do CIOSP. Também dá para avisar ocorrências e receber alertas pelo WhatsApp da **Estela**, da Prefeitura: (84) 3232-4900. [fonte: natal-semdes-defesa-civil-municipal] [fonte: natal-defesa-civil-el-nino-2026]
+  deslizamento-local: |
+    Em Natal, as áreas de duna e encosta ocupadas têm risco de deslizamento, como Cidade Nova (Baixa do Cão), Pião, Aparecida, África, Planalto, Passo da Pátria e Jacó. Com sinal de perigo, saia e avise pelo [190](tel:190) ou pelo WhatsApp da Estela. [fonte: natal-pmrr-2008] [fonte: natal-defesa-civil-el-nino-2026]
+  hospitais: |
+    **Hospitais em Natal:** o **Walfredo Gurgel** (Av. Senador Salgado Filho, Tirol) é o pronto-socorro de trauma e AVC, 24 horas. Para picada de escorpião, cobra ou aranha: **Giselda Trigueiro** ([(84) 3232-7944](tel:8432327944)) e, para crianças, **Maria Alice Fernandes** ([(84) 3232-7717](tel:8432327717)). [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+  peconhentos-hospital: |
+    Em Natal: **Hospital Giselda Trigueiro** (R. Cônego Monte, 110, Quintas) e, para crianças, **Hospital Maria Alice Fernandes**. [fonte: ms-hospitais-referencia-peconhentos-rn]
+  prefeitura: |
+    - WhatsApp da **Estela**, a assistente da Prefeitura: (84) 3232-4900. Também há o app Natal Digital. [fonte: natal-defesa-civil-el-nino-2026]
+    - [**156**](tel:156) para trânsito e transporte. [fonte: natal-guia-servicos-2024]
