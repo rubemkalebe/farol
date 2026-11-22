@@ -129,9 +129,27 @@ Quem amamenta deve **continuar amamentando**. [fonte: cofen-nt-56-2024-bebes-eme
 ## Cadastros e combinados (faça uma vez)
 
 - [marcar: cad-40199] **Alertas da Defesa Civil:** mande o seu CEP por SMS para **40199** [fonte: midr-cadastro-alertas-sms]
+:::regiao bh
 - [marcar: cad-bh] Em BH, a Defesa Civil também atende no WhatsApp: procure por "defesacivilbh". O telefone é **199**. [fonte: pbh-periodo-chuvoso-2026-2027]
 - [marcar: cad-cemig] **Cemig:** deixe um celular cadastrado para receber avisos e **anote o número da instalação**, que fica na conta de luz [fonte: cemig-plano-comunicacao-interrupcao]
 - [marcar: cad-eletrodependente] Se alguém depende de aparelho elétrico: faça o **cadastro na Cemig** com declaração médica e combine com o médico o que fazer sem energia [fonte: cemig-direitos-deveres-equip-vida] [fonte: sp-sempre-alerta-plano-familiar]
+:::
+:::regiao natal
+- [marcar: cad-natal] Em Natal, salve o WhatsApp da **Estela**, da Prefeitura: (84) 3232-4900, para avisar ocorrências e receber alertas de risco [fonte: natal-defesa-civil-el-nino-2026]
+:::
+:::regiao mossoro
+- [marcar: cad-mossoro] Em Mossoró, a Defesa Civil atende no **199** e no Disque Segurança (84) 98631-7000 [fonte: mossoro-contatos-emergencia-2025]
+:::
+:::regiao natal,mossoro
+- [marcar: cad-cosern] **Cosern:** anote o **número da Unidade Consumidora**, que fica na conta de luz, e salve o WhatsApp (84) 3215-6001 [fonte: cosern-falta-de-energia]
+- [marcar: cad-eletrodependente-rn] Se alguém depende de aparelho elétrico: faça o **cadastro de equipamento vital na Cosern**, que é presencial e pede atestado e relatório médico, e combine com o médico o que fazer sem energia [fonte: cosern-equipamentos-vitais] [fonte: sp-sempre-alerta-plano-familiar]
+- [marcar: caixa-rn] Confira se a caixa d'água dá conta de 2 dias: 1.000 litros para até 4 pessoas, 1.500 litros para 5 ou 6 [fonte: caern-caixa-dagua-dimensionamento]
+:::
+:::regiao outra
+- [marcar: cad-distribuidora] **Distribuidora de energia:** anote o número da instalação, que fica na conta de luz, e os canais de atendimento [geral]
+- [marcar: cad-eletrodependente-outra] Se alguém depende de aparelho elétrico: faça o **cadastro de equipamento vital** na distribuidora, com comprovação médica [fonte: aneel-ren-1000-2021]
+- [marcar: cad-locais] Anote na Ficha os telefones da Defesa Civil, da empresa de água e do hospital de referência da sua cidade [geral]
+:::
 - [marcar: plano-encontro] **Combine um ponto de encontro** da família, fácil de achar [fonte: sp-sempre-alerta-plano-familiar] [fonte: ready-gov-get-tech-ready]
 - [marcar: plano-desligar] Todo mundo da casa sabe **onde desligar a luz (disjuntor), a água (registro) e o gás** [fonte: sp-sempre-alerta-plano-familiar]
 - [marcar: plano-criancas] As crianças sabem ligar para **192** e **193** [fonte: sp-sempre-alerta-plano-familiar]

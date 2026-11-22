@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../dados/conteudo.dart';
+import '../dados/regiao.dart';
 import '../tema.dart';
 import 'capitulo.dart';
 import 'ficha.dart';
@@ -23,6 +24,46 @@ class TelaInicio extends StatefulWidget {
 
 class _TelaInicioState extends State<TelaInicio> {
   late final Future<List<Capitulo>> _indice = carregarIndice();
+  String? _regiao;
+
+  @override
+  void initState() {
+    super.initState();
+    lerRegiao().then((r) {
+      if (!mounted) return;
+      setState(() => _regiao = r);
+      // Primeira vez: pergunta a cidade para mostrar os telefones certos.
+      if (r == null) WidgetsBinding.instance.addPostFrameCallback((_) => _escolherRegiao());
+    });
+  }
+
+  Future<void> _escolherRegiao() async {
+    final escolhida = await showDialog<String>(
+      context: context,
+      builder: (context) => SimpleDialog(
+        title: const Text('Onde você está?'),
+        children: [
+          const Padding(
+            padding: EdgeInsets.fromLTRB(24, 0, 24, 8),
+            child: Text('Os telefones e serviços locais mudam conforme a cidade. '
+                'Dá para trocar depois na tela inicial.'),
+          ),
+          for (final r in regioes)
+            SimpleDialogOption(
+              onPressed: () => Navigator.pop(context, r.id),
+              child: Text(r.nome, style: TextStyle(fontWeight: r.id == _regiao ? FontWeight.w700 : null)),
+            ),
+        ],
+      ),
+    );
+    if (escolhida == null) {
+      if (_regiao == null) await salvarRegiao('outra');
+      setState(() => _regiao ??= 'outra');
+      return;
+    }
+    await salvarRegiao(escolhida);
+    setState(() => _regiao = escolhida);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +83,16 @@ class _TelaInicioState extends State<TelaInicio> {
               padding: const EdgeInsets.all(16),
               children: [
                 const _Cabecalho(),
-                const SizedBox(height: 16),
+                const SizedBox(height: 8),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: ActionChip(
+                    avatar: const Icon(Icons.place_outlined, size: 18, color: corFeixe),
+                    label: Text(_regiao == null ? 'Escolher cidade' : regiaoPorId(_regiao!).nome),
+                    onPressed: _escolherRegiao,
+                  ),
+                ),
+                const SizedBox(height: 8),
                 for (final c in capitulos) _CartaoCapitulo(capitulo: c),
                 const SizedBox(height: 8),
                 Text('Ferramentas', style: Theme.of(context).textTheme.titleMedium),

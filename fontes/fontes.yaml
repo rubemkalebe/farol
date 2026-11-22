@@ -2599,3 +2599,714 @@ fontes:
     notas: |
       "Turn Around. Don't Drown!"; "just six inches of moving water can knock you down, and one foot of moving water can sweep your vehicle away." (15 cm derrubam; 30 cm arrastam um carro)
       "Return home only when authorities say it is safe."
+
+  # ───────────── Ciclone, tornado, seca ─────────────
+
+  - id: rs-saiba-agir-tornado
+    tema: tornado
+    titulo: "Saiba como agir em caso de tornado"
+    orgao: Governo do RS / Defesa Civil RS
+    url: "https://estado.rs.gov.br/saiba-como-agir-em-caso-de-tornado"
+    acessado: 2026-11-22
+    publicado: 2026-07-15
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Amarelo: acompanhar os canais oficiais; conferir calhas, telhados e árvores. Laranja: ficar abrigado; preparar o kit; proteger os animais.
+      Durante: "buscar abrigo imediatamente e permanecer em local seguro até que o risco cesse"; longe de árvores e estruturas metálicas; não atravessar áreas alagadas; ao ar livre, "deitar-se em uma vala ou depressão do terreno".
+      Depois: "não retornar às áreas evacuadas até a liberação oficial".
+
+  - id: rs-saiba-agir-vendaval
+    tema: ciclone
+    titulo: "Saiba como agir em caso de vendaval"
+    orgao: Governo do RS / Defesa Civil RS
+    url: "https://www.estado.rs.gov.br/saiba-como-agir-em-caso-de-vendaval"
+    acessado: 2026-11-22
+    publicado: 2026-07-15
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Amarelo: conferir telhados e árvores. Laranja: "manter-se abrigado". Vermelho: "permanecer em local seguro até cessarem as fontes de risco". Roxo: "sair imediatamente de áreas de risco".
+
+  - id: rs-protocolo-alertas-cores
+    tema: ciclone
+    titulo: "Defesa Civil atualiza protocolos de comunicação de alertas à população"
+    orgao: Governo do RS / Defesa Civil RS
+    url: "https://estado.rs.gov.br/defesa-civil-atualiza-protocolos-de-comunicacao-de-alertas-a-populacao"
+    acessado: 2026-11-22
+    publicado: 2025-05-06
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Cinco cores: verde (normalidade), amarelo (moderado), laranja (alto), vermelho (muito alto), "Roxo" para "alertas de ação imediata".
+
+  - id: poa-informe-ciclone-bomba-2026
+    tema: ciclone
+    titulo: "Informe Conjunto de Risco à Saúde nº 01/2026 – Ciclone extratropical explosivo (\"ciclone-bomba\")"
+    orgao: Prefeitura de Porto Alegre – Secretaria Municipal de Saúde
+    url: "https://prefeitura.poa.br/sites/default/files/usu_doc/hotsites/sms/vigilancia-em-saude/Informe_Ciclone_POA_06-08-2026.docx.pdf"
+    acessado: 2026-11-22
+    publicado: 2026-08-06
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Rajadas "podendo atingir até 100 km/h"; aviso vermelho do Inmet; possibilidade de tornado.
+      Antes: "Guarde ou prenda objetos soltos que possam ser levados pelo vento"; carregar celulares e lanternas, "Evite usar velas."; kit com documentos, remédios, água, comida e agasalhos; quem depende de equipamento deve conferir baterias e "oxigênio reserva".
+      Durante: "Permaneça em local seguro, longe de janelas, portas e coberturas de vidro."; "Não tente consertar telhados, antenas ou toldos durante o vendaval."; "Nunca toque em fios caídos."
+      Depois: instalação elétrica alagada só volta "após avaliação de um eletricista"; comida estragada fora, não recongelar o que descongelou; "Antes de consumir a água após interrupção do abastecimento, deixe-a correr. Se estiver turva ou com mau cheiro, ferva ou desinfete antes do uso."
+
+  - id: inmet-aviso-vs-alerta
+    tema: ciclone
+    titulo: "Aviso meteorológico ou Alerta? Entenda a diferença"
+    orgao: Inmet
+    url: "https://portal.inmet.gov.br/noticias/aviso-meteorol%C3%B3gico-e-alerta-entenda-a-diferenca"
+    acessado: 2026-11-22
+    publicado: 2026-10-23
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      O Inmet emite **avisos** sobre a previsão de tempo severo; a Defesa Civil emite **alertas** "considerando os riscos e as condições de cada localidade".
+
+  - id: embrapa-catarina-hazards-2004
+    tema: ciclone
+    titulo: "Uma discussão sobre o conceito de hazards e o caso do furacão/ciclone Catarina"
+    orgao: Embrapa Trigo
+    url: "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/852489/1/pdo36.pdf"
+    acessado: 2026-11-22
+    publicado: 2004-12
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Catarina atingiu SC e RS em 27 e 28 de março de 2004; classificado pelos EUA como furacão categoria 1 (120 a 150 km/h), classificação não totalmente aceita pelo serviço meteorológico brasileiro.
+
+  - id: readygov-tornadoes
+    tema: tornado
+    titulo: "Tornadoes"
+    orgao: Ready.gov / FEMA (EUA)
+    url: "https://www.ready.gov/tornadoes"
+    acessado: 2026-11-22
+    publicado: 2026-06-02
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Abrigo: "a small, interior, windowless room or basement on the lowest level of a sturdy building".
+      Proteger cabeça e pescoço com os braços; móveis ou cobertores em volta ou por cima.
+      Carro: "There is no safe option"; não se abrigar sob pontes ou viadutos.
+
+  - id: nws-tornado-during
+    tema: tornado
+    titulo: "What to do During a Tornado"
+    orgao: National Weather Service (EUA)
+    url: "https://www.weather.gov/safety/tornado-during"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Em casa: "an interior room away from windows". Casa móvel ou barraca não é segura.
+      Escola ou trabalho: longe de janelas; não ficar em salões grandes (refeitório, ginásio, auditório).
+
+  - id: readygov-hurricanes
+    tema: ciclone
+    titulo: "Hurricanes"
+    orgao: Ready.gov / FEMA (EUA)
+    url: "https://www.ready.gov/hurricanes"
+    acessado: 2026-11-22
+    publicado: 2026-10-16
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Mandaram sair: saia na hora. Ventos fortes: "an interior room". Preso por enchente: ir para o andar mais alto.
+      "Do not touch electrical equipment if it is wet or if you are standing in water."
+
+  - id: ms-cartilha-tratamento-intradomiciliar
+    tema: seca
+    titulo: "Cartilha - Tratamento Intradomiciliar da Água e Cuidados com Alimentos"
+    orgao: Ministério da Saúde – SVSA
+    url: "https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/doencas-diarreicas-agudas/cartilha-tratamento-intradomiciliar-da-agua-e-cuidados-com-alimentos/@@download/file"
+    acessado: 2026-11-22
+    publicado: 2023-06
+    licenca: "desconhecida (portal gov.br)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Seja da chuva, do poço, da torneira, da cisterna ou do carro-pipa ... a água que a gente bebe tem que ser tratada."
+      Filtrar; 2 gotas de hipoclorito 2,5% por litro; 30 minutos; consumir em até 24 h. Ou ferver 5 minutos.
+      "Separe um recipiente/vasilha, limpo e com tampa, apenas para guardar a água tratada para beber."
+
+  - id: ms-cartilha-cuidados-carro-pipa
+    tema: seca
+    titulo: "Cuidados com carro-pipa (Cartilha 2 - Cuidados com pipeiros)"
+    orgao: Ministério da Saúde (cópia na SES-MG)
+    url: "https://www.saude.mg.gov.br/wp-content/uploads/2017/12/PPR_Chuva-2024_Anexo-2-do-anexo-J-cuidados-com-carro-pipa-9ed.pdf"
+    acessado: 2026-11-22
+    publicado: 2023-07
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      O caminhão deve ter escrito "ÁGUA POTÁVEL" e ser de uso exclusivo para água; o pipeiro deve ter autorização da autoridade de saúde e documento que diga onde o caminhão foi abastecido.
+      "O caminhão NÃO pode ter: Perfurações, vazamentos, amassados e ferrugem."
+
+  - id: ms-secas-pagina
+    tema: seca
+    titulo: "Secas"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/secas"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "©2025 Ministério da Saúde"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Fervura ou tratamento da água; "maior risco de desidratação" (crianças, idosos, doentes crônicos); diarreia, hepatite A e cólera.
+      Higiene com menos água: "álcool em gel". Calor: filtro solar, chapéu, roupas leves.
+
+  - id: embrapa-manejo-agua-cisterna
+    tema: seca
+    titulo: "Manejo da Água Armazenada em Cisterna (Instruções Técnicas 85)"
+    orgao: Embrapa Semiárido
+    url: "https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/160785/1/INT85.pdf"
+    acessado: 2026-11-22
+    publicado: 2008-12
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "lavar e desinfetar a cisterna pelo menos uma vez por ano, sempre antes do início das chuvas"; não misturar água velha com nova; não deixar a cisterna vazia (racha).
+      "a água das primeiras chuvas deve ser eliminada" (lava o telhado).
+      Bomba manual em vez de balde; tampa fechada; tela nos respiros; longe de fossa, curral e lixo.
+      "amebas e giárdias ... resistem ao cloro. Por isso, é necessário também filtrar a água de beber".
+      Atenção: a tabela de cloro da Embrapa é para hipoclorito a 10%, não para água sanitária 2,5%.
+
+  - id: govbr-servico-carro-pipa
+    tema: seca
+    titulo: "Solicitar a distribuição emergencial de água potável, por meio da Operação Carro-Pipa Federal"
+    orgao: gov.br (MIDR / Exército)
+    url: "https://www.gov.br/pt-br/servicos/solicitar-a-distribuicao-emergencial-de-agua-potavel-por-carro-pipa"
+    acessado: 2026-11-22
+    publicado: 2025-12-15
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Para a zona rural do semiárido nordestino (e norte do ES), com decreto de emergência por seca. O cidadão não pede direto: o pedido é feito pela Defesa Civil municipal. Gratuito.
+
+  - id: agenciabrasil-rn-123-municipios-2026
+    tema: seca
+    titulo: "Seca provoca situação de emergência em 123 cidades do RN"
+    orgao: Agência Brasil (EBC)
+    url: "https://agenciabrasil.ebc.com.br/radioagencia-nacional/meio-ambiente/audio/2026-09/seca-provoca-situacao-de-emergencia-em-123-cidades-do-rn"
+    acessado: 2026-11-22
+    publicado: 2026-09-28
+    licenca: "© EBC"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      123 municípios do RN em emergência por seca (setembro de 2026); Operação Carro-Pipa na zona rural de 77 municípios.
+
+  # ───────────── Terremoto, tsunami, ressaca ─────────────
+
+  - id: usp-sismo-panfleto-como-se-comportar
+    tema: terremoto
+    titulo: "Como se comportar durante um sismo (panfleto)"
+    orgao: Centro de Sismologia da USP (IAG/USP)
+    url: "https://sismo.iag.usp.br/saibacomoagir/impressao"
+    acessado: 2026-11-22
+    publicado: 2024
+    licenca: "Acesso aberto: uso, distribuição e reprodução irrestritos, desde que citado o original."
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Durante: "Ajoelhe-se e proteja-se com os braços à volta da cabeça."; na cama, proteger-se com o travesseiro; ao ar livre, ir para local aberto, longe de prédios.
+      "NÃO SAIA CORRENDO AFOBADO NA RUA - A fuga afobada pode causar acidentes."; "Ao sentir o tremor, apague imediatamente qualquer fonte de fogo."
+      Depois: "Mantenha-se calmo, mas atento à possíveis réplicas"; "Nunca use elevadores durante ou após um sismo, utilize as escadas."; "Feche imediatamente o gás, a eletricidade e a água"; abrir portas e janelas para garantir saída; longe de muros e vielas.
+      Antes: cama longe de janelas, lustres e ventiladores; objetos pesados nas prateleiras de baixo.
+      "Tome cuidado com informações falsas e espere a divulgação de notícias por meio de vias oficiais"
+      (O panfleto também cita "vãos de portas", que diretrizes mais recentes não recomendam.)
+
+  - id: midr-ceara-tremor-saiba-como-agir
+    tema: terremoto
+    titulo: "Experiências exitosas no enfrentamento aos abalos sísmicos no Ceará (cartilha \"Tremor de Terra – Saiba como agir\")"
+    orgao: Defesa Civil do Ceará, no portal do MIDR
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/boas-praticas/002_boaspraticas_iniciativacomunidades_tremor_terra_saiba_como_agir_ceara_fev2022.pdf"
+    acessado: 2026-11-22
+    publicado: 2022-02
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "O nordeste é uma das regiões mais ativas, principalmente nos estados do Ceará, Rio Grande do Norte, Pernambuco e Bahia."
+      "Os sismos que ocorrem no Brasil normalmente são superficiais e possuem baixa magnitude."; "quase nunca são registrados graves danos humanos e materiais."
+      Maiores: 6,2 (MT, 1955); 6,1 (ES, 1955); 5,2 (Pacajus-CE, 1980, o maior do Nordeste); 4,9 (Itacarambi-MG, 2007).
+      "Não fique em sacadas e janelas"; "Informe imediatamente a Defesa Civil sobre a hora, local e características do sismo."; "Não espalhe boatos".
+
+  - id: sgb-terremotos
+    tema: terremoto
+    titulo: "Terremotos"
+    orgao: Serviço Geológico do Brasil
+    url: "https://www.sgb.gov.br/web/guest/terremotos"
+    acessado: 2026-11-22
+    publicado: 2014-08-18
+    licenca: "© SGB. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      "Em nosso país, ocorrem a cada ano, em média, 20 sismos de magnitude maior que 3,0 e dois com magnitude maior que 4,0."
+
+  - id: labsis-tremor-rn-currais-novos-2026
+    tema: terremoto
+    titulo: "Tremor é registrado no estado do Rio Grande do Norte (06/11/2026)"
+    orgao: Laboratório Sismológico da UFRN
+    url: "https://www.labsis.ufrn.br/noticias/73296963/tremor-e-registrado-no-estado-do-rio-grande-do-norte-06-11-2026"
+    acessado: 2026-11-22
+    publicado: 2026-11-10
+    licenca: "© LabSis UFRN. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      Tremor de magnitude 1,7 na região de Currais Novos em 06/11/2026; não sentido pela população. Exemplo da atividade pequena e frequente no RN.
+
+  - id: labsis-tremores-joao-camara
+    tema: terremoto
+    titulo: "Tremores em João Câmara"
+    orgao: Laboratório Sismológico da UFRN
+    url: "https://www.labsis.ufrn.br/en/noticias/26738215/tremores-em-joao-camara"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© LabSis UFRN. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      51 eventos em poucas horas na região de João Câmara; maior de magnitude 2,8, sentido num raio de cerca de 30 km.
+
+  - id: readygov-earthquakes
+    tema: terremoto
+    titulo: "Earthquakes"
+    orgao: Ready.gov / FEMA (EUA)
+    url: "https://www.ready.gov/earthquakes"
+    acessado: 2026-11-22
+    publicado: 2026-09-09
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Abaixe ("onto hands and knees"), proteja-se ("Cover your head and neck"), segure ("Hold ... until the shaking stops").
+      Dentro de casa, fique onde está: "avoid doorways"; "do not run outside". Sem móvel por perto, junto a uma parede interna, longe de janelas.
+      Na cama: virar de bruços e cobrir a cabeça com o travesseiro. Dirigindo: encostar e parar.
+      Depois: "Expect aftershocks"; "Do not enter damaged buildings."
+
+  - id: usgs-after-earthquake
+    tema: terremoto
+    titulo: "What do I do AFTER an earthquake?"
+    orgao: U.S. Geological Survey
+    url: "https://www.usgs.gov/faqs/what-do-i-do-after-earthquake"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Don't light your kitchen stove if you suspect a gas leak"; não mover ferido grave a não ser que haja mais perigo; não tocar em fios caídos.
+
+  - id: revista-usp-tsunamis-no-brasil
+    tema: tsunami
+    titulo: "Tsunamis no Brasil?"
+    orgao: Revista USP n. 91 (J. A. Veloso, Observatório Sismológico da UnB)
+    url: "https://revistas.usp.br/revusp/article/download/34843/37582/40831"
+    acessado: 2026-11-22
+    publicado: 2011
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Não há por que temer, em nosso litoral, o aparecimento de tsunamis com a grandeza ... aos dos acontecidos no Japão em 2011, ou na Indonésia em 2004."
+      "efeitos marginais de maremotos distantes, os teletsunamis, devem continuar chegando ao nosso litoral"; ondas de 1,2 m em Imbituba (SC) vindas do tsunami de 2004.
+
+  - id: readygov-tsunamis
+    tema: tsunami
+    titulo: "Tsunamis"
+    orgao: Ready.gov / FEMA (EUA)
+    url: "https://www.ready.gov/tsunamis"
+    acessado: 2026-11-22
+    publicado: 2026-05-11
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Sinais: terremoto; "a loud roar from the ocean"; "sudden draining of water showing the ocean floor" ou parede de água.
+      "Get to high ground as far inland as possible." Sair ao ver os sinais, sem esperar alerta. Vêm várias ondas.
+
+  - id: unesco-tsunami-warning-system
+    tema: tsunami
+    titulo: "Tsunami Warning System: Preparing for the unpredictable"
+    orgao: UNESCO
+    url: "https://www.unesco.org/en/tsunami-warning-system-preparing-unpredictable"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "The expanding shoreline is nature's warning that a tsunami is approaching." Do recuo do mar até a primeira onda podem ser só segundos ou minutos. Esperar confirmação oficial para voltar.
+
+  - id: govbr-meteorologia-marinha
+    tema: ressaca
+    titulo: "Obter serviços e produtos de Meteorologia Marinha"
+    orgao: Marinha do Brasil / Centro de Hidrografia (gov.br)
+    url: "https://www.gov.br/pt-br/servicos/obter-servicos-e-produtos-de-cartografia-e-meteorologia-marinha"
+    acessado: 2026-11-22
+    publicado: 2025-12-15
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Aviso de ressaca: "ondas atingindo a costa com altura acima de 2,5 metros". Divulgação: app "Boletim ao Mar", rádio costeira e redes da Marinha.
+
+  - id: agenciabrasil-ressaca-rj-2026
+    tema: ressaca
+    titulo: "RJ: praias seguem com ressaca e banhistas devem evitar entrar no mar"
+    orgao: Agência Brasil (EBC)
+    url: "https://agenciabrasil.ebc.com.br/geral/noticia/2026-01/rj-praias-seguem-com-ressaca-e-banhistas-devem-evitar-entrar-no-mar"
+    acessado: 2026-11-22
+    publicado: 2026-01-04
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Não entrar no mar; seguir guarda-vidas e bandeira vermelha; longe de pedras e costões; evitar mirantes e orlas, onde a onda pode chegar; cuidado com crianças; 193 ou 199.
+
+  - id: midr-rn-falesias-tabatinga
+    tema: ressaca
+    titulo: "Monitoramento da situação de risco nas falésias da Praia de Barra de Tabatinga (Nísia Floresta)"
+    orgao: Defesa Civil do RN, no portal do MIDR
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/boas-praticas/006_boaspraticas_monitoramentoalerta_monitoramento_risco_falesias_rio_grande_norte_fev2022.pdf"
+    acessado: 2026-11-22
+    publicado: 2022-02
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Risco de "desmoronamento das falésias" e interdição de áreas no litoral do RN.
+
+  # ═══════════════════════ Natal e Mossoró (RN) ═══════════════════════
+
+  - id: cosern-canais-atendimento
+    tema: energia
+    titulo: "Canais de Atendimento - Distribuidora Rio Grande do Norte - Neoenergia"
+    orgao: Neoenergia Cosern
+    url: "https://www.neoenergia.com/web/rn/sua-casa/canais-de-atendimento"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 Neoenergia. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [contatos, durante-apagao, depois]
+    notas: |
+      RN inteiro: "116" central 24 horas; WhatsApp "(84) 3215-6001"; surdos ou deficiência de fala "0800 701 0155"; de fora da área de concessão "0800 283 0800"; Ouvidoria "0800 084 0404" (seg–sex, 8h–18h, com protocolo anterior). App Neoenergia Cosern e agência virtual.
+
+  - id: cosern-falta-de-energia
+    tema: energia
+    titulo: "Falta de Energia - Distribuidora Rio Grande do Norte - Neoenergia"
+    orgao: Neoenergia Cosern
+    url: "https://www.neoenergia.com/web/rn/falta-de-energia"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 Neoenergia. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [contatos, durante-apagao]
+    notas: |
+      Registrar falta de luz: agência virtual; WhatsApp (84) 3215-6001, opção "Falta de Energia", com o número da Unidade Consumidora e o CPF do titular; app; telefone 116.
+      Antes, ver se a falta é só no seu imóvel.
+
+  - id: cosern-equipamentos-vitais
+    tema: energia
+    titulo: "Cadastro de Equipamentos Vitais - Distribuidora Rio Grande do Norte - Neoenergia"
+    orgao: Neoenergia Cosern
+    url: "https://www.neoenergia.com/web/rn/sua-casa/cadastro-de-equipamentos-vitais"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 Neoenergia. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      Para "imóveis que possuem moradores com necessidade de equipamentos elétricos indispensáveis à vida".
+      Documentos: RG e CPF do titular e do paciente; declaração de uso de equipamento vital e relatório médico (formulários na página); atestado médico. Cadastro presencial, em loja de atendimento ou rede credenciada.
+      Benefícios: aviso antes de corte por falta de pagamento; aviso de desligamento programado; "prioridade no restabelecimento após interrupções não programadas".
+
+  - id: cosern-ressarcimento-danos
+    tema: energia
+    titulo: "Ressarcimento de Danos Elétricos - Distribuidora Rio Grande do Norte - Neoenergia"
+    orgao: Neoenergia Cosern
+    url: "https://www.neoenergia.com/web/rn/sua-casa/ressarcimento-de-danos-eletricos"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 Neoenergia. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      "até 5 (cinco) anos, a contar da data provável da ocorrência do dano elétrico". Canais: 116, presencial, WhatsApp e site.
+      Não jogar o aparelho fora: a distribuidora pode pedir as peças danificadas.
+      Resposta em 15 dias (pedido em até 90 dias) ou 30 dias; "O prazo para o Ressarcimento é de 20 (vinte) dias, contados a partir da Resposta de deferimento."
+
+  - id: caern-home
+    tema: agua
+    titulo: "Home - CAERN"
+    orgao: Caern
+    url: "https://www.caern.com.br/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 caern. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [contatos, depois, outros-desastres]
+    notas: |
+      RN: "Ligação gratuita: 115"; WhatsApp (84) 98118-8400; app Caern Mobile; agência virtual.
+
+  - id: caern-ouvidoria
+    tema: agua
+    titulo: "Ouvidoria - CAERN"
+    orgao: Caern
+    url: "https://www.caern.com.br/servicos/ouvidoria/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 caern. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [contatos]
+    notas: |
+      "0800 084 0100" (gratuito), 115, WhatsApp (84) 98118-8400; dias úteis, das 7h30 às 17h30.
+
+  - id: caern-caixa-dagua-dimensionamento
+    tema: agua
+    titulo: "Caern orienta: Ter caixa d’água no imóvel assegura melhor uso do sistema de abastecimento"
+    orgao: Caern
+    url: "https://www.caern.com.br/noticias/caern-orienta-ter-caixa-dagua-no-imovel-assegura-melhor-uso-do-sistema-de-abastecimento/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 caern. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Caixa d'água para reserva de no mínimo 48 horas: 1 a 4 pessoas, 1.000 litros; 5 a 6 pessoas, 1.500 litros; 7 a 10 pessoas, 2.000 litros. Com tampa, boia e tubo de limpeza.
+
+  - id: caern-limpeza-caixa-dagua
+    tema: agua
+    titulo: "Limpeza da caixa dágua: prevenção que não custa caro e garante potabilidade ao produto distribuído"
+    orgao: Caern
+    url: "https://www.caern.com.br/noticias/limpeza-da-caixa-dagua-prevencao-que-nao-custa-caro/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "© 2026 caern. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      "coloque 1 litro de água sanitária para cada 1.000 litros de água"; "deixe agir por 2 horas"; limpar "a cada seis meses".
+
+  - id: agrm-mossoro-caern-115-inoperante
+    tema: agua
+    titulo: "Agência reguladora notifica Caern sobre inoperância de canais de comunicação"
+    orgao: Agência Reguladora de Mossoró (AGRM)
+    url: "https://agrm.mossoro.rn.gov.br/noticia/6b6ac575-8464-4ef0-93e1-78a2230279d2"
+    acessado: 2026-11-22
+    publicado: 2026-01-19
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Em janeiro de 2026 o 115 da Caern estava sem funcionar em Mossoró. Ouvidoria municipal de saneamento (AGRM): WhatsApp (84) 99655-6587; fixo (84) 2142-8757.
+
+  - id: potigas-duvidas-comuns
+    tema: gas
+    titulo: "Perguntas Frequentes - Potigás"
+    orgao: Potigás
+    url: "https://potigas.com.br/acesso-a-informacao/duvidas-comuns"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Emergência: "117" e "0800-281-4004".
+      Cheiro de gás: "Feche imediatamente a válvula de bloqueio dos aparelhos"; "Não ligue ou desligue nenhum interruptor, disjuntor ou aparelho elétrico"; ventilar; não usar chama para procurar o vazamento; ligar para a emergência.
+
+  - id: gac-rn-carta-servicos-defesa-civil
+    tema: defesa-civil
+    titulo: "Carta de Serviços ao Cidadão - Gabinete Civil (Coordenadoria de Proteção e Defesa Civil)"
+    orgao: Governo do RN
+    url: "https://www.transparencia.rn.gov.br/docs/orgaosdogoverno/cartasdeservico/Carta_de_Servi%C3%A7o_GAC.pdf"
+    acessado: 2026-11-22
+    publicado: 2025-08-13
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Defesa Civil do RN: "(84) 3232-5155", defesacivil@rn.gov.br; das 8h às 18h.
+
+  - id: natal-defesa-civil-el-nino-2026
+    tema: defesa-civil
+    titulo: "Defesa Civil orienta população sobre El Niño e medidas de preparação para eventuais emergências"
+    orgao: Prefeitura do Natal
+    url: "https://www.natal.rn.gov.br/news/post2/46074"
+    acessado: 2026-11-22
+    publicado: 2026-11-09
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos, preparacao, outros-desastres]
+    notas: |
+      Natal: WhatsApp da Estela, assistente da Prefeitura, "(84) 3232-4900", para registrar ocorrências e receber alertas de risco; "190" do CIOSP, também pelo app Natal Digital.
+
+  - id: natal-semdes-defesa-civil-municipal
+    tema: defesa-civil
+    titulo: "SEMDES - Defesa Civil Municipal"
+    orgao: Prefeitura do Natal
+    url: "https://www.natal.rn.gov.br/semdes/defesa-civil-municipal"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      A Defesa Civil de Natal atende "pelo telefone 190, do Centro Integrado de Operações em Segurança Pública (Ciosp)".
+
+  - id: mossoro-contatos-emergencia-2025
+    tema: prefeitura
+    titulo: "Prefeitura reforça contatos de emergência de saúde e segurança para a população"
+    orgao: Prefeitura de Mossoró
+    url: "https://prefeiturademossoro.com.br/noticias/prefeitura-reforca-contatos-de-emergencia-de-saude-e-seguranca-para-a-populacao/15195"
+    acessado: 2026-11-22
+    publicado: 2025-11-19
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Mossoró: SAMU 192; "Defesa Civil - 199"; Guarda Municipal 153; Trânsito 156; Disque Segurança e Defesa Civil "(84) 98631-7000"; Disque Trânsito (84) 99655-3622.
+
+  - id: mossoro-defesa-civil-chuvas-2026
+    tema: riscos
+    titulo: "Inmet alerta para chuvas intensas e trovoadas nesta segunda-feira; Prefeitura reforça canais da Defesa Civil em Mossoró"
+    orgao: Prefeitura de Mossoró
+    url: "https://prefeiturademossoro.com.br/noticias/inmet-alerta-para-chuvas-intensas-e-trovoadas-nesta-segundafeira-prefeitura-reforca-canais-da-defesa-civil-em-mossoro/16275"
+    acessado: 2026-11-22
+    publicado: 2026-04-13
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos, outros-desastres]
+    notas: |
+      Mossoró: Defesa Civil pelo 199 para atendimento, orientação e registro de ocorrências no período chuvoso.
+
+  - id: mossoro-areas-ribeirinhas-2026
+    tema: riscos
+    titulo: "Defesa Civil intensifica ações de monitoramento preventivo em áreas ribeirinhas de Mossoró"
+    orgao: Prefeitura de Mossoró
+    url: "https://prefeiturademossoro.com.br/noticias/defesa-civil-intensifica-acoes-de-monitoramento-preventivo-em-areas-ribeirinhas-de-mossoro/15630"
+    acessado: 2026-11-22
+    publicado: 2026-01-23
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Alto da Conceição (ruas Flávio Oliveira, Dr. Haroldo Galvão e Romualdo Galvão): "um dos pontos críticos e mais suscetíveis a alagamentos". Descartar o lixo corretamente. Defesa Civil 199.
+
+  - id: mossoro-elevacao-rio-2023
+    tema: riscos
+    titulo: "Prefeitura orienta a população sobre elevação do nível do rio Mossoró"
+    orgao: Prefeitura de Mossoró
+    url: "https://prefeiturademossoro.com.br/noticias/prefeitura-orienta-a-populacao-sobre-elevacao-do-nivel-do-rio-mossoro/10090"
+    acessado: 2026-11-22
+    publicado: 2023-04-02
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Zona Sul e Alto da Conceição: casas "construídas dentro da planície de inundação do rio". Defesa Civil 199.
+
+  - id: mossoro-calor-baixa-umidade-2019
+    tema: riscos
+    titulo: "Defesa Civil dá dicas para enfrentar altas temperaturas e baixa umidade do ar"
+    orgao: Prefeitura de Mossoró
+    url: "https://prefeiturademossoro.com.br/noticias/defesa-civil-da-dicas-para-enfrentar-altas-temperaturas-e-baixa-umidade-do-ar/3598"
+    acessado: 2026-11-22
+    publicado: 2019-11-12
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres, contatos]
+    notas: |
+      Máxima de cerca de 38 °C e umidade "em torno de 15%". Bastante líquido; panos úmidos ou baldes com água no quarto; soro no nariz e nos olhos; evitar exercício das 10h às 17h; não provocar queimadas.
+      Prefeitura: (84) 2140-6000; WhatsApp Fale Conosco (84) 99655-7170, seg–sex, 7h–17h.
+
+  - id: natal-pmrr-2008
+    tema: riscos
+    titulo: "Plano Municipal de Redução de Riscos do Município de Natal - Relatório Final Volume 1"
+    orgao: Prefeitura do Natal / SEMURB
+    url: "https://planodiretor.natal.rn.gov.br/anexos/GT/normas/08_PMRR_AREAS_RISCO_2008_V1.pdf"
+    acessado: 2026-11-22
+    publicado: 2008-10
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Plano antigo. Áreas com risco de deslizamento ou soterramento de dunas, incluindo Cidade Nova (Baixa do Cão), Pião, Aparecida, África e Planalto; Passo da Pátria e São José do Jacó como assentamentos de risco. Encostas dunares de Mãe Luíza como zona de proteção.
+
+  - id: sesap-carta-servicos-2025
+    tema: toxicologia
+    titulo: "Carta de Serviços SESAP (Atualizada em 03/09/2025)"
+    orgao: Secretaria de Estado da Saúde Pública do RN
+    url: "https://www.transparencia.rn.gov.br/docs/orgaosdogoverno/cartasdeservico/Carta_de_Servi%C3%A7o_SESAP.pdf"
+    acessado: 2026-11-22
+    publicado: 2025-09-03
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos, primeiros-socorros]
+    notas: |
+      CIATox/RN (Natal, todo o estado): "Plantão 24 horas, 7 dias da semana"; "0800 281 7005"; WhatsApp "(84) 98883-9155"; intoxicações e animais peçonhentos; atende a população.
+      Hospital Regional Tarcísio Maia (Mossoró): 24 horas; referência em urgência e trauma da região; (84) 3315-3400.
+      Hospital Monsenhor Walfredo Gurgel (Natal), Av. Senador Salgado Filho, Tirol: 24 horas; politrauma e suspeita de AVC; politrauma é porta aberta.
+      Hospital Giselda Trigueiro (Natal), R. Cônego Monte, 110, Quintas.
+
+  - id: ms-hospitais-referencia-peconhentos-rn
+    tema: toxicologia
+    titulo: "Hospitais de referência para atendimento de acidentes por animais peçonhentos - Rio Grande do Norte"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/hospitais-de-referencia/rio-grande-do-norte"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida (portal gov.br)"
+    redistribuir: verificar
+    usado_em: [contatos, primeiros-socorros]
+    notas: |
+      Todos com soro para cobra, escorpião e aranha.
+      Mossoró: "Hospital Regional Tarcísio Maia | Rua Antônio Vieira de Sá, s/n – Aeroporto | (84) 3315-3379/3414".
+      Natal: "Hospital Giselda Trigueiro | Rua Cônego Monte, 110 – Quintas | (84) 3232-7944"; "Hosp. Pediátrico Maria Alice Fernandes | Avenida Pedro Álvares Cabral, s/n - Parque dos Coqueiros | (84) 3232-7717/5408".
+
+  - id: natal-guia-servicos-2024
+    tema: prefeitura
+    titulo: "Guia de Serviços - Prefeitura do Natal (2024-08-29)"
+    orgao: Prefeitura do Natal
+    url: "https://guiadeservicos.natal.rn.gov.br/arquivos/guia-de-servicos-2024-08-29.pdf"
+    acessado: 2026-11-22
+    publicado: 2024-08-29
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      "156 (Natal) ou (84) 3232-1003 (fora de Natal)" para reclamações da STTU (trânsito e transporte).
+
+  - id: sesed-carta-servicos-2025
+    tema: policia
+    titulo: "Carta de Serviços SESED (setembro/2025)"
+    orgao: Secretaria de Segurança Pública e Defesa Social do RN
+    url: "https://www.transparencia.rn.gov.br/docs/orgaosdogoverno/cartasdeservico/Carta_de_Servi%c3%a7os_SESED.pdf"
+    acessado: 2026-11-22
+    publicado: 2025-09
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Disque Denúncia "181 e Whatsapp (84) 98102-5950". "SOS Mulher e Idoso: 0800 281 2336".

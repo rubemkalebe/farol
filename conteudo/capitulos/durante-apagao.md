@@ -28,7 +28,7 @@ Se precisar usar vela:
 - não deixe acesa sozinha nem no quarto na hora de dormir;
 - **nunca use onde há oxigênio em uso.** [fonte: nfpa-candle-safety]
 
-**Fio caído na rua:** não chegue perto e não toque. Se o fio cair sobre o carro, **fique dentro**. Se pegar fogo, pule para longe sem encostar no carro e no chão ao mesmo tempo. Ligue 193 ou, em MG, Cemig 116. [fonte: agenciaminas-cemig-fio-partido]
+**Fio caído na rua:** não chegue perto e não toque. Se o fio cair sobre o carro, **fique dentro**. Se pegar fogo, pule para longe sem encostar no carro e no chão ao mesmo tempo. Ligue 193 ou a distribuidora de energia, no [116](tel:116). [fonte: agenciaminas-cemig-fio-partido] [fonte: anatel-sup-codigos]
 
 **Incêndio:** saia de casa imediatamente e ligue 193. [fonte: cbmmg-autoprotecao-incendios]
 
@@ -135,9 +135,18 @@ Oxigênio, CPAP, nebulizador, diálise em casa, cadeira de rodas motorizada:
 - **Faça um plano antes.** Veja no manual, ou pergunte ao fabricante, se o aparelho funciona com bateria ou gerador. [fonte: cdc-prepare-your-health-power-sources]
 - Tenha uma alternativa manual quando existir, como cadeira comum, andador ou bengala. [fonte: cdc-prepare-your-health-power-sources]
 - Converse com o médico sobre um plano para quando faltar energia. [fonte: ready-gov-power-outages]
-- **Cadastre a pessoa na distribuidora de energia** (em MG, a Cemig), com comprovação médica. Com o cadastro, a casa recebe aviso com **5 dias úteis** de antecedência antes de desligamentos programados. [fonte: aneel-ren-1000-2021]
+- **Cadastre a pessoa na distribuidora de energia**, com comprovação médica. Com o cadastro, a casa recebe aviso com **5 dias úteis** de antecedência antes de desligamentos programados. [fonte: aneel-ren-1000-2021]
+:::regiao bh
 - Na Cemig, o cadastro é feito pelos canais digitais, com declaração médica. Mantenha o cadastro atualizado. [fonte: cemig-direitos-deveres-equip-vida]
-- **O cadastro não garante religamento antes dos outros num apagão.** Tenha um plano B. [fonte: aneel-ren-1000-2021]
+- **O cadastro não garante religamento antes dos outros num apagão.** A regra da ANEEL não prevê isso. Tenha um plano B. [fonte: aneel-ren-1000-2021]
+:::
+:::regiao natal,mossoro
+- Na Cosern, o cadastro é presencial (loja de atendimento ou rede credenciada), com RG e CPF, declaração de uso do equipamento, relatório e atestado médico. Os formulários estão no site da Neoenergia. [fonte: cosern-equipamentos-vitais]
+- A Cosern informa **prioridade no religamento** depois de quedas não programadas para quem está cadastrado. [fonte: cosern-equipamentos-vitais] Mesmo assim, num apagão grande, **tenha um plano B**. [geral]
+:::
+:::regiao outra
+- **O cadastro, pela regra da ANEEL, não garante religamento antes dos outros num apagão.** Pergunte à sua distribuidora e tenha um plano B. [fonte: aneel-ren-1000-2021]
+:::
 - **Oxigênio:** tenha uma reserva de oxigênio para o caso de a bateria acabar ou a energia cair. [fonte: msd-oxigenoterapia] Pergunte à empresa que fornece o oxigênio sobre um cilindro reserva e quanto tempo ele dura. [geral]
 - Onde há oxigênio, **nada de vela, fogo ou cigarro**. [fonte: nfpa-candle-safety] [fonte: msd-oxigenoterapia]
 - **CPAP:** pergunte ao médico o que fazer se ficar algumas noites sem o aparelho, e ao fabricante se existe bateria para o seu modelo. [geral]
@@ -196,7 +205,10 @@ O tamanho da bateria do seu celular aparece nas especificações do modelo (proc
 
 ---
 
-## Avisar a Cemig (Minas Gerais)
+## Avisar a distribuidora de energia
+
+:::regiao bh
+**Cemig**
 
 | Canal | Como |
 |---|---|
@@ -211,6 +223,25 @@ O tamanho da bateria do seu celular aparece nas especificações do modelo (proc
 - Tenha **anotado o número da instalação** (está na conta de luz). Ligando no 116 com ele, você fica sabendo se a falta já foi confirmada e a previsão de volta. [fonte: cemig-plano-comunicacao-interrupcao]
 - O site da Cemig tem um mapa das áreas sem energia, atualizado a cada 30 minutos. [fonte: cemig-plano-comunicacao-interrupcao]
 - Mantenha um celular cadastrado na Cemig para receber os avisos. [fonte: cemig-plano-comunicacao-interrupcao]
+:::
+:::regiao natal,mossoro
+**Neoenergia Cosern**
+
+| Canal | Como |
+|---|---|
+| Telefone | [**116**](tel:116), 24 horas |
+| WhatsApp | (84) 3215-6001, opção "Falta de Energia" |
+| App ou site | Neoenergia Cosern, "Registre sua falta de luz" |
+| Surdos ou deficiência de fala | [0800 701 0155](tel:08007010155) |
+
+[fonte: cosern-canais-atendimento] [fonte: cosern-falta-de-energia]
+
+- Tenha à mão o **número da Unidade Consumidora** (está na conta de luz) e o CPF do titular. [fonte: cosern-falta-de-energia]
+- Antes de avisar, veja se a falta não é só na sua casa, como um disjuntor desarmado. [fonte: cosern-falta-de-energia]
+:::
+:::regiao outra
+Ligue para a distribuidora da sua cidade: o número costuma ser o [**116**](tel:116). [fonte: anatel-sup-codigos] Tenha à mão o número da instalação, que está na conta de luz. [geral]
+:::
 
 ---
 

@@ -1,18 +1,26 @@
 # Outros desastres
 
-> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça e falta d'água. Em BH, o período de chuva vai de outubro a março, e o tempo seco vai de agosto a setembro.
+> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, falta d'água, tremor de terra, tsunami, ressaca, ciclone e seca.
 >
-> **Defesa Civil: [199](tel:199) · Bombeiros: [193](tel:193) · Cemig: [116](tel:116)**
+> **Defesa Civil: [199](tel:199) · Bombeiros: [193](tel:193) · Energia: [116](tel:116)**
 
 ---
 
 ## Alertas: saiba antes
 
 - **SMS:** mande o seu **CEP** para [**40199**](sms:40199), de graça. [fonte: midr-cadastro-alertas-sms]
-- **Defesa Civil de BH:** WhatsApp "defesacivilbh" e Telegram @defesacivilbh. [fonte: pbh-periodo-chuvoso-2026-2027]
 - **Defesa Civil Alerta:** aparece sozinho na tela do celular, sem cadastro. [fonte: anatel-defesa-civil-alerta] [fonte: pbh-periodo-chuvoso-2026-2027]
+:::regiao bh
+- **Defesa Civil de BH:** WhatsApp "defesacivilbh" e Telegram @defesacivilbh. [fonte: pbh-periodo-chuvoso-2026-2027]
 - Os alertas de BH são **por região da cidade** e avisam de chuva forte, tempestade, granizo e vento antes que alguma coisa aconteça. [fonte: pbh-alertas-regionalizados-2026]
 - **Semáforo nos pontos de alagamento:** amarelo piscando significa atenção; **vermelho significa via fechada: não avance**. [fonte: pbh-periodo-chuvoso-2026-2027]
+:::
+:::regiao natal
+- Em Natal, a Prefeitura manda **alertas de risco pelo WhatsApp da Estela**: (84) 3232-4900. Ocorrências pelo [190](tel:190). [fonte: natal-defesa-civil-el-nino-2026]
+:::
+:::regiao mossoro
+- Em Mossoró, a Defesa Civil atende no [**199**](tel:199) durante o período de chuva. [fonte: mossoro-defesa-civil-chuvas-2026]
+:::
 
 ---
 
@@ -22,7 +30,13 @@
 Uns **15 cm** de água correndo já derrubam uma pessoa, e **30 cm** arrastam um carro. [fonte: ready-gov-floods]
 
 - Não deixe criança brincar em enxurrada nem perto de córrego. [fonte: pbh-esquema-fortes-chuvas-2022]
-- Respeite os bloqueios. Em BH, as avenidas sobre córregos são fechadas quando a água sobe: Teresa Cristina, Francisco Sá, Silva Lobo, Prudente de Morais, Silviano Brandão, Bernardo Vasconcelos, Vilarinho e outras. [fonte: pbh-bloqueio-vias-chuvas]
+- Respeite os bloqueios. [fonte: pbh-bloqueio-vias-chuvas]
+:::regiao bh
+- Em BH, as avenidas sobre córregos são fechadas quando a água sobe: Teresa Cristina, Francisco Sá, Silva Lobo, Prudente de Morais, Silviano Brandão, Bernardo Vasconcelos, Vilarinho e outras. [fonte: pbh-bloqueio-vias-chuvas]
+:::
+:::regiao mossoro
+- Em Mossoró, a Zona Sul e o **Alto da Conceição** (ruas Flávio Oliveira, Dr. Haroldo Galvão e Romualdo Galvão) ficam na área de cheia do rio e estão entre os pontos que mais alagam. Com chuva forte, fique de olho no rio e nos avisos da Defesa Civil. Lixo na rua entope a drenagem: descarte certo. [fonte: mossoro-areas-ribeirinhas-2026] [fonte: mossoro-elevacao-rio-2023]
+:::
 - Água da chuva barrenta e trazendo galhos é sinal de inundação. Procure um lugar alto. [fonte: cbmmg-cartilha-encosta-inundacao]
 - **Não entre na água para salvar alguém.** Ligue 193. [fonte: cbmmg-cartilha-encosta-inundacao]
 
@@ -82,7 +96,13 @@ Durante a chuva, fique longe de encostas e muros de arrimo. [fonte: pbh-periodo-
 - não jogue lixo, entulho, água de lavar ou esgoto no barranco;
 - não plante bananeira em encosta.
 
-Rachadura no terreno: cubra com lona até a vistoria. Em BH, o **Disque Vistoria** é o (31) 3277-6409, em horário comercial; fora dele, ligue 199. [fonte: sedec-movimentos-de-massa] [fonte: pbh-urbel-dicas-periodo-chuvoso-2026]
+Rachadura no terreno: cubra com lona até a vistoria. [fonte: sedec-movimentos-de-massa]
+:::regiao bh
+Em BH, o **Disque Vistoria** é o (31) 3277-6409, em horário comercial; fora dele, ligue 199. [fonte: pbh-urbel-dicas-periodo-chuvoso-2026]
+:::
+:::regiao natal
+Em Natal, as áreas de duna e encosta ocupadas têm risco de deslizamento, como Cidade Nova (Baixa do Cão), Pião, Aparecida, África, Planalto, Passo da Pátria e Jacó. Com sinal de perigo, saia e avise pelo [190](tel:190) ou pelo WhatsApp da Estela. [fonte: natal-pmrr-2008] [fonte: natal-defesa-civil-el-nino-2026]
+:::
 
 ---
 
@@ -137,7 +157,13 @@ Sinais de insolação e o que fazer: veja o capítulo **Primeiros socorros**.
 
 ## Ar seco
 
-O ideal é a umidade do ar entre 40% e 70%. Em BH, ela já ficou **abaixo de 12%**. [fonte: pbh-tempo-seco-cuidados]
+O ideal é a umidade do ar entre 40% e 70%. [fonte: pbh-tempo-seco-cuidados]
+:::regiao bh
+Em BH, ela já ficou **abaixo de 12%**, entre agosto e setembro. [fonte: pbh-tempo-seco-cuidados]
+:::
+:::regiao mossoro
+Em Mossoró, já passou de **38 °C com umidade em torno de 15%**. [fonte: mossoro-calor-baixa-umidade-2019]
+:::
 
 | Umidade | Estado | O que fazer |
 |---|---|---|
@@ -182,10 +208,128 @@ O ideal é a umidade do ar entre 40% e 70%. Em BH, ela já ficou **abaixo de 12%
 
 ## Falta d'água
 
+:::regiao bh
 - Avise a Copasa: [115](tel:115) ou WhatsApp (31) 99770-7000. [fonte: copasa-canais-oficiais]
+:::
+:::regiao natal,mossoro
+- Avise a Caern: [115](tel:115) ou WhatsApp (84) 98118-8400. [fonte: caern-home]
+:::
+:::regiao outra
+- Avise a empresa de água: [115](tel:115). [fonte: anatel-sup-codigos]
+:::
 - **Água para beber vem primeiro.** Na dúvida sobre a água, trate com água sanitária ou ferva (veja **Durante o apagão**). [fonte: ms-noticia-pos-enchente-2024] Higiene e comida vêm depois. [geral]
 - Feche a torneira enquanto ensaboa ou escova os dentes. Use balde em vez de mangueira e vassoura em vez de água na calçada. [fonte: agenciaminas-copasa-uso-consciente-2026]
 - **Reaproveite** a água da máquina de lavar para limpar quintal e calçada, e para a descarga. [fonte: agenciaminas-copasa-uso-consciente-2026] [geral]
 - Conserte vazamentos. [fonte: agenciaminas-copasa-uso-consciente-2026]
-- Água da torneira voltou com cheiro ou cor estranha: **não beba** e avise a Copasa. [fonte: ms-tratamento-agua-desastres-2016]
+- Água da torneira voltou com cheiro ou cor estranha: **não beba** e avise a empresa de água. [fonte: ms-tratamento-agua-desastres-2016]
 - Água recebida de caminhão-pipa ou guardada em balde: mantenha tampada e trate antes de beber. [fonte: sessp-cve-hipoclorito-2025] [geral]
+
+---
+
+## Tremor de terra (terremoto)
+
+No Brasil, os tremores costumam ser **fracos e quase nunca causam estrago grave**. O **Nordeste**, e o **RN** em especial, é uma das regiões com mais tremores do país. [fonte: midr-ceara-tremor-saiba-como-agir] [fonte: labsis-tremor-rn-currais-novos-2026] Por ano, o país tem em média uns 20 tremores acima de magnitude 3. [fonte: sgb-terremotos]
+
+**Durante o tremor:** [fonte: readygov-earthquakes] [fonte: usp-sismo-panfleto-como-se-comportar]
+
+1. **Abaixe-se**, de joelhos.
+2. **Proteja a cabeça e o pescoço** com os braços, ou fique debaixo de uma mesa firme e segure nela.
+3. **Fique onde está até parar.** Não saia correndo no meio do tremor, porque a correria machuca mais.
+4. Fique longe de janelas, sacadas, estantes e lustres.
+5. Na cama: fique deitado e proteja a cabeça com o travesseiro.
+6. Na rua: vá para um lugar aberto, longe de prédios, muros, postes e fios.
+7. Dirigindo: encoste e pare.
+
+Apague o fogão e qualquer chama assim que sentir o tremor. [fonte: usp-sismo-panfleto-como-se-comportar]
+
+**Depois:** [fonte: usp-sismo-panfleto-como-se-comportar] [fonte: readygov-earthquakes] [fonte: usgs-after-earthquake]
+
+- Podem vir **novos tremores** (réplicas). Fique atento.
+- **Feche o gás** e não acenda o fogão se sentir cheiro de gás.
+- **Use a escada, nunca o elevador.**
+- Não entre em construção rachada ou danificada, e fique longe de fios caídos.
+- Não mova um ferido grave, a não ser que ele corra mais perigo onde está. Ligue 192.
+- Avise a Defesa Civil ([199](tel:199)). **Não espalhe boato**: espere a informação oficial. [fonte: midr-ceara-tremor-saiba-como-agir] [fonte: usp-sismo-panfleto-como-se-comportar]
+
+**Para prevenir:** cama longe de janela e de lustre, e objetos pesados nas prateleiras de baixo. [fonte: usp-sismo-panfleto-como-se-comportar]
+
+---
+
+## Tsunami
+
+O risco de um tsunami grande no litoral brasileiro é **muito baixo**. Ondas pequenas, vindas de terremotos distantes, já chegaram: em 2004 houve ondas de 1,2 m em Santa Catarina. [fonte: revista-usp-tsunamis-no-brasil]
+
+**Mesmo assim, conheça os sinais:** [fonte: readygov-tsunamis] [fonte: unesco-tsunami-warning-system]
+
+- **o mar recua de repente**, mostrando o fundo;
+- um **ronco forte** vindo do mar;
+- uma parede de água vindo.
+
+**Viu algum sinal? Corra para o alto e para longe da praia**, sem esperar aviso oficial. Do recuo do mar até a onda podem ser só minutos. Vêm várias ondas: só volte quando as autoridades liberarem. [fonte: readygov-tsunamis] [fonte: unesco-tsunami-warning-system]
+
+---
+
+## Ressaca e mar agitado
+
+A Marinha emite **aviso de ressaca** quando as ondas passam de 2,5 metros na costa. [fonte: govbr-meteorologia-marinha]
+
+Com aviso de ressaca: [fonte: agenciabrasil-ressaca-rj-2026]
+
+- **não entre no mar**;
+- respeite a **bandeira vermelha** e os guarda-vidas;
+- fique longe de **pedras, costões e molhes**;
+- evite mirantes e a beira da orla, porque a onda pode chegar mais alto do que parece;
+- não tire os olhos das crianças.
+
+**Falésias** (no litoral do RN, por exemplo): não fique em cima nem embaixo delas, principalmente com chuva. Viu rachadura ou areia caindo? Afaste-se e avise a Defesa Civil. [fonte: midr-rn-falesias-tabatinga] [geral]
+
+---
+
+## Ciclone, tornado e vendaval forte (mais comum no Sul)
+
+O **Inmet** emite **avisos** de tempo severo: amarelo, laranja e vermelho, que significa "grande perigo". A **Defesa Civil** emite **alertas** para cada lugar. No RS, os alertas vão até o **roxo, que significa ação imediata: saia da área de risco**. [fonte: inmet-aviso-vs-alerta] [fonte: rs-protocolo-alertas-cores] [fonte: rs-saiba-agir-vendaval]
+
+**Antes, assim que sair o aviso:** [fonte: poa-informe-ciclone-bomba-2026]
+
+- Guarde ou amarre o que o vento pode levar: vasos, telhas soltas, móveis de quintal.
+- Carregue celulares e lanternas, e **evite velas**.
+- Separe o kit com documentos, remédios, água, comida e agasalho.
+- Quem depende de aparelho: confira as baterias e o oxigênio reserva.
+
+**Durante:**
+
+- Fique num cômodo **interno, sem janelas**, no andar mais baixo de uma construção firme. [fonte: readygov-tornadoes] [fonte: nws-tornado-during]
+- Proteja a cabeça e o pescoço com os braços. Cubra-se com cobertores ou fique atrás de um móvel. [fonte: readygov-tornadoes]
+- Longe de janelas, portas e coberturas de vidro. [fonte: poa-informe-ciclone-bomba-2026]
+- **Não suba no telhado para consertar nada** durante o vento. [fonte: poa-informe-ciclone-bomba-2026]
+- Barraca, trailer e casa de madeira leve não são abrigo seguro. Debaixo de viaduto também não. [fonte: nws-tornado-during] [fonte: readygov-tornadoes]
+- Sem abrigo nenhum: deite numa vala ou num buraco do terreno. [fonte: rs-saiba-agir-tornado] [fonte: sedec-vendavais]
+
+**Depois:** [fonte: poa-informe-ciclone-bomba-2026] [fonte: rs-saiba-agir-tornado]
+
+- Nunca toque em fio caído.
+- Se a instalação elétrica molhou, só religue depois que um eletricista avaliar.
+- Quando a água voltar, deixe correr um pouco. Se vier turva ou com cheiro, trate antes de beber.
+- Não volte para área evacuada sem liberação oficial.
+
+Em 2004, o **Catarina** atingiu Santa Catarina e o Rio Grande do Sul com ventos de furacão. [fonte: embrapa-catarina-hazards-2004]
+
+---
+
+## Seca e estiagem (semiárido)
+
+**Toda água para beber precisa ser tratada**, venha da torneira, do poço, da cisterna ou do carro-pipa: filtre e use 2 gotas de água sanitária por litro, ou ferva. Guarde a água tratada num pote limpo, tampado e só para isso. [fonte: ms-cartilha-tratamento-intradomiciliar]
+
+**Carro-pipa: confira** se o caminhão tem escrito "**ÁGUA POTÁVEL**", não tem ferrugem nem vazamento, e se o motorista tem autorização da vigilância sanitária. [fonte: ms-cartilha-cuidados-carro-pipa]
+
+**Cisterna:** [fonte: embrapa-manejo-agua-cisterna]
+
+- Lave e desinfete **uma vez por ano, antes das chuvas**.
+- **Jogue fora a água das primeiras chuvas**, que lava o telhado.
+- Mantenha a tampa fechada e tela nos respiros. Fique longe de fossa, curral e lixo.
+- Tire a água com bomba manual, não com balde.
+- **Mesmo clorada, filtre a água de beber**: alguns parasitas resistem ao cloro.
+
+**Saúde:** com pouca água aumentam a **desidratação** (cuidado com crianças e idosos) e a diarreia. Para higiene, use álcool em gel quando faltar água. [fonte: ms-secas-pagina]
+
+**Operação Carro-Pipa:** atende a zona rural do semiárido em municípios com decreto de emergência. O pedido é feito pela **Defesa Civil do município**, não pelo morador. [fonte: govbr-servico-carro-pipa] Em setembro de 2026, 123 cidades do RN estavam em emergência por seca. [fonte: agenciabrasil-rn-123-municipios-2026]

@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
 import '../dados/marcacoes.dart';
+import '../dados/regiao.dart';
 import '../tema.dart';
 import 'ficha.dart' show ligar;
 
@@ -21,8 +22,13 @@ class TelaCapitulo extends StatefulWidget {
 class _TelaCapituloState extends State<TelaCapitulo> {
   // Carregado uma vez só: criar o Future dentro do build refaz a leitura
   // a cada redesenho e a tela fica presa no indicador de carregamento.
-  late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados =
-      (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir()).wait;
+  late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados = _carregar();
+
+  Future<(String, Map<String, Fonte>, Marcacoes)> _carregar() async {
+    final (bruto, fontes, marcacoes, regiao) =
+        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), lerRegiao()).wait;
+    return (filtrarRegiao(bruto, regiao ?? 'outra'), fontes, marcacoes);
+  }
 
   @override
   Widget build(BuildContext context) {

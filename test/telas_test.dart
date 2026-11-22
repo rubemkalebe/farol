@@ -9,7 +9,7 @@ void main() {
   // anterior não completa no seguinte.
   setUp(() {
     rootBundle.clear();
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues({'regiao': 'bh'});
   });
 
   testWidgets('início lista os capítulos e abre um', (tester) async {
@@ -82,5 +82,16 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.descendant(of: find.byKey(const ValueKey('marcar-agua-beber')),
         matching: find.byIcon(Icons.check_box)), findsOneWidget);
+  });
+
+  testWidgets('primeira abertura pergunta a cidade e guarda a escolha', (tester) async {
+    SharedPreferences.setMockInitialValues({});
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+    expect(find.text('Onde você está?'), findsOneWidget);
+    await tester.tap(find.text('Natal (RN)'));
+    await tester.pumpAndSettle();
+    expect(find.text('Natal (RN)'), findsOneWidget);
+    expect((await SharedPreferences.getInstance()).getString('regiao'), 'natal');
   });
 }

@@ -232,7 +232,12 @@ Fio caído é sempre fio com energia. [fonte: rs-gov-energia-eventos-climaticos]
 ## Envenenamento e intoxicação
 
 **Disque-Intoxicação: 0800 722 6001**, grátis, 24 horas. [fonte: anvisa-disque-intoxicacao]
-Em BH, a referência é o **Hospital João XXIII**. CIATox-MG: **(31) 3224-4000**. [fonte: mg-servico-atendimento-intoxicacao] [fonte: fhemig-joao-xxiii-produtos-limpeza-2024]
+:::regiao bh
+Em BH, a referência é o **Hospital João XXIII**. CIATox-MG: [**(31) 3224-4000**](tel:3132244000). [fonte: mg-servico-atendimento-intoxicacao] [fonte: fhemig-joao-xxiii-produtos-limpeza-2024]
+:::
+:::regiao natal,mossoro
+**CIATox-RN**, 24 horas: [**0800 281 7005**](tel:08002817005) · WhatsApp (84) 98883-9155. [fonte: sesap-carta-servicos-2025]
+:::
 
 1. **Não provoque vômito**, a não ser que o centro de intoxicação mande. [fonte: fhemig-joao-xxiii-produtos-limpeza-2024]
 2. **Não dê nada para comer ou beber**, nem leite nem água. [fonte: fhemig-joao-xxiii-produtos-limpeza-2024] [fonte: sbp-intoxicacoes-exogenas-2024]
@@ -246,12 +251,25 @@ Para monóxido de carbono (gerador, fogareiro), veja o capítulo **Durante o apa
 
 ## Escorpião, cobra e aranha
 
-**Escorpião**, muito comum em BH:
+**Escorpião**, muito comum nas cidades:
 
 1. Acalme a pessoa e afaste-a do escorpião. [fonte: ms-escorpioes-esclarecimentos-2024]
 2. Lave o local com **água e sabão**. [fonte: ms-escorpioes-esclarecimentos-2024]
 3. Para a dor, use **compressa morna**. [fonte: ms-escorpioes-esclarecimentos-2024]
-4. **Vá já ao hospital de referência.** Em BH, é o João XXIII. [fonte: agenciaminas-mg-peconhentos-2026]
+4. **Vá já ao hospital de referência**, que tem o soro. [fonte: agenciaminas-mg-peconhentos-2026]
+
+:::regiao bh
+Em BH, o hospital de referência é o **João XXIII**. [fonte: agenciaminas-mg-peconhentos-2026]
+:::
+:::regiao natal
+Em Natal: **Hospital Giselda Trigueiro** (R. Cônego Monte, 110, Quintas) e, para crianças, **Hospital Maria Alice Fernandes**. [fonte: ms-hospitais-referencia-peconhentos-rn]
+:::
+:::regiao mossoro
+Em Mossoró: **Hospital Regional Tarcísio Maia**. [fonte: ms-hospitais-referencia-peconhentos-rn]
+:::
+:::regiao outra
+A lista de hospitais com soro, por estado, está no site do Ministério da Saúde. Descubra o da sua cidade **antes** de precisar e anote na Ficha. [fonte: ms-hospitais-referencia-peconhentos-rn] [geral]
+:::
 
 **Não use:** gelo, pomada, remédio caseiro ou torniquete. [fonte: ms-escorpioes-esclarecimentos-2024] [fonte: ms-pcdt-escorpionicos-2025]
 

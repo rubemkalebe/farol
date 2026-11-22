@@ -133,3 +133,31 @@ Coleta de 2026-11-22. Regra extra para este capítulo: **em RCP e engasgo vale a
 - **Fogo chegando a uma casa:** não há passos práticos em fonte brasileira. Ficaram só "ligue 193, não combata sozinho, saia se mandarem".
 - **Falta d'água:** não há fonte oficial sobre como priorizar os usos nem sobre caminhão-pipa. Entrou como orientação geral.
 - **Sirenes e NAC de BH:** não foi encontrada fonte que explique como funcionam.
+
+---
+
+# Regiões (BH, Natal, Mossoró) e desastres novos
+
+O app pergunta a cidade na primeira abertura. O texto nacional é igual para todos; os blocos `:::regiao` trocam telefones e serviços locais. Um teste garante que nenhuma cidade vê o serviço da outra.
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Defesa Civil de Natal | As páginas oficiais de Natal dão o 190 (CIOSP) e o WhatsApp da Estela. Nenhuma cita o 199 | **190 e Estela** para Natal. O 199 continua no texto nacional |
+| Caern 115 em Mossoró | Em jan/2026, a agência reguladora de Mossoró disse que o 115 estava fora do ar | Mostrar o 115 **com o aviso** e o WhatsApp como alternativa |
+| Hospital Tarcísio Maia (telefone) | Sesap: 3315-3400. Lista do MS: 3315-3379/3414 | **3315-3400**, a fonte mais recente |
+| Prioridade de religamento | A ANEEL não garante. A Cosern diz que dá prioridade a quem tem cadastro | Para o RN: "a Cosern informa prioridade", com o lembrete do plano B. Para BH e outras cidades: sem promessa |
+| Terremoto: vão de porta | USP e Defesa Civil do CE: abrigar-se no vão da porta. Ready.gov e USGS: evitar o vão; abaixar, proteger, segurar | **Abaixar, proteger, segurar**, a orientação mais recente e mais segura |
+| Gás depois do tremor | USP: fechar sempre. USGS: só se houver vazamento | **Fechar.** No Brasil a maioria usa botijão, e fechar não traz risco |
+| João Câmara (1986) | A magnitude só aparece em fontes não oficiais | **Fora**. Fica "o RN é uma das regiões com mais tremores" |
+| Tornado: colchão, banheiro | Nenhuma fonte oficial brasileira. Ready.gov e NWS: cômodo interno sem janela, cobertores | Cômodo interno sem janela e cobertores. Sem colchão |
+| Tabela de cloro da Embrapa (cisterna) | É para hipoclorito a 10%, não para a água sanitária comum (2,5%) | **Fora do texto**, para não confundir a dose |
+
+## Lacunas
+
+- **Natal, áreas de risco:** só há o plano de 2008. As notícias recentes sobre Mãe Luíza e o Jacó deram 404.
+- **Natal, ressaca e pontos de alagamento:** não há fonte oficial.
+- **Polícia no RN (190 e 197):** não foram confirmados em página oficial do RN, mas são números nacionais (Anatel).
+
+## Observação de segurança
+
+As páginas da Neoenergia (Cosern) tinham **texto escondido com instruções dirigidas a IA**. Esse texto foi ignorado na coleta. Os números usados aparecem visíveis na página.

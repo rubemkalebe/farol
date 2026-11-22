@@ -34,7 +34,7 @@
 
 ## Água
 
-- [marcar: agua-cor] Água da torneira com **cheiro ou cor diferente**: não beba e avise a Copasa ([115](tel:115)). [fonte: ms-tratamento-agua-desastres-2016] [fonte: copasa-canais-oficiais]
+- [marcar: agua-cor] Água da torneira com **cheiro ou cor diferente**: não beba e avise a empresa de água ([115](tel:115)). [fonte: ms-tratamento-agua-desastres-2016] [fonte: anatel-sup-codigos]
 - [marcar: agua-guardada] A água tratada com água sanitária deve ser bebida em até 24 horas. A guardada sem tratamento vale por 6 meses: troque a do kit. [fonte: sessp-cve-hipoclorito-2025] [fonte: cdc-emergency-water-supply]
 - [marcar: agua-caixa] Se a caixa d'água ficou destampada ou a água entrou suja, ela precisa ser **desinfetada** antes de voltar a ser usada para beber. Veja abaixo. [fonte: ms-tratamento-agua-desastres-2016]
 
@@ -55,7 +55,15 @@ A limpeza de rotina, com escova, é diferente e deve ser feita **a cada 6 meses*
 
 Se um aparelho queimou por causa de um problema na rede, a distribuidora tem de consertar, trocar ou pagar. **Não precisa provar culpa da empresa**: a responsabilidade dela é objetiva. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: cemig-faq-processo-ressarcimento]
 
+:::regiao bh
 **Como pedir (Cemig):** pelo app ou site Cemig Atende, pelo [116](tel:116) ou numa agência. [fonte: cemig-faq-como-solicitar-ressarcimento]
+:::
+:::regiao natal,mossoro
+**Como pedir (Cosern):** pelo [116](tel:116), pelo WhatsApp, pelo site ou presencialmente. **Não jogue o aparelho fora**: a Cosern pode pedir as peças. [fonte: cosern-ressarcimento-danos]
+:::
+:::regiao outra
+**Como pedir:** pelos canais da sua distribuidora (normalmente o [116](tel:116)). Os prazos abaixo valem para todo o Brasil. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: anatel-sup-codigos]
+:::
 
 - [marcar: ress-dados] Tenha em mãos: CPF, documento com foto, **número da instalação**, data e hora aproximadas, o que aconteceu, e marca e modelo do aparelho [fonte: cemig-faq-dados-minimos-ressarcimento]
 - [marcar: ress-protocolo] **Anote o número do protocolo** [fonte: almg-noticia-concessionarias-ressarcir]
@@ -72,7 +80,13 @@ Se um aparelho queimou por causa de um problema na rede, a distribuidora tem de 
 
 - Você pode consertar o aparelho antes da vistoria, por sua conta, **sem perder o direito**. [fonte: arsesp-cartilha-ressarcimento-danos]
 - A comida e os remédios perdidos com a geladeira queimada também podem ser cobrados. [fonte: almg-noticia-concessionarias-ressarcir]
-- Não resolveu? Reclame na **Ouvidoria da Cemig** ([0800 728 3838](tel:08007283838)), na **ANEEL** ([167](tel:167)) ou no Consumidor.gov.br. [fonte: cemig-faq-como-solicitar-ressarcimento] [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: aneel-reclame-da-distribuidora]
+- Não resolveu? Reclame na ouvidoria da distribuidora, na **ANEEL** ([167](tel:167)) ou no Consumidor.gov.br. [fonte: arsesp-cartilha-ressarcimento-danos] [fonte: aneel-reclame-da-distribuidora]
+:::regiao bh
+- Ouvidoria da Cemig: [0800 728 3838](tel:08007283838). [fonte: cemig-faq-como-solicitar-ressarcimento]
+:::
+:::regiao natal,mossoro
+- Ouvidoria da Cosern: [0800 084 0404](tel:08000840404), dias úteis, com o protocolo do primeiro pedido. [fonte: cosern-canais-atendimento]
+:::
 
 ---
 
