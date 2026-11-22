@@ -145,6 +145,8 @@ fontes:
       p.1: filtrar e tratar "com hipoclorito de sódio a 2,5%, adicionando 2 (duas) gotas para cada litro de água e deixando repousar por 30 (trinta) minutos antes de consumir."
       p.2: frasco "ao abrigo da luz e do calor, sempre fechado e fora do alcance de crianças"
       Anexo (~p.7): sem hipoclorito, filtrar e "ferva-a durante 5 minutos. Marque os 5 minutos, após o início da fervura/ebulição."
+      Anexo, recipientes: lavar com sabão e enxaguar; "Misturar 2 colheres, das de sopa, de solução de hipoclorito de sódio ou água sanitária (2% a 2,5%) em um 1 litro de água"; tampar, agitar, deixar 30 minutos e enxaguar com água própria para consumo.
+      "Caso observe alguma alteração na água da torneira (como odor e/ou coloração diferente do habitual) entre em contato com a empresa de saneamento"
 
   - id: sesrs-guia-basico-enchentes-2024
     tema: agua
@@ -415,6 +417,7 @@ fontes:
       "Talk to your medical provider about a power outage plan for medical devices powered by electricity."
       "Go to a community location with power if heat or cold is extreme."
       "Do not use a gas stove or oven to heat your home."
+      Gerador: ligar os aparelhos com extensão para serviço pesado; deixar esfriar antes de abastecer. "Monitor temperatures with a thermometer."
 
   - id: ses-sc-samu-monoxido
     tema: seguranca
@@ -1555,7 +1558,9 @@ fontes:
     usado_em: [preparacao, contatos, outros-desastres]
     notas: |
       Defesa Civil BH: telefone 199 (24 h); WhatsApp "basta digitar defesacivilbh no aplicativo"; SMS: CEP para 40199;
-      Cell Broadcast chega "sem necessidade de internet ou cadastro"; pop-up na TV por assinatura.
+      Cell Broadcast chega "sem necessidade de internet ou cadastro"; pop-up na TV por assinatura. Telegram @defesacivilbh.
+      Semáforos nos pontos de alagamento: amarelo piscante = atenção; vermelho = via interditada, "No vermelho, não avance."
+      Disque Vistoria 3277-6409 (seg–sex, horário comercial).
 
   - id: readygov-food
     tema: comida
@@ -1900,3 +1905,697 @@ fontes:
     usado_em: [contatos]
     notas: |
       "PLANTÃO 24H MG - LIGUE 117"; "OUTROS ESTADOS 0800 031 0197".
+
+  # ═══════════════════════ Outros desastres ═══════════════════════
+
+  # ───────────── Fumaça, calor, ar seco, falta d'água, queimadas ─────────────
+
+  - id: ms-queimadas-saude-a-z
+    tema: fumaca
+    titulo: "Queimadas (Saúde de A a Z)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/q/queimadas
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Permaneça em ambientes fechados, preferencialmente bem vedados e com conforto térmico adequado."; portas e janelas fechadas nos horários de mais fumaça.
+      "Utilize, preferencialmente, máscaras do tipo N95, PFF2 ou P100"; "Aumente a ingestão de água e líquidos".
+      "Crianças menores de 5 anos, idosos e gestantes devem ter atenção redobrada"; também cardíacos, respiratórios e imunossuprimidos.
+      "Buscar atendimento médico imediatamente na ocorrência de sintomas."
+
+  - id: ms-queimadas-alerta-risco-2020
+    tema: fumaca
+    titulo: "Queimadas e incêndios florestais: alerta de risco sanitário e recomendações para a população"
+    orgao: Ministério da Saúde / SVS
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/queimadas_incendios_florestais_alerta_risco.pdf
+    acessado: 2026-11-22
+    publicado: 2020
+    licenca: "CC BY-NC-SA 4.0. É permitida a reprodução parcial ou total desta obra, desde que citada a fonte."
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Sintomas: "Dores de cabeça. Irritação e ardência nos olhos, nariz e garganta. Rouquidão. Lacrimejamento. Tosse seca. Dificuldade de respirar. Cansaço."
+      Água ajuda a manter as vias respiratórias úmidas; evitar exercício ao ar livre com fumaça; comida sem fritura nem grelha.
+      Máscaras comuns dão "pouca ou nenhuma proteção" contra partículas de fumaça; só N95, PFF2 ou P100.
+      Ar-condicionado em recirculação; evitar aspirador sem filtro HEPA.
+      Menores de 5 anos, maiores de 60 e gestantes: procurar atendimento cedo. Cardíacos e respiratórios: ter os remédios de crise à mão.
+      Prevenção: aceiros; "Não soltar balões ou fogos de artifícios."; "Não acender fogueiras."
+
+  - id: epa-protect-lungs-smoke
+    tema: fumaca
+    titulo: "Protect Your Lungs From Wildfire Smoke and Ash"
+    orgao: EPA (EUA)
+    url: https://www.epa.gov/system/files/documents/2026-06/protect-your-lungs-factsheet.pdf
+    acessado: 2026-11-22
+    publicado: 2026
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Ficar menos tempo ao ar livre é a proteção mais eficaz.
+      Não usar máscara de uma alça ou com elásticos nas orelhas, que não vedam; barba impede a vedação; respiradores não servem em crianças pequenas.
+      Cardíacos, pneumopatas e grávidas: perguntar ao médico antes de usar respirador. No calor, a máscara aumenta o risco: pausas e água.
+
+  - id: ms-nt38-2023-calor-crianca-idoso
+    tema: calor
+    titulo: "Nota Técnica nº 38/2023 – Atenção à saúde da criança e da pessoa idosa no período de ondas de calor"
+    orgao: Ministério da Saúde / SAPS
+    url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2023/nota-tecnica-conjunta-onda-calor.pdf
+    acessado: 2026-11-22
+    publicado: 2023-09-25
+    licenca: desconhecida (ato oficial)
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Risco maior: crianças e idosos, pouca água, álcool ou cafeína, gastroenterite, remédios (anti-hipertensivos, diuréticos, antidepressivos, antipsicóticos) e doença crônica.
+      Idosos têm "menor sensação de sede"; oferecer mais líquido que o habitual.
+      "panos úmidos com água fresca nos punhos, na face e atrás do pescoço"; roupas largas; evitar atividade física "entre 10 e 15h".
+
+  - id: inmet-onda-calor-centro-sul-2025
+    tema: calor
+    titulo: "Onda de calor em áreas do Centro-Sul do país persiste até sábado (8)"
+    orgao: Inmet
+    url: https://portal.inmet.gov.br/noticias/onda-de-calor-em-areas-do-centro-sul-do-pais-persiste-ate-sabado-8
+    acessado: 2026-11-22
+    publicado: 2025-03-05
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Avisos: amarelo "perigo potencial"; laranja "perigo"; vermelho "grande perigo".
+      Onda de calor (OMM): máximas 5 °C ou mais acima da média por "no mínimo, cinco dias consecutivos".
+
+  - id: pbh-tempo-seco-cuidados
+    tema: umidade
+    titulo: "Tempo seco exige cuidados redobrados com a saúde"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/noticias/tempo-seco-exige-cuidados-redobrados-com-saude
+    acessado: 2026-11-22
+    publicado: 2019-09-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Umidade ideal (OMS) "em torno de 40 a 70%"; BH já registrou abaixo de 12%.
+      "O essencial é tomar água com frequência."; urina "transparente".
+      "Umidificar o ambiente com toalhas molhadas, em especial no quarto de dormir"; evitar exercício ao ar livre "entre 10h às 16h".
+      Soro fisiológico nas narinas; colírio lubrificante. Crianças e idosos mais vulneráveis.
+      Pele muito seca, pouca urina, cansaço intenso, sonolência ou confusão: Centro de Saúde.
+
+  - id: agenciaminas-defesa-civil-baixa-umidade-2025
+    tema: umidade
+    titulo: "Defesa Civil alerta para baixa umidade do ar nos próximos dias"
+    orgao: Agência Minas / Defesa Civil MG
+    url: https://www.agenciaminas.mg.gov.br/noticia/defesa-civil-alerta-para-baixa-umidade-do-ar-nos-proximos-dias/
+    acessado: 2026-11-22
+    publicado: 2025-06-09
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      Água mesmo sem sede; evitar atividade ao ar livre entre 10h e 17h; toalhas molhadas, baldes com água ou umidificador; soro nas narinas.
+      "Não solte balões nem realize queimadas". Emergência: 190, 193, 199.
+
+  - id: sesgo-umidade-ar-saude-cepagri
+    tema: umidade
+    titulo: "Umidade relativa do ar e a saúde no tempo seco"
+    orgao: Secretaria de Estado da Saúde de Goiás (escala Cepagri/Unicamp)
+    url: https://goias.gov.br/saude/wp-content/uploads/sites/34/2012/02/umidade-relativa-do-ar-e-a-saude.-e3f.pdf
+    acessado: 2026-11-22
+    publicado: 2013-06
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Entre 20 e 30% - Estado de Atenção": evitar exercício ao ar livre entre 11 e 15 h; umidificar; água à vontade.
+      "Entre 12 e 20% - Estado de Alerta": suprimir exercício e trabalho ao ar livre entre 10 e 16 h; evitar aglomeração em lugar fechado; soro nos olhos e narinas.
+      "Abaixo de 12% - Estado de emergência": interromper atividade ao ar livre entre 10 e 16 h; manter quartos de crianças úmidos.
+
+  - id: agenciaminas-copasa-uso-consciente-2026
+    tema: falta-agua
+    titulo: "Copasa reforça alerta para uso consciente de água em período de altas temperaturas"
+    orgao: Agência Minas / Copasa
+    url: https://www.agenciaminas.mg.gov.br/noticia/copasa-reforca-alerta-para-uso-consciente-de-agua-em-periodo-de-altas-temperaturas-128657
+    acessado: 2026-11-22
+    publicado: 2026-01-05
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      Torneira fechada ao ensaboar e escovar dentes; balde em vez de mangueira; vassoura na calçada; juntar roupa e lavar duas vezes por semana; reusar a água da máquina para limpar quintal; consertar vazamentos.
+
+  - id: cbmmg-cartilha-incendio-vegetacao
+    tema: queimada
+    titulo: "Dicas preventivas para evitar incêndios em vegetação"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: "https://www.bombeiros.mg.gov.br/storage/files/13/Cartilha%20de%20Dicas%20Preventivas%20-%20Inc%C3%AAndio%20em%20Vegeta%C3%A7%C3%A3o%20-%20MOBILE.pdf"
+    acessado: 2026-11-22
+    publicado: 2023-11-17
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Limpar lote com capina ou roçada: "Nunca utilize o fogo".
+      Incêndio em vegetação: 193. Denúncia: 190, 193 ou 181 (sigilo).
+      Provocar incêndio em mata é crime (Lei 9.605/98), reclusão de 2 a 4 anos.
+
+  - id: sp-guia-incendios-florestais-2025
+    tema: queimada
+    titulo: "Guia de orientações — Incêndios florestais: como proteger sua propriedade e o que fazer em caso de emergência?"
+    orgao: Governo de SP (SEMIL / Defesa Civil SP)
+    url: https://sigam.ambiente.sp.gov.br/sigam3/Repositorio/562/Documentos/Tutoriais/2025_guia_incendios.pdf
+    acessado: 2026-11-22
+    publicado: 2025-04
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Avisar já o 193 ou o 199 e os vizinhos, com localização e pontos de referência.
+      "Nunca tente combater um incêndio florestal sozinho."; seguir as instruções dos Bombeiros e da Defesa Civil.
+      "Não usar o fogo como agente de limpeza e para queimar resíduos de poda e lixo."
+
+  - id: readygov-wildfires
+    tema: queimada
+    titulo: "Wildfires"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/wildfires
+    acessado: 2026-11-22
+    publicado: 2026-11-18
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Evacuate immediately if authorities tell you to do so."
+      Preso: ligar para a emergência e dar a localização, sabendo que o resgate pode demorar; "Turn on lights to help rescuers find you."
+
+  # ═══════════════════════ Quando a energia voltar ═══════════════════════
+
+  - id: cemig-faq-como-solicitar-ressarcimento
+    tema: ressarcimento
+    titulo: "Como solicitar ressarcimento de danos em aparelhos elétricos?"
+    orgao: Cemig
+    url: https://www.cemig.com.br/duvida-frequente/como-solicitar-ressarcimento-de-danos-em-aparelhos-eletricos/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CEMIG 2026© - Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      CONFERIR (veio resumido): vale para residências, pequeno comércio e rural (grupo B). Opções: conserto, troca ou dinheiro.
+      Pedido pelo Cemig Atende Web, pelo 116 ou em agência. Ouvidoria 0800 728 3838.
+
+  - id: cemig-faq-prazo-ressarcimento
+    tema: ressarcimento
+    titulo: "Qual o prazo máximo para solicitação do ressarcimento?"
+    orgao: Cemig
+    url: https://www.cemig.com.br/duvida-frequente/qual-o-prazo-maximo-para-solicitacao-do-ressarcimento/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CEMIG 2026© - Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      "Você pode pedir o ressarcimento em até 5 anos a partir da data do dano."
+      Pedido em até 90 dias: resposta em até 15 dias; depois de 90 dias: até 30 dias (contados da verificação técnica).
+      Verificação: "Até 1 dia útil, se o aparelho danificado é usado para conservar alimento ou remédios"; até 10 dias para os demais.
+
+  - id: cemig-faq-processo-ressarcimento
+    tema: ressarcimento
+    titulo: "Como funciona o processo de ressarcimento?"
+    orgao: Cemig
+    url: https://www.cemig.com.br/duvida-frequente/como-funciona-o-processo-de-ressarcimento/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CEMIG 2026© - Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      A Cemig investiga a rede; aprovado, oferece conserto, troca ou dinheiro. Pode negar se não tiver acesso ao aparelho.
+      Quem já consertou apresenta nota do conserto, laudo técnico, dois orçamentos e as peças trocadas.
+
+  - id: cemig-faq-dados-minimos-ressarcimento
+    tema: ressarcimento
+    titulo: "Quais os dados mínimos devo fornecer para registrar solicitação de ressarcimento?"
+    orgao: Cemig
+    url: https://www.cemig.com.br/duvida-frequente/quais-os-dados-minimos-devo-fornecer-para-registrar-solicitacao-de-ressarcimento/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CEMIG 2026© - Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      CPF e documento com foto; "Número da instalação"; "Data e horário aproximado"; "Descrição do problema"; marca e modelo do aparelho; celular e e-mail.
+
+  - id: arsesp-cartilha-ressarcimento-danos
+    tema: ressarcimento
+    titulo: "Cartilha Ressarcimento de Danos Elétricos"
+    orgao: ARSESP (regra nacional da REN ANEEL 1.000/2021)
+    url: https://www.arsesp.sp.gov.br/Documentosgerais/Cartilha%20Ressarcimento%20de%20Danos%20Eletricos%2030-06-26.pdf
+    acessado: 2026-11-22
+    publicado: 2026
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [depois]
+    notas: |
+      "até cinco anos, a contar da data provável da ocorrência do dano"; pedido em até 90 dias segue rito simplificado.
+      "O consumidor pode consertar o equipamento, por sua conta e risco e sem autorização, antes do término do prazo definido para que a distribuidora verifique os equipamentos, sem a perda do direito ao ressarcimento."
+      Responsabilidade "OBJETIVA". 45 dias no total: até 10 para vistoriar (1 dia útil para geladeira), 15 para responder, 20 para pagar, consertar ou trocar.
+      Não cobre dano moral nem lucro cessante. Resposta ruim: Ouvidoria da ANEEL, "telefone 167".
+
+  - id: almg-noticia-concessionarias-ressarcir
+    tema: ressarcimento
+    titulo: "Concessionárias devem ressarcir consumidor por danos provocados pela rede elétrica"
+    orgao: Assembleia Legislativa de Minas Gerais (Procon Assembleia)
+    url: https://www.almg.gov.br/comunicacao/noticias/arquivos/Concessionarias-devem-ressarcir-consumidor-por-danos-provocados-pela-rede-eletrica/
+    acessado: 2026-11-22
+    publicado: 2025-02-03
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [depois]
+    notas: |
+      CONFERIR (veio resumido): pedir número de protocolo; ter a nota fiscal do aparelho.
+      Alimentos e remédios perdidos com a geladeira queimada podem ser cobrados (Código de Defesa do Consumidor, art. 22).
+
+  - id: aneel-reclame-da-distribuidora
+    tema: ressarcimento
+    titulo: "Reclame da distribuidora"
+    orgao: ANEEL
+    url: https://www.gov.br/aneel/pt-br/canais_atendimento/reclame-da-distribuidora
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [depois]
+    notas: |
+      Reclamação pelo Consumidor.gov.br e pelos canais da ANEEL (site e app).
+
+  - id: aneel-faq-ren-1137-2025
+    tema: compensacao
+    titulo: "FAQ - Resolução Normativa nº 1.137/2025"
+    orgao: ANEEL
+    url: https://www.gov.br/aneel/pt-br/acesso-a-informacao/perguntas-frequentes/faq-resolucao-normativa-no-1-137-2025/
+    acessado: 2026-11-22
+    publicado: 2026-03-30
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [depois]
+    notas: |
+      Compensação por interrupção em situação de emergência (DISE), para eventos "a partir de 1º/1/2026"; crédito "na fatura".
+      Aviso aos consumidores "independentemente de terem ou não registrado reclamação."
+      Não traz os limites de 24 h / 48 h.
+
+  - id: ms-tratamento-agua-desastres-2016
+    tema: agua
+    titulo: "Orientações para o tratamento intradomiciliar da água de consumo humano em situações de desastres"
+    orgao: Ministério da Saúde / SVS (cópia na SES-MG)
+    url: https://www.saude.mg.gov.br/wp-content/uploads/2017/12/PPR_Chuva-2024_Anexo-4-do-anexo-J-47d.pdf
+    acessado: 2026-11-22
+    publicado: 2016
+    licenca: "Distribuição gratuita, venda proibida"
+    redistribuir: verificar
+    usado_em: [depois, outros-desastres]
+    notas: |
+      Desinfecção da caixa d'água quando ela ou o abastecimento foram afetados: "Não usar sabão, detergente e nem esponja de aço."
+      "acrescente 1 litro de água sanitária para cada 1.000 litros de água. Abra as torneiras ... para que a canalização seja preenchida com a solução clorada."
+      "Aguarde por duas horas"; depois esvazie a caixa abrindo as torneiras; essa água serve para limpar a casa. Anote a data do lado de fora da caixa.
+      Água da torneira com cheiro ou cor diferente: avisar a empresa de saneamento ou a secretaria de saúde.
+
+  - id: copasa-limpeza-caixa-dagua
+    tema: agua
+    titulo: "Limpeza de Caixa D'Água"
+    orgao: Copasa
+    url: https://www.copasa.com.br/wps/portal/internet/agua-de-qualidade/limpeza-da-caixa-dagua/limpeza-de-caixa-dagua
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [depois]
+    notas: |
+      Limpeza de rotina: esvaziar; escovar com escova de nylon (não de aço); enxaguar; 1 litro de água sanitária em 5 litros de água, espalhar no fundo e nas paredes; esperar meia hora; enxaguar e deixar escorrer tudo; encher. "Esta deve ser lavada a cada seis meses."
+
+  - id: govbr-armazenamento-descarte-remedios
+    tema: remedios
+    titulo: "Do armazenamento ao descarte: saiba como guardar remédios ou jogar fora os que estão em desuso"
+    orgao: gov.br / Ministério da Saúde / Anvisa
+    url: https://www.gov.br/pt-br/noticias/saude-e-vigilancia-sanitaria/2022/12/do-armazenamento-ao-descarte-saiba-como-guardar-remedios-ou-jogar-fora-os-que-estao-em-desuso
+    acessado: 2026-11-22
+    publicado: 2022-12-13
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [depois]
+    notas: |
+      Dúvida sobre remédio: "sempre procure um profissional de saúde ou um farmacêutico."
+      Descarte em farmácias com ponto de coleta; a UBS informa onde há.
+
+  - id: fda-safe-drug-use-after-disaster
+    tema: remedios
+    titulo: "Safe Drug Use After a Natural Disaster"
+    orgao: FDA (EUA)
+    url: https://www.fda.gov/drugs/emergency-preparedness-drugs/safe-drug-use-after-natural-disaster
+    acessado: 2026-11-22
+    publicado: 2026-09-01
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [depois, outros-desastres]
+    notas: |
+      "Consider replacing medicines that may have been exposed to excessive heat."
+      "Medicines that have come into contact with floodwater or unsafe water should be discarded."
+      Remédio vital sem reposição: pode usar se parecer inalterado, até conseguir outro.
+
+  - id: fema-geradores-seguros-ptbr
+    tema: gerador
+    titulo: "Use geradores de maneira segura em casa"
+    orgao: FEMA (EUA), versão em português
+    url: https://fema.gov/pt-br/print/pdf/node/643989
+    acessado: 2026-11-22
+    publicado: 2022-10-02
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [depois, durante-apagao]
+    notas: |
+      "Sempre conecte o gerador a aparelhos com cabos de extensão para serviço pesado."
+      Ligar o gerador direto na instalação da casa "pode ... ferir ou eletrocutar um funcionário da empresa de energia elétrica".
+      Usar eletricista qualificado e chave de transferência apropriada.
+      "Antes de reabastecer o gerador, desligue-o e deixe-o esfriar."
+
+  - id: osha-portable-generators
+    tema: gerador
+    titulo: "Using Portable Generators Safely (Fact Sheet OSHA 3286)"
+    orgao: OSHA (EUA)
+    url: https://www.osha.gov/sites/default/files/publications/OSHA3286.pdf
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [depois]
+    notas: |
+      "Never attach a generator directly to the electrical system of a structure ... unless a qualified electrician has properly installed the generator with a transfer switch."
+      Sem a chave, o gerador energiza a fiação "for great distances", com risco de choque para os trabalhadores da rede.
+      "Do not overload a generator"
+
+  # ───────────── Chuva, enchente, deslizamento, raios, vento ─────────────
+
+  - id: pbh-sinais-risco-geologico-2026
+    tema: deslizamento
+    titulo: "Defesa Civil de BH alerta a população sobre sinais de risco geológico neste período chuvoso"
+    orgao: Prefeitura de Belo Horizonte / Defesa Civil BH
+    url: "https://prefeitura.pbh.gov.br/noticias/defesa-civil-de-bh-alerta-populacao-sobre-sinais-de-risco-geologico-neste-periodo-chuvoso"
+    acessado: 2026-11-22
+    publicado: 2026-11-18
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Sinais: trincas e rachaduras em paredes, pisos e muros; fendas ou depressões no terreno; minas d'água; "Água minando na base de barrancos"; "Portas e janelas que começam a emperrar repentinamente"; inclinação de árvores, postes, muros e barrancos; pequenos deslizamentos; "Estalos ou ruídos incomuns nas estruturas".
+      Muros: rachaduras, inclinação, estufamento, deslocamento.
+      "não permanecer próximo à estrutura, evitar intervenções improvisadas e acionar imediatamente a Defesa Civil pelo telefone 199."
+      "Em situações que indiquem risco iminente, a recomendação é deixar o imóvel e não retornar até que as condições de segurança sejam avaliadas pelos órgãos competentes."
+      Prevenção: calhas e drenagem desobstruídas; não jogar água servida ou esgoto em barrancos.
+
+  - id: pbh-alertas-regionalizados-2026
+    tema: alertas
+    titulo: "Defesa Civil de BH reforça importância dos alertas regionalizados"
+    orgao: Prefeitura de Belo Horizonte / Defesa Civil BH
+    url: "https://prefeitura.pbh.gov.br/noticias/defesa-civil-de-bh-reforca-importancia-dos-alertas-regionalizados"
+    acessado: 2026-11-22
+    publicado: 2026-11-03
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Alertas por regional para chuva intensa, tempestade, granizo e rajadas de vento; "não depende da ocorrência prévia de danos".
+      "não atravessar enxurradas e redobrar a atenção durante tempestades com raios e rajadas de vento."
+
+  - id: pbh-esquema-fortes-chuvas-2022
+    tema: enchente
+    titulo: "Prefeitura define esquema de atuação diante da previsão de fortes chuvas em BH"
+    orgao: Prefeitura de Belo Horizonte
+    url: "https://prefeitura.pbh.gov.br/noticias/prefeitura-define-esquema-de-atuacao-diante-da-previsao-de-fortes-chuvas-em-bh"
+    acessado: 2026-11-22
+    publicado: 2022-12-16
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Não atravesse ruas alagadas nem deixe crianças brincando nas enxurradas e próximo a córregos"
+      Sinais de risco: "saia imediatamente do seu imóvel, e ligue para a Defesa Civil (199)"
+      "Em caso de raios, não permaneça em áreas abertas nem use equipamentos elétricos."; "Não se abrigue nem estacione veículos debaixo de árvores."
+      "Nunca se aproxime de cabos elétricos rompidos. Ligue imediatamente para a Cemig (116) ou Defesa Civil (199)."
+
+  - id: pbh-bloqueio-vias-chuvas
+    tema: enchente
+    titulo: "Saiba como funciona a operação da PBH para bloquear vias durante as chuvas"
+    orgao: Prefeitura de Belo Horizonte / BHTrans
+    url: "https://prefeitura.pbh.gov.br/noticias/saiba-como-funciona-operacao-da-pbh-para-bloquear-vias-durante-chuvas"
+    acessado: 2026-11-22
+    publicado: 2022-12-21
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Pontos monitorados: Av. Teresa Cristina; Av. Francisco Sá; Av. Silva Lobo; Avs. Joaquim Murtinho e Prudente de Morais; Av. Silviano Brandão; Av. Bernardo Vasconcelos; Estação São Gabriel; Av. Prof. Heráclito Mourão; Av. Sebastião de Brito; Av. Vilarinho.
+      "Respeite a sinalização implantada, os pontos de bloqueio e siga as orientações dos agentes de trânsito."
+
+  - id: pbh-urbel-dicas-periodo-chuvoso-2026
+    tema: deslizamento
+    titulo: "Urbel reforça dicas de segurança e prevenção para o período chuvoso"
+    orgao: Prefeitura de Belo Horizonte / Urbel
+    url: "https://prefeitura.pbh.gov.br/noticias/urbel-reforca-dicas-de-seguranca-e-prevencao-para-o-periodo-chuvoso"
+    acessado: 2026-11-22
+    publicado: 2026-01-13
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Disque Vistoria 3277-6409 (seg–sex 8h–12h, 13h–17h); fora do horário, 199.
+      Não jogar lixo em encostas ou córregos; calhas; não despejar esgoto nos barrancos; não cortar barrancos.
+
+  - id: sedec-alagamentos
+    tema: enchente
+    titulo: "Alagamentos – Saiba como agir"
+    orgao: Secretaria Nacional de Proteção e Defesa Civil (MIDR)
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/Alagamentos.pdf"
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: "portal gov.br: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Antes: documentos em sacos plásticos fechados; móveis no alto; "Desligue aparelhos elétricos, quadro geral de energia e feche o registro de entrada de água."; seguir as autoridades e ir para abrigo se recomendado.
+      Durante: "Antes de tudo, salve e proteja sua vida"; "Não volte para casa até as águas baixarem"; evitar contato com a água, que está contaminada; "Não beba água do alagamento."
+      Depois: ver se a casa corre risco de desabar; raspar a lama; lavar e desinfetar o que teve contato com a água; "Cuidado com aranhas, cobras e ratos"; não usar água de poço ou fonte; "Volte para casa durante o dia."
+
+  - id: sedec-chuvas-intensas
+    tema: enchente
+    titulo: "Chuvas Intensas – Saiba como agir"
+    orgao: Secretaria Nacional de Proteção e Defesa Civil (MIDR)
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/chuvasintensas.pdf"
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: "portal gov.br: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Se houver qualquer sinal de movimentação no terreno, procure local seguro."
+
+  - id: sedec-movimentos-de-massa
+    tema: deslizamento
+    titulo: "Movimentos de Massa – Saiba como agir"
+    orgao: Secretaria Nacional de Proteção e Defesa Civil (MIDR)
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/MovimentosdeMassa.pdf"
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: "portal gov.br: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Sinais: rachaduras no chão; árvores, postes ou cercas inclinados; fendas; "levantamento do piso da residência"; barulhos vindos do chão.
+      "saia imediatamente da residência e solicite vistoria técnica da Defesa Civil Municipal."
+      Rachadura no terreno: cobrir com lona plástica. Evitar bananeiras na encosta. Não retornar sem liberação da Defesa Civil.
+
+  - id: sedec-vendavais
+    tema: vendaval
+    titulo: "Vendavais – Saiba como agir"
+    orgao: Secretaria Nacional de Proteção e Defesa Civil (MIDR)
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/Vendavais.pdf"
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: "portal gov.br: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Antes: revisar o telhado; desligar aparelhos e gás; pôr no chão o que pode cair.
+      Durante: lugar seguro, longe de janelas e objetos soltos; proteger a cabeça; fora de casa, deitar numa vala ou depressão.
+      Depois: não chegar perto de fios caídos; avisar Defesa Civil ou Bombeiros.
+
+  - id: sedec-granizo
+    tema: granizo
+    titulo: "Granizo – Saiba como agir"
+    orgao: Secretaria Nacional de Proteção e Defesa Civil (MIDR)
+    url: "https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/Granizo.pdf"
+    acessado: 2026-11-22
+    publicado: 2022
+    licenca: "portal gov.br: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Abrigo resistente, sem risco de destelhamento; não ficar sob árvores nem em coberturas metálicas frágeis; não estacionar perto de torres e placas.
+
+  - id: ms-leptospirose
+    tema: enchente
+    titulo: "Leptospirose"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/l/leptospirose"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Transmitida pela urina de animais, principalmente ratos; sintomas normalmente de 7 a 14 dias após a exposição (até 30).
+      Sintomas: febre, falta de apetite, dor muscular (principalmente nas panturrilhas), dor de cabeça, náusea e vômito. Procurar o serviço de saúde e contar da exposição; não se automedicar.
+      "Evitar o contato com água ou lama de enchentes e impedir que crianças nadem ou brinquem nessas águas."
+      Limpeza: "para 20 litros de água, adicionar duas xícaras de chá (400mL) de hipoclorito de sódio a 2,5%", deixar agir 15 minutos; botas de borracha e luvas.
+
+  - id: ms-enchentes-leptospirose
+    tema: enchente
+    titulo: "Cuidados com a leptospirose"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/enchentes/cuidados-com-a-leptospirose"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Use sempre botas impermeáveis e luvas ao transitar em áreas inundadas."; cobrir cortes com curativo à prova d'água.
+      "Descarte alimentos que tenham entrado em contato com água de enchente".
+
+  - id: ms-enchentes-alimentos
+    tema: enchente
+    titulo: "Cuidados com os alimentos"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/enchentes/cuidados-com-os-alimentos"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Descartar qualquer alimento que teve contato com água de enchente ou lama, inclusive em embalagem que não seja vedada. "Mesmo que a comida pareça seca, pode não ser segura."
+
+  - id: ms-enchentes-hub
+    tema: enchente
+    titulo: "Enchentes"
+    orgao: Ministério da Saúde
+    url: "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/enchentes"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      Seguir Defesa Civil e Bombeiros. Procurar atendimento com "três ou mais episódios de diarreia, em um intervalo de 24 horas".
+
+  - id: cbmmg-cartilha-encosta-inundacao
+    tema: deslizamento
+    titulo: "Dicas preventivas para áreas de encosta e sujeitas a inundação"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: "https://www.bombeiros.mg.gov.br/storage/files/13/Cartilha%20de%20Dicas%20Preventivas%20-%20%C3%81reas%20de%20Encosta%20e%20de%20inunda%C3%A7%C3%B5es%20-%20MOBILE.pdf"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Barulho estranho de água ou deslizamento perto de casa: "abandone-a e busque um local seguro". Não plantar bananeira em encosta.
+      Água da chuva barrenta, com plantas e troncos: sinal de inundação.
+      "Nunca atravesse locais atingidos pela água, pois a força da água pode arrastá-lo."; "Busque abrigo em um local alto"
+      "Não se arrisque entrando nas águas para realizar salvamentos. Ligue para o Corpo de Bombeiros Militar pelo telefone 193."
+      Depois: limpar com botas e luvas; descartar alimentos e bebidas contaminados; "Não utilize equipamentos elétricos molhados"; voltar durante o dia se a casa não foi interditada.
+
+  - id: cemig-temporais-2026
+    tema: raios
+    titulo: "Temporais estão chegando: Cemig orienta como evitar acidentes com a rede elétrica"
+    orgao: Agência Minas / Cemig
+    url: "https://www.agenciaminas.mg.gov.br/noticia/temporais-estao-chegando-cemig-orienta-como-evitar-acidentes-com-a-rede-eletrica/"
+    acessado: 2026-11-22
+    publicado: 2026-10-14
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      Tirar os aparelhos da tomada antes da tempestade; não ficar em telhado ou laje; "Construções de alvenaria oferecem a melhor proteção"; longe de árvores, postes, estruturas metálicas e cercas de arame.
+      Alagamento: desligar o disjuntor geral antes que a água alcance a instalação; se a água já chegou às tomadas, não se aproximar para desligar.
+      Fio caído: nunca tocar nem chegar perto, mesmo que pareça desligado; 116. Não tentar tirar galho ou objeto de cima da rede.
+
+  - id: cemig-raios-2025
+    tema: raios
+    titulo: "Cemig reforça alertas de segurança para tempestades e aumento de raios durante o período chuvoso"
+    orgao: Agência Minas / Cemig
+    url: "https://agenciaminas.mg.gov.br/noticia/cemig-reforca-alertas-de-seguranca-para-tempestades-e-aumento-de-raios-durante-o-periodo-chuvoso"
+    acessado: 2026-11-22
+    publicado: 2025-12-01
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [outros-desastres]
+    notas: |
+      Interromper atividade externa e procurar local seguro. "Fio partido é sempre sinônimo de risco de morte."; o cabo pode estar escondido sob folhas, lama ou galhos.
+
+  - id: rs-defesa-civil-descargas-eletricas
+    tema: raios
+    titulo: "Previna-se: Saiba como agir em caso de descargas elétricas"
+    orgao: Defesa Civil do RS (com base na cartilha do ELAT/INPE)
+    url: "https://defesacivil.rs.gov.br/upload/arquivos/202602/25125014-folder-descargas-eletricas.pdf"
+    acessado: 2026-11-22
+    publicado: 2026-02
+    licenca: "desconhecida"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Fora de casa, não: esporte ao ar livre; áreas descampadas; lugares altos; perto de varal de metal, antena ou portão de ferro; dentro da água; sob guarda-sol ou tenda.
+      Em casa, não: aparelhos ligados na tomada; telefone com fio ou celular no carregador; "Tomar banho em chuveiro elétrico"; perto de janelas e portas metálicas e de torneiras e canos.
+
+  - id: agencia-brasil-raios-2024
+    tema: raios
+    titulo: "Saiba como se proteger de raios durante tempestades"
+    orgao: Agência Brasil (EBC), citando o ELAT/INPE
+    url: "https://agenciabrasil.ebc.com.br/geral/noticia/2024-01/saiba-como-se-proteger-de-raios-durante-tempestades"
+    acessado: 2026-11-22
+    publicado: 2024-01-22
+    licenca: "© EBC"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Carro fechado, sem conversível, sem encostar na lataria, é abrigo. Sem abrigo: longe de pontos altos e metais, pés juntos, agachado, sem deitar.
+
+  - id: nws-lightning-safety-overview
+    tema: raios
+    titulo: "Overview: Lightning Safety"
+    orgao: National Weather Service (EUA)
+    url: "https://www.weather.gov/safety/lightning-safety-overview"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "When Thunder Roars, Go Indoors!"; "wait 30 minutes after the last lightning or thunder before going back outside."
+      "There is no safe place outside when thunderstorms are in the area."
+
+  - id: ready-gov-floods
+    tema: enchente
+    titulo: "Floods"
+    orgao: Ready.gov / FEMA (EUA)
+    url: "https://www.ready.gov/floods"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "desconhecida (governo federal dos EUA)"
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Turn Around. Don't Drown!"; "just six inches of moving water can knock you down, and one foot of moving water can sweep your vehicle away." (15 cm derrubam; 30 cm arrastam um carro)
+      "Return home only when authorities say it is safe."

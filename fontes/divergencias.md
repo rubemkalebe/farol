@@ -103,3 +103,33 @@ Coleta de 2026-11-22. Regra extra para este capítulo: **em RCP e engasgo vale a
 | Copasa | O site oficial não abriu (JavaScript). Foram usadas as notícias da própria Copasa e a lista da Anatel e do mg.gov.br | 115 e 0800 0300 115 |
 | Emergência MG | A notícia de 2023 fala em implantação gradual | Entra, com o aviso de que depende de internet. A cobertura atual não foi confirmada |
 | CIATox-MG | Três telefones locais diferentes | (31) 3224-4000, que aparece em todas as fontes de MG |
+
+---
+
+# Divergências: "Quando a energia voltar"
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Prazo total do ressarcimento | ARSESP: 45 dias. ALMG: até 60 dias. Cemig: prazos por etapa | Mostrar **os prazos por etapa** (Cemig e ARSESP concordam), sem total |
+| Compensação de 24 h / 48 h | Só aparece na imprensa (O Setor Elétrico). A FAQ da ANEEL confirma a compensação em emergência, mas não traz o número | **Sem número**: "quando passa dos limites da ANEEL" |
+| Dica do Procon ALMG (12 h, "Drici", pedir de novo) | Parece anterior à REN 1.137 | **Fora** |
+| Dose de água sanitária na caixa d'água | Copasa (rotina): 1 L em 5 L, passado nas paredes, 30 min. MS (contaminação): 1 L por 1.000 L com a caixa cheia, 2 h | **As duas, separadas**: a do MS para caixa contaminada e a da Copasa para a limpeza de 6 em 6 meses |
+| Remédio refrigerado depois do apagão | Ready.gov: descartar depois de 1 dia. FDA e SES-RS: perguntar ao farmacêutico; se for vital, usar até repor | **Perguntar ao farmacêutico ou à UBS**, com a exceção do remédio vital |
+| Gerador quando a energia volta | Nenhuma fonte brasileira. FEMA e OSHA: nunca ligar na fiação sem chave de transferência | Entra pela FEMA e pela OSHA |
+
+# Divergências: "Outros desastres"
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Faixas de umidade e horários | Cepagri (SES-GO): atenção, alerta e emergência, das 10h às 16h. PBH: das 10h às 16h. Defesa Civil MG: das 10h às 17h | Tabela do Cepagri, a única com faixas. Os horários seguem a tabela |
+| Níveis de alerta geológico de BH (mm de chuva) | Só aparecem na imprensa (Itatiaia) | **Fora**. O app manda seguir os alertas da Defesa Civil |
+| Regra 30-30 dos raios | Nenhuma fonte brasileira. O NWS só traz "30 minutos depois do último trovão" | Só os **30 minutos** |
+| Pano úmido contra fumaça | Nenhuma fonte recomenda. O MS diz que máscara comum quase não protege | **Fora**. Só PFF2, N95 ou P100 |
+| Desinfetar a casa depois da enchente | MS: 400 ml em 20 L, 15 min. Guia do RS, só visto na busca: 200 ml, 30 min | **MS** |
+| ELAT/INPE (raios) | O site deu erro de certificado | Usado o folder da Defesa Civil RS, baseado na cartilha do ELAT |
+
+## Lacunas
+
+- **Fogo chegando a uma casa:** não há passos práticos em fonte brasileira. Ficaram só "ligue 193, não combata sozinho, saia se mandarem".
+- **Falta d'água:** não há fonte oficial sobre como priorizar os usos nem sobre caminhão-pipa. Entrou como orientação geral.
+- **Sirenes e NAC de BH:** não foi encontrada fonte que explique como funcionam.

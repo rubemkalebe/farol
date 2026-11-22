@@ -27,6 +27,8 @@ O núcleo vem sempre instalado e é pequeno:
 5. Quando a energia voltar
 6. Outros desastres: enchente, deslizamento, tempestade, calor, fumaça, falta d'água
 
+Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios e contatos, salva só no aparelho), **checklists** que ficam marcadas e **números que ligam com um toque**.
+
 Pacotes opcionais, para baixar quando houver internet: mapa offline da região (Organic Maps), Wikipédia em português sem imagens (Kiwix), manuais oficiais completos e livros em domínio público.
 
 > **Aviso:** o Farol resume orientações de órgãos oficiais e cita a fonte de cada uma. Ele não substitui atendimento médico nem as instruções das autoridades locais. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros).
