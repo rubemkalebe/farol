@@ -43,3 +43,32 @@ Segunda rodada de coleta (2026-11-22). O que ainda não tem fonte oficial entrou
 - As páginas gov.br (CC BY-ND 3.0) podem ir **inteiras e sem alteração** num pacote; o texto do app é nosso e cita a fonte.
 - Cemig, Agência Minas, Google, Apple e NFPA reservam todos os direitos. Delas usamos só os fatos, com nossas palavras e citação.
 - As demais estão como "verificar".
+
+---
+
+# Divergências: "Primeiros socorros"
+
+Coleta de 2026-11-22. Regra extra para este capítulo: **em RCP e engasgo vale a diretriz mais recente** (AHA 2025 e SAMU-SP 2026, que já a segue), porque as fontes brasileiras mais antigas ensinam técnicas que foram revistas.
+
+| Tema | O que as fontes dizem | Decisão |
+|---|---|---|
+| Engasgo em adulto e criança | Bombeiros MG (2023), SESA-PR e SBC 2019 ensinam só a manobra de Heimlich. AHA 2025 e SAMU-SP 2026 alternam **5 tapas nas costas + 5 compressões abdominais** | **5 + 5**, porque é a diretriz mais nova e teve mais sucesso e menos lesões |
+| Bebê: RCP e compressões no engasgo | SBC 2019 e Bombeiros MG: 2 dedos. AHA 2025: base de uma mão ou 2 polegares; "2 dedos não é mais recomendado" | **Base de uma mão ou 2 polegares** |
+| Bombeiros MG manda "sugar a boca e o nariz do bebê" | Nenhuma diretriz recomenda | **Fora** |
+| Torniquete | SIATE-PR (2013): "último recurso, praticamente em desuso". ILCOR e RCUK 2025: usar cedo em sangramento grave de membro que não para com pressão | **ILCOR/RCUK 2025**, com o aviso de que o torniquete comprado é melhor que o improvisado |
+| Tempo de água na queimadura | NHS: 20 min. ILCOR: sem tempo definido. Imprensa citando o MS: cerca de 10 min. Bombeiros: sem tempo | **20 minutos**, o mais longo e com fonte; com o alerta de frio em criança pequena |
+| Gramas na hipoglicemia | SBD: 15 g, regra dos 15. MS (2006): 10–20 g. MS APS: 30 g | **Regra dos 15 da SBD**, a única para leigo com exemplos caseiros |
+| Soro caseiro | Caderneta da Criança 2025: por copo de 200 ml, com colher-medida. BVS 2009: por litro, com outra proporção | **Caderneta 2025.** A receita de 2009 fica registrada mas não é usada |
+| Leite no envenenamento | Só a SBP diz "não dê leite". A Fhemig diz "não ofereça alimentos ou bebidas" | **Não dar nada**, nem leite nem água: as duas fontes apontam no mesmo sentido |
+| AVC: teste "SAMU" | A notícia do HSPM-SP diz "se todos os testes forem positivos", o que está errado. SBC: basta um sinal | **Basta um sinal.** Usado o teste do SAMU-SP 2026 (sorrir, braços, frase, hora) |
+| AAS no infarto | SBC 2019: 200 mg mastigado se não houver contraindicação. O folheto do MS não fala nisso | **Entra, com a condição da SBC**, e com orientação geral de confirmar com o 192 |
+| Insolação: dar líquido? | MS: água fria ao consciente. CDC: líquidos na exaustão | **Só se estiver acordada e conseguir engolir** |
+| CIATox-MG | As fontes dão 3 telefones locais diferentes | **0800 722 6001** (nacional) **+ (31) 3224-4000**, que aparece em todas as fontes de MG |
+
+## Lacunas
+
+- **Destaques da AHA 2025 em português:** o PDF oficial foi bloqueado na coleta. Foi usada a edição canadense, em inglês.
+- **Cruz Vermelha Brasileira e protocolo federal do SAMU:** não foi encontrada nenhuma página aberta.
+- **Convulsão:** não há fonte de neurologia brasileira. Foi usada a SBC 2019.
+- **Sangue pelo nariz, cortes e quando dar pontos:** não há fonte brasileira. Foi usado o NHS.
+- **"Não cortar o local da picada de cobra":** nenhuma página do MS que abrimos diz isso. Entrou como orientação geral.

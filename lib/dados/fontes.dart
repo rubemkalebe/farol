@@ -1,3 +1,5 @@
+import 'dart:convert' show utf8;
+
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:markdown/markdown.dart' as md;
 import 'package:yaml/yaml.dart';
@@ -22,7 +24,11 @@ Map<String, Fonte>? _cache;
 
 Future<Map<String, Fonte>> carregarFontes() async {
   if (_cache != null) return _cache!;
-  final yaml = loadYaml(await rootBundle.loadString('fontes/fontes.yaml')) as YamlMap;
+  // loadString manda textos acima de 50 KB para outro isolate; o catálogo
+  // passa disso, então a leitura e a decodificação são feitas aqui mesmo.
+  final bytes = await rootBundle.load('fontes/fontes.yaml');
+  final texto = utf8.decode(bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
+  final yaml = loadYaml(texto) as YamlMap;
   return _cache = {
     for (final f in yaml['fontes'] as YamlList)
       f['id'] as String: Fonte(

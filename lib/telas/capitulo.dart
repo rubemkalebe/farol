@@ -6,17 +6,27 @@ import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
 import '../tema.dart';
 
-class TelaCapitulo extends StatelessWidget {
+class TelaCapitulo extends StatefulWidget {
   const TelaCapitulo({super.key, required this.capitulo});
 
   final Capitulo capitulo;
 
   @override
+  State<TelaCapitulo> createState() => _TelaCapituloState();
+}
+
+class _TelaCapituloState extends State<TelaCapitulo> {
+  // Carregado uma vez só: criar o Future dentro do build refaz a leitura
+  // a cada redesenho e a tela fica presa no indicador de carregamento.
+  late final Future<(String, Map<String, Fonte>)> _dados =
+      (carregarCapitulo(widget.capitulo), carregarFontes()).wait;
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(capitulo.titulo)),
+      appBar: AppBar(title: Text(widget.capitulo.titulo)),
       body: FutureBuilder<(String, Map<String, Fonte>)>(
-        future: (carregarCapitulo(capitulo), carregarFontes()).wait,
+        future: _dados,
         builder: (context, snap) {
           if (snap.hasError) {
             return Center(child: Text('Erro ao abrir o capítulo: ${snap.error}'));

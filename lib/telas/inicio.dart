@@ -13,15 +13,22 @@ const _icones = <String, IconData>{
   'storm': Icons.thunderstorm_outlined,
 };
 
-class TelaInicio extends StatelessWidget {
+class TelaInicio extends StatefulWidget {
   const TelaInicio({super.key});
+
+  @override
+  State<TelaInicio> createState() => _TelaInicioState();
+}
+
+class _TelaInicioState extends State<TelaInicio> {
+  late final Future<List<Capitulo>> _indice = carregarIndice();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: FutureBuilder<List<Capitulo>>(
-          future: carregarIndice(),
+          future: _indice,
           builder: (context, snap) {
             if (snap.hasError) {
               return Center(child: Text('Erro ao abrir o conteúdo: ${snap.error}'));

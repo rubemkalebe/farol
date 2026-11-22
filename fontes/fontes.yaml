@@ -834,3 +834,635 @@ fontes:
     notas: |
       Dicas de economia: "Não lavar o passeio. Em vez disso, usar a vassoura"; "Tomar banhos rápidos".
       Não fala de prédio nem de bomba d'água.
+
+  # ═══════════════════════ Primeiros socorros ═══════════════════════
+
+  # ───────────── Hipoglicemia ─────────────
+
+  - id: sbd-orientacoes-hipoglicemia-2023
+    tema: hipoglicemia
+    titulo: "Orientações sobre hipoglicemia para profissionais de saúde"
+    orgao: Sociedade Brasileira de Diabetes (Departamento de Enfermagem)
+    url: https://diabetes.org.br/wp-content/uploads/2023/09/Orientacoes_Hipoglicemia_SBD.pdf
+    acessado: 2026-11-22
+    publicado: 2023
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.1: hipoglicemia é glicose "inferior a 70 mg/dL"; sem como medir, tratar com carboidrato de rápida absorção imediatamente.
+      p.1-2 sintomas: "sudorese, fome, visão turva, taquicardia, tremores, palidez, cefaleia, desânimo, incoordenação motora, sonolência, alterações de humor, sensação de desmaio, perda da consciência, convulsão, coma"
+      p.7: "regra dos 15: ingerir 15 g de carboidrato de rápida absorção, aguardar 15 minutos em repouso, medir novamente a glicose, fazer um lanche ou adiantar a refeição do horário. Se necessário, repetir"
+      p.10: 15 g = "uma colher de sopa de açúcar misturada em meio copo de água ou 3 balas moles ou uma colher de sopa de mel ou 150 ml de refrigerante comum ou um copo de suco integral de laranja ou um sachê de glicose instantânea"
+      p.10 nível 3: "em caso de rebaixamento do nível de consciência, colocar a pessoa em posição de conforto, lateralizar a cabeça e se possível, esfregar 15 a 30 gramas de açúcar ou mel na face interna da bochecha cautelosamente, enquanto aguarda o serviço de emergência"
+      p.10: glucagon se disponível, "conforme orientação médica". Carboidrato "isoladamente, sem associar fibras, gorduras ou proteínas"; refeição em até 1 hora.
+
+  - id: sbd-hipoglicemia-como-tratar
+    tema: hipoglicemia
+    titulo: "Hipoglicemia: como tratar e evitar?"
+    orgao: Sociedade Brasileira de Diabetes
+    url: https://diabetes.org.br/hipoglicemia-como-tratar-e-evitar/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "O tratamento da hipoglicemia deve ser realizado com 15 gramas de carboidrato simples"; aguardar 15 minutos e medir de novo.
+      "no caso de redução do nível de consciência não se recomenda a oferta de líquidos."
+
+  - id: ms-cab16-diabetes-2006
+    tema: hipoglicemia
+    titulo: "Cadernos de Atenção Básica n.º 16 – Diabetes Mellitus"
+    orgao: Ministério da Saúde
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/diabetes_mellitus.PDF
+    acessado: 2026-11-22
+    publicado: 2006
+    licenca: "É permitida a reprodução parcial ou total desta obra, desde que citada a fonte e que não seja para venda ou qualquer fim comercial."
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.34 Quadro 12 (familiar): "Se o paciente não conseguir engolir, não forçar: injetar glucagon 1mg SC ou IM (crianças <3 anos, dar ½ dose). Se não for disponível, colocar açúcar ou mel embaixo da língua ou entre a gengiva e a bochecha e levar o paciente imediatamente a um serviço de saúde."
+      p.35: "usar um bracelete e/ou portar uma carteira informando que têm diabetes."
+
+  - id: ms-linhas-cuidado-hipoglicemia-aps
+    tema: hipoglicemia
+    titulo: "Hipoglicemia - APS (Linhas de Cuidado DM2 no adulto)"
+    orgao: Ministério da Saúde
+    url: "https://linhasdecuidado.saude.gov.br/portal/diabetes-mellitus-tipo-2-(DM2)-no-adulto/unidade-de-atencao-primaria/dm2-aguda/hipoglicemia/"
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Para profissionais. Sinais incluem "Dormência nos lábios e língua", "Mudança de humor e de comportamento".
+      Inconsciente: 15 g de carboidrato "embaixo da língua ou entre a gengiva e a bochecha."
+
+  # ───────────── Desidratação ─────────────
+
+  - id: ms-caderneta-crianca-2025
+    tema: desidratacao
+    titulo: "Caderneta da Criança – Passaporte da Cidadania (7ª edição revisada)"
+    orgao: Ministério da Saúde
+    url: https://sisaps.saude.gov.br/sistemas/materialtecnico/arquivos/caderneta-crianca-versao-menina.pdf
+    acessado: 2026-11-22
+    publicado: 2025
+    licenca: "CC BY-NC-SA 4.0. É permitida a reprodução parcial ou total desta obra, desde que citada a fonte."
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.21 sinais de desidratação: "olhos fundos", "muita sede", "Chorar sem lágrimas", "pouca saliva", "Urinar pouco", "Pele com pouca elasticidade".
+      p.21: soro "após cada evacuação ou vômito, em pequenas colheradas ... Se ela vomitar, aguarde dez minutos e ofereça-o mais uma vez, lentamente"
+      p.21: "O soro oral não cura a diarreia, mas evita a desidratação, que pode matar."
+      p.21 SRO: envelope (UBS ou farmácia) em 1 litro de água fervida ou filtrada; "só pode ser usado por 24 horas. Não coloque açúcar nem sal no soro. Não ferva o soro depois de pronto."
+      p.21: soro caseiro é "alternativa emergencial, até consegui-lo".
+      p.22 colher-medida: "1 copo 200 ml cheio de água fervida ou filtrada | 1 medida (a menor) rasa de sal | 2 medidas (a maior) rasas de açúcar"
+      p.22 com a mão: "1 copo 200 ml ... | 1 pitada de 3 dedos de sal | 1 punhado pequeno de açúcar"
+      p.23 sinais de perigo: não consegue mamar ou beber; vomita tudo; muito sonolenta; convulsão ou perda de consciência. "ligue para 192"
+
+  - id: bvs-ms-diarreia-desidratacao-2009
+    tema: desidratacao
+    titulo: "Diarréia e Desidratação (Dicas em Saúde)"
+    orgao: Biblioteca Virtual em Saúde – Ministério da Saúde
+    url: https://bvsms.saude.gov.br/bvs/dicas/214_diarreia.html
+    acessado: 2026-11-22
+    publicado: 2009-12
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Receita antiga por litro: "uma colher pequena (tipo cafezinho), de sal e uma colher grande (tipo sopa), de açúcar."
+      Superada pela Caderneta da Criança 2025 (por copo de 200 ml). NÃO usar esta receita no app.
+      Sinais: "boca e língua secas", "afundamento da moleira".
+
+  # ───────────── Intoxicação ─────────────
+
+  - id: anvisa-disque-intoxicacao
+    tema: intoxicacao
+    titulo: "Disque intoxicação"
+    orgao: Anvisa
+    url: https://www.gov.br/anvisa/pt-br/assuntos/agrotoxicos/disque-intoxicacao
+    acessado: 2026-11-22
+    publicado: 2020-09-21
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros, contatos]
+    notas: |
+      "0800-722-6001"; "24 horas por dia, sete dias por semana, durante todo o ano". Gratuito, direcionado ao centro (Renaciat) mais próximo.
+
+  - id: fhemig-joao-xxiii-produtos-limpeza-2024
+    tema: intoxicacao
+    titulo: "Toxicologia do Hospital João XXIII alerta para riscos de acidentes com produtos de limpeza"
+    orgao: Fhemig – Hospital João XXIII / CIATox-MG
+    url: https://www.fhemig.mg.gov.br/sala-de-imprensa/noticias-sala-imprensa/2993-toxicologia-do-hospital-joao-xxiii-alerta-para-riscos-de-acidentes-com-produtos-de-limpeza
+    acessado: 2026-11-22
+    publicado: 2024-08-30
+    licenca: "© FHEMIG"
+    redistribuir: nao
+    usado_em: [primeiros-socorros, contatos]
+    notas: |
+      "Não ofereça alimentos ou bebidas;"; "Não induza vômitos, exceto se houver orientação diferente vinda de um centro de informações toxicológicas;"
+      "Leve a vítima a uma unidade de pronto-atendimento mais próxima, com a embalagem ou fotos do recipiente e rótulos."
+      CIATox/MG: "(31) 3239-9308, (31) 3239- 9390 e (31) 3224-4000."
+
+  - id: mg-servico-atendimento-intoxicacao
+    tema: intoxicacao
+    titulo: "Solicitar atendimento às vítimas de intoxicação química, auto extermínio, envenenamento ou picada de escorpião e de outros animais peçonhentos"
+    orgao: Governo de Minas Gerais (mg.gov.br / Fhemig)
+    url: https://www.mg.gov.br/servico/solicitar-atendimento-vitimas-de-intoxicacao-quimica-auto-exterminio-envenenamento-ou
+    acessado: 2026-11-22
+    publicado: 2022-07-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros, contatos]
+    notas: |
+      Referência em BH: "Hospital João XXIII Pronto Socorro - HPS". Telefone "0800-722-6001". Ou acionar 193 / 192.
+      No interior, posto de saúde ou UPA mais próxima.
+
+  - id: sbp-intoxicacoes-exogenas-2024
+    tema: intoxicacao
+    titulo: "Intoxicações exógenas (Pediatria para Famílias)"
+    orgao: Sociedade Brasileira de Pediatria
+    url: https://www.sbp.com.br/pediatria-para-familias/seguranca-e-prevencao/intoxicacoes-exogenas/
+    acessado: 2026-11-22
+    publicado: 2024-01
+    licenca: "Copyright © 2026 Sociedade Brasileira de Pediatria. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Não ofereça leite, água ou outros líquidos;"; "Não provoque vômitos sem orientação"
+      "Em caso de contato com pele ou olhos, lave o local com água em abundância;"
+      Levar ao serviço médico com "a embalagem, o rótulo ou a bula". 192 se inconsciente ou convulsionando.
+
+  # ───────────── Animais peçonhentos ─────────────
+
+  - id: ms-escorpioes-esclarecimentos-2024
+    tema: peconhentos
+    titulo: "Esclarecimentos e cuidados sobre acidentes com escorpiões"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-com-ciencia/noticias/2024/setembro/esclarecimentos-e-cuidados-sobre-acidentes-com-escorpioes
+    acessado: 2026-11-22
+    publicado: 2024-09-30
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      "acalmar a pessoa e afastá-la do escorpião"; "limpar o local da picada com água e sabão"; encaminhar "sem demora" ao atendimento de referência.
+      "Compressa de água morna ajuda no alívio da dor."
+      "Para acidentes causados por escorpião-amarelo, gelo ou compressa de água gelada não devem ser utilizados" ... "assim como pomadas ou medicamentos caseiros."
+      "Crianças fazem parte do grupo mais suscetível ao envenenamento sistêmico grave."
+
+  - id: ms-pcdt-escorpionicos-2025
+    tema: peconhentos
+    titulo: "Acidentes Escorpiônicos – PCDT resumido (Portaria SECTICS/MS nº 59/2025)"
+    orgao: Ministério da Saúde / Conitec
+    url: https://www.gov.br/conitec/pt-br/midias/protocolos/2026/pcdt-resumido/pcdt_acidentes-escopionicos_f.pdf/@@display-file/file
+    acessado: 2026-11-22
+    publicado: 2025
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.1: risco maior "em crianças com idade ≤ 10 anos"; escorpião amarelo é o principal responsável pelos casos graves.
+      p.1 sinais de gravidade: "sudorese, sialorreia, lacrimejamento, náuseas e vômitos"
+      p.2: "lavar o local com água e sabão, evitando torniquetes ou substâncias não indicadas."; "Compressa morna como medida auxiliar."
+      p.2: risco maior em "menores de 7 anos" e em pessoas com hipertensão, diabetes, cardiopatia e nefropatia.
+
+  - id: ms-faq-picada-cobra-o-que-fazer
+    tema: peconhentos
+    titulo: "O que devo fazer no caso de uma picada de cobra?"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/acidentes-ofidicos/faq/faq/o-que-devo-fazer-no
+    acessado: 2026-11-22
+    publicado: 2022-10-17
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      "acalmar a pessoa e afastá-la da serpente." "Retire o sapato, anel, pulseira, fitas"
+      "Se puder, lave o local da picada com água e sabão,"; ir "o mais rápido possível" ao atendimento de referência.
+      "Dê água para a vítima beber"; "manter o membro atingido em uma posição elevada"; "fotografe a serpente".
+
+  - id: ms-faq-acidentes-ofidicos
+    tema: peconhentos
+    titulo: "Perguntas Frequentes (FAQ) – Acidentes ofídicos"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos/acidentes-ofidicos/faq/faq
+    acessado: 2026-11-22
+    publicado: 2022-10-17
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Torniquete ou amarrar: "Não."
+      "O veneno inoculado não pode ser chupado."
+      Ervas, borra de café, "garrafadas", querosene e gasolina não funcionam.
+
+  - id: ms-aranhas-2024
+    tema: peconhentos
+    titulo: "Acidentes causados por aranhas são a segunda maior causa de envenenamento no Brasil"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/noticias/2024/setembro/acidentes-causados-por-aranhas-sao-a-segunda-maior-causa-de-envenenamento-no-brasil
+    acessado: 2026-11-22
+    publicado: 2024-09-30
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Procure atendimento médico imediatamente;"; fotografar ou descrever o animal.
+      Lavar com água e sabão se não atrasar a ida ao atendimento; "Compressas mornas podem ajudar a aliviar a dor;"; SAMU 192 ou Bombeiros 193.
+
+  - id: agenciaminas-joao-xxiii-peconhentos-2023
+    tema: peconhentos
+    titulo: "Hospital João XXIII alerta para riscos de acidentes com animais peçonhentos"
+    orgao: Agência Minas / Fhemig
+    url: https://www.agenciaminas.mg.gov.br/noticia/hospital-joao-xxiii-alerta-para-riscos-de-acidentes-com-animais-peconhentos-118921
+    acessado: 2026-11-22
+    publicado: 2023-09-08
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros, contatos]
+    notas: |
+      "A primeira providência é afastar a vítima do animal peçonhento." Se capturado, levar "em segurança".
+      "a evolução para um quadro grave pode ser rápida."
+      CIATox-MG: "(31) 3224-4000, 3239-9390, 3239-9308 ou 0800-7226001"
+      "Crianças menores de 7 anos e idosos estão mais suscetíveis a complicações"
+
+  - id: agenciaminas-mg-peconhentos-2026
+    tema: peconhentos
+    titulo: "Minas Gerais reforça prevenção e atendimento a acidentes com animais peçonhentos"
+    orgao: Agência Minas / SES-MG
+    url: https://www.agenciaminas.mg.gov.br/noticia/minas-gerais-reforca-prevencao-e-atendimento-a-acidentes-com-animais-peconhentos-128699
+    acessado: 2026-11-22
+    publicado: 2026-01-09
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      "lavar o local apenas com água e sabão"; ir "o mais rápido possível para o hospital de referência da região".
+      Em BH e região, o Hospital João XXIII "é referência nesse tipo de atendimento".
+
+  # ───────────── Calor ─────────────
+
+  - id: ms-insolacao
+    tema: calor
+    titulo: "Insolação"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/i/insolacao
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Sinais: "dores de cabeça;" "tontura;" "náusea;" "pele quente e seca;" "pulso rápido;" "temperatura elevada;" "distúrbios visuais;" "confusão mental."; graves: convulsão, coma.
+      "baixar a temperatura corporal, lenta e gradativamente."
+      "remover a pessoa para um local fresco, à sombra e ventilado;"; "remover o máximo de peças de roupa;"
+      Consciente: "repouso e recostada (cabeça elevada)"; "oferecer bastante água fria ou gelada ou qualquer líquido não alcoólico;"
+      "borrifar água fria em todo o corpo"; "compressas de água fria na testa, pescoço, axilas e virilhas;"
+      "O melhor cenário é levar a pessoa imediatamente ao hospital ou solicitar apoio de urgência e emergência (SAMU 192)."
+
+  - id: cdc-niosh-heat-related-illnesses
+    tema: calor
+    titulo: "Heat-related Illnesses"
+    orgao: CDC / NIOSH (EUA)
+    url: https://www.cdc.gov/niosh/heat-stress/about/illnesses.html
+    acessado: 2026-11-22
+    publicado: 2026-03-03
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Insolação: "Confusion, altered mental status, slurred speech"; "Loss of consciousness"; "Seizures"; "Very high body temperature". "Call 911"; "Stay with the worker until emergency medical services arrive."
+      Exaustão: "Headache," "Nausea," "Dizziness," "Weakness," "Thirst," "Heavy sweating"; "give liquids to drink"; "frequent sips of cool water."
+
+  # ───────────── RCP, engasgo, emergências clínicas ─────────────
+
+  - id: sbc-diretriz-rcp-2019
+    tema: rcp
+    titulo: "Atualização da Diretriz de Ressuscitação Cardiopulmonar e Cuidados Cardiovasculares de Emergência da Sociedade Brasileira de Cardiologia – 2019"
+    orgao: Sociedade Brasileira de Cardiologia (Arq Bras Cardiol. 2019; 113(3):449-663)
+    url: https://abccardiol.org/wp-content/uploads/articles_xml/0066-782X-abc-113-03-0449/0066-782X-abc-113-03-0449.x66747.pdf
+    acessado: 2026-11-22
+    publicado: 2019
+    licenca: "artigo de acesso aberto, licença Creative Commons de atribuição (p. 663)"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Páginas da revista.
+      RCP adulto, p.461: "100 a 120 compressões/minuto"; "profundidade de, no mínimo, 5 cm (evitando compressões com profundidade maior que 6 cm)"; "Permita o retorno completo do tórax"; "Reveze com outro socorrista a cada 2 minutos".
+      p.469: leigo liga imediatamente se a vítima não responde; sozinho, celular no "viva-voz"; treinado faz 30:2; "O leigo não treinado deve realizar compressões torácicas contínuas".
+      p.551 pediatria: lactente "um terço do diâmetro anteroposterior ou aproximadamente de 4 cm"; criança "aproximadamente 5 cm"; ventilação recomendada em crianças.
+      p.555: leigo "não checa o pulso"; 30:2 para todas as idades; sem saber ventilar, só compressões.
+      p.608: inconsciente → chamar socorro e pedir DEA; olhar a respiração por 5 a 10 s; sem respiração ou "gasping", iniciar RCP.
+      Engasgo, p.555: bebê "cinco golpes nas costas e cinco compressões torácicas"; >1 ano Heimlich; criança obesa: compressões torácicas.
+      p.610: engasgo leve → "encorajar a vítima a persistir na tosse"; grave → "Incapacidade de respirar, tossir e falar, cianose", "sinal universal da asfixia"; grávida ou obesa → compressões torácicas; ficou inconsciente → deitar no chão, chamar socorro e iniciar RCP; tirar o objeto só se visível, sem "varredura digital às cegas"; todo engasgado que recebeu Heimlich "deve ser encaminhada para o hospital".
+      Desmaio, p.609: deitar de costas e esperar recuperar; se não recuperar, chamar socorro; elevar as pernas, exceto em trauma.
+      Infarto, p.611: dor no peito "> 10 minutos", "em aperto, peso ou queimação", irradiando para braços, costas, pescoço ou mandíbula, com falta de ar, suor, náusea, vômito, tontura; sintomas atípicos em "mulheres, idosos e diabéticos". AAS 200 mg mastigado se não houver contraindicação (alergia ou sangramento).
+      AVC, p.611-612: reconhecer cedo e ligar 192; Cincinnati: "desvio de rima labial, fraqueza em um dos membros superiores e anormalidades na fala" — qualquer um dos três já indica AVC provável; carro particular atrasa o atendimento.
+      Convulsão, p.613-614: calma; local seguro; algo macio sob a cabeça; de lado; ficar junto; ">5 minutos sem sinais de melhora, peça ajuda médica". Não segurar, "Não coloque a mão dentro da boca", "Não jogue água". Depois: ver a respiração e posição de recuperação.
+
+  - id: samu-sp-manual-sbv-2026
+    tema: rcp
+    titulo: "Manual de protocolos operacionais do SAMU 192 São Paulo para as equipes de URAM, SBV e SBV-E 2026"
+    orgao: Prefeitura de São Paulo / SAMU 192 São Paulo
+    url: https://prefeitura.sp.gov.br/documents/d/saude/manual-sbv-sbv-e-2026-atualizado-10-03-2026-pdf-1
+    acessado: 2026-11-22
+    publicado: 2026
+    licenca: "Permitida a reprodução parcial ou total, desde que indicada a fonte"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Protocolo para equipes profissionais, já alinhado à AHA 2025.
+      p.208-209 RCP adulto: "30:2"; "5 a 6 cm de profundidade"; "100 a 120 compressões por minuto"; DEA "assim que disponível"; "Durante a análise do ritmo, não toque no paciente"; no choque, todos afastados.
+      p.203-204 engasgo adulto: "ciclos repetidos de 5 golpes nas costas, seguidos de 5 compressões abdominais"; obesos e gestantes no último trimestre: mãos sobre o esterno; inconsciente: 30 compressões e retirar o objeto só se visível.
+      p.379-381 engasgo criança: bebê 5 golpes entre as escápulas + "5 compressões torácicas com a base de uma mão"; >1 ano 5 golpes + 5 compressões abdominais.
+      p.267-268 AVC (BE FAST): face (sorrir), braços (levantar os dois), fala (repetir frase), tempo (hora em que foi vista normal pela última vez).
+
+  - id: aha-2025-highlights
+    tema: rcp
+    titulo: "Highlights of the 2025 American Heart Association Guidelines for CPR and ECC (Heart and Stroke Foundation of Canada Edition)"
+    orgao: American Heart Association / Heart and Stroke Foundation of Canada
+    url: https://cpr.heartandstroke.ca/resource/GuidelinesHighlightsEN2025
+    acessado: 2026-11-22
+    publicado: 2025-10
+    licenca: "© 2025 American Heart Association"
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      Versão pt-BR oficial bloqueada na coleta (Cloudflare); usada a edição canadense.
+      p.6: por telefone, leigo faz "Hands-Only CPR for adults and conventional CPR, including breaths, for children".
+      p.11: bebê, "heel of 1 hand or using the 2 thumb–encircling hands technique"; "The long-used 2-finger technique for infant CPR is no longer recommended."
+      p.11-12: criança engasgada, "5 back blows alternated with 5 abdominal thrusts"; bebê, "5 back blows alternating with 5 chest thrusts"; "Abdominal thrusts are not recommended for infants".
+      p.12-13: adulto engasgado, "5 back blows (slaps) followed by 5 abdominal thrusts"; golpes nas costas tiveram mais sucesso e menos lesões.
+      p.14: gestação avançada ou quando não dá para abraçar o abdome: "5 chest thrusts" no lugar das abdominais.
+
+  - id: ms-avc-saude-a-z
+    tema: avc
+    titulo: "AVC (Saúde de A a Z)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/avc
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Sinais: "Confusão mental;" "Alteração da fala ou compreensão;" "Alteração na visão (em um ou ambos os olhos);" "Dor de cabeça súbita, intensa, sem causa aparente;" "Alteração do equilíbrio, coordenação, tontura ou alteração no andar;" "Fraqueza ou formigamento em um lado do corpo (rosto, braço ou perna)."
+      SAMU 192 ou Bombeiros 193; "Quanto mais rápido for o atendimento, maiores serão as chances de sobrevivência e recuperação total."
+
+  - id: ms-folheto-infarto-2022
+    tema: infarto
+    titulo: "Conheça a Linha de Cuidado do Infarto Agudo do Miocárdio (folheto)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/campanhas-da-saude/2022/infarto-agudo-do-miocardio/campanha-nacional-do-infarto-do-miocardio/folheto.pdf
+    acessado: 2026-11-22
+    publicado: 2022-01
+    licenca: desconhecida (portal gov.br usa CC BY-ND 3.0)
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Se sentir dor no peito, suor frio, palidez ou sensação de desmaio, LIGUE PARA O SAMU PELO 192."
+      "EM CASOS DE INFARTO, OS PRIMEIROS MINUTOS SÃO MUITO IMPORTANTES."
+
+  - id: sja-recovery-position
+    tema: convulsao
+    titulo: "Recovery position (First aid advice)"
+    orgao: St John Ambulance (Reino Unido; o NHS redireciona para esta página)
+    url: https://www.sja.org.uk/first-aid-advice/recovery-position/
+    acessado: 2026-11-22
+    publicado: 2025-04-28
+    licenca: "© 2026 St John Ambulance"
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      Para quem "is not responding to you but is breathing normally".
+      Passos (paráfrase): braço mais próximo em ângulo reto, palma para cima; o outro braço cruzado no peito, dorso da mão encostado na bochecha; dobrar o joelho do lado oposto; puxar esse joelho para rolar a pessoa de lado; joelho de cima em ângulo reto; cabeça para trás e queixo erguido; chamar socorro e acompanhar a respiração.
+
+  # ───────────── Ferimentos e trauma ─────────────
+
+  - id: ms-cartilha-queimaduras-2012
+    tema: queimadura
+    titulo: "Cartilha para tratamento de emergência das queimaduras"
+    orgao: Ministério da Saúde (com a Câmara Técnica de Queimaduras do CFM e a SBQ)
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/cartilha_tratamento_emergencia_queimaduras.pdf
+    acessado: 2026-11-22
+    publicado: 2012
+    licenca: "É permitida a reprodução parcial ou total desta obra, desde que citada a fonte e que não seja para venda ou qualquer fim comercial."
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      Voltada a profissionais.
+      p.6: "Interrompa o processo de queimadura. • Remova roupas, joias, anéis, piercings e próteses. • Cubra as lesões com tecido limpo."
+      p.11 grave: "Idade menor do que 3 anos ou maior do que 65 anos"; lesão inalatória; química; "Trauma elétrico".
+      p.14: vítima de trauma elétrico deve ser internada.
+      p.15 química: "Dilua a substância em água corrente por no mínimo 30 minutos e irrigue exaustivamente os olhos".
+      p.16: face, olhos, períneo, mãos, pés, grandes articulações, elétrica e química são casos de transferência para hospital.
+
+  - id: cbmmg-cartilha-queimaduras
+    tema: queimadura
+    titulo: "Cuidados com Queimaduras (Cartilha de Dicas Preventivas)"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: "https://www.bombeiros.mg.gov.br/storage/files/13/Cartilha%20de%20Dicas%20Preventivas%20-%20Queimaduras%20-%20MOBILE.pdf"
+    acessado: 2026-11-22
+    publicado: 2023
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.6: "Nunca aplique produtos caseiros como sal, açúcar, pó de café, pasta de dente, pomadas, ovo, manteiga, óleo de cozinha ou qualquer outro."
+      p.7: "Queimaduras na face, genitália, mãos e pés são sempre consideradas graves e devem receber atendimento hospitalar imediato."
+      p.7: "Não aplique gelo diretamente sobre o local"; "Utilize apenas água em temperatura ambiente para resfriar"
+      p.7: roupa grudada "não remova. Apenas corte o tecido ao redor da lesão."; "Nunca fure as bolhas, não toque a área afetada e não cubra com algodão."
+      p.7 choque: afastar a fonte "com algum objeto não condutor de energia (borracha, madeira) ou desligue a energia geral. Nunca toque na vítima enquanto ela estiver em contato com a eletricidade."
+
+  - id: nhs-burns-scalds
+    tema: queimadura
+    titulo: "Burns and scalds"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/burns-and-scalds/
+    acessado: 2026-11-22
+    publicado: 2026-03-31
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Hold the burn or scald under cool running water for 20 minutes." Até 3 h depois da queimadura.
+      Tirar roupas e joias próximas, menos o que estiver grudado. Cobrir com filme plástico sem enrolar.
+      Nada de "creams, oils or butter"; "do not burst any blisters."
+      Emergência se for grande ou profunda, no rosto ou genitais, química ou elétrica.
+
+  - id: ilcor-2025-first-aid
+    tema: sangramento
+    titulo: "2025 International Consensus on First Aid Science With Treatment Recommendations"
+    orgao: ILCOR (First Aid Task Force)
+    url: https://www.ilcor.org/uploads/FA-2025-COSTR-Full-Chapter.pdf
+    acessado: 2026-11-22
+    publicado: 2025
+    licenca: "© 2025 AHA, ERC e ILCOR"
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      p.38: pressão manual direta para sangramento grave; "We recommend against the use of pressure points".
+      p.40: torniquete para sangramento grave de membro; torniquete comercial funciona melhor que o improvisado.
+      p.41: enquanto o torniquete não chega, pressão manual direta.
+      p.43: resfriar queimadura já, com água corrente; sem duração específica.
+      p.44: criança pequena resfriando a queimadura deve ser observada para não esfriar demais.
+
+  - id: rcuk-2025-first-aid
+    tema: sangramento
+    titulo: "First Aid Guidelines (2025 Resuscitation Guidelines)"
+    orgao: Resuscitation Council UK
+    url: https://www.resus.org.uk/library/2025-resuscitation-guidelines/first-aid-guidelines
+    acessado: 2026-11-22
+    publicado: 2025-10-27
+    licenca: "Copyright ©2014 - 2026 (reprodução só com permissão)"
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Apply firm, direct manual pressure to any bleeding injury site."
+      Torniquete se a pressão não controla sangramento grave de membro: "5-7cm above the injury, but not over a joint"; apertar até parar (dói); "Write the time the tourniquet was applied."; "Do not release the tourniquet."; se precisar, um segundo acima do primeiro.
+
+  - id: cbmpr-siate-hemorragia-choque
+    tema: sangramento
+    titulo: "Manual do Atendimento Pré-Hospitalar – SIATE/CBPR, Capítulo 10 – Hemorragia e Choque"
+    orgao: Corpo de Bombeiros do Paraná / SIATE
+    url: https://www.bombeiros.pr.gov.br/sites/bombeiros/arquivos_restritos/files/documento/2018-12/HemorragiaeChoque.pdf
+    acessado: 2026-11-22
+    publicado: 2013
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Registrado só como divergência: trata o torniquete como "último recurso (praticamente em desuso)". Superado por ILCOR e RCUK 2025. Não usar como base.
+
+  - id: rs-gov-energia-eventos-climaticos
+    tema: choque-eletrico
+    titulo: "Saiba como agir para evitar acidentes com energia elétrica durante eventos climáticos severos"
+    orgao: Governo do Estado do Rio Grande do Sul
+    url: https://estado.rs.gov.br/saiba-como-agir-para-evitar-acidentes-com-energia-eletrica-durante-eventos-climaticos-severos
+    acessado: 2026-11-22
+    publicado: 2026-07-17
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros, outros-desastres]
+    notas: |
+      "nunca toque diretamente na vítima enquanto ela estiver em contato com a fonte de energia."
+      Desligar o disjuntor geral se der "sem colocar a própria segurança em risco"; Bombeiros 193 e SAMU 192.
+      Com alagamento: não tocar em aparelhos elétricos "nem tente desligar o disjuntor caso ele esteja em uma área inundada."
+      "Todo cabo rompido deve ser considerado energizado"
+
+  - id: abracopel-primeiros-socorros-choque
+    tema: choque-eletrico
+    titulo: "Primeiros Socorros Choque Elétrico: Salvando Vidas com Ação Rápida e Precisa"
+    orgao: Abracopel
+    url: https://abracopel.org/download/primeiros-socorros-choque-eletrico-salvando-vidas-com-acao-rapida-e-precisa/
+    acessado: 2026-11-22
+    publicado: 2024-06-25
+    licenca: "Copyright © Abracopel. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      Desligar a fonte; "Não Toque na Vítima"; afastar com "materiais não condutores"; ver se está consciente e respirando; sem pulso, RCP.
+
+  - id: ms-tetano-acidental
+    tema: ferimento
+    titulo: "Tétano acidental"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/t/tetano-acidental
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Sempre que houver lesão da pele/mucosa, a pessoa deve lavar o local com água e sabão"; depois, avaliar no serviço de saúde a necessidade de vacina ou soro.
+      "Atenção para a necessidade de reforço, após 10 anos da última dose do esquema completo."
+
+  - id: nhs-cuts-grazes
+    tema: ferimento
+    titulo: "Cuts and grazes"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/cuts-and-grazes/
+    acessado: 2026-11-22
+    publicado: 2026-04-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Parar o sangramento, limpar e cobrir. Pressão com pano limpo dobrado; se o sangue atravessar, outra camada por cima; elevar acima do coração.
+      Procurar atendimento se ficar sujo depois de limpar, se for mordida de pessoa ou de animal, ou se o corte tiver mais de cerca de 5 cm.
+      Emergência se o sangramento não parar.
+
+  - id: cbmgo-cartilha-primeiros-socorros
+    tema: fratura
+    titulo: "Cartilha Primeiros Socorros"
+    orgao: Corpo de Bombeiros Militar de Goiás
+    url: https://goias.gov.br/esporte/wp-content/uploads/sites/53/2023/09/CartilhaPrimeirosSocorros-c11.pdf
+    acessado: 2026-11-22
+    publicado: 2007
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Material antigo; usado só para confirmar.
+      Fratura: "Movimentar o mínimo possível a vítima; imobilizar o membro com talas ou apoios adequados como: tábua; papelão; revistas; travesseiros"; "Jamais tente colocar o osso no lugar"; osso exposto, cobrir com tecido limpo.
+      Sangramento: pressionar com pano; nada de "açúcar ou pó de café"; pano encharcado, colocar outro por cima sem tirar o primeiro.
+      "DISQUE 193 ... DIGA SEU NOME E O ENDEREÇO DO ACIDENTE; DIGA TAMBÉM UM PONTO DE REFERÊNCIA"
+
+  - id: nhs-sprains-strains
+    tema: fratura
+    titulo: "Sprains and strains"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/sprains-and-strains/
+    acessado: 2026-11-22
+    publicado: 2024-04-23
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Entorse: repouso; gelo enrolado em pano "for up to 20 minutes" a cada 2-3 h; faixa; elevar.
+      Sinais de fratura: estalo na hora; parte com formato ou ângulo estranho; dormência; pele azulada, acinzentada ou fria.
+
+  - id: nhs-head-injury
+    tema: cabeca
+    titulo: "Head injury and concussion"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/head-injury-and-concussion/
+    acessado: 2026-11-22
+    publicado: 2025-05-29
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Emergência se desmaiou e não acordou, não consegue ficar acordado, convulsão, líquido claro saindo do nariz ou ouvido, queda de mais de 1 metro ou 5 degraus, problema de visão ou audição, dormência ou fraqueza nova, dificuldade para andar, falar ou entender.
+      Em casa: um adulto junto nas primeiras 24 h; gelo enrolado em pano por pouco tempo.
+
+  - id: sbp-tce-leve-infancia
+    tema: cabeca
+    titulo: "Traumatismo cranioencefálico leve na infância"
+    orgao: Sociedade Brasileira de Pediatria
+    url: https://www.sbp.com.br/pediatria-para-familias/seguranca-e-prevencao/traumatismo-cranioencefalico-leve-na-infancia/
+    acessado: 2026-11-22
+    publicado: 2025-10
+    licenca: "Copyright © 2026 Sociedade Brasileira de Pediatria. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [primeiros-socorros]
+    notas: |
+      Atendimento imediato: perda de consciência mesmo breve; "Três ou mais episódios de vômitos"; sonolência excessiva; confusão ou fala enrolada; convulsão; sangue ou líquido saindo do nariz ou ouvido; fraqueza; visão dupla; menores de 2 anos: choro inconsolável, recusa alimentar, moleira abaulada.
+      "As primeiras 24 a 48 horas são as mais críticas."; compressa fria 10–20 min.
+
+  - id: nhs-nosebleed
+    tema: sangramento
+    titulo: "Nosebleed"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/nosebleed/
+    acessado: 2026-11-22
+    publicado: 2023-12-05
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "sit down and lean forward, with your head tilted forward and your mouth open"; "pinch your nose just above your nostrils for 10 to 15 minutes"; respirar pela boca.
+      Não deitar. Emergência se durar mais de 10–15 min, se for muito sangue ou se veio depois de pancada na cabeça.

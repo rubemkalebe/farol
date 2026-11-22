@@ -1,8 +1,13 @@
 import 'package:farol/main.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  // O rootBundle guarda Futures entre testes; um Future criado no teste
+  // anterior não completa no seguinte.
+  setUp(rootBundle.clear);
+
   testWidgets('início lista os capítulos e abre um', (tester) async {
     await tester.pumpWidget(const FarolApp());
     await tester.pumpAndSettle();
@@ -30,5 +35,22 @@ void main() {
     await tester.tap(find.byIcon(Icons.help_outline).first);
     await tester.pumpAndSettle();
     expect(find.text('Orientação geral'), findsOneWidget);
+  });
+
+  testWidgets('todo capítulo abre sem erro', (tester) async {
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+    for (final titulo in ['Durante o apagão', 'Primeiros socorros', 'Antes de cair',
+        'Contatos de emergência', 'Quando a energia voltar', 'Outros desastres']) {
+      await tester.ensureVisible(find.text(titulo));
+      await tester.pumpAndSettle();
+      await tester.tap(find.text(titulo));
+      await tester.pumpAndSettle();
+      expect(find.byType(BackButton), findsOneWidget, reason: titulo);
+      expect(find.textContaining('Erro ao abrir'), findsNothing, reason: titulo);
+      expect(find.byType(CircularProgressIndicator), findsNothing, reason: titulo);
+      await tester.tap(find.byType(BackButton));
+      await tester.pumpAndSettle();
+    }
   });
 }
