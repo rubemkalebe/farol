@@ -1,0 +1,16 @@
+# Catálogo de fontes do Farol.
+# Todo texto em conteudo/ deve citar ao menos uma entrada daqui pelo id.
+#
+# Campos:
+#   id:         identificador curto (ex.: ms-agua-hipoclorito)
+#   titulo:     título do documento ou página
+#   orgao:      quem publica (Ministério da Saúde, Defesa Civil, Anvisa, Cemig...)
+#   url:        endereço original
+#   acessado:   data da consulta (AAAA-MM-DD)
+#   publicado:  data ou ano de publicação, se houver
+#   licenca:    o que o documento diz sobre reprodução (texto curto, ou "desconhecida")
+#   redistribuir: sim | nao | verificar   (se podemos incluir o arquivo no app)
+#   arquivo:    caminho em fontes/arquivos/, se baixado
+#   usado_em:   capítulos que usam esta fonte
+#   notas:      trechos ou números importantes, com página
+fontes: []
