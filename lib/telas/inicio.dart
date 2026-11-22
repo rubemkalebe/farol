@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../dados/conteudo.dart';
 import '../dados/locais.dart';
+import 'busca.dart';
+import 'emergencia.dart';
 import 'escolher_cidade.dart';
 import '../tema.dart';
 import 'capitulo.dart';
@@ -86,6 +88,44 @@ class _TelaInicioState extends State<TelaInicio> {
                     onPressed: _escolherCidade,
                   ),
                 ),
+                const SizedBox(height: 12),
+                // No desespero ninguém lê: o primeiro botão vai direto ao trecho certo.
+                FilledButton(
+                  key: const ValueKey('botao-emergencia'),
+                  style: FilledButton.styleFrom(
+                    backgroundColor: corAlerta,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  ),
+                  onPressed: () =>
+                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TelaEmergencia())),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.emergency, size: 34),
+                      SizedBox(width: 12),
+                      Expanded(
+                        child: Text('O QUE ESTÁ ACONTECENDO?',
+                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+                      ),
+                      Icon(Icons.chevron_right, size: 30),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 12),
+                OutlinedButton.icon(
+                  key: const ValueKey('botao-busca'),
+                  style: OutlinedButton.styleFrom(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 16),
+                    foregroundColor: corTexto,
+                  ),
+                  onPressed: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TelaBusca())),
+                  icon: const Icon(Icons.search, color: corFeixe),
+                  label: const Text('Buscar nos guias', style: TextStyle(fontSize: 16)),
+                ),
+                const SizedBox(height: 20),
+                Text('Guias', style: Theme.of(context).textTheme.titleMedium),
                 const SizedBox(height: 8),
                 for (final c in capitulos) _CartaoCapitulo(capitulo: c),
                 const SizedBox(height: 8),

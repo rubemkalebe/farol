@@ -110,4 +110,10 @@ Future<String?> lerCidade() async {
   return migrado;
 }
 
+/// Blocos locais da cidade salva no aparelho (ou do padrão).
+Future<Map<String, String>> blocosDaCidadeEscolhida() async {
+  final cidade = await lerCidade();
+  return blocosLocais(cidade == null || cidade == outraCidade ? null : cidade);
+}
+
 Future<void> salvarCidade(String id) async => (await SharedPreferences.getInstance()).setString(_chave, id);

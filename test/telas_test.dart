@@ -105,4 +105,38 @@ void main() {
     expect(find.text('Natal (RN)'), findsOneWidget);
     expect(find.text('Onde você está?'), findsNothing);
   });
+
+  testWidgets('emergência: desmaiou → não respira → RCP com botão do 192', (tester) async {
+    tester.view.physicalSize = const Size(1080, 4000);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.reset);
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.byKey(const ValueKey('botao-emergencia')));
+    await tester.pumpAndSettle();
+    expect(find.byKey(const ValueKey('ligar-192')), findsOneWidget);
+    await tester.tap(find.text('Alguém desmaiou ou não responde'));
+    await tester.pumpAndSettle();
+    expect(find.text('A pessoa respira normalmente?'), findsOneWidget);
+    await tester.tap(find.text('Não respira, ou só puxa o ar de vez em quando'));
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey('ligar-192')), findsOneWidget);
+    expect(find.textContaining('Não responde e não respira: RCP'), findsWidgets);
+    expect(find.textContaining('Abrir o guia completo'), findsOneWidget);
+  });
+
+  testWidgets('busca: "engasgou" mostra a seção de engasgo', (tester) async {
+    await tester.pumpWidget(const FarolApp());
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('botao-busca')));
+    await tester.pumpAndSettle();
+    await tester.enterText(find.byType(TextField), 'meu filho engasgou');
+    await tester.pumpAndSettle();
+    expect(find.text('Engasgo'), findsWidgets);
+    await tester.tap(find.text('Engasgo').first);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('tapas firmes nas costas'), findsWidgets);
+  });
 }

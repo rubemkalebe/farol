@@ -29,6 +29,8 @@ O núcleo vem sempre instalado e é pequeno:
 5. Quando a energia voltar
 6. Outros desastres: enchente, deslizamento, tempestade, calor, fumaça, falta d'água
 
+Para a hora do aperto: o botão **"O que está acontecendo?"** leva direto ao trecho certo do guia, com botão grande de ligar 192 ou 193, e a **busca** entende o jeito que a gente fala ("engasgou", "picou", "faltou luz"). O roteiro fica em `conteudo/emergencia.yaml` e os sinônimos em `conteudo/sinonimos.yaml`.
+
 Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios e contatos, salva só no aparelho), **checklists** que ficam marcadas e **números que ligam com um toque**.
 
 Pacotes opcionais, para baixar quando houver internet: mapa offline da região (Organic Maps), Wikipédia em português sem imagens (Kiwix), manuais oficiais completos e livros em domínio público.

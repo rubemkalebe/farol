@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown_plus/flutter_markdown_plus.dart';
-import 'package:markdown/markdown.dart' as md;
-import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/conteudo.dart';
 import '../dados/fontes.dart';
-import '../dados/marcacoes.dart';
 import '../dados/locais.dart';
-import '../tema.dart';
-import 'ficha.dart' show ligar;
+import '../dados/marcacoes.dart';
+import 'texto_farol.dart';
 
 class TelaCapitulo extends StatefulWidget {
   const TelaCapitulo({super.key, required this.capitulo});
@@ -25,9 +21,8 @@ class _TelaCapituloState extends State<TelaCapitulo> {
   late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados = _carregar();
 
   Future<(String, Map<String, Fonte>, Marcacoes)> _carregar() async {
-    final (bruto, fontes, marcacoes, cidade) =
-        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), lerCidade()).wait;
-    final blocos = await blocosLocais(cidade == outraCidade ? null : cidade);
+    final (bruto, fontes, marcacoes, blocos) =
+        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), blocosDaCidadeEscolhida()).wait;
     return (aplicarLocais(bruto, blocos), fontes, marcacoes);
   }
 
@@ -60,38 +55,7 @@ class _TelaCapituloState extends State<TelaCapitulo> {
             return const Center(child: CircularProgressIndicator());
           }
           final (texto, fontes, marcacoes) = snap.data!;
-          final tema = Theme.of(context);
-          return Markdown(
-            data: texto,
-            extensionSet: md.ExtensionSet(
-              md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-              [SintaxeFonte(), SintaxeGeral(), SintaxeMarcar(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
-            ),
-            // tel: abre o discador e sms: abre a mensagem. Outros links não
-            // são seguidos: o app é offline e não abre páginas.
-            onTapLink: (_, href, _) {
-              if (href == null) return;
-              if (href.startsWith('tel:')) ligar(href.substring(4));
-              if (href.startsWith('sms:')) launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
-            },
-            builders: {
-              'fonte': _BotaoFonte(
-                (id) => fontes[id] != null ? _mostrarFonte(context, fontes[id]!) : null,
-              ),
-              'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
-              'marcar': _CaixaMarcar(widget.capitulo.id, marcacoes),
-            },
-            padding: const EdgeInsets.all(16),
-            styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
-              a: const TextStyle(color: corFeixe, fontWeight: FontWeight.w700),
-              blockquoteDecoration: BoxDecoration(
-                color: corSuperficie,
-                borderRadius: BorderRadius.circular(8),
-                border: const Border(left: BorderSide(color: corFeixe, width: 4)),
-              ),
-              tableBorder: TableBorder.all(color: tema.dividerColor),
-            ),
-          );
+          return TextoFarol(markdown: texto, capituloId: widget.capitulo.id, fontes: fontes, marcacoes: marcacoes);
         },
       ),
     );
@@ -110,148 +74,5 @@ class _TelaCapituloState extends State<TelaCapitulo> {
       ),
     );
     if (ok == true) await marcacoes.limpar(widget.capitulo.id);
-  }
-
-  void _mostrarAvisoGeral(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (context) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Orientação geral',
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: corAviso)),
-            const SizedBox(height: 6),
-            Text(
-              'Não encontramos fonte oficial para este ponto. Ele foi escrito com base '
-              'em conhecimento técnico comum e pode mudar quando houver uma fonte melhor.',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  void _mostrarFonte(BuildContext context, Fonte f) {
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (context) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(f.orgao, style: Theme.of(context).textTheme.labelLarge?.copyWith(color: corFeixe)),
-            const SizedBox(height: 6),
-            Text(f.titulo, style: Theme.of(context).textTheme.titleMedium),
-            const SizedBox(height: 12),
-            SelectableText(f.url, style: Theme.of(context).textTheme.bodySmall),
-            const SizedBox(height: 4),
-            Text('Consultado em ${f.acessado}', style: Theme.of(context).textTheme.bodySmall),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-/// Ícone de informação no lugar de `[fonte: id]`. Usa a fonte de ícones
-/// embutida no app, então aparece mesmo sem internet.
-class _BotaoFonte extends MarkdownElementBuilder {
-  _BotaoFonte(this.aoTocar);
-
-  final void Function(String id) aoTocar;
-
-  @override
-  bool isBlockElement() => false;
-
-  @override
-  Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
-    final id = element.textContent;
-    return Semantics(
-      button: true,
-      label: 'Ver fonte',
-      child: InkWell(
-        key: ValueKey('fonte-$id'),
-        onTap: () => aoTocar(id),
-        borderRadius: BorderRadius.circular(12),
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
-          child: Icon(Icons.info_outline, size: 18, color: corFeixe),
-        ),
-      ),
-    );
-  }
-}
-
-/// Ícone de orientação sem fonte oficial, no lugar de `[geral]`.
-class _MarcaGeral extends MarkdownElementBuilder {
-  _MarcaGeral(this.aoTocar);
-
-  final VoidCallback aoTocar;
-
-  @override
-  bool isBlockElement() => false;
-
-  @override
-  Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
-    return Semantics(
-      button: true,
-      label: 'Orientação geral, sem fonte oficial',
-      child: InkWell(
-        onTap: aoTocar,
-        borderRadius: BorderRadius.circular(12),
-        child: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 3),
-          child: Icon(Icons.help_outline, size: 18, color: corAviso),
-        ),
-      ),
-    );
-  }
-}
-
-/// Caixa de marcar no lugar de `[marcar: id]`. O estado fica salvo no aparelho.
-class _CaixaMarcar extends MarkdownElementBuilder {
-  _CaixaMarcar(this.capitulo, this.marcacoes);
-
-  final String capitulo;
-  final Marcacoes marcacoes;
-
-  @override
-  bool isBlockElement() => false;
-
-  @override
-  Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
-    final item = element.textContent;
-    return ListenableBuilder(
-      listenable: marcacoes,
-      builder: (context, _) {
-        final marcado = marcacoes.marcado(capitulo, item);
-        return Semantics(
-          checked: marcado,
-          child: InkWell(
-            key: ValueKey('marcar-$item'),
-            onTap: () => marcacoes.alternar(capitulo, item),
-            borderRadius: BorderRadius.circular(6),
-            child: Padding(
-              padding: const EdgeInsets.only(right: 6),
-              child: Icon(
-                marcado ? Icons.check_box : Icons.check_box_outline_blank,
-                size: 22,
-                color: marcado ? corFeixe : corTexto,
-              ),
-            ),
-          ),
-        );
-      },
-    );
   }
 }

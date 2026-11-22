@@ -6,6 +6,8 @@ const corFeixe = Color(0xFFFFD34E);
 const corTexto = Color(0xFFE9EEF6);
 // Orientação sem fonte oficial: cor distinta do amarelo das fontes.
 const corAviso = Color(0xFF8FB8DE);
+// Emergência: botões de ligar e o "O que está acontecendo?".
+const corAlerta = Color(0xFFE5484D);
 
 final _base = ThemeData(
   useMaterial3: true,

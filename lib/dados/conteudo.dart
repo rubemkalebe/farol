@@ -17,8 +17,8 @@ class Capitulo {
   String get caminho => 'conteudo/capitulos/$id.md';
 }
 
-Future<List<Capitulo>> carregarIndice() async {
-  final texto = await rootBundle.loadString('conteudo/indice.yaml');
+Future<List<Capitulo>> carregarIndice({Future<String> Function(String) ler = _lerAsset}) async {
+  final texto = await ler('conteudo/indice.yaml');
   final yaml = loadYaml(texto) as YamlMap;
   return [
     for (final c in yaml['capitulos'] as YamlList)
@@ -31,4 +31,7 @@ Future<List<Capitulo>> carregarIndice() async {
   ];
 }
 
-Future<String> carregarCapitulo(Capitulo c) => rootBundle.loadString(c.caminho);
+Future<String> carregarCapitulo(Capitulo c, {Future<String> Function(String) ler = _lerAsset}) =>
+    ler(c.caminho);
+
+Future<String> _lerAsset(String caminho) => rootBundle.loadString(caminho);
