@@ -3,6 +3,8 @@
 #
 # Campos:
 #   id:         identificador curto (ex.: ms-agua-hipoclorito)
+#   tema:       assunto (alimentos, agua, remedios, eletrodependentes, calor,
+#               seguranca, comunicacao, bateria, energia)
 #   titulo:     título do documento ou página
 #   orgao:      quem publica (Ministério da Saúde, Defesa Civil, Anvisa, Cemig...)
 #   url:        endereço original
@@ -12,5 +14,640 @@
 #   redistribuir: sim | nao | verificar   (se podemos incluir o arquivo no app)
 #   arquivo:    caminho em fontes/arquivos/, se baixado
 #   usado_em:   capítulos que usam esta fonte
-#   notas:      trechos ou números importantes, com página
-fontes: []
+#   notas:      trechos literais e números importantes, com página.
+#               "CONFERIR" marca trecho que veio resumido e precisa ser
+#               checado no original antes de virar citação.
+#
+# Regra de licença: páginas gov.br usam CC BY-ND 3.0, que permite
+# redistribuir o original sem alteração (redistribuir: sim), mas não
+# adaptar. O texto do app é escrito por nós a partir dos fatos, com citação.
+fontes:
+
+  # ───────────────────────── Alimentos ─────────────────────────
+
+  - id: sessp-cve-falta-energia-alimentos
+    tema: alimentos
+    titulo: "Como proteger os alimentos na falta de energia elétrica"
+    orgao: Secretaria de Estado da Saúde de SP – Centro de Vigilância Epidemiológica (deduzido pela URL)
+    url: https://www.saude.sp.gov.br/resources/cve-centro-de-vigilancia-epidemiologica/areas-de-vigilancia/doencas-transmitidas-por-agua-e-alimentos/folder/energia_folder.pdf
+    acessado: 2026-11-22
+    publicado: null  # PDF criado em 2009-07-08
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "A geladeira conserva frio os alimentos por até 4 horas se for mantida fechada durante todo o tempo;"
+      "Um freezer poderá conservar a temperatura por aproximadamente 24 horas se a porta se mantiver fechada." (destaque: "Geladeira – 4 horas / Freezer – 24 horas")
+      "Se a energia elétrica faltar por um período de tempo prolongado, aconselha-se adquirir blocos de gelo (se possível)"
+      "Zona de risco: entre 5º e 60º – Multiplicam-se" / "Abaixo de 5º, tornam-se inativas."
+      "Jogue fora todo e qualquer alimento perecível (carne, frango, peixe e ovo) que pareçam ter permanecido a uma temperatura acima de 5°C por mais de 2 horas."
+      "Não se deve confiar no seu aspecto e cheiro."
+      Folder quase idêntico da SMS Rio (2023): https://saude.prefeitura.rio/wp-content/uploads/sites/47/2023/04/09.FALTADEENERGIA.pdf
+      acrescenta "pois alguns micróbios e toxinas não são eliminados com o calor".
+
+  - id: ms-alimentos-enchentes-falta-energia-2017
+    tema: alimentos
+    titulo: "Cuidados com os alimentos para consumo humano em situação de enchentes"
+    orgao: Ministério da Saúde / Secretaria de Vigilância em Saúde
+    url: https://bvsms.saude.gov.br/bvs/folder/cuidados_alimentos_consumo_humano_situacao_enchentes.pdf
+    acessado: 2026-11-22
+    publicado: 2017
+    licenca: "sem declaração; só \"VENDA PROIBIDA\" (distribuição gratuita)"
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.1, "COMO PROTEGER OS ALIMENTOS NA FALTA DE ENERGIA ELÉTRICA":
+      "mantenha as portas da geladeira e do freezer fechados para que a temperatura interna se conserve fria o maior tempo possível."
+      "Caso contenha acúmulo de líquidos por dentro da embalagem, os produtos devem ser descartados."
+      "Descarte todo e qualquer alimento perecível (como carnes, leite, ovos, frutos do mar, e outros) que tenha permanecido a uma temperatura acima de 5°C por mais de 2 horas."
+      p.2: "nunca experimente o alimento para determinar se ele é seguro. Em caso de dúvida, descarte-o!"
+      Não dá número de horas para geladeira/freezer.
+
+  - id: cdc-keep-food-safe-after-emergency
+    tema: alimentos
+    titulo: "Keep Food Safe After a Disaster or Emergency"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/food-safety/foods/keep-food-safe-after-emergency.html
+    acessado: 2026-11-22
+    publicado: 2025-11-24
+    licenca: desconhecida (governo federal dos EUA; confirmar domínio público)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "4 hours in a refrigerator" / "48 hours in a full freezer and 24 hours in a half-full freezer" (portas fechadas)
+      "The refrigerator should be at 40°F or below." (≈ 4 °C)
+      Descartar perecíveis refrigerados após "4 hours without power or without a cold source like ice"
+      "Never taste food to know if it is safe to eat." / "When in doubt, throw it out."
+      Pode recongelar o que "still contains ice crystals or is at 40 °F or below"
+
+  # ─────────────────────────── Água ────────────────────────────
+
+  - id: ms-orientacoes-populacao-enchentes-2024
+    tema: agua
+    titulo: "Orientações à população em situação de enchentes"
+    orgao: Ministério da Saúde (SVSA)
+    url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/enchentes/orientacoes-a-populacao-em-situacao-de-enchentes.pdf
+    acessado: 2026-11-22
+    publicado: 2024  # PDF criado em 2024-05-29
+    licenca: "gov.br/saude: CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      p.2, "OPÇÃO 1 FILTRAR E DESINFETAR": filtrar com "filtro doméstico, coador de papel ou pano limpo" e "adicionar 2 gotas de hipoclorito de sódio (água sanitária) a 2,5%" ... "(30 minutos) antes de consumir a água."
+      "A água sanitária, com teor de cloro ativo de 2,0% a 2,5%, sem nenhum outro aditivo, como: alvejante, desinfetantes, essência, perfume etc., pode ser utilizada"
+      "OPÇÃO 2 FILTRAR E FERVER ... fever [sic] por 5 minutos após o início de fervura. Aguardar a água esfriar e sacudir/chacoalhar a água após a fervura antes de beber."
+
+  - id: ms-noticia-pos-enchente-2024
+    tema: agua
+    titulo: "Ministério da Saúde orienta sobre cuidados essenciais à população no pós-enchente"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/noticias/2024/maio/ministerio-da-saude-orienta-sobre-cuidados-essenciais-a-populacao-no-pos-enchente
+    acessado: 2026-11-22
+    publicado: 2024-05-19  # atualizado em 2026-10-26
+    licenca: "CC BY-ND 3.0 (rodapé gov.br)"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      "adicione 2 gotas de hipoclorito de sódio a 2,5% (água sanitária) por litro de água, misture bem e aguarde 30 minutos antes de consumir. Caso não tenha hipoclorito de sódio, ferva a água por 5 minutos após o início da fervura. Deixe esfriar antes de consumir."
+
+  - id: sessp-cve-hipoclorito-2025
+    tema: agua
+    titulo: "Hipoclorito de Sódio 2,5% (folder)"
+    orgao: Secretaria de Estado da Saúde de SP – CVE (deduzido pela URL)
+    url: https://www.saude.sp.gov.br/resources/cve-centro-de-vigilancia-epidemiologica/areas-de-vigilancia/doencas-transmitidas-por-agua-e-alimentos/folder/folder_hipoclorito_de_sodio.pdf
+    acessado: 2026-11-22
+    publicado: null  # PDF criado em 2025-08-12
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.2: "Adicione 2 gotas de hipoclorito de sódio 2,5% para cada litro de água, misture bem com uma colher e espere meia hora (30 minutos) antes de consumir a água."
+      Tabela: 1 L = "2 gotas (0,1 ml)"; "20 gotas (1 ml)"; "40 gotas (2 ml)"; 200 L = 20 ml; 1.000 L = "2 copinhos de café descartável (100 ml)".
+      CONFERIR: rótulos de 10 L e 20 L inferidos pela proporção.
+      "A água tratada com hipoclorito de sódio 2,5% deve ser consumida em até 24h."
+      "Ferva a água por 5 minutos ... Depois, faça aeração, transferindo o líquido algumas vezes entre 2 recipientes"
+      "Não se pode usar água sanitária que contenha alvejante e perfume"
+      Desinfetar recipiente: "1 litro de água e adicionar 2 colheres de sopa (30 ml) de água sanitária (2,5%)" ... "Durante 30 minutos".
+      "Manter os recipientes bem fechados" / usar só para água de consumo.
+
+  - id: sesmg-nt39-2023-hipoclorito
+    tema: agua
+    titulo: "Nota Técnica nº 39/SES/SUBVS-SVS-DVAA-CVSA/2023 – Distribuição do hipoclorito de sódio a 2,5% e sua utilização para desinfecção caseira da água para consumo humano"
+    orgao: Secretaria de Estado de Saúde de Minas Gerais
+    url: https://www.saude.mg.gov.br/wp-content/uploads/2025/03/ANEXO-F-Nota-tcnica-39-2023_Orientaes-tratamento-intradomiciliar.pdf
+    acessado: 2026-11-22
+    publicado: 2023-11-29
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.1: filtrar e tratar "com hipoclorito de sódio a 2,5%, adicionando 2 (duas) gotas para cada litro de água e deixando repousar por 30 (trinta) minutos antes de consumir."
+      p.2: frasco "ao abrigo da luz e do calor, sempre fechado e fora do alcance de crianças"
+      Anexo (~p.7): sem hipoclorito, filtrar e "ferva-a durante 5 minutos. Marque os 5 minutos, após o início da fervura/ebulição."
+
+  - id: sesrs-guia-basico-enchentes-2024
+    tema: agua
+    titulo: "Guia básico para riscos e cuidados com a saúde após enchentes (Informe Técnico CEVS, 10/06/2024)"
+    orgao: CEVS / Secretaria Estadual da Saúde do Rio Grande do Sul
+    url: https://saude.rs.gov.br/upload/arquivos/202406/10141303-guia-basico-10-06-24.pdf
+    acessado: 2026-11-22
+    publicado: 2024-06-10
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.6–7: "Armazene a água potável em recipientes limpos e seguros, de preferência em recipientes de plástico alimentar ou galões próprios para armazenamento de água;"
+      Filtrar e "ferva a água por 5 minutos"; ou "2 gotas de solução de água sanitária (hipoclorito de sódio a 2,5%) para cada 1 litro de água e espere 30 minutos".
+      Alimentos: descartar os que "ficaram fora da geladeira (ou dentro da geladeira, mas sem luz) por mais de 2 horas" com alteração de cor, cheiro ou consistência.
+      Versão 2026 (mesmo texto, acrescenta "Se estiver turva, filtre-a primeiro."):
+      https://saude.rs.gov.br/upload/arquivos/202607/28140534-guia-enchentes-2026-cevs-ses-rs.pdf
+
+  - id: defesacivil-pr-kit-emergencia
+    tema: agua
+    titulo: "Kit de Emergência pessoal"
+    orgao: Coordenadoria Estadual da Defesa Civil do Paraná
+    url: https://www.defesacivil.pr.gov.br/Pagina/Kit-de-Emergencia-pessoal
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Água – 2litros por pessoa, por dia"
+      "Comida não perecível (Ex.: frutas secas, barras de cereais, biscoitos)"
+      Não diz por quantos dias.
+
+  - id: cdc-emergency-water-supply
+    tema: agua
+    titulo: "How to Create an Emergency Water Supply"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/water-emergency/about/how-to-create-and-store-an-emergency-water-supply.html
+    acessado: 2026-11-22
+    publicado: 2025-06-27
+    licenca: desconhecida (governo federal dos EUA; confirmar)
+    redistribuir: verificar
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Store at least 1 gallon of water per person, per day for 3 days." (≈ 3,8 L; inclui higiene)
+      "Consider storing more water than this for pregnant women, people who are sick, pets, or if you live in a hot climate."
+      Recipientes de grau alimentar; nunca os que tiveram produtos tóxicos. Trocar a água a cada 6 meses; local fresco, longe do sol; etiquetar com data.
+
+  - id: cdc-make-water-safe
+    tema: agua
+    titulo: "How to Make Water Safe in an Emergency"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/water-emergency/about/index.html
+    acessado: 2026-11-22
+    publicado: 2024-09-19
+    licenca: desconhecida (governo federal dos EUA; confirmar)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Bring clear water to a rolling boil for 1 minute" (3 min acima de ~2.000 m).
+      Dosagem do CDC é para água sanitária de 5–9%: NÃO transpor para a brasileira de 2–2,5%.
+      "If the water is cloudy, murky, colored, or very cold, add double the amount of bleach"
+      "You cannot make water containing fuel, toxic chemicals, or radioactive materials safe by boiling or disinfecting it."
+
+  # ───────────────────────── Remédios ──────────────────────────
+
+  - id: rs-ses-medicamentos-falta-energia
+    tema: remedios
+    titulo: "Como conservar medicamentos durante a falta de energia elétrica"
+    orgao: Governo do Estado do RS – Secretaria da Saúde
+    url: https://estado.rs.gov.br/como-conservar-medicamentos-durante-a-falta-de-energia-eletrica
+    acessado: 2026-11-22
+    publicado: 2026-07-23
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "não há uma regra única: cada produto possui características específicas"; verificar "na bula e na embalagem."
+      "No caso das insulinas, a orientação é que, quando já estão em uso, suportam até 30 dias sem refrigeração."
+      Fechadas: "devem ser colocadas em bolsa ou caixa térmica com gelo ou gelo reutilizável"; "Evite o contato direto da insulina com o gelo para prevenir o congelamento"; "Caso a insulina congele, não a utilizar mais."
+      Sem caixa térmica: "manter a geladeira fechada pelo maior tempo possível"
+      "Se a interrupção de energia se prolongar por vários dias, procure o serviço de saúde" (UBS pode ajudar a conservar).
+      "Não congelar medicamentos, exceto quando houver orientação específica do fabricante"
+
+  - id: rs-ses-informe-insulina-sem-energia
+    tema: remedios
+    titulo: "Informe Insulina – armazenamento de insulina sem energia (usuários)"
+    orgao: Secretaria da Saúde do RS (fonte citada – Ministério da Saúde, Linha de Cuidado DM2)
+    url: https://saude.rs.gov.br/upload/arquivos/202405/03121024-armaz-insulina-sem-energia-para-usuarios.pdf
+    acessado: 2026-11-22
+    publicado: 2024-05-03
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      CONFERIR (veio resumido): insulina em uso em temperatura ambiente até 30 °C por até 28 dias, longe da luz e do calor;
+      lacrada vai para caixa térmica sem contato direto com o gelo; não congelar; outros refrigerados: "consulte o(a) farmacêutico(a)".
+      Versão para profissionais: https://saude.rs.gov.br/upload/arquivos/202405/03121020-armaz-insulina-sem-energia-para-profissionais.pdf
+
+  - id: sc-ses-cartilha-canetas-insulina
+    tema: remedios
+    titulo: "Cartilha para profissionais de saúde – Orientações sobre o uso das canetas aplicadoras de insulina"
+    orgao: Secretaria de Estado da Saúde de Santa Catarina (DIAF/CEAF)
+    url: https://www.saude.sc.gov.br/edocman/areas-de-atuacao/assistencia-farmaceutica-diaf/componente-especializado-ceaf/protocolos-clinicos-ter-resumos-e-formularios/diabete-melito-tipo-i/cartilha%20de%20insulina%20para%20profissionais%20de%20saude%202025.pdf
+    acessado: 2026-11-22
+    publicado: 2023-09-04
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.3: abertas, "em temperatura ambiente, abaixo de 30°C, por até 4 semanas longe da luz e do calor"
+      p.3: fechadas "na geladeira, na temperatura entre 2ºC e 8°C ... distantes do congelador, pois não devem ser congeladas"
+      p.7: "Caso sejam identificados grumos, cristais ou agregados ... orientar que a insulina não seja utilizada e que seja descartada"
+
+  - id: fda-insulin-storage-emergency
+    tema: remedios
+    titulo: "Information Regarding Insulin Storage and Switching Between Products in an Emergency"
+    orgao: FDA (EUA)
+    url: https://www.fda.gov/drugs/emergency-preparedness-drugs/information-regarding-insulin-storage-and-switching-between-products-emergency
+    acessado: 2026-11-22
+    publicado: 2026-09-28
+    licenca: desconhecida (governo federal dos EUA; confirmar)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      Abertos ou fechados "may be left unrefrigerated at a temperature between 59°F and 86°F for up to 28 days" (15–30 °C).
+      "Under emergency conditions, you might still need to use insulin that has been stored above 86°F."
+      Não usar insulina que congelou. Longe do sol e do calor direto.
+      Bomba: insulina no set "should be thrown away after 48 hours"; acima de 98.6°F (37 °C), descartar.
+      Depois do evento, repor o quanto antes os frascos expostos a temperaturas extremas.
+
+  - id: cdc-refrigerated-drugs
+    tema: remedios
+    titulo: "Refrigerated Drugs"
+    orgao: CDC (EUA)
+    url: https://www.cdc.gov/natural-disasters/psa-toolkit/refrigerated-drugs.html
+    acessado: 2026-11-22
+    publicado: 2026-08-26
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "When the power is out for a day or more, throw away any medication that should be refrigerated, unless the drug's label says otherwise."
+      "If a life depends on the refrigerated drugs, use them only until a new supply is available."
+      Complemento, "Managing Insulin in an Emergency" (2024-05-15), https://www.cdc.gov/diabetes/articles/managing-insulin-in-emergency.html:
+      "Realistically, you may have to use insulin that's been stored above 86°F. If so, monitor your blood sugar regularly."
+
+  # ──────────────── Pessoas que dependem de aparelhos ────────────────
+
+  - id: aneel-ren-1000-2021
+    tema: eletrodependentes
+    titulo: "Resolução Normativa ANEEL nº 1.000/2021 (texto compilado)"
+    orgao: ANEEL (cópia hospedada pela Cemig)
+    url: https://www.cemig.com.br/wp-content/uploads/2025/08/ren20211000.pdf
+    acessado: 2026-11-22
+    publicado: 2021-12-07
+    licenca: ato normativo oficial (sem aviso no PDF)
+    redistribuir: verificar
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      Art. 6º §1º: "A distribuidora deve cadastrar de imediato a existência de pessoa usuária de equipamentos de autonomia limitada, vitais à preservação da vida humana e dependentes de energia elétrica, mediante comprovação médica."
+      Art. 436, I, a: aviso de desligamento programado com "5 dias úteis" para essas unidades, "desde que efetuado o prévio cadastro".
+      Art. 360 §3º, II: notificação escrita e comprovada antes de suspensão, se cadastrada.
+      NÃO há garantia de prioridade de religamento em falta não programada. O app não deve prometer isso.
+      Original (deu 403 na coleta): www2.aneel.gov.br/cedoc/ren20211000.html
+
+  - id: neoenergia-recadastramento-eletrodependentes
+    tema: eletrodependentes
+    titulo: "Neoenergia convoca para recadastramento clientes que dependem de equipamentos médicos para sobreviver"
+    orgao: Neoenergia
+    url: https://www.neoenergia.com/w/neoenergia-convoca-para-recadastramento-clientes-que-dependem-de-equipamentos-medicos-para-sobreviver
+    acessado: 2026-11-22
+    publicado: 2020-04-15
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      Exemplo de documentação pedida: RG/CPF do titular e do beneficiário; atestado médico com CID, CRM e prazo de uso; termo de compromisso.
+      Religamento "priorizado" é prática desta empresa, não regra da ANEEL.
+
+  - id: copel-cadastro-equipamento-vital
+    tema: eletrodependentes
+    titulo: "Cadastrar usuário de equipamento vital na Copel"
+    orgao: Governo do Paraná / Copel
+    url: https://www.parana.pr.gov.br/servicos/Habitacao/Infraestrutura/Cadastrar-usuario-de-equipamento-vital-na-Copel-ZVNk7pNe
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      CONFERIR (veio resumido): cadastro gratuito, feito pelo titular da fatura, com formulário assinado pelo médico; renovação anual.
+      "Este cadastro NÃO isenta o consumidor de pagar a fatura."
+      Cita a REN 414/2010, já revogada.
+      Falta achar a página equivalente da Cemig.
+
+  - id: cdc-prepare-your-health-power-sources
+    tema: eletrodependentes
+    titulo: "Prepare Your Health: Power sources"
+    orgao: CDC (EUA)
+    url: https://stacks.cdc.gov/view/cdc/139901/cdc_139901_DS1.pdf
+    acessado: 2026-11-22
+    publicado: null
+    licenca: desconhecida (foto é Getty/iStock)
+    redistribuir: nao
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Create an emergency power plan for your medical devices, including breathing machines, power wheelchairs and scooters, nebulizers, and oxygen and home dialysis equipment."
+      "Read the user manual or contact the manufacturer to find out if your medical device is compatible with batteries or a generator."
+      "Buy manual alternatives to your electricity-dependent equipment, if possible."
+
+  # ─────────────────────────── Calor ───────────────────────────
+
+  - id: ms-ondas-de-calor
+    tema: calor
+    titulo: "Ondas de calor"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/c/calor
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao, outros-desastres]
+    notas: |
+      "Beber água regularmente, mesmo quando não se sente sede." Evitar álcool e cafeína.
+      Usar centros comunitários e shoppings como refúgio nas horas mais quentes.
+      "Cuidado com crianças, idosos e gestantes"; também doentes crônicos.
+      Sinais: "transpiração excessiva, fraqueza, tontura, náuseas, dor de cabeça, cãibras musculares e diarreia".
+      Insolação é "uma emergência médica".
+
+  # ───────────────────────── Segurança ─────────────────────────
+
+  - id: epa-apagoes-qualidade-ar
+    tema: seguranca
+    titulo: "Apagões e Qualidade do ar interno (IAQ)"
+    orgao: EPA (EUA), página em português
+    url: https://www.epa.gov/lep/apagoes-e-qualidade-do-ar-interno-iaq
+    acessado: 2026-11-22
+    publicado: 2026-04-27
+    licenca: desconhecida (governo federal dos EUA; confirmar)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "A fumaça e os vapores expelidos por um gerador portátil podem matá-lo em minutos, caso não respire ar puro."
+      Gerador do lado de fora; nunca "dentro de sua casa ou garagem", "em varandas ou próximo de portas, exaustores ou janelas".
+      "não deixar o motor do seu carro ou caminhão ligado dentro de uma garagem, mesmo se deixar a porta aberta."
+      Não usar "churrasqueiras, grill ou fogareiros" em ambiente fechado.
+      Velas: ventilar; "se não forem supervisionadas podem se tornar um perigo de incêndio."; preferir lanternas à bateria.
+
+  - id: ready-gov-power-outages
+    tema: seguranca
+    titulo: "Power Outages"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/power-outages
+    acessado: 2026-11-22
+    publicado: 2026-06-04
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Generators and fuel should always be used outdoors and at least 20 feet away from windows, doors and attached garages." (≈ 6 m)
+      "Disconnect appliances and electronics to avoid damage from electrical surges."
+      "Have flashlights for every household member."
+      Geladeira "about four hours"; freezer cheio "about 48 hours".
+
+  - id: ses-sc-samu-monoxido
+    tema: seguranca
+    titulo: "Ameaça Invisível: SAMU orienta sobre cuidados envolvendo Monóxido de Carbono"
+    orgao: Secretaria de Estado da Saúde de Santa Catarina (SAMU)
+    url: https://www.saude.sc.gov.br/index.php/pt/component/content/article/ameaca-invisivel-samu-orienta-sobre-cuidados-envolvendo-monoxido-de-carbono?catid=10&Itemid=101
+    acessado: 2026-11-22
+    publicado: 2024-01-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao, primeiros-socorros]
+    notas: |
+      Leves: "dores de cabeça, enjoos, tontura, vômitos, dificuldade de concentração, sonolência e falta de coordenação"
+      Moderados: "falta de discernimento, confusão, inconsciência, convulsões, dores no peito, falta de ar, pressão arterial baixa e coma"
+      Socorro: levar a vítima para área aberta; se não der, "abrir todas as janelas e portas"; desligar a fonte; ligar 192.
+      "Nunca ligar um carro em uma garagem fechada"; "Nunca ficar dentro do carro parado com ele ligado."
+
+  - id: ms-nota-tecnica-3-2025-co
+    tema: seguranca
+    titulo: "Nota Técnica nº 3/2025-CGVAM/DVSAT/SVSA/MS"
+    orgao: Ministério da Saúde (SVSA)
+    url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/notas-tecnicas/2025/nota-tecnica-3-2025-cgvam-dvsat-svsa-ms
+    acessado: 2026-11-22
+    publicado: 2025-03-26
+    licenca: provável CC BY-ND 3.0 (portal gov.br; não conferido)
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      Tema é fumaça de queimadas; serve para definição e sintomas do CO.
+      "gás incolor, inodoro e insípido ... Altamente tóxico ... cefaleia, tontura, náusea, confusão mental e, em casos graves, ser fatal."
+      "Grávidas: a exposição ao monóxido de carbono pode reduzir o fornecimento de oxigênio ao feto"
+
+  - id: nfpa-candle-safety
+    tema: seguranca
+    titulo: "Candle Safety (tip sheet)"
+    orgao: National Fire Protection Association (NFPA)
+    url: https://content.nfpa.org/-/media/Project/Storefront/Catalog/Files/Safety-tip-sheets/CandleSafetyTips.pdf?rev=2aa815a63b38458296ed60caab0f8842
+    acessado: 2026-11-22
+    publicado: 2025
+    licenca: "©NFPA 2025"
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      "Have flashlights and battery-powered lighting ready to use during a power outage. Never use candles."
+      "Keep candles at least 1 foot (30 centimeters) away from anything that can burn."
+      "Avoid the use of candles in the bedroom and other areas where people may fall asleep."
+      "Never use a candle if oxygen is used in the home."
+
+  - id: cbmmg-autoprotecao-incendios
+    tema: seguranca
+    titulo: "Pesquisa mostra que medidas simples de autoproteção podem salvar vidas em incêndios residenciais"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: https://www.bombeiros.mg.gov.br/pesquisa-mostra-que-medidas-simples-de-autoprotecao-podem-salvar-vidas-em-incendios-residenciais
+    acessado: 2026-11-22
+    publicado: 2026-04-15
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      Risco de vários aparelhos numa tomada e carregadores de baixa qualidade; "não deixar aparelhos carregando sobre superfícies combustíveis".
+      Em incêndio, "a prioridade seja deixar o imóvel imediatamente"; 193.
+
+  - id: agenciaminas-cemig-fio-partido
+    tema: seguranca
+    titulo: "Cemig dá orientações de segurança para casos de fio partido sobre carros"
+    orgao: Agência Minas / Cemig
+    url: https://www.agenciaminas.mg.gov.br/noticia/cemig-da-orientacoes-de-seguranca-para-casos-de-fio-partido-sobre-carros
+    acessado: 2026-11-22
+    publicado: 2026-02-03
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao, outros-desastres]
+    notas: |
+      "não se aproximar e não tocar no cabeamento"
+      Fio sobre o carro: "a pessoa não deve sair de qualquer forma"; com fogo, pular "sem tocar ao mesmo tempo, no veículo e no solo".
+      Não tentar cortar ou remover árvores caídas. Cemig 116; Bombeiros 193.
+
+  - id: agenciaminas-cemig-queima-equipamentos
+    tema: seguranca
+    titulo: "Cemig orienta sobre medidas que evitam a queima de equipamentos durante temporais de verão"
+    orgao: Agência Minas / Cemig
+    url: https://www.agenciaminas.mg.gov.br/noticia/cemig-orienta-sobre-medidas-que-evitam-a-queima-de-equipamentos-durante-temporais-de-verao
+    acessado: 2026-11-22
+    publicado: 2025-12-12
+    licenca: "© 2026 Agência Minas. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao, depois]
+    notas: |
+      "retirar da tomada os equipamentos sensíveis antes do início da tempestade."
+      Na volta da energia: "aguarde alguns minutos antes de ligar novamente os aparelhos."
+      Ressarcimento de danos: https://www.cemig.com.br/duvida-frequente/como-solicitar-ressarcimento-de-danos-em-aparelhos-eletricos/
+
+  # ──────────────────────── Comunicação ────────────────────────
+
+  - id: midr-cadastro-alertas-sms
+    tema: comunicacao
+    titulo: "Solicitar cadastro para recebimento de avisos e alertas de desastres"
+    orgao: Ministério da Integração e do Desenvolvimento Regional (gov.br)
+    url: https://www.gov.br/pt-br/servicos/solicitar-cadastro-para-recebimento-de-avisos-e-alertas-de-desastres
+    acessado: 2026-11-22
+    publicado: 2025-12-15
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao, preparacao, contatos]
+    notas: |
+      "Envie mensagem para o número 40199, com o CEP da área de interesse."
+      WhatsApp: "61 2034-4611" (https://wa.me/556120344611). Telegram: "Defesa Civil Alertas".
+      "Este serviço é gratuito para o cidadão."
+
+  - id: anatel-defesa-civil-alerta
+    tema: comunicacao
+    titulo: "Defesa Civil Alerta"
+    orgao: Anatel
+    url: https://www.gov.br/anatel/pt-br/dados/utilidade-publica/alertas-de-desastres/defesa-civil-alerta
+    acessado: 2026-11-22
+    publicado: 2025-11-17
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      "exibe mensagens de texto em formato pop-up diretamente na tela do celular"; "celulares compatíveis, conectados às redes 4G ou 5G"
+
+  - id: agenciagov-defesa-civil-alerta
+    tema: comunicacao
+    titulo: "Desenvolve Aí explica como funcionam os avisos do Defesa Civil Alerta"
+    orgao: Agência Gov (EBC)
+    url: https://agenciagov.ebc.com.br/noticias/202510/desenvolve-ai-explica-como-funcionam-os-avisos-do-defesa-civil-alerta
+    acessado: 2026-11-22
+    publicado: 2025-10-17
+    licenca: "A reprodução é gratuita desde que citada a fonte."
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      Chega "sem necessidade de cadastro prévio."
+      Alertas extremos fazem os celulares "vibram e emitem um som parecido com o de uma sirene."
+
+  - id: anatel-regras-emergencia-res739
+    tema: comunicacao
+    titulo: "Conheça as regras dos serviços de telecomunicações em situações de emergência"
+    orgao: Anatel
+    url: https://www.gov.br/anatel/pt-br/assuntos/noticias/conheca-as-regras-dos-servicos-de-telecomunicacoes-em-situacoes-de-emergencia
+    acessado: 2026-11-22
+    publicado: 2021-01-05
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      Res. 739/2020: prestadoras devem "viabilizar o acesso de usuários de outras prestadoras em sua rede na localidade afetada" (roaming de emergência).
+      Não há regra de autonomia de bateria nas torres.
+
+  - id: ready-gov-get-tech-ready
+    tema: comunicacao
+    titulo: "Get Tech Ready"
+    orgao: Ready.gov / FEMA (EUA)
+    url: https://www.ready.gov/get-tech-ready
+    acessado: 2026-11-22
+    publicado: 2026-03-13
+    licenca: desconhecida (governo federal dos EUA)
+    redistribuir: verificar
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Mobile networks can become overwhelmed during emergencies, making it hard to make and get phone calls."; "Text messages require less bandwidth."
+      "Change the settings on your phone to low power mode or place it on airplane mode to conserve energy."
+      "Keep a portable phone charger in your car at all times."
+      Complemento, https://www.ready.gov/plan: "Establish a family meeting place that's familiar and easy to find."
+
+  # ────────────────────────── Bateria ──────────────────────────
+
+  - id: android-ajuda-bateria
+    tema: bateria
+    titulo: "Aproveitar ao máximo a duração da bateria em dispositivos Android"
+    orgao: Google (Ajuda do Android)
+    url: https://support.google.com/android/answer/7664692?hl=pt-BR
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "©2026 Google"
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      "reduzir o brilho da tela"; tela desligar mais cedo; "Ativar a "Economia de bateria" ou o modo de baixo consumo"
+      "Desative o Bluetooth."; "Desative o acesso à Localização."; "Evite situações em que o smartphone possa superaquecer"
+
+  - id: apple-modo-pouca-energia
+    tema: bateria
+    titulo: "Use o Modo Pouca Energia para economizar bateria no iPhone ou iPad"
+    orgao: Apple
+    url: https://support.apple.com/pt-br/101604
+    acessado: 2026-11-22
+    publicado: 2026-10-01
+    licenca: "Copyright © 2026 Apple Inc. Todos os direitos reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      Ajustes > Bateria > Modo Pouca Energia, ou pelo ícone da bateria na Central de Controle.
+      Diminui atividade em segundo plano e o brilho; desliga sozinho ao chegar a 80%.
+
+  # ───────────────────── Energia (Cemig / ANEEL) ─────────────────────
+
+  - id: cemig-comunicar-falta-energia
+    tema: energia
+    titulo: "Como posso comunicar a falta de energia?"
+    orgao: Cemig
+    url: https://www.cemig.com.br/duvida-frequente/como-posso-comunicar-a-falta-de-energia/
+    acessado: 2026-11-22
+    publicado: null
+    licenca: "CEMIG 2026© - Todos os Direitos Reservados."
+    redistribuir: nao
+    usado_em: [durante-apagao, contatos]
+    notas: |
+      Canais: Cemig Atende (site e app, opção "Estou sem luz"); WhatsApp 55 31 3506-1160 ("estou sem luz"); Telegram @CemigOficial;
+      telefone 116 (gratuito, 24 h); SMS para 29810. Deficiente auditivo: 0800 723 8007.
+      Fora de MG: a página traz 0800 721 0106 e o rodapé 0800 721 0116. CONFERIR antes de publicar.
+
+  - id: cemig-plano-comunicacao-interrupcao
+    tema: energia
+    titulo: "Plano de comunicação para interrupção no fornecimento de energia elétrica (Anexo 1)"
+    orgao: Cemig Distribuição
+    url: https://www.cemig.com.br/wp-content/uploads/2026/01/Plano-de-Comunicacao-Cemig-D.pdf
+    acessado: 2026-11-22
+    publicado: 2026-01-28
+    licenca: "\"Classificação: Público\" (sem licença de reprodução)"
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      p.3: para receber avisos, o consumidor precisa ter celular cadastrado.
+      p.3 (REN 1.137/2025, art. 105): informar causa provável, área e previsão "em até 15 (quinze) minutos após o conhecimento da causa" e "em até 1 (uma) hora após o reconhecimento da ocorrência".
+      p.5: mapa de interrupções no site, "Atualização a cada 30 minutos".
+      p.5–6: no 116, com o número da instalação, o sistema informa se há falta confirmada e o tempo previsto.
+
+  - id: aneel-qualidade-fornecimento-dic-fic
+    tema: energia
+    titulo: "Qualidade do Fornecimento de Energia Elétrica"
+    orgao: ANEEL
+    url: https://www.gov.br/aneel/pt-br/assuntos/distribuicao/qualidade-do-fornecimento-de-energia-eletrica
+    acessado: 2026-11-22
+    publicado: 2024-07-01  # modificado em 2026-04-29
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [depois]
+    notas: |
+      Estourar os limites de DIC/FIC/DMIC gera "compensação financeira automática", em "crédito na fatura", "no prazo de até dois meses após o período de apuração".
+      Notícia de 2025-10-21 (DISE, situação de emergência): https://www.gov.br/aneel/pt-br/assuntos/noticias/2025/aneel-amplia-direitos-do-consumidor-em-interrupcoes-de-energia-em-situacoes-de-emergencia-por-eventos-climaticos
+      Os prazos de 24 h urbano / 48 h rural da REN 1.137/2025 NÃO foram confirmados em fonte oficial.
