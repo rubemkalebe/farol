@@ -1,10 +1,10 @@
 # Divergências e lacunas: "Durante o apagão"
 
-Coleta de 2026-11-22. Cada item mostra o que as fontes dizem e a regra proposta para o texto do app. A regra só vale depois de aprovada.
+Coleta de 2026-11-22. Cada item mostra o que as fontes dizem e a decisão tomada pela regra de `README.md`.
 
-## Decisões propostas
+## Decisões
 
-| Tema | O que as fontes dizem | Proposta para o app |
+| Tema | O que as fontes dizem | Decisão |
 |---|---|---|
 | Geladeira | 4 h fechada, em todas as fontes (SP, Rio, CDC, FEMA) | **4 horas com a porta fechada** |
 | Freezer | 24 h segundo SP e Rio, sem distinguir; o CDC dá 48 h cheio e 24 h pela metade | **24 horas**, número brasileiro e o mais seguro. Observação: freezer cheio aguenta mais |

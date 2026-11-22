@@ -8,3 +8,19 @@ O Farol não inventa orientação de saúde ou segurança. O fluxo é:
 4. **Oferecer o original:** quando a fonte puder ser redistribuída, o documento completo entra num pacote opcional.
 
 Quando duas fontes discordarem, vale a mais recente do órgão responsável, e a divergência fica anotada em `notas`.
+
+## Regra de decisão
+
+Quando as fontes divergem, a decisão segue esta ordem, sem depender de revisão leiga:
+
+1. Fonte oficial brasileira (federal, depois estadual) antes de fonte estrangeira.
+2. Entre números diferentes, vale **o mais seguro** (menos tempo fora da geladeira, mais tempo de fervura, mais distância).
+3. Remédios: o app nunca substitui a bula. Sempre orienta a conferir a bula e procurar farmácia ou UBS.
+4. Sem fonte, não entra. O assunto vai para a lista de lacunas.
+5. Nunca prometer direito que a norma não garante.
+
+As decisões tomadas ficam em `divergencias.md`.
+
+## Como citar no texto
+
+No Markdown dos capítulos, escreva `[fonte: id]` depois da frase. O app transforma a marca num ícone ⓘ, e o toque mostra a fonte. O teste `test/fontes_test.dart` falha se o `id` não existir no catálogo.

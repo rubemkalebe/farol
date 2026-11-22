@@ -12,6 +12,10 @@ void main() {
     await tester.tap(find.text('Durante o apagão'));
     await tester.pumpAndSettle();
     expect(find.byType(AppBar), findsOneWidget);
-    expect(find.textContaining('Capítulo em construção'), findsOneWidget);
+    expect(find.textContaining('O que pode matar'), findsWidgets);
+
+    await tester.tap(find.byIcon(Icons.info_outline).first);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('Consultado em'), findsOneWidget);
   });
 }
