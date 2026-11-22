@@ -39,15 +39,20 @@ Future<List<Cidade>> carregarCidades({LerTexto ler = _lerAsset}) async {
   return lista;
 }
 
-Future<YamlMap> _abrir(LerTexto ler, String caminho) async => loadYaml(await ler(caminho)) as YamlMap;
+Future<YamlMap> _abrir(LerTexto ler, String caminho) async =>
+    loadYaml(await ler(caminho)) as YamlMap;
 
 Map<String, String> _blocos(YamlMap arquivo) => {
-      for (final MapEntry(:key, :value) in ((arquivo['blocos'] as YamlMap?) ?? YamlMap()).entries)
-        key as String: ((value ?? '') as String).trimRight(),
-    };
+  for (final MapEntry(:key, :value)
+      in ((arquivo['blocos'] as YamlMap?) ?? YamlMap()).entries)
+    key as String: ((value ?? '') as String).trimRight(),
+};
 
 /// Junta os blocos das camadas para a cidade escolhida (null = outra).
-Future<Map<String, String>> blocosLocais(String? cidadeId, {LerTexto ler = _lerAsset}) async {
+Future<Map<String, String>> blocosLocais(
+  String? cidadeId, {
+  LerTexto ler = _lerAsset,
+}) async {
   final blocos = _blocos(await _abrir(ler, 'locais/padrao.yaml'));
   if (cidadeId == null) return blocos;
 
@@ -56,7 +61,11 @@ Future<Map<String, String>> blocosLocais(String? cidadeId, {LerTexto ler = _lerA
   blocos.addAll(_blocos(await _abrir(ler, 'locais/estados/$uf.yaml')));
   for (final tipo in ['energia', 'agua', 'gas']) {
     final empresa = cidade[tipo] as String?;
-    if (empresa != null) blocos.addAll(_blocos(await _abrir(ler, 'locais/empresas/$empresa.yaml')));
+    if (empresa != null) {
+      blocos.addAll(
+        _blocos(await _abrir(ler, 'locais/empresas/$empresa.yaml')),
+      );
+    }
   }
   blocos.addAll(_blocos(cidade));
   return blocos;
@@ -96,7 +105,12 @@ const _chave = 'cidade';
 const outraCidade = 'outra';
 
 /// Ids da primeira versão, que tinha só três cidades fixas.
-const _antigos = {'bh': 'mg/belo-horizonte', 'natal': 'rn/natal', 'mossoro': 'rn/mossoro', 'outra': outraCidade};
+const _antigos = {
+  'bh': 'mg/belo-horizonte',
+  'natal': 'rn/natal',
+  'mossoro': 'rn/mossoro',
+  'outra': outraCidade,
+};
 
 Future<String?> lerCidade() async {
   final prefs = await SharedPreferences.getInstance();
@@ -116,4 +130,5 @@ Future<Map<String, String>> blocosDaCidadeEscolhida() async {
   return blocosLocais(cidade == null || cidade == outraCidade ? null : cidade);
 }
 
-Future<void> salvarCidade(String id) async => (await SharedPreferences.getInstance()).setString(_chave, id);
+Future<void> salvarCidade(String id) async =>
+    (await SharedPreferences.getInstance()).setString(_chave, id);

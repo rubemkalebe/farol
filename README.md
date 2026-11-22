@@ -8,6 +8,14 @@ App de emergência que funciona sem internet, pensado para apagões e outros des
 - **Idioma:** português do Brasil.
 - **Público:** uso pessoal e do círculo próximo. O código é aberto para quem quiser usar ou adaptar.
 
+## Acessibilidade
+
+- Fonte **Atkinson Hyperlegible** (Braille Institute, SIL OFL), feita para quem enxerga mal, embutida no app.
+- **Tamanho da letra** no próprio app (Normal, Grande, Muito grande), somado ao tamanho escolhido no celular. Com letra grande, as telas viram uma coluna só e os botões de ligar ficam empilhados.
+- Cores com contraste conferido pela WCAG: texto ≥ 4,5:1, contornos de campos ≥ 3:1.
+- Nomes para leitor de tela (TalkBack, VoiceOver) nos botões de emergência e de ligar.
+- Testes abrem as telas principais num celular comum com a letra no máximo e falham se algo estourar a tela.
+
 ## Organização
 
 | Pasta | O que tem |

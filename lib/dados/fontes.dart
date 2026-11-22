@@ -27,7 +27,9 @@ Future<Map<String, Fonte>> carregarFontes() async {
   // loadString manda textos acima de 50 KB para outro isolate; o catálogo
   // passa disso, então a leitura e a decodificação são feitas aqui mesmo.
   final bytes = await rootBundle.load('fontes/fontes.yaml');
-  final texto = utf8.decode(bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes));
+  final texto = utf8.decode(
+    bytes.buffer.asUint8List(bytes.offsetInBytes, bytes.lengthInBytes),
+  );
   final yaml = loadYaml(texto) as YamlMap;
   return _cache = {
     for (final f in yaml['fontes'] as YamlList)
@@ -50,7 +52,9 @@ class SintaxeFonte extends md.InlineSyntax {
 
   @override
   bool onMatch(md.InlineParser parser, Match match) {
-    final ids = [for (final m in _idFonte.allMatches(match.group(0)!)) m.group(1)!];
+    final ids = [
+      for (final m in _idFonte.allMatches(match.group(0)!)) m.group(1)!,
+    ];
     parser.addNode(md.Element.text('fonte', ids.join(',')));
     return true;
   }

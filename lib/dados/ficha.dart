@@ -28,28 +28,28 @@ class Pessoa {
   String observacoes;
 
   Map<String, String> toJson() => {
-        'nome': nome,
-        'nascimento': nascimento,
-        'tipoSanguineo': tipoSanguineo,
-        'alergias': alergias,
-        'doencas': doencas,
-        'remedios': remedios,
-        'cartaoSus': cartaoSus,
-        'planoSaude': planoSaude,
-        'observacoes': observacoes,
-      };
+    'nome': nome,
+    'nascimento': nascimento,
+    'tipoSanguineo': tipoSanguineo,
+    'alergias': alergias,
+    'doencas': doencas,
+    'remedios': remedios,
+    'cartaoSus': cartaoSus,
+    'planoSaude': planoSaude,
+    'observacoes': observacoes,
+  };
 
   factory Pessoa.fromJson(Map<String, dynamic> j) => Pessoa(
-        nome: j['nome'] ?? '',
-        nascimento: j['nascimento'] ?? '',
-        tipoSanguineo: j['tipoSanguineo'] ?? '',
-        alergias: j['alergias'] ?? '',
-        doencas: j['doencas'] ?? '',
-        remedios: j['remedios'] ?? '',
-        cartaoSus: j['cartaoSus'] ?? '',
-        planoSaude: j['planoSaude'] ?? '',
-        observacoes: j['observacoes'] ?? '',
-      );
+    nome: j['nome'] ?? '',
+    nascimento: j['nascimento'] ?? '',
+    tipoSanguineo: j['tipoSanguineo'] ?? '',
+    alergias: j['alergias'] ?? '',
+    doencas: j['doencas'] ?? '',
+    remedios: j['remedios'] ?? '',
+    cartaoSus: j['cartaoSus'] ?? '',
+    planoSaude: j['planoSaude'] ?? '',
+    observacoes: j['observacoes'] ?? '',
+  );
 }
 
 class Contato {
@@ -59,10 +59,17 @@ class Contato {
   String relacao;
   String telefone;
 
-  Map<String, String> toJson() => {'nome': nome, 'relacao': relacao, 'telefone': telefone};
+  Map<String, String> toJson() => {
+    'nome': nome,
+    'relacao': relacao,
+    'telefone': telefone,
+  };
 
-  factory Contato.fromJson(Map<String, dynamic> j) =>
-      Contato(nome: j['nome'] ?? '', relacao: j['relacao'] ?? '', telefone: j['telefone'] ?? '');
+  factory Contato.fromJson(Map<String, dynamic> j) => Contato(
+    nome: j['nome'] ?? '',
+    relacao: j['relacao'] ?? '',
+    telefone: j['telefone'] ?? '',
+  );
 }
 
 class Ficha {
@@ -73,8 +80,8 @@ class Ficha {
     this.instalacaoEnergia = '',
     List<Pessoa>? pessoas,
     List<Contato>? contatos,
-  })  : pessoas = pessoas ?? [],
-        contatos = contatos ?? [];
+  }) : pessoas = pessoas ?? [],
+       contatos = contatos ?? [];
 
   String endereco;
   String referencia;
@@ -95,8 +102,12 @@ class Ficha {
       referencia: j['referencia'] ?? '',
       pontoEncontro: j['pontoEncontro'] ?? '',
       instalacaoEnergia: j['instalacaoEnergia'] ?? '',
-      pessoas: [for (final p in (j['pessoas'] as List? ?? [])) Pessoa.fromJson(p)],
-      contatos: [for (final c in (j['contatos'] as List? ?? [])) Contato.fromJson(c)],
+      pessoas: [
+        for (final p in (j['pessoas'] as List? ?? [])) Pessoa.fromJson(p),
+      ],
+      contatos: [
+        for (final c in (j['contatos'] as List? ?? [])) Contato.fromJson(c),
+      ],
     );
   }
 
@@ -128,7 +139,9 @@ class Ficha {
     linha('Ponto de encontro', pontoEncontro);
     linha('Nº da instalação (energia)', instalacaoEnergia);
     for (final p in pessoas) {
-      b.writeln('\n${p.nome.trim().isEmpty ? 'Pessoa sem nome' : p.nome.trim().toUpperCase()}');
+      b.writeln(
+        '\n${p.nome.trim().isEmpty ? 'Pessoa sem nome' : p.nome.trim().toUpperCase()}',
+      );
       linha('Nascimento', p.nascimento);
       linha('Tipo sanguíneo', p.tipoSanguineo);
       linha('Alergias', p.alergias);

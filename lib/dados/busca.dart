@@ -18,16 +18,68 @@ String normalizar(String s) {
 }
 
 const _vazias = {
-  'a', 'o', 'as', 'os', 'e', 'de', 'da', 'do', 'das', 'dos', 'em', 'no', 'na', 'nos', 'nas', 'um',
-  'uma', 'que', 'com', 'pra', 'para', 'por', 'meu', 'minha', 'ele', 'ela', 'esta', 'ta', 'to',
-  'tem', 'foi', 'se', 'eu', 'me', 'mais', 'muito', 'ai', 'como', 'fazer', 'faco', 'oque', 'qual',
-  'agora', 'socorro', 'ajuda', 'filho', 'filha', 'mae', 'pai', 'vo', 'avo', 'pessoa', 'alguem',
+  'a',
+  'o',
+  'as',
+  'os',
+  'e',
+  'de',
+  'da',
+  'do',
+  'das',
+  'dos',
+  'em',
+  'no',
+  'na',
+  'nos',
+  'nas',
+  'um',
+  'uma',
+  'que',
+  'com',
+  'pra',
+  'para',
+  'por',
+  'meu',
+  'minha',
+  'ele',
+  'ela',
+  'esta',
+  'ta',
+  'to',
+  'tem',
+  'foi',
+  'se',
+  'eu',
+  'me',
+  'mais',
+  'muito',
+  'ai',
+  'como',
+  'fazer',
+  'faco',
+  'oque',
+  'qual',
+  'agora',
+  'socorro',
+  'ajuda',
+  'filho',
+  'filha',
+  'mae',
+  'pai',
+  'vo',
+  'avo',
+  'pessoa',
+  'alguem',
 };
 
-String raiz(String palavra) => palavra.length <= 5 ? palavra : palavra.substring(0, 5);
+String raiz(String palavra) =>
+    palavra.length <= 5 ? palavra : palavra.substring(0, 5);
 
 Iterable<String> _palavras(String texto) =>
-    normalizar(texto).split(' ').where((p) => p.length >= 2 && !_vazias.contains(p));
+    normalizar(texto)
+        .split(' ')
+        .where((p) => p.length >= 2 && !_vazias.contains(p));
 
 /// Texto sem marcações, para mostrar um trecho no resultado.
 String textoLimpo(String markdown) => markdown
@@ -41,7 +93,9 @@ Map<String, List<String>> lerSinonimos(String yamlTexto) {
   final y = loadYaml(yamlTexto) as YamlMap;
   return {
     for (final MapEntry(:key, :value) in (y['sinonimos'] as YamlMap).entries)
-      raiz(normalizar(key as String)): [for (final v in value as YamlList) raiz(normalizar(v as String))],
+      raiz(normalizar(key as String)): [
+        for (final v in value as YamlList) raiz(normalizar(v as String)),
+      ],
   };
 }
 
@@ -55,8 +109,13 @@ class Resultado {
 
 class Busca {
   Busca(this.secoes, this.sinonimos)
-      : _titulos = [for (final s in secoes) {for (final p in _palavras(s.titulo)) raiz(p)}],
-        _corpos = [for (final s in secoes) [for (final p in _palavras(textoLimpo(s.markdown))) raiz(p)]];
+    : _titulos = [
+        for (final s in secoes) {for (final p in _palavras(s.titulo)) raiz(p)},
+      ],
+      _corpos = [
+        for (final s in secoes)
+          [for (final p in _palavras(textoLimpo(s.markdown))) raiz(p)],
+      ];
 
   final List<Secao> secoes;
   final Map<String, List<String>> sinonimos;
@@ -82,7 +141,11 @@ class Busca {
         final vezes = _corpos[i].where((p) => p == t).length;
         pontos += (vezes > 3 ? 3 : vezes) * peso;
       }
-      if (pontos > 0) resultados.add(Resultado(secoes[i], pontos, _trecho(secoes[i], termos.keys.toSet())));
+      if (pontos > 0) {
+        resultados.add(
+          Resultado(secoes[i], pontos, _trecho(secoes[i], termos.keys.toSet())),
+        );
+      }
     }
     resultados.sort((a, b) => b.pontos.compareTo(a.pontos));
     return resultados.take(limite).toList();
@@ -92,7 +155,8 @@ class Busca {
     String curto(String l) => l.length > 140 ? '${l.substring(0, 140)}…' : l;
     final linhas = [
       for (final l in textoLimpo(s.markdown).split('\n'))
-        if (l.trim().isNotEmpty && !RegExp(r'^[-: ]+$').hasMatch(l.trim())) l.trim(),
+        if (l.trim().isNotEmpty && !RegExp(r'^[-: ]+$').hasMatch(l.trim()))
+          l.trim(),
     ];
     for (final l in linhas) {
       if (_palavras(l).any((p) => termos.contains(raiz(p)))) return curto(l);

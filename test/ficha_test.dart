@@ -9,8 +9,12 @@ void main() {
 
   test('salva e lê de volta', () async {
     final f = Ficha(endereco: 'Rua A, 10', pontoEncontro: 'Praça')
-      ..pessoas.add(Pessoa(nome: 'Ana', tipoSanguineo: 'O+', alergias: 'dipirona'))
-      ..contatos.add(Contato(nome: 'Bia', relacao: 'irmã', telefone: '31 99999-0000'));
+      ..pessoas.add(
+        Pessoa(nome: 'Ana', tipoSanguineo: 'O+', alergias: 'dipirona'),
+      )
+      ..contatos.add(
+        Contato(nome: 'Bia', relacao: 'irmã', telefone: '31 99999-0000'),
+      );
     await f.salvar();
 
     final lida = await Ficha.abrir();
@@ -20,7 +24,8 @@ void main() {
   });
 
   test('texto omite campos vazios', () {
-    final f = Ficha(endereco: 'Rua A, 10')..pessoas.add(Pessoa(nome: 'Ana', tipoSanguineo: 'O+'));
+    final f = Ficha(endereco: 'Rua A, 10')
+      ..pessoas.add(Pessoa(nome: 'Ana', tipoSanguineo: 'O+'));
     final t = f.comoTexto();
     expect(t, contains('Endereço: Rua A, 10'));
     expect(t, contains('ANA'));
@@ -38,7 +43,10 @@ void main() {
     await tester.tap(find.widgetWithText(TextButton, 'Adicionar').last);
     await tester.pumpAndSettle();
     await tester.enterText(find.widgetWithText(TextField, 'Nome'), 'Bia');
-    await tester.enterText(find.widgetWithText(TextField, 'Telefone com DDD'), '31 99999-0000');
+    await tester.enterText(
+      find.widgetWithText(TextField, 'Telefone com DDD'),
+      '31 99999-0000',
+    );
     await tester.tap(find.text('Salvar'));
     await tester.pumpAndSettle();
 

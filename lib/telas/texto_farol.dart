@@ -34,29 +34,52 @@ class TextoFarol extends StatelessWidget {
       data: markdown,
       extensionSet: md.ExtensionSet(
         md.ExtensionSet.gitHubFlavored.blockSyntaxes,
-        [SintaxeFonte(), SintaxeGeral(), SintaxeMarcar(), ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes],
+        [
+          SintaxeFonte(),
+          SintaxeGeral(),
+          SintaxeMarcar(),
+          ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
+        ],
       ),
       // tel: abre o discador e sms: abre a mensagem. Outros links não
       // são seguidos: o app é offline e não abre páginas.
       onTapLink: (_, href, _) {
         if (href == null) return;
         if (href.startsWith('tel:')) ligar(href.substring(4));
-        if (href.startsWith('sms:')) launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
+        if (href.startsWith('sms:')) {
+          launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
+        }
       },
       builders: {
-        'fonte': _BotaoFonte((ids) => _mostrarFontes(context, [for (final id in ids) ?fontes[id]])),
+        'fonte': _BotaoFonte(
+          (ids) => _mostrarFontes(context, [for (final id in ids) ?fontes[id]]),
+        ),
         'geral': _MarcaGeral(() => _mostrarAvisoGeral(context)),
         'marcar': _CaixaMarcar(capituloId, marcacoes),
       },
       padding: padding,
       styleSheet: MarkdownStyleSheet.fromTheme(tema).copyWith(
         p: tema.textTheme.bodyLarge?.copyWith(height: 1.5),
-        listBullet: tema.textTheme.bodyLarge?.copyWith(height: 1.5, color: corFeixe),
-        a: const TextStyle(color: corFeixe, fontWeight: FontWeight.w800, decoration: TextDecoration.underline,
-            decorationColor: corFeixeSuave),
-        strong: const TextStyle(fontWeight: FontWeight.w800, color: Colors.white),
+        listBullet: tema.textTheme.bodyLarge?.copyWith(
+          height: 1.5,
+          color: corFeixe,
+        ),
+        a: const TextStyle(
+          color: corFeixe,
+          fontWeight: FontWeight.w800,
+          decoration: TextDecoration.underline,
+          decorationColor: corFeixeSuave,
+        ),
+        strong: const TextStyle(
+          fontWeight: FontWeight.w800,
+          color: Colors.white,
+        ),
         h1: tema.textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w900),
-        h2: tema.textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w900, color: corFeixe, letterSpacing: -0.2),
+        h2: tema.textTheme.titleLarge?.copyWith(
+          fontWeight: FontWeight.w900,
+          color: corFeixe,
+          letterSpacing: -0.2,
+        ),
         h2Padding: const EdgeInsets.only(top: 12, bottom: 4),
         h3: tema.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
         h3Padding: const EdgeInsets.only(top: 8),
@@ -67,11 +90,19 @@ class TextoFarol extends StatelessWidget {
           borderRadius: BorderRadius.circular(14),
           border: Border.all(color: corBorda),
         ),
-        tableBorder: TableBorder.symmetric(inside: const BorderSide(color: corBorda)),
-        tableHead: const TextStyle(fontWeight: FontWeight.w800, color: corFeixe),
+        tableBorder: TableBorder.symmetric(
+          inside: const BorderSide(color: corBorda),
+        ),
+        tableHead: const TextStyle(
+          fontWeight: FontWeight.w800,
+          color: corFeixe,
+        ),
         tableHeadCellsDecoration: const BoxDecoration(color: corSuperficieAlta),
         tableCellsDecoration: const BoxDecoration(color: corSuperficie),
-        tableCellsPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        tableCellsPadding: const EdgeInsets.symmetric(
+          horizontal: 10,
+          vertical: 8,
+        ),
         horizontalRuleDecoration: const BoxDecoration(
           border: Border(top: BorderSide(color: corBorda)),
         ),
@@ -81,28 +112,31 @@ class TextoFarol extends StatelessWidget {
 }
 
 void _mostrarAvisoGeral(BuildContext context) {
-    showModalBottomSheet<void>(
-      context: context,
-      showDragHandle: true,
-      builder: (context) => Padding(
-        padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Orientação geral',
-                style: Theme.of(context).textTheme.labelLarge?.copyWith(color: corAviso)),
-            const SizedBox(height: 6),
-            Text(
-              'Não encontramos fonte oficial para este ponto. Ele foi escrito com base '
-              'em conhecimento técnico comum e pode mudar quando houver uma fonte melhor.',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-          ],
-        ),
+  showModalBottomSheet<void>(
+    context: context,
+    showDragHandle: true,
+    builder: (context) => Padding(
+      padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Orientação geral',
+            style: Theme.of(context).textTheme.labelLarge
+                ?.copyWith(color: corAviso),
+          ),
+          const SizedBox(height: 6),
+          Text(
+            'Não encontramos fonte oficial para este ponto. Ele foi escrito com base '
+            'em conhecimento técnico comum e pode mudar quando houver uma fonte melhor.',
+            style: Theme.of(context).textTheme.bodyMedium,
+          ),
+        ],
       ),
-    );
-  }
+    ),
+  );
+}
 
 void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
   showModalBottomSheet<void>(
@@ -110,13 +144,20 @@ void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
     isScrollControlled: true,
     builder: (context) => SafeArea(
       child: ConstrainedBox(
-        constraints: BoxConstraints(maxHeight: MediaQuery.of(context).size.height * 0.7),
+        constraints: BoxConstraints(
+          maxHeight: MediaQuery.of(context).size.height * 0.7,
+        ),
         child: ListView(
           shrinkWrap: true,
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
           children: [
-            Text(fontes.length == 1 ? 'De onde veio' : 'De onde veio (${fontes.length} fontes)',
-                style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+            Text(
+              fontes.length == 1
+                  ? 'De onde veio'
+                  : 'De onde veio (${fontes.length} fontes)',
+              style: Theme.of(context).textTheme.titleMedium
+                  ?.copyWith(fontWeight: FontWeight.w800),
+            ),
             const SizedBox(height: 12),
             for (final f in fontes)
               Container(
@@ -130,14 +171,35 @@ void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(f.orgao,
-                        style: const TextStyle(color: corFeixe, fontWeight: FontWeight.w700, fontSize: 13)),
+                    Text(
+                      f.orgao,
+                      style: const TextStyle(
+                        color: corFeixe,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 13,
+                      ),
+                    ),
                     const SizedBox(height: 4),
-                    Text(f.titulo, style: const TextStyle(fontWeight: FontWeight.w600)),
+                    Text(
+                      f.titulo,
+                      style: const TextStyle(fontWeight: FontWeight.w600),
+                    ),
                     const SizedBox(height: 8),
-                    SelectableText(f.url, style: const TextStyle(color: corTextoSuave, fontSize: 12)),
+                    SelectableText(
+                      f.url,
+                      style: const TextStyle(
+                        color: corTextoSuave,
+                        fontSize: 12,
+                      ),
+                    ),
                     const SizedBox(height: 2),
-                    Text('Consultado em ${f.acessado}', style: const TextStyle(color: corTextoSuave, fontSize: 12)),
+                    Text(
+                      'Consultado em ${f.acessado}',
+                      style: const TextStyle(
+                        color: corTextoSuave,
+                        fontSize: 12,
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -149,8 +211,14 @@ void _mostrarFontes(BuildContext context, List<Fonte> fontes) {
 }
 
 /// Etiqueta pequena no fim da frase: "fonte" ou "2 fontes".
-Widget _etiqueta({required Key key, required IconData icone, required String texto, required Color cor,
-    required VoidCallback onTap, required String rotulo}) {
+Widget _etiqueta({
+  required Key key,
+  required IconData icone,
+  required String texto,
+  required Color cor,
+  required VoidCallback onTap,
+  required String rotulo,
+}) {
   return Semantics(
     button: true,
     label: rotulo,
@@ -160,20 +228,32 @@ Widget _etiqueta({required Key key, required IconData icone, required String tex
         key: key,
         onTap: onTap,
         borderRadius: BorderRadius.circular(10),
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
-          decoration: BoxDecoration(
-            color: cor.withValues(alpha: 0.10),
-            borderRadius: BorderRadius.circular(10),
-            border: Border.all(color: cor.withValues(alpha: 0.35)),
-          ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Icon(icone, size: 11, color: cor),
-              const SizedBox(width: 3),
-              Text(texto, style: TextStyle(color: cor, fontSize: 11, fontWeight: FontWeight.w700, height: 1.4)),
-            ],
+        // Área de toque maior que o desenho, para quem tem dedo grosso ou tremor.
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
+            decoration: BoxDecoration(
+              color: cor.withValues(alpha: 0.10),
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: cor.withValues(alpha: 0.35)),
+            ),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(icone, size: 11, color: cor),
+                const SizedBox(width: 3),
+                Text(
+                  texto,
+                  style: TextStyle(
+                    color: cor,
+                    fontSize: 11,
+                    fontWeight: FontWeight.w700,
+                    height: 1.4,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -193,7 +273,11 @@ class _BotaoFonte extends MarkdownElementBuilder {
 
   @override
   Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
+    BuildContext context,
+    md.Element element,
+    TextStyle? preferredStyle,
+    TextStyle? parentStyle,
+  ) {
     final ids = element.textContent.split(',');
     return _etiqueta(
       key: ValueKey('fonte-${ids.first}'),
@@ -217,7 +301,11 @@ class _MarcaGeral extends MarkdownElementBuilder {
 
   @override
   Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
+    BuildContext context,
+    md.Element element,
+    TextStyle? preferredStyle,
+    TextStyle? parentStyle,
+  ) {
     return _etiqueta(
       key: const ValueKey('geral'),
       icone: Icons.help_outline,
@@ -241,7 +329,11 @@ class _CaixaMarcar extends MarkdownElementBuilder {
 
   @override
   Widget? visitElementAfterWithContext(
-      BuildContext context, md.Element element, TextStyle? preferredStyle, TextStyle? parentStyle) {
+    BuildContext context,
+    md.Element element,
+    TextStyle? preferredStyle,
+    TextStyle? parentStyle,
+  ) {
     final item = element.textContent;
     return ListenableBuilder(
       listenable: marcacoes,
@@ -254,7 +346,7 @@ class _CaixaMarcar extends MarkdownElementBuilder {
             onTap: () => marcacoes.alternar(capitulo, item),
             borderRadius: BorderRadius.circular(6),
             child: Padding(
-              padding: const EdgeInsets.only(right: 8),
+              padding: const EdgeInsets.fromLTRB(4, 4, 10, 4),
               child: AnimatedContainer(
                 duration: const Duration(milliseconds: 150),
                 width: 22,
@@ -262,7 +354,10 @@ class _CaixaMarcar extends MarkdownElementBuilder {
                 decoration: BoxDecoration(
                   color: marcado ? corFeixe : Colors.transparent,
                   borderRadius: BorderRadius.circular(7),
-                  border: Border.all(color: marcado ? corFeixe : corTextoSuave, width: 1.6),
+                  border: Border.all(
+                    color: marcado ? corFeixe : corTextoSuave,
+                    width: 1.6,
+                  ),
                 ),
                 child: Icon(
                   marcado ? Icons.check_box : Icons.check_box_outline_blank,

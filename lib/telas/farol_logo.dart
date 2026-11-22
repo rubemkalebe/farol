@@ -12,7 +12,10 @@ class FarolLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox.square(dimension: tamanho, child: CustomPaint(painter: _PintorFarol()));
+    return SizedBox.square(
+      dimension: tamanho,
+      child: CustomPaint(painter: _PintorFarol()),
+    );
   }
 }
 
@@ -25,7 +28,10 @@ class _PintorFarol extends CustomPainter {
     // Feixes para os dois lados, saindo da lanterna.
     final feixe = Paint()
       ..shader = RadialGradient(
-        colors: [corFeixe.withValues(alpha: 0.55), corFeixe.withValues(alpha: 0)],
+        colors: [
+          corFeixe.withValues(alpha: 0.55),
+          corFeixe.withValues(alpha: 0),
+        ],
       ).createShader(Rect.fromCircle(center: luz, radius: w * 0.6));
     for (final lado in [-1.0, 1.0]) {
       canvas.drawPath(
@@ -56,7 +62,10 @@ class _PintorFarol extends CustomPainter {
 
     // Lanterna, telhado e base.
     canvas.drawRRect(
-      RRect.fromRectAndRadius(Rect.fromLTWH(w * 0.41, h * 0.21, w * 0.18, h * 0.13), Radius.circular(w * 0.03)),
+      RRect.fromRectAndRadius(
+        Rect.fromLTWH(w * 0.41, h * 0.21, w * 0.18, h * 0.13),
+        Radius.circular(w * 0.03),
+      ),
       Paint()..color = corFeixe,
     );
     canvas.drawPath(
@@ -68,7 +77,10 @@ class _PintorFarol extends CustomPainter {
       Paint()..color = corTexto,
     );
     canvas.drawRRect(
-      RRect.fromRectAndRadius(Rect.fromLTWH(w * 0.26, h * 0.90, w * 0.48, h * 0.06), Radius.circular(w * 0.02)),
+      RRect.fromRectAndRadius(
+        Rect.fromLTWH(w * 0.26, h * 0.90, w * 0.48, h * 0.06),
+        Radius.circular(w * 0.02),
+      ),
       Paint()..color = corTextoSuave,
     );
   }

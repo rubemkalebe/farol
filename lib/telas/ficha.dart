@@ -38,7 +38,9 @@ class _TelaFichaState extends State<TelaFicha> {
           IconButton(
             tooltip: 'Mostrar para o socorrista',
             icon: const Icon(Icons.fullscreen),
-            onPressed: _ficha == null ? null : () => _mostrarTextoGrande(context),
+            onPressed: _ficha == null
+                ? null
+                : () => _mostrarTextoGrande(context),
           ),
           PopupMenuButton<String>(
             onSelected: (op) async {
@@ -46,8 +48,9 @@ class _TelaFichaState extends State<TelaFicha> {
               if (op == 'copiar') {
                 await Clipboard.setData(ClipboardData(text: texto));
                 if (context.mounted) {
-                  ScaffoldMessenger.of(context)
-                      .showSnackBar(const SnackBar(content: Text('Ficha copiada.')));
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Ficha copiada.')),
+                  );
                 }
               } else {
                 await SharePlus.instance.share(ShareParams(text: texto));
@@ -63,8 +66,12 @@ class _TelaFichaState extends State<TelaFicha> {
       body: FutureBuilder<Ficha>(
         future: _carregar,
         builder: (context, snap) {
-          if (snap.hasError) return Center(child: Text('Erro ao abrir a ficha: ${snap.error}'));
-          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+          if (snap.hasError) {
+            return Center(child: Text('Erro ao abrir a ficha: ${snap.error}'));
+          }
+          if (!snap.hasData) {
+            return const Center(child: CircularProgressIndicator());
+          }
           final f = _ficha ??= snap.data!;
           final t = Theme.of(context).textTheme;
           return ListView(
@@ -115,7 +122,10 @@ class _TelaFichaState extends State<TelaFicha> {
                 ],
               ),
               if (f.pessoas.isEmpty)
-                Text('Nenhuma pessoa ainda. Adicione cada morador da casa.', style: t.bodySmall),
+                Text(
+                  'Nenhuma pessoa ainda. Adicione cada morador da casa.',
+                  style: t.bodySmall,
+                ),
               for (final p in f.pessoas)
                 Card(
                   child: ListTile(
@@ -137,12 +147,20 @@ class _TelaFichaState extends State<TelaFicha> {
                 ],
               ),
               if (f.contatos.isEmpty)
-                Text('Parentes, vizinhos, médico, escola. Anote também em papel.', style: t.bodySmall),
+                Text(
+                  'Parentes, vizinhos, médico, escola. Anote também em papel.',
+                  style: t.bodySmall,
+                ),
               for (final c in f.contatos)
                 Card(
                   child: ListTile(
                     title: Text(c.nome.isEmpty ? 'Sem nome' : c.nome),
-                    subtitle: Text([c.relacao, c.telefone].where((s) => s.isNotEmpty).join(' · ')),
+                    subtitle: Text(
+                      [
+                        c.relacao,
+                        c.telefone,
+                      ].where((s) => s.isNotEmpty).join(' · '),
+                    ),
                     onLongPress: () => _editarContato(context, c),
                     onTap: () => _editarContato(context, c),
                     trailing: c.telefone.isEmpty
@@ -173,7 +191,9 @@ class _TelaFichaState extends State<TelaFicha> {
   Future<void> _editarPessoa(BuildContext context, Pessoa? existente) async {
     final p = existente ?? Pessoa();
     final resultado = await Navigator.of(context).push<_Acao>(
-      MaterialPageRoute(builder: (_) => _TelaPessoa(pessoa: p, nova: existente == null)),
+      MaterialPageRoute(
+        builder: (_) => _TelaPessoa(pessoa: p, nova: existente == null),
+      ),
     );
     if (resultado == _Acao.salvar && existente == null) _ficha!.pessoas.add(p);
     if (resultado == _Acao.apagar) _ficha!.pessoas.remove(p);
@@ -193,10 +213,16 @@ class _TelaFichaState extends State<TelaFicha> {
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextField(controller: nome, decoration: const InputDecoration(labelText: 'Nome')),
+            TextField(
+              controller: nome,
+              decoration: const InputDecoration(labelText: 'Nome'),
+            ),
             TextField(
               controller: relacao,
-              decoration: const InputDecoration(labelText: 'Quem é', hintText: 'Irmã, vizinho, médico...'),
+              decoration: const InputDecoration(
+                labelText: 'Quem é',
+                hintText: 'Irmã, vizinho, médico...',
+              ),
             ),
             TextField(
               controller: telefone,
@@ -207,9 +233,18 @@ class _TelaFichaState extends State<TelaFicha> {
         ),
         actions: [
           if (existente != null)
-            TextButton(onPressed: () => Navigator.pop(context, _Acao.apagar), child: const Text('Apagar')),
-          TextButton(onPressed: () => Navigator.pop(context), child: const Text('Cancelar')),
-          FilledButton(onPressed: () => Navigator.pop(context, _Acao.salvar), child: const Text('Salvar')),
+            TextButton(
+              onPressed: () => Navigator.pop(context, _Acao.apagar),
+              child: const Text('Apagar'),
+            ),
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cancelar'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(context, _Acao.salvar),
+            child: const Text('Salvar'),
+          ),
         ],
       ),
     );
@@ -225,18 +260,21 @@ class _TelaFichaState extends State<TelaFicha> {
   }
 
   void _mostrarTextoGrande(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(
-      builder: (_) => Scaffold(
-        appBar: AppBar(title: const Text('Ficha')),
-        body: SingleChildScrollView(
-          padding: const EdgeInsets.all(20),
-          child: SelectableText(
-            _ficha!.comoTexto(),
-            style: Theme.of(context).textTheme.titleLarge?.copyWith(height: 1.4),
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => Scaffold(
+          appBar: AppBar(title: const Text('Ficha')),
+          body: SingleChildScrollView(
+            padding: const EdgeInsets.all(20),
+            child: SelectableText(
+              _ficha!.comoTexto(),
+              style: Theme.of(context).textTheme.titleLarge
+                  ?.copyWith(height: 1.4),
+            ),
           ),
         ),
       ),
-    ));
+    );
   }
 }
 
@@ -317,12 +355,20 @@ class _TelaPessoa extends StatelessWidget {
                   builder: (c) => AlertDialog(
                     title: const Text('Apagar esta pessoa da ficha?'),
                     actions: [
-                      TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Cancelar')),
-                      TextButton(onPressed: () => Navigator.pop(c, true), child: const Text('Apagar')),
+                      TextButton(
+                        onPressed: () => Navigator.pop(c, false),
+                        child: const Text('Cancelar'),
+                      ),
+                      TextButton(
+                        onPressed: () => Navigator.pop(c, true),
+                        child: const Text('Apagar'),
+                      ),
                     ],
                   ),
                 );
-                if (ok == true && context.mounted) Navigator.pop(context, _Acao.apagar);
+                if (ok == true && context.mounted) {
+                  Navigator.pop(context, _Acao.apagar);
+                }
               },
             ),
         ],
@@ -330,7 +376,12 @@ class _TelaPessoa extends StatelessWidget {
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 0, 16, 32),
         children: [
-          _Campo(rotulo: 'Nome', valor: p.nome, aoMudar: (v) => p.nome = v, aoSair: nada),
+          _Campo(
+            rotulo: 'Nome',
+            valor: p.nome,
+            aoMudar: (v) => p.nome = v,
+            aoSair: nada,
+          ),
           _Campo(
             rotulo: 'Data de nascimento',
             valor: p.nascimento,
@@ -375,7 +426,12 @@ class _TelaPessoa extends StatelessWidget {
             aoSair: nada,
             teclado: TextInputType.number,
           ),
-          _Campo(rotulo: 'Plano de saúde', valor: p.planoSaude, aoMudar: (v) => p.planoSaude = v, aoSair: nada),
+          _Campo(
+            rotulo: 'Plano de saúde',
+            valor: p.planoSaude,
+            aoMudar: (v) => p.planoSaude = v,
+            aoSair: nada,
+          ),
           _Campo(
             rotulo: 'Observações',
             dica: 'Aparelho que usa, deficiência, quem cuida...',

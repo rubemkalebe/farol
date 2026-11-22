@@ -18,8 +18,10 @@ class _TelaBuscaState extends State<TelaBusca> {
   String _consulta = '';
 
   Future<Busca> _carregar() async {
-    final (secoes, sinonimos) =
-        await (secoesDaCidadeEscolhida(), rootBundle.loadString('conteudo/sinonimos.yaml')).wait;
+    final (secoes, sinonimos) = await (
+      secoesDaCidadeEscolhida(),
+      rootBundle.loadString('conteudo/sinonimos.yaml'),
+    ).wait;
     return Busca(secoes, lerSinonimos(sinonimos));
   }
 
@@ -41,35 +43,55 @@ class _TelaBuscaState extends State<TelaBusca> {
         future: _busca,
         builder: (context, snap) {
           if (snap.hasError) return Center(child: Text('Erro: ${snap.error}'));
-          if (!snap.hasData) return const Center(child: CircularProgressIndicator());
+          if (!snap.hasData) {
+            return const Center(child: CircularProgressIndicator());
+          }
           if (_consulta.trim().isEmpty) {
             return const Padding(
               padding: EdgeInsets.all(16),
-              child: Text('Escreva do seu jeito: "meu filho engasgou", "escorpião", "sem luz geladeira"…'),
+              child: Text(
+                'Escreva do seu jeito: "meu filho engasgou", "escorpião", "sem luz geladeira"…',
+              ),
             );
           }
           final resultados = snap.data!.buscar(_consulta);
           if (resultados.isEmpty) {
             return const Padding(
               padding: EdgeInsets.all(16),
-              child: Text('Nada encontrado. Tente outra palavra, ou use o botão de emergência na tela inicial.'),
+              child: Text(
+                'Nada encontrado. Tente outra palavra, ou use o botão de emergência na tela inicial.',
+              ),
             );
           }
           return ListView(
             children: [
               for (final r in resultados)
                 ListTile(
-                  title: Text(r.secao.titulo, style: const TextStyle(fontWeight: FontWeight.w700)),
+                  title: Text(
+                    r.secao.titulo,
+                    style: const TextStyle(fontWeight: FontWeight.w700),
+                  ),
                   subtitle: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(r.secao.capitulo.titulo, style: const TextStyle(color: corFeixe, fontSize: 12)),
-                      if (r.trecho.isNotEmpty) Text(r.trecho, maxLines: 2, overflow: TextOverflow.ellipsis),
+                      Text(
+                        r.secao.capitulo.titulo,
+                        style: const TextStyle(color: corFeixe, fontSize: 12),
+                      ),
+                      if (r.trecho.isNotEmpty)
+                        Text(
+                          r.trecho,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
                     ],
                   ),
-                  onTap: () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => TelaSecoes(titulo: r.secao.titulo, secoes: [r.secao]),
-                  )),
+                  onTap: () => Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (_) =>
+                          TelaSecoes(titulo: r.secao.titulo, secoes: [r.secao]),
+                    ),
+                  ),
                 ),
             ],
           );

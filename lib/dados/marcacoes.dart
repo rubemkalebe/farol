@@ -9,11 +9,13 @@ class Marcacoes extends ChangeNotifier {
 
   final SharedPreferences _prefs;
 
-  static Future<Marcacoes> abrir() async => Marcacoes._(await SharedPreferences.getInstance());
+  static Future<Marcacoes> abrir() async =>
+      Marcacoes._(await SharedPreferences.getInstance());
 
   String _chave(String capitulo, String item) => 'marcado:$capitulo:$item';
 
-  bool marcado(String capitulo, String item) => _prefs.getBool(_chave(capitulo, item)) ?? false;
+  bool marcado(String capitulo, String item) =>
+      _prefs.getBool(_chave(capitulo, item)) ?? false;
 
   Future<void> alternar(String capitulo, String item) async {
     await _prefs.setBool(_chave(capitulo, item), !marcado(capitulo, item));
@@ -21,7 +23,11 @@ class Marcacoes extends ChangeNotifier {
   }
 
   Future<void> limpar(String capitulo) async {
-    for (final k in _prefs.getKeys().where((k) => k.startsWith('marcado:$capitulo:')).toList()) {
+    for (final k
+        in _prefs
+            .getKeys()
+            .where((k) => k.startsWith('marcado:$capitulo:'))
+            .toList()) {
       await _prefs.remove(k);
     }
     notifyListeners();
@@ -42,6 +48,8 @@ class SintaxeMarcar extends md.InlineSyntax {
 final _marcaItem = RegExp(r'\[marcar: ([a-z0-9-]+)\]');
 
 /// Ids dos itens de checklist presentes no texto.
-List<String> itensDeChecklist(String markdown) => [for (final m in _marcaItem.allMatches(markdown)) m.group(1)!];
+List<String> itensDeChecklist(String markdown) => [
+  for (final m in _marcaItem.allMatches(markdown)) m.group(1)!,
+];
 
 bool temMarcacoes(String markdown) => _marcaItem.hasMatch(markdown);

@@ -86,6 +86,21 @@ flutter:
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/to/asset-from-package
 
+  # Atkinson Hyperlegible: fonte do Braille Institute feita para quem enxerga
+  # mal (letras parecidas, como I/l/1 e O/0, ficam bem diferentes). SIL OFL 1.1,
+  # licença em assets/fontes/atkinson/OFL.txt.
+  fonts:
+    - family: Atkinson
+      fonts:
+        - asset: assets/fontes/atkinson/AtkinsonHyperlegible-Regular.ttf
+        - asset: assets/fontes/atkinson/AtkinsonHyperlegible-Italic.ttf
+          style: italic
+        - asset: assets/fontes/atkinson/AtkinsonHyperlegible-Bold.ttf
+          weight: 700
+        - asset: assets/fontes/atkinson/AtkinsonHyperlegible-BoldItalic.ttf
+          weight: 700
+          style: italic
+
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
   # "family" key with the font family name, and a "fonts" key with a

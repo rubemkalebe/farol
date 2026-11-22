@@ -19,11 +19,16 @@ class TelaCapitulo extends StatefulWidget {
 class _TelaCapituloState extends State<TelaCapitulo> {
   // Carregado uma vez só: criar o Future dentro do build refaz a leitura
   // a cada redesenho e a tela fica presa no indicador de carregamento.
-  late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados = _carregar();
+  late final Future<(String, Map<String, Fonte>, Marcacoes)> _dados =
+      _carregar();
 
   Future<(String, Map<String, Fonte>, Marcacoes)> _carregar() async {
-    final (bruto, fontes, marcacoes, blocos) =
-        await (carregarCapitulo(widget.capitulo), carregarFontes(), Marcacoes.abrir(), blocosDaCidadeEscolhida()).wait;
+    final (bruto, fontes, marcacoes, blocos) = await (
+      carregarCapitulo(widget.capitulo),
+      carregarFontes(),
+      Marcacoes.abrir(),
+      blocosDaCidadeEscolhida(),
+    ).wait;
     return (aplicarLocais(bruto, blocos), fontes, marcacoes);
   }
 
@@ -36,7 +41,9 @@ class _TelaCapituloState extends State<TelaCapitulo> {
           FutureBuilder(
             future: _dados,
             builder: (context, snap) {
-              if (!snap.hasData || !temMarcacoes(snap.data!.$1)) return const SizedBox.shrink();
+              if (!snap.hasData || !temMarcacoes(snap.data!.$1)) {
+                return const SizedBox.shrink();
+              }
               return IconButton(
                 tooltip: 'Desmarcar tudo',
                 icon: const Icon(Icons.restart_alt),
@@ -50,7 +57,9 @@ class _TelaCapituloState extends State<TelaCapitulo> {
         future: _dados,
         builder: (context, snap) {
           if (snap.hasError) {
-            return Center(child: Text('Erro ao abrir o capítulo: ${snap.error}'));
+            return Center(
+              child: Text('Erro ao abrir o capítulo: ${snap.error}'),
+            );
           }
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
@@ -59,10 +68,19 @@ class _TelaCapituloState extends State<TelaCapitulo> {
           final itens = itensDeChecklist(texto);
           return Column(
             children: [
-              if (itens.isNotEmpty) _Progresso(capitulo: widget.capitulo.id, itens: itens, marcacoes: marcacoes),
+              if (itens.isNotEmpty)
+                _Progresso(
+                  capitulo: widget.capitulo.id,
+                  itens: itens,
+                  marcacoes: marcacoes,
+                ),
               Expanded(
                 child: TextoFarol(
-                    markdown: texto, capituloId: widget.capitulo.id, fontes: fontes, marcacoes: marcacoes),
+                  markdown: texto,
+                  capituloId: widget.capitulo.id,
+                  fontes: fontes,
+                  marcacoes: marcacoes,
+                ),
               ),
             ],
           );
@@ -76,10 +94,18 @@ class _TelaCapituloState extends State<TelaCapitulo> {
       context: context,
       builder: (context) => AlertDialog(
         title: const Text('Desmarcar tudo?'),
-        content: const Text('Todos os itens marcados neste capítulo voltam a ficar em branco.'),
+        content: const Text(
+          'Todos os itens marcados neste capítulo voltam a ficar em branco.',
+        ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(context, false), child: const Text('Cancelar')),
-          TextButton(onPressed: () => Navigator.pop(context, true), child: const Text('Desmarcar')),
+          TextButton(
+            onPressed: () => Navigator.pop(context, false),
+            child: const Text('Cancelar'),
+          ),
+          TextButton(
+            onPressed: () => Navigator.pop(context, true),
+            child: const Text('Desmarcar'),
+          ),
         ],
       ),
     );
@@ -89,7 +115,11 @@ class _TelaCapituloState extends State<TelaCapitulo> {
 
 /// "12 de 62 prontos", com barra, no topo dos capítulos com checklist.
 class _Progresso extends StatelessWidget {
-  const _Progresso({required this.capitulo, required this.itens, required this.marcacoes});
+  const _Progresso({
+    required this.capitulo,
+    required this.itens,
+    required this.marcacoes,
+  });
 
   final String capitulo;
   final List<String> itens;
@@ -100,7 +130,9 @@ class _Progresso extends StatelessWidget {
     return ListenableBuilder(
       listenable: marcacoes,
       builder: (context, _) {
-        final feitos = itens.where((i) => marcacoes.marcado(capitulo, i)).length;
+        final feitos = itens
+            .where((i) => marcacoes.marcado(capitulo, i))
+            .length;
         final tudo = feitos == itens.length;
         return Container(
           margin: const EdgeInsets.fromLTRB(16, 4, 16, 4),

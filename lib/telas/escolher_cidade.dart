@@ -32,7 +32,10 @@ class _TelaEscolherCidadeState extends State<TelaEscolherCidade> {
   Widget build(BuildContext context) {
     final termo = _semAcento(_busca.trim());
     final lista = widget.cidades
-        .where((c) => termo.isEmpty || _semAcento('${c.nome} ${c.uf}').contains(termo))
+        .where(
+          (c) =>
+              termo.isEmpty || _semAcento('${c.nome} ${c.uf}').contains(termo),
+        )
         .toList();
     return Scaffold(
       appBar: AppBar(title: const Text('Onde você está?')),
@@ -64,15 +67,21 @@ class _TelaEscolherCidadeState extends State<TelaEscolherCidade> {
                   ListTile(
                     title: Text(c.nome),
                     subtitle: Text(c.uf),
-                    trailing: c.id == widget.atual ? const Icon(Icons.check, color: corFeixe) : null,
+                    trailing: c.id == widget.atual
+                        ? const Icon(Icons.check, color: corFeixe)
+                        : null,
                     onTap: () => Navigator.pop(context, c.id),
                   ),
                 const Divider(),
                 ListTile(
                   leading: const Icon(Icons.public),
                   title: const Text('Outra cidade'),
-                  subtitle: const Text('Mostra os números nacionais. Anote os locais na Ficha da família.'),
-                  trailing: widget.atual == outraCidade ? const Icon(Icons.check, color: corFeixe) : null,
+                  subtitle: const Text(
+                    'Mostra os números nacionais. Anote os locais na Ficha da família.',
+                  ),
+                  trailing: widget.atual == outraCidade
+                      ? const Icon(Icons.check, color: corFeixe)
+                      : null,
                   onTap: () => Navigator.pop(context, outraCidade),
                 ),
               ],

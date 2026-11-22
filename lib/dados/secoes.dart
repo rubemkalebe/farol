@@ -21,9 +21,15 @@ List<Secao> dividirEmSecoes(Capitulo c, String markdown) {
   var corpo = <String>[];
   void fechar() {
     // Tira o separador "---" que fica no fim de cada seção.
-    final texto = corpo.join('\n').trim().replaceFirst(RegExp(r'(\n\s*---\s*)+$'), '').trim();
+    final texto = corpo
+        .join('\n')
+        .trim()
+        .replaceFirst(RegExp(r'(\n\s*---\s*)+$'), '')
+        .trim();
     // Separadores "---" sozinhos não contam como conteúdo.
-    if (texto.replaceAll('---', '').trim().isNotEmpty) secoes.add(Secao(c, titulo, texto));
+    if (texto.replaceAll('---', '').trim().isNotEmpty) {
+      secoes.add(Secao(c, titulo, texto));
+    }
   }
 
   for (final linha in markdown.split('\n')) {
@@ -44,26 +50,33 @@ Future<List<Secao>> carregarSecoes({
   Map<String, String>? blocos,
   Future<String> Function(String)? ler,
 }) async {
-  final indice = ler == null ? await carregarIndice() : await carregarIndice(ler: ler);
+  final indice = ler == null
+      ? await carregarIndice()
+      : await carregarIndice(ler: ler);
   final locais = blocos ?? await blocosDaCidadeEscolhida();
   return [
     for (final c in indice)
       ...dividirEmSecoes(
         c,
-        aplicarLocais(ler == null ? await carregarCapitulo(c) : await carregarCapitulo(c, ler: ler), locais),
+        aplicarLocais(
+          ler == null
+              ? await carregarCapitulo(c)
+              : await carregarCapitulo(c, ler: ler),
+          locais,
+        ),
       ),
   ];
 }
 
 String? _cacheCidade;
-Future<List<Secao>>? _cache;
+List<Secao>? _cache;
 
 /// Seções da cidade escolhida, guardadas até a cidade mudar.
 Future<List<Secao>> secoesDaCidadeEscolhida() async {
   final cidade = await lerCidade();
   if (_cache == null || cidade != _cacheCidade) {
+    _cache = await carregarSecoes();
     _cacheCidade = cidade;
-    _cache = carregarSecoes();
   }
   return _cache!;
 }
