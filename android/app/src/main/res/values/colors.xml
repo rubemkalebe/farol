@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- corNoite do app: abertura escura, sem clarão branco. -->
+    <color name="farol_noite">#FF040507</color>
+</resources>
