@@ -49,7 +49,7 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 
 **Mapa sem internet:** o Farol não tem mapa próprio. Ele ensina a guardar o mapa da cidade no Google Maps ou nos Mapas da Apple e lembra de conferir de tempos em tempos.
 
-**Biblioteca sem internet:** o app baixa, a pedido, pacotes em português feitos pelo Kiwix e lê tudo sem internet. Wikipédia (Medicina, 116 MB; artigos principais; a Wikipédia inteira), com busca pelo título também na busca geral. E uma biblioteca para um apagão longo: Vikidia (enciclopédia para crianças), quase mil livros em domínio público do Projeto Gutenberg, Wikilivros, Wikiversidade, Wikivoyage, Wikcionário e Wikisource. O leitor do formato ZIM é do próprio Farol, em Dart, sem app extra.
+**Biblioteca sem internet:** o app baixa, a pedido, pacotes em português feitos pelo Kiwix e lê tudo sem internet. Wikipédia (Medicina, 116 MB; artigos principais; a Wikipédia inteira), com busca pelo título também na busca geral. E uma biblioteca para um apagão longo: Vikidia (enciclopédia para crianças), quase mil livros em domínio público do Projeto Gutenberg, Wikilivros, Wikiversidade, Wikivoyage, Wikcionário e Wikisource. Em inglês, a Appropedia (tecnologia simples: água, energia solar, saneamento). Nos pacotes que trazem fotos (Vikidia, Appropedia), o leitor mostra as imagens. O leitor do formato ZIM é do próprio Farol, em Dart, sem app extra.
 
 Em estudo: manuais oficiais completos e livros em domínio público.
 
@@ -72,4 +72,4 @@ flutter build apk      # APK para instalar à mão no Android
 - Código: MIT (`LICENSE`)
 - Textos em `conteudo/`: CC BY-SA 4.0 (`conteudo/LICENSE.md`)
 - Materiais de terceiros: licença dos autores, registrada em `fontes/fontes.yaml`
-- Pacotes da biblioteca: baixados do Kiwix direto no aparelho (não ficam no repositório). Projetos Wiki em CC BY-SA (Vikidia 3.0, os demais 4.0); livros do Projeto Gutenberg em domínio público
+- Pacotes da biblioteca: baixados do Kiwix direto no aparelho (não ficam no repositório). Projetos Wiki em CC BY-SA (Vikidia 3.0, os demais 4.0, Appropedia incluída); livros do Projeto Gutenberg em domínio público

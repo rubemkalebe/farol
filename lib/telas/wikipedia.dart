@@ -377,8 +377,8 @@ void abrirArtigoWiki(BuildContext context, PacoteWiki p, EntradaZim e) {
   );
 }
 
-(String, List<String>) _limpar((String, String) a) {
-  final artigo = limparArtigo(a.$1, tituloPadrao: a.$2);
+(String, List<String>) _limpar((String, String, bool) a) {
+  final artigo = limparArtigo(a.$1, tituloPadrao: a.$2, imagens: a.$3);
   return (artigo.titulo, dividirEmPartes(artigo.corpo));
 }
 
@@ -405,7 +405,11 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
     final bytes = await zim.conteudo(widget.entrada);
     final pagina = utf8.decode(bytes, allowMalformed: true);
     // Artigos grandes passam de 300 mil caracteres: limpa fora da tela.
-    return compute(_limpar, (pagina, widget.entrada.tituloLegivel));
+    return compute(_limpar, (
+      pagina,
+      widget.entrada.tituloLegivel,
+      widget.pacote.comImagens,
+    ));
   }
 
   Future<bool> _link(String url) async {
@@ -471,6 +475,18 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
               ),
               textStyle: t.bodyLarge?.copyWith(height: 1.5),
               onTapUrl: _link,
+              customWidgetBuilder: (e) {
+                final src = e.attributes['src'] ?? '';
+                if (e.localName != 'img' || !src.startsWith(esquemaImagem)) {
+                  return null;
+                }
+                return _ImagemZim(
+                  pacote: widget.pacote,
+                  artigo: widget.entrada,
+                  caminho: src.substring(esquemaImagem.length),
+                  descricao: e.attributes['alt'] ?? '',
+                );
+              },
               customStylesBuilder: (e) => switch (e.localName) {
                 'a' => {'color': '#FFD34E', 'text-decoration': 'underline'},
                 'h1' => {'font-size': '1.6em', 'margin': '0 0 4px 0'},
@@ -526,6 +542,77 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
           );
         },
       ),
+    );
+  }
+}
+
+/// Foto ou figura guardada dentro do arquivo ZIM, carregada só quando o
+/// artigo abre. Se não achar ou não decodificar, some sem erro na tela.
+class _ImagemZim extends StatefulWidget {
+  const _ImagemZim({
+    required this.pacote,
+    required this.artigo,
+    required this.caminho,
+    required this.descricao,
+  });
+
+  final PacoteWiki pacote;
+  final EntradaZim artigo;
+  final String caminho;
+  final String descricao;
+
+  @override
+  State<_ImagemZim> createState() => _ImagemZimState();
+}
+
+class _ImagemZimState extends State<_ImagemZim> {
+  late final Future<Uint8List?> _bytes = _carregar();
+
+  Future<Uint8List?> _carregar() async {
+    try {
+      final zim = await Wikipedia.instancia.abrir(widget.pacote);
+      final atual = (await zim.resolver(widget.artigo)).url;
+      final caminho = resolverCaminho(atual, widget.caminho);
+      final e =
+          await zim.porUrl('C', caminho) ??
+          await zim.porUrl('I', caminho) ??
+          await zim.porUrl('C', widget.caminho) ??
+          await zim.porUrl('I', widget.caminho);
+      return e == null ? null : await zim.conteudo(e);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<Uint8List?>(
+      future: _bytes,
+      builder: (context, snap) {
+        if (snap.connectionState != ConnectionState.done) {
+          return const SizedBox(height: 48);
+        }
+        final bytes = snap.data;
+        if (bytes == null) return const SizedBox.shrink();
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(6),
+            child: Image(
+              // Foto grande ocupa muita memória: decodifica no máximo com
+              // 900 px de largura, sem aumentar as pequenas.
+              image: ResizeImage(
+                MemoryImage(bytes),
+                width: 900,
+                policy: ResizeImagePolicy.fit,
+              ),
+              fit: BoxFit.contain,
+              semanticLabel: widget.descricao.isEmpty ? null : widget.descricao,
+              errorBuilder: (_, _, _) => const SizedBox.shrink(),
+            ),
+          ),
+        );
+      },
     );
   }
 }

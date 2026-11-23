@@ -4,6 +4,16 @@ import 'package:html/parser.dart' as html;
 /// Esquema dos links entre artigos depois da limpeza.
 const esquemaWiki = 'wiki:';
 
+/// Esquema das imagens que ficam (pacotes com imagem): o caminho dentro do
+/// arquivo ZIM, relativo ao artigo.
+const esquemaImagem = 'zimimg:';
+
+/// Imagens que o leitor sabe mostrar (SVG e fórmulas ficam de fora).
+final _imagemLegivel = RegExp(r'\.(jpe?g|png|gif|webp)$', caseSensitive: false);
+
+/// Partes que só fazem sentido com imagem: saem dos pacotes sem imagem.
+const _soComImagem = {'figure', 'img', '.thumb', '.gallery'};
+
 /// Seções que não ajudam a ler no celular sem internet.
 const _secoesFora = {
   'Referências',
@@ -42,6 +52,9 @@ const _foraSeletores = [
   '.thumb',
   '.gallery',
   '.mw-empty-elt',
+  '#toc',
+  '.template-databox',
+  '.toc',
   '.catlinks',
   '.zim-footer',
   '.scribunto-error',
@@ -55,8 +68,13 @@ class ArtigoLimpo {
   final String corpo;
 }
 
-/// Tira da página só o texto do artigo, pronto para mostrar.
-ArtigoLimpo limparArtigo(String pagina, {String tituloPadrao = ''}) {
+/// Tira da página só o texto do artigo, pronto para mostrar. Com
+/// [imagens], as fotos e figuras ficam, apontando para dentro do arquivo.
+ArtigoLimpo limparArtigo(
+  String pagina, {
+  String tituloPadrao = '',
+  bool imagens = false,
+}) {
   final doc = html.parse(pagina);
   final titulo =
       doc.querySelector('#firstHeading')?.text.trim() ??
@@ -69,6 +87,7 @@ ArtigoLimpo limparArtigo(String pagina, {String tituloPadrao = ''}) {
       doc.documentElement!;
 
   for (final seletor in _foraSeletores) {
+    if (imagens && _soComImagem.contains(seletor)) continue;
     for (final e in raiz.querySelectorAll(seletor).toList()) {
       e.remove();
     }
@@ -91,6 +110,16 @@ ArtigoLimpo limparArtigo(String pagina, {String tituloPadrao = ''}) {
     }
   }
 
+  if (imagens) _prepararImagens(raiz);
+
+  // Tabela com largura fixa ("width: 25%", flutuando à direita) fica
+  // espremida na tela do celular: deixa ocupar a largura que precisar.
+  for (final t in raiz.querySelectorAll('table, td, th').toList()) {
+    t.attributes
+      ..remove('style')
+      ..remove('width');
+  }
+
   for (final a in raiz.querySelectorAll('a').toList()) {
     final href = a.attributes['href'] ?? '';
     final interno =
@@ -110,6 +139,37 @@ ArtigoLimpo limparArtigo(String pagina, {String tituloPadrao = ''}) {
   }
 
   return ArtigoLimpo(titulo, raiz.innerHtml.trim());
+}
+
+/// Deixa só as imagens que o leitor mostra, com o caminho no arquivo, e
+/// tira o link em volta delas (levaria à página do arquivo da imagem).
+void _prepararImagens(Element raiz) {
+  for (final img in raiz.querySelectorAll('img').toList()) {
+    final src = img.attributes['src'] ?? '';
+    final largura = int.tryParse(img.attributes['width'] ?? '') ?? 0;
+    final interna =
+        src.isNotEmpty && !src.contains(':') && !src.startsWith('//');
+    // Ícones e bandeirinhas (menos de 40 px) só poluem a leitura.
+    if (!interna ||
+        !_imagemLegivel.hasMatch(src) ||
+        (largura > 0 && largura < 40)) {
+      img.remove();
+      continue;
+    }
+    final alt = img.attributes['alt'] ?? '';
+    img.attributes
+      ..clear()
+      ..['src'] = '$esquemaImagem${_caminho(src)}'
+      ..['alt'] = alt;
+    final link = img.parent;
+    if (link != null && link.localName == 'a') {
+      link.replaceWith(img);
+    }
+  }
+  // Figuras que ficaram sem imagem (SVG, ícones) saem inteiras.
+  for (final f in raiz.querySelectorAll('figure, .thumb, .gallery').toList()) {
+    if (f.querySelector('img') == null) f.remove();
+  }
 }
 
 /// "./Febre#Sintomas" → "Febre". "Doen%C3%A7a" → "Doença".

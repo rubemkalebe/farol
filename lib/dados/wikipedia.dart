@@ -27,6 +27,9 @@ class PacoteWiki {
   /// os da biblioteca, só na busca da tela de pacotes.
   bool get daWikipedia => pasta == 'wikipedia';
 
+  /// Pacotes "maxi" trazem as fotos e figuras dentro do arquivo.
+  bool get comImagens => id.contains('_maxi');
+
   /// Nome do arquivo no Kiwix, sem a data (ex.: wikipedia_pt_medicine_nopic).
   final String id;
   final String titulo;
@@ -153,6 +156,17 @@ const pacotesWiki = [
     versao: '2026-10',
     pasta: 'wikisource',
     fonte: 'Wikisource',
+  ),
+  PacoteWiki(
+    id: 'appropedia_en_all_maxi',
+    titulo: 'Appropedia (em inglês)',
+    descricao:
+        'Tecnologia simples para se virar: filtro de água, energia solar, '
+        'coleta de chuva, saneamento, horta. Algumas páginas em português.',
+    tamanho: '555 MB',
+    versao: '2026-02',
+    pasta: 'other',
+    fonte: 'Appropedia',
   ),
 ];
 

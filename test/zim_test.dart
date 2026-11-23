@@ -237,6 +237,30 @@ e vista em <a href="https://who.int">OMS</a>.</p><figure><img src="a.png"></figu
     expect(a.corpo, isNot(contains('Referências')));
   });
 
+  test('pacote com imagens: mantém fotos, tira ícones, SVG e o link', () {
+    const pagina = '''
+<html><body><div id="mw-content-text">
+<figure><a href="./File:Filtro.jpg"><img src="./_assets_/ab/Filtro%20de%20areia.JPG" width="300" alt="Filtro"></a><figcaption>Filtro de areia</figcaption></figure>
+<p>Texto <img src="./_assets_/cd/icone.png" width="16"> aqui.</p>
+<figure><img src="../_assets_/ef/esquema.svg"></figure>
+<p><img src="https://exemplo.org/x.jpg"></p>
+</div></body></html>''';
+    final semImagem = limparArtigo(pagina);
+    expect(semImagem.corpo, isNot(contains('<img')));
+
+    final a = limparArtigo(pagina, imagens: true);
+    expect(
+      a.corpo,
+      contains('src="${esquemaImagem}_assets_/ab/Filtro de areia.JPG"'),
+    );
+    expect(a.corpo, contains('Filtro de areia</figcaption>'));
+    expect(a.corpo, isNot(contains('File:')));
+    expect(a.corpo, isNot(contains('icone.png')));
+    expect(a.corpo, isNot(contains('esquema.svg')));
+    expect(a.corpo, isNot(contains('exemplo.org')));
+    expect('<img'.allMatches(a.corpo).length, 1);
+  });
+
   // Com um arquivo de verdade: FAROL_ZIM=/caminho/medicina.zim flutter test
   final real = Platform.environment['FAROL_ZIM'];
   test(
