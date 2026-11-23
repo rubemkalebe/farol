@@ -3,7 +3,7 @@ uf: rn
 energia: cosern
 agua: caern
 gas: null
-verificado_em: 2026-11-22
+verificado_em: 2026-11-23
 blocos:
   alagamento-local: |
     - Em Mossoró, a Zona Sul e o **Alto da Conceição** (ruas Flávio Oliveira, Dr. Haroldo Galvão e Romualdo Galvão) ficam na área de cheia do rio e estão entre os pontos que mais alagam. Com chuva forte, fique de olho no rio e nos avisos da Defesa Civil. Lixo na rua entope a drenagem: descarte certo. [fonte: mossoro-areas-ribeirinhas-2026] [fonte: mossoro-elevacao-rio-2023]
@@ -18,7 +18,21 @@ blocos:
   defesa-civil-local: |
     - **Defesa Civil de Mossoró:** [**199**](tel:199). Também atende no Disque Segurança [(84) 98631-7000](tel:84986317000). [fonte: mossoro-contatos-emergencia-2025] [fonte: mossoro-defesa-civil-chuvas-2026]
   hospitais: |
-    **Hospital em Mossoró:** o **Regional Tarcísio Maia** é a referência de urgência, trauma e picada de animal, 24 horas: [(84) 3315-3400](tel:8433153400). [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+    ### Onde ser atendido em Mossoró
+
+    - **Urgência:** **UPA**, 24 horas, sem precisar de encaminhamento. **Sintoma leve e consulta:** UBS do bairro. [fonte: mossoro-upas-equipamentos-2026] [fonte: mossoro-hospital-municipal-2026]
+    - Não dá para levar a pessoa: [**192**](tel:192) (SAMU). [fonte: anatel-sup-codigos]
+
+    **Hospital com pronto-socorro 24 horas:**
+
+    - **Regional Tarcísio Maia:** urgência de adultos e crianças, trauma e picada de bicho peçonhento. Rua Projetada, Aeroporto. [(84) 3315-3400](tel:8433153400) · [Abrir no mapa](mapa:Hospital%20Regional%20Tarc%C3%ADsio%20Maia%2C%20Mossor%C3%B3%20-%20RN) [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+    - **Hospital da Mulher Parteira Maria Correia:** pronto-socorro de gravidez e infantil (sem trauma), com encaminhamento da UPA. Av. Professor Antônio Campos, 1000, Presidente Costa e Silva. [Abrir no mapa](mapa:Avenida%20Professor%20Ant%C3%B4nio%20Campos%2C%201000%2C%20Mossor%C3%B3%20-%20RN) [fonte: sesap-carta-servicos-2025]
+
+    **UPAs, 24 horas:**
+
+    - **UPA Alto de São Manoel:** R. Chico Pedro, 160, Alto de São Manoel. [(84) 3315-4745](tel:8433154745) · [Abrir no mapa](mapa:Rua%20Chico%20Pedro%2C%20160%2C%20Mossor%C3%B3%20-%20RN) [fonte: mossoro-agenda-unidades]
+    - **UPA Belo Horizonte:** R. Jaen Menescal, 419, Lagoa do Mato. [Abrir no mapa](mapa:Rua%20Jaen%20Menescal%2C%20419%2C%20Mossor%C3%B3%20-%20RN) [fonte: mossoro-upas-sao-joao-2026]
+    - **UPA Santo Antônio:** R. Seis de Janeiro, 1914, Barrocas. [Abrir no mapa](mapa:Rua%20Seis%20de%20Janeiro%2C%201914%2C%20Mossor%C3%B3%20-%20RN) [fonte: mossoro-upas-sao-joao-2026]
   peconhentos-hospital: |
     Em Mossoró: **Hospital Regional Tarcísio Maia**. [fonte: ms-hospitais-referencia-peconhentos-rn]
   prefeitura: |

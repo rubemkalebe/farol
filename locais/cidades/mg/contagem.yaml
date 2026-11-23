@@ -3,7 +3,7 @@ uf: mg
 energia: cemig
 agua: copasa
 gas: gasmig
-verificado_em: 2026-11-22
+verificado_em: 2026-11-23
 blocos:
   alagamento-local: |
     - Em Contagem, o encontro do **córrego Ferrugem com o ribeirão Arrudas**, na Vila São Paulo, é área crítica na chuva. O período mais forte vai de **dezembro a janeiro**. [fonte: contagem-simulado-ferrugem-arrudas]
@@ -19,7 +19,26 @@ blocos:
   deslizamento-local: |
     Em Contagem, o plano de redução de riscos mapeou **39 áreas com risco de deslizamento**, a maioria em vilas e na periferia. Viu sinal de perigo? Saia e ligue [199](tel:199). [fonte: contagem-pmrr-2025] [fonte: contagem-quando-chamar-defesa-civil]
   hospitais: |
-    **Hospital em Contagem:** o **Hospital Municipal José Lucas Filho** (HMC), na Av. João César de Oliveira, 4495, bairro Cinco, tem pronto-socorro e soro para picada de escorpião, cobra e aranha: [(31) 3352-8827](tel:3133528827). [fonte: ms-hospitais-referencia-peconhentos-mg] [fonte: contagem-hmc-pronto-socorro]
+    ### Onde ser atendido em Contagem
+
+    - **Vá à UPA (24 horas)** com: febre acima de 39 °C ou que não passa, dor forte no peito, na barriga ou nas costas, falta de ar forte, desmaio ou confusão, convulsão, vômito ou diarreia fortes, sangramento forte, corte fundo, fratura, intoxicação, picada de bicho peçonhento, perda de força ou formigamento. [fonte: contagem-ubs-ou-upa-2025]
+    - **Vá à UBS** (segunda a sexta, 7h às 17h) com: dor de garganta leve, tosse e coriza, febre baixa há menos de 3 dias, dor de ouvido, dor no corpo. [fonte: contagem-ubs-ou-upa-2025]
+    - **Bebê com menos de 3 meses com febre** vai direto à urgência. [fonte: contagem-ubs-ou-urgencia-crianca-2026]
+    - Não dá para levar a pessoa: [**192**](tel:192) (SAMU). [fonte: anatel-sup-codigos]
+
+    **Hospital:**
+
+    - **Hospital Municipal de Contagem (HMC):** pronto-socorro de casos graves; tem soro para picada de escorpião, cobra e aranha. Av. João César de Oliveira, 4495, Eldorado. [(31) 3352-2070](tel:3133522070) · [Abrir no mapa](mapa:Avenida%20Jo%C3%A3o%20C%C3%A9sar%20de%20Oliveira%2C%204495%2C%20Contagem%20-%20MG) [fonte: contagem-complexo-hospitalar] [fonte: contagem-hmc-pronto-socorro] [fonte: ms-hospitais-referencia-peconhentos-mg]
+    - **Centro Materno Infantil (CMI):** urgência de crianças, na gravidez e ginecológica, e violência sexual. Mesmo endereço do HMC. [(31) 2538-9296](tel:3125389296) [fonte: contagem-complexo-hospitalar] [fonte: contagem-ubs-ou-urgencia-crianca-2026]
+
+    **UPAs, 24 horas** (criança: Ressaca, Vargem das Flores, Industrial, Nacional ou o CMI): [fonte: contagem-upas] [fonte: contagem-ubs-ou-urgencia-crianca-2026]
+
+    - **UPA JK:** Av. João César de Oliveira, 780, Eldorado. [(31) 2538-9289](tel:3125389289) · [Abrir no mapa](mapa:Avenida%20Jo%C3%A3o%20C%C3%A9sar%20de%20Oliveira%2C%20780%2C%20Contagem%20-%20MG) [fonte: contagem-upas]
+    - **UPA Ressaca:** Praça 21 de Abril, Guanabara. [(31) 2538-9291](tel:3125389291) · [Abrir no mapa](mapa:UPA%20Ressaca%2C%20Pra%C3%A7a%2021%20de%20Abril%2C%20Contagem%20-%20MG) [fonte: contagem-upas]
+    - **UPA Petrolândia:** R. Refinaria União, 137, Petrolândia. Vai mudar para a R. Madeirão, 57, quando a obra acabar. [(31) 2538-9293](tel:3125389293) · [Abrir no mapa](mapa:Rua%20Refinaria%20Uni%C3%A3o%2C%20137%2C%20Contagem%20-%20MG) [fonte: contagem-upas] [fonte: contagem-upa-petrolandia-obra-2026]
+    - **UPA Vargem das Flores:** R. Retiro dos Imigrantes, 80, Retiro. [(31) 2538-9294](tel:3125389294) · [Abrir no mapa](mapa:Rua%20Retiro%20dos%20Imigrantes%2C%2080%2C%20Contagem%20-%20MG) [fonte: contagem-upas]
+    - **UPA Industrial** (ortopedia, cirurgia e crianças): Av. Maria da Glória, 491, Amazonas. [(31) 2538-9288](tel:3125389288) · [Abrir no mapa](mapa:Avenida%20Maria%20da%20Gl%C3%B3ria%2C%20491%2C%20Contagem%20-%20MG) [fonte: contagem-upas] [fonte: contagem-upa-industrial-2026]
+    - **UPA Nacional** (só crianças): R. Almenara, 300, Pedra Azul. [Abrir no mapa](mapa:Rua%20Almenara%2C%20300%2C%20Contagem%20-%20MG) [fonte: contagem-upa-nacional-2026]
   peconhentos-hospital: |
     Em Contagem: **Hospital Municipal José Lucas Filho** (HMC), Av. João César de Oliveira, 4495. [fonte: ms-hospitais-referencia-peconhentos-mg]
   prefeitura: |

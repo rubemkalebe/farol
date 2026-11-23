@@ -3814,3 +3814,282 @@ fontes:
       violência sexual. Av. do Contorno, 9330, Barro Preto. (31) 3298-6000.
       Fora da lista do app: Hospital Metropolitano Dr. Célio de Castro "não atende por demanda espontânea"
       (PBH, 12/12/2025); Sofia Feldman não informa 24h no site.
+
+  # ───────────── Onde ser atendido: Betim ─────────────
+
+  - id: betim-rede-urgencia
+    tema: saude
+    titulo: "Rede de Urgência e Emergência"
+    orgao: Prefeitura de Betim – Secretaria Municipal de Saúde
+    url: https://www.betim.mg.gov.br/portal/secretarias-paginas/91/rede-de-urgencia-e-emergencia/
+    acessado: 2026-11-23
+    publicado: null  # portal atualizado em 2026-11-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      4 UPAs 24h e SAMU 192. Norte: R. Coronel Abílio Rodrigues Pereira, 697, Bom Retiro, 3965-1997
+      (a Carta de Serviços dá 2115-5641 "recepção"; vale o número que aparece aqui e nos Telefones).
+      Teresópolis: aqui 2571-8660; Carta de Serviços e Telefones dão 3597-8270 (usado).
+      Alterosas: Av. Afonso Cândido de Souza, 160, 3665-8900. Guanabara: R. Jovelino Gregório Silva, 225,
+      3592-2345, só clínica médica (adulto). PA Orestes Diniz (Colônia Santa Isabel) 3529-3331, 24h.
+
+  - id: betim-carta-servicos-upa
+    tema: saude
+    titulo: "Carta de Serviços: Unidades de Pronto Atendimento"
+    orgao: Prefeitura de Betim
+    url: https://www.betim.mg.gov.br/portal/carta-servicos/158/
+    acessado: 2026-11-23
+    publicado: 2026-05-05  # "Atualizado em"
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Classificação de risco (Manchester): vermelho imediato, laranja até 10 min, amarelo até 1 h,
+      verde até 2 h, azul até 4 h ou encaminhamento à UBS. UPA Teresópolis (31) 3597-8270.
+
+  - id: betim-telefones-saude
+    tema: saude
+    titulo: "Telefones úteis – Saúde"
+    orgao: Prefeitura de Betim
+    url: https://www.betim.mg.gov.br/portal/telefones/4/0/0
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: UPA Norte 3965-1997; UPA Teresópolis 3597-8270; UPA Alterosas 3665-8900; UPA Guanabara 3592-2345.
+
+  - id: betim-assistencia-hospitalar
+    tema: saude
+    titulo: "Assistência Hospitalar"
+    orgao: Prefeitura de Betim
+    url: https://www.betim.mg.gov.br/portal/secretarias-paginas/120/assistencia-hospitalar/
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Hospital Público Regional Osvaldo Rezende Franco: Av. Edméia Matos Lazarotti, 3800, Jardim Brasília,
+      (31) 3539-8100 / 3539-8129, 24h; trauma e urgências clínicas, cirúrgicas, ortopédicas e neurológicas.
+      Centro Materno-Infantil, mesmo endereço, 3539-8258, 24h. PA do Hospital Orestes Diniz: R. Emílio Ribas, 100,
+      Colônia Santa Isabel, 3529-3331, 24h (a Fhemig dá R. Olavo Bilac, 113 para a Casa de Saúde Santa Izabel;
+      o app abre o mapa pelo nome).
+
+  - id: betim-onde-buscar-2024
+    tema: saude
+    titulo: "Saiba onde buscar atendimento em caso de sintomas de dengue, chikungunya ou zika em Betim"
+    orgao: Prefeitura de Betim
+    url: https://www.betim.mg.gov.br/portal/noticias/0/3/12991/saiba-onde-buscar-atendimento-em-caso-de-sintomas-de-dengue-chikungunya-ou-zika-em-betim
+    acessado: 2026-11-23
+    publicado: 2024-01-26
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      UBS de segunda a sexta, 7h–18h, para sintomas menos agudos; UPA para urgência. Urgência pediátrica
+      (menores de 13 anos) nas UPAs Alterosas, Teresópolis e Norte. Conferir de novo: notícia de 2024.
+
+  # ───────────── Onde ser atendido: Contagem ─────────────
+
+  - id: contagem-upas
+    tema: saude
+    titulo: "Unidades de Pronto Atendimento (UPAs)"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/secretarias-paginas/300/unidades-de-pronto-atendimento-upas/
+    acessado: 2026-11-23
+    publicado: null  # portal atualizado em 2026-11-22
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      JK: Av. João César de Oliveira, 780, Eldorado, 2538-9289. Ressaca: Praça 21 de Abril, Guanabara, 2538-9291.
+      Petrolândia: R. Refinaria União, 137, 2538-9293. Vargem das Flores: R. Retiro dos Imigrantes, 80, Retiro,
+      2538-9294 (notícia de 2025 chama de "UPA Nova Contagem"). Industrial: Av. Maria da Glória, 491, Amazonas,
+      2538-9288. A UPA Nacional (pediátrica, 2026) ainda não aparece nesta página.
+
+  - id: contagem-ubs-ou-upa-2025
+    tema: saude
+    titulo: "Unidade Básica de Saúde (UBS) ou UPA? Saiba onde buscar atendimento no SUS Contagem"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/noticias/0/3/82405/unidade-basica-de-saude-ubs-ou-upa-saiba-onde-buscar-atendimento-no-sus-contagem
+    acessado: 2026-11-23
+    publicado: 2025-09-22
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      UBS (seg.–sex., 7h–17h): dor de garganta leve, tosse/coriza, febre baixa ou moderada há menos de 3 dias,
+      diarreia ou vômito iniciais, dor de ouvido, dor de cabeça ou no corpo, escoriações leves.
+      UPA 24h: febre acima de 39 °C ou persistente, dor intensa no peito, abdômen ou costas, intoxicação, falta de
+      ar intensa, desmaio ou confusão, vômito ou diarreia intensos, convulsão, acidentes, cortes profundos,
+      fraturas, sangramento intenso, perda de força ou formigamento, animais peçonhentos. HMC recebe os casos
+      complexos encaminhados pelas UPAs.
+
+  - id: contagem-ubs-ou-urgencia-crianca-2026
+    tema: saude
+    titulo: "UBS ou urgência? Saiba onde levar a criança quando precisar"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/noticias/0/3/84490/ubs-ou-urgencia-saiba-onde-levar-a-crianca-quando-precisar
+    acessado: 2026-11-23
+    publicado: 2026-08-13
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Urgência infantil: UPAs Ressaca, Vargem das Flores, Industrial e o CMI. Qualquer febre em bebê com menos
+      de 3 meses é sinal de alarme. JK e Petrolândia não aparecem na lista infantil.
+
+  - id: contagem-complexo-hospitalar
+    tema: saude
+    titulo: "Complexo Hospitalar de Contagem"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/secretarias-paginas/324/complexo-hospitalar-de-contagem-/
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      HMC: Av. João César de Oliveira, 4495, Eldorado, (31) 3352-2070 / 2538-9299 / 2538-9297.
+      CMI: mesmo endereço, (31) 2538-9296. O 3352-8827 usado antes não aparece aqui.
+
+  - id: contagem-upa-petrolandia-obra-2026
+    tema: saude
+    titulo: "Visita às obras da nova UPA Petrolândia"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/noticias/0/3/83247/visita-as-obras-da-nova-upa-petrolandia-envolve-liderancas-comunitarias
+    acessado: 2026-11-23
+    publicado: 2026-02-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: Nova sede na R. Madeirão, 57, Industrial São Luiz, prevista para o 2º semestre de 2026; até lá, R. Refinaria União.
+
+  - id: contagem-upa-industrial-2026
+    tema: saude
+    titulo: "UPA Industrial fortalece assistência de urgência em ortopedia e pediatria"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/noticias/0/3/83844/upa-industrial-fortalece-assistencia-de-urgencia-em-ortopedia-e-pediatria
+    acessado: 2026-11-23
+    publicado: 2026-05-25
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: 24h, demanda espontânea; referência em ortopedia, pediatria e cirurgia geral. 
+
+  - id: contagem-upa-nacional-2026
+    tema: saude
+    titulo: "Saúde mais perto de casa: Nacional ganha novo complexo de atendimento"
+    orgao: Prefeitura de Contagem
+    url: https://portal.contagem.mg.gov.br/portal/noticias/0/3/84606/saude-mais-perto-de-casa-nacional-ganha-novo-complexo-de-atendimento/
+    acessado: 2026-11-23
+    publicado: 2026-08-30
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: UPA Nacional, só pediátrica, 24h. R. Almenara, 300, Pedra Azul. Sem telefone publicado.
+
+  # ───────────── Onde ser atendido: Natal ─────────────
+
+  - id: natal-guia-servicos-urgencia
+    tema: saude
+    titulo: "Guia de Serviços da Prefeitura do Natal (versão para impressão)"
+    orgao: Prefeitura do Natal
+    url: https://guiadeservicos.natal.rn.gov.br/printservico.php
+    acessado: 2026-11-23
+    publicado: null  # "Dados atualizados em agosto de 2025", na página inicial do guia
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Página única (latin-1) com todos os serviços; ver "Atendimento de Urgência e Emergência" e "Pronto-Socorro".
+      UPA Satélite 3215-1915 (a cartilha de 2023 dá 3232-1915); Potengi 3232-4450; Pajuçara 3614-5180;
+      Cidade da Esperança 3232-2369; PSI Brasília Teimosa 3232-8536; Hospital dos Pescadores 3232-4592;
+      Maternidade Araken Irerê Pinto 3232-8431; Hospital Municipal Dr. Newton Azevedo 3215-9857;
+      Urgência Ortopédica 3215-9824; Unidade Mista Mãe Luiza 3232-8625; Maternidade Leide Morais 3232-5651
+      (a cartilha de 2023 dá 3232-1548). Vale o guia, mais recente.
+      A imprensa fala em troca da UPA Pajuçara por uma UPA no Lagoa Azul (2º semestre de 2026), sem
+      confirmação oficial: conferir.
+
+  - id: natal-upa-satelite-2026
+    tema: saude
+    titulo: "UPA Satélite (notícia da Prefeitura do Natal)"
+    orgao: Prefeitura do Natal
+    url: https://natal.rn.gov.br/news/post2/46053
+    acessado: 2026-11-23
+    publicado: 2026-11-05
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Av. dos Xavantes, 1228, Pitimbu, 24h, com leitos de pediatria. Classificação de risco: vermelho (risco de
+      vida) e amarelo (urgente) com prioridade; verde e azul, menor gravidade, podem esperar mais.
+
+
+  - id: govbr-mejc-urgencia
+    tema: saude
+    titulo: "Realizar atendimento na Unidade de Urgência e Emergência da Maternidade Escola Januário Cicco"
+    orgao: EBSERH / UFRN (gov.br)
+    url: https://www.gov.br/pt-br/servicos/realizar-atendimento-na-unidade-de-urgencia-e-emergencia-da-maternidade-escola-januario-cicco-mejc
+    acessado: 2026-11-23
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [contatos]
+    notas: Urgência ginecológica e obstétrica por demanda espontânea. Entrada pela R. Dr. Manoel Dantas, 484, Petrópolis. Setor de urgência (84) 3215-8727.
+
+  # ───────────── Onde ser atendido: Mossoró ─────────────
+
+  - id: mossoro-agenda-unidades
+    tema: saude
+    titulo: "Agenda das unidades"
+    orgao: Prefeitura de Mossoró
+    url: https://prefeiturademossoro.com.br/agenda-unidades
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: UPA Alto de São Manoel (Gov. Tarcísio de Vasconcelos Maia), R. Chico Pedro, 160-240, (84) 3315-4745.
+
+  - id: mossoro-upas-sao-joao-2026
+    tema: saude
+    titulo: "UPAs de Mossoró estão prontas para o Pingo da Mei Dia"
+    orgao: Prefeitura de Mossoró
+    url: https://prefeiturademossoro.com.br/noticias/upas-de-mossoro-estao-prontas-para-o-pingo-da-mei-dia/16798
+    acessado: 2026-11-23
+    publicado: 2026-06-05
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Endereços das 3 UPAs: Alto de São Manoel (R. Chico Pedro), Belo Horizonte (R. Jaen Menescal, 419,
+      Lagoa do Mato) e Santo Antônio (R. Seis de Janeiro, 1914, Barrocas). Sem telefones das duas últimas.
+
+  - id: mossoro-upas-equipamentos-2026
+    tema: saude
+    titulo: "UPAs do Belo Horizonte e do Alto de São Manoel recebem novos equipamentos"
+    orgao: Prefeitura de Mossoró
+    url: https://prefeiturademossoro.com.br/noticias/upas-do-belo-horizonte-e-do-alto-de-sao-manoel-recebem-novos-equipamentos/17877
+    acessado: 2026-11-23
+    publicado: 2026-09-24
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: UPAs "voltadas para casos de urgência e emergência, 24 horas". PAM do Bom Jardim não é pronto-atendimento.
+
+  - id: mossoro-hospital-municipal-2026
+    tema: saude
+    titulo: "Hospital Municipal alcança a marca de 15 mil atendimentos em 10 meses de funcionamento"
+    orgao: Prefeitura de Mossoró
+    url: https://prefeiturademossoro.com.br/noticias/hospital-municipal-alcanca-a-marca-de-15-mil-atendimentos-em-10-meses-de-funcionamento/18274
+    acessado: 2026-11-23
+    publicado: 2026-11-11
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Hospital Municipal Francisca Conceição da Silva: cirurgias eletivas e consultas; "o paciente deve buscar a
+      Unidade Básica de Saúde (UBS) de seu bairro ou comunidade para a equipe realizar o encaminhamento". Não é urgência.

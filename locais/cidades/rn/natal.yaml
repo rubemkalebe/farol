@@ -3,7 +3,7 @@ uf: rn
 energia: cosern
 agua: caern
 gas: potigas
-verificado_em: 2026-11-22
+verificado_em: 2026-11-23
 blocos:
   alertas-locais: |
     - Em Natal, a Prefeitura manda **alertas de risco pelo WhatsApp da Estela**: (84) 3232-4900. Ocorrências pelo [190](tel:190). [fonte: natal-defesa-civil-el-nino-2026]
@@ -14,7 +14,34 @@ blocos:
   deslizamento-local: |
     Em Natal, as áreas de duna e encosta ocupadas têm risco de deslizamento, como Cidade Nova (Baixa do Cão), Pião, Aparecida, África, Planalto, Passo da Pátria e Jacó. Com sinal de perigo, saia e avise pelo [190](tel:190) ou pelo WhatsApp da Estela. [fonte: natal-pmrr-2008] [fonte: natal-defesa-civil-el-nino-2026]
   hospitais: |
-    **Hospitais em Natal:** o **Walfredo Gurgel** (Av. Senador Salgado Filho, Tirol) é o pronto-socorro de trauma e AVC, 24 horas. Para picada de escorpião, cobra ou aranha: **Giselda Trigueiro** ([(84) 3232-7944](tel:8432327944)) e, para crianças, **Maria Alice Fernandes** ([(84) 3232-7717](tel:8432327717)). [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+    ### Onde ser atendido em Natal
+
+    - **Urgência:** UPA ou pronto-socorro, 24 horas. Na chegada, a equipe classifica pela cor: **vermelho** (risco de vida) e **amarelo** (urgente) passam na frente; **verde** e **azul** esperam mais. [fonte: natal-upa-satelite-2026]
+    - Não dá para levar a pessoa: [**192**](tel:192) (SAMU). [fonte: anatel-sup-codigos]
+
+    **Hospitais e pronto-socorros 24 horas:**
+
+    - **Walfredo Gurgel** (Pronto-Socorro Clóvis Sarinho): acidente grave e trauma, porta aberta. Suspeita de AVC e outros casos chegam pelo SAMU ou encaminhados. Av. Senador Salgado Filho, s/n. [Abrir no mapa](mapa:Hospital%20Monsenhor%20Walfredo%20Gurgel%2C%20Natal%20-%20RN) [fonte: sesap-carta-servicos-2025]
+    - **Giselda Trigueiro:** referência para picada de escorpião, cobra ou aranha e para doenças infecciosas. R. Cônego Monte, 110, Quintas. [(84) 3232-7944](tel:8432327944) · [Abrir no mapa](mapa:Rua%20C%C3%B4nego%20Monte%2C%20110%2C%20Natal%20-%20RN) [fonte: ms-hospitais-referencia-peconhentos-rn]
+    - **Hospital Municipal de Natal** (Dr. Newton Azevedo): R. Coronel Joaquim Manoel, 654, Petrópolis. [(84) 3215-9857](tel:8432159857) · [Abrir no mapa](mapa:Rua%20Coronel%20Joaquim%20Manoel%2C%20654%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **Hospital dos Pescadores** (pronto-socorro): R. São João de Deus, 80, Rocas. [(84) 3232-4592](tel:8432324592) · [Abrir no mapa](mapa:Rua%20S%C3%A3o%20Jo%C3%A3o%20de%20Deus%2C%2080%2C%20Rocas%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **Urgência Ortopédica** (fratura, entorse): R. Manoel Machado, Petrópolis. [(84) 3215-9824](tel:8432159824) · [Abrir no mapa](mapa:Rua%20Manoel%20Machado%2C%20Petr%C3%B3polis%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **Pronto-Socorro Infantil de Brasília Teimosa** (só crianças): R. Miramar, Praia do Meio. [(84) 3232-8536](tel:8432328536) · [Abrir no mapa](mapa:Rua%20Miramar%2C%20Praia%20do%20Meio%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **Maria Alice Fernandes** (crianças até 14 anos): a criança passa antes pela UPA ou pelo pronto-socorro, que encaminha. Tem soro para picada. [(84) 3232-5400](tel:8432325400) [fonte: sesap-carta-servicos-2025] [fonte: ms-hospitais-referencia-peconhentos-rn]
+
+    **Gravidez e parto, 24 horas:**
+
+    - **Maternidade Escola Januário Cicco:** entrada pela R. Dr. Manoel Dantas, 484, Petrópolis. [(84) 3215-8727](tel:8432158727) · [Abrir no mapa](mapa:Rua%20Doutor%20Manoel%20Dantas%2C%20484%2C%20Natal%20-%20RN) [fonte: govbr-mejc-urgencia]
+    - **Maternidade Araken Irerê Pinto:** R. Coronel Joaquim Manoel, 654, Petrópolis. [(84) 3232-8431](tel:8432328431) [fonte: natal-guia-servicos-urgencia]
+    - **Maternidade Leide Morais:** Av. das Fronteiras, Nossa Senhora da Apresentação. [(84) 3232-5651](tel:8432325651) · [Abrir no mapa](mapa:Maternidade%20Leide%20Morais%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+
+    **UPAs e pronto-atendimentos, 24 horas:**
+
+    - **UPA Satélite** (adultos e crianças): Av. dos Xavantes, 1228, Pitimbu. [(84) 3215-1915](tel:8432151915) · [Abrir no mapa](mapa:Avenida%20dos%20Xavantes%2C%201228%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia] [fonte: natal-upa-satelite-2026]
+    - **UPA Potengi:** Av. Senhor do Bonfim, Potengi. [(84) 3232-4450](tel:8432324450) · [Abrir no mapa](mapa:UPA%20Potengi%2C%20Avenida%20Senhor%20do%20Bonfim%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **UPA Pajuçara:** Av. Moema Tinoco da Cunha Lima, 3393, Pajuçara. [(84) 3614-5180](tel:8436145180) · [Abrir no mapa](mapa:Avenida%20Moema%20Tinoco%20da%20Cunha%20Lima%2C%203393%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **UPA Cidade da Esperança:** Av. Paraíba, Cidade da Esperança. [(84) 3232-2369](tel:8432322369) · [Abrir no mapa](mapa:UPA%20Cidade%20da%20Esperan%C3%A7a%2C%20Avenida%20Para%C3%ADba%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
+    - **Unidade Mista de Mãe Luiza:** 2ª Travessa João XXIII, Mãe Luíza. [(84) 3232-8625](tel:8432328625) · [Abrir no mapa](mapa:Unidade%20Mista%20M%C3%A3e%20Luiza%2C%20Natal%20-%20RN) [fonte: natal-guia-servicos-urgencia]
   peconhentos-hospital: |
     Em Natal: **Hospital Giselda Trigueiro** (R. Cônego Monte, 110, Quintas) e, para crianças, **Hospital Maria Alice Fernandes**. [fonte: ms-hospitais-referencia-peconhentos-rn]
   prefeitura: |

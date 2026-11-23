@@ -4,7 +4,7 @@ energia: cemig
 agua: copasa
 # A Gasmig chega a Betim para indústria e comércio; rede residencial não confirmada.
 gas: null
-verificado_em: 2026-11-22
+verificado_em: 2026-11-23
 blocos:
   alagamento-local: |
     - Em Betim, os pontos de atenção na chuva são o **rio Betim** (avenida Edméia Mattos Lazzarotti), o **Riacho das Areias** (avenida Marco Túlio Isaac) e os córregos **Estiva**, **Guandu**, **Bandeirinhas** e o da avenida Yete. O **Citrolândia** tem áreas mapeadas com risco de inundação. [fonte: betim-chuvas-18-nov-2026] [fonte: betim-desassoreamento-rios] [fonte: betim-cadastro-familias-areas-risco]
@@ -20,7 +20,24 @@ blocos:
   deslizamento-local: |
     Em Betim, há áreas mapeadas com risco de deslizamento em bairros como São João, Vila Kennedy, Parque Fernão Dias, Jardim Alterosas, Riacho III, Cruzeiro e Guanabara. Viu sinal de perigo? Saia e ligue [199](tel:199). [fonte: betim-encostas-sete-obras] [fonte: betim-orientacoes-chuva-bombeiros]
   hospitais: |
-    **Hospital em Betim:** o **Hospital Público Regional** (Prefeito Osvaldo Rezende Franco), na Av. Edméia Mattos Lazzarotti, 3800, atende urgência e trauma 24 horas e tem soro para picada de escorpião, cobra e aranha: [(31) 3539-8100](tel:3135398100). [fonte: betim-hospital-regional-carta] [fonte: ms-hospitais-referencia-peconhentos-mg]
+    ### Onde ser atendido em Betim
+
+    - **Urgência** (dor forte, sangramento, falta de ar): **UPA**, aberta 24 horas. Na chegada, a equipe classifica a gravidade e quem está pior passa na frente. [fonte: betim-carta-servicos-upa]
+    - **Sintoma leve:** **UBS**, de segunda a sexta. [fonte: betim-onde-buscar-2024]
+    - Não dá para levar a pessoa: [**192**](tel:192) (SAMU). [fonte: betim-rede-urgencia]
+
+    **Hospital com pronto-socorro 24 horas:**
+
+    - **Hospital Público Regional** (Osvaldo Rezende Franco): trauma e urgências clínicas, cirúrgicas, ortopédicas e neurológicas. Tem soro para picada de escorpião, cobra e aranha. Av. Edméia Matos Lazarotti, 3800, Jardim Brasília. [(31) 3539-8100](tel:3135398100) · [Abrir no mapa](mapa:Avenida%20Edm%C3%A9ia%20Matos%20Lazarotti%2C%203800%2C%20Betim%20-%20MG) [fonte: betim-assistencia-hospitalar] [fonte: ms-hospitais-referencia-peconhentos-mg]
+    - **Centro Materno-Infantil:** urgência na gravidez e ginecológica, parto e violência sexual, 24 horas. Mesmo endereço do Hospital Regional. [(31) 3539-8258](tel:3135398258) [fonte: betim-assistencia-hospitalar]
+    - **Pronto Atendimento do Hospital Orestes Diniz** (Colônia Santa Isabel, Citrolândia): 24 horas. R. Emílio Ribas, 100. [(31) 3529-3331](tel:3135293331) · [Abrir no mapa](mapa:Hospital%20Orestes%20Diniz%2C%20Citrol%C3%A2ndia%2C%20Betim%20-%20MG) [fonte: betim-assistencia-hospitalar]
+
+    **UPAs, 24 horas** (crianças com menos de 13 anos: Norte, Teresópolis e Alterosas): [fonte: betim-rede-urgencia] [fonte: betim-onde-buscar-2024]
+
+    - **UPA Norte:** R. Coronel Abílio Rodrigues Pereira, 697, Bom Retiro. [(31) 3965-1997](tel:3139651997) · [Abrir no mapa](mapa:Rua%20Coronel%20Ab%C3%ADlio%20Rodrigues%20Pereira%2C%20697%2C%20Betim%20-%20MG) [fonte: betim-rede-urgencia] [fonte: betim-telefones-saude]
+    - **UPA Teresópolis:** Av. Belo Horizonte, 154, Jardim Teresópolis. [(31) 3597-8270](tel:3135978270) · [Abrir no mapa](mapa:Avenida%20Belo%20Horizonte%2C%20154%2C%20Jardim%20Teres%C3%B3polis%2C%20Betim%20-%20MG) [fonte: betim-carta-servicos-upa] [fonte: betim-telefones-saude]
+    - **UPA Alterosas:** Av. Afonso Cândido de Souza, 160, Jardim das Alterosas. [(31) 3665-8900](tel:3136658900) · [Abrir no mapa](mapa:Avenida%20Afonso%20C%C3%A2ndido%20de%20Souza%2C%20160%2C%20Betim%20-%20MG) [fonte: betim-rede-urgencia]
+    - **UPA Guanabara** (só adultos): R. Jovelino Gregório Silva, 225, Guanabara. [(31) 3592-2345](tel:3135922345) · [Abrir no mapa](mapa:Rua%20Jovelino%20Greg%C3%B3rio%20Silva%2C%20225%2C%20Betim%20-%20MG) [fonte: betim-rede-urgencia]
   peconhentos-hospital: |
     Em Betim: **Hospital Público Regional** (Av. Edméia Mattos Lazzarotti, 3800). [fonte: ms-hospitais-referencia-peconhentos-mg]
   prefeitura: |

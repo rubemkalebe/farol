@@ -159,7 +159,12 @@ void main() {
             .where((x) => x.id != id)
             .map((x) => x.nome);
         for (final MapEntry(key: cap, value: bruto) in capitulos.entries) {
-          final texto = aplicarLocais(bruto, blocos).replaceAll(citacao, '');
+          // Ruas e bairros com nome de outra cidade não contam
+          // (ex.: Av. Belo Horizonte em Betim, UPA Belo Horizonte em Mossoró).
+          var texto = aplicarLocais(bruto, blocos).replaceAll(citacao, '');
+          for (final homonimo in _homonimos) {
+            texto = texto.replaceAll(homonimo, '');
+          }
           expect(
             texto.contains('{{'),
             isFalse,
@@ -192,3 +197,6 @@ void main() {
     },
   );
 }
+
+/// Nomes de rua ou bairro iguais ao nome de outra cidade do app.
+const _homonimos = ['Av. Belo Horizonte', 'UPA Belo Horizonte'];
