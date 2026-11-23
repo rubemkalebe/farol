@@ -45,7 +45,9 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 
 **Mapa sem internet:** o Farol não tem mapa próprio. Ele ensina a guardar o mapa da cidade no Google Maps ou nos Mapas da Apple e lembra de conferir de tempos em tempos.
 
-Em estudo, para baixar quando houver internet: Wikipédia em português sem imagens, manuais oficiais completos e livros em domínio público.
+**Wikipédia sem internet:** o app baixa, a pedido, pacotes da Wikipédia em português feitos pelo Kiwix (Medicina, 116 MB; artigos principais; a Wikipédia inteira) e lê tudo sem internet, com busca pelo título também na busca geral. O leitor do formato ZIM é do próprio Farol, em Dart, sem app extra.
+
+Em estudo: manuais oficiais completos e livros em domínio público.
 
 > **Aviso:** o Farol resume orientações de órgãos oficiais e cita a fonte de cada uma. Ele não substitui atendimento médico nem as instruções das autoridades locais. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros).
 
@@ -66,3 +68,4 @@ flutter build apk      # APK para instalar à mão no Android
 - Código: MIT (`LICENSE`)
 - Textos em `conteudo/`: CC BY-SA 4.0 (`conteudo/LICENSE.md`)
 - Materiais de terceiros: licença dos autores, registrada em `fontes/fontes.yaml`
+- Pacotes da Wikipédia: CC BY-SA 4.0, baixados do Kiwix direto no aparelho (não ficam no repositório)

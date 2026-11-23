@@ -3,9 +3,12 @@ import 'package:flutter/services.dart' show rootBundle;
 
 import '../dados/busca.dart';
 import '../dados/secoes.dart';
+import '../dados/wikipedia.dart';
+import '../dados/zim.dart';
 import '../tema.dart';
 import 'secoes.dart';
 import 'largura.dart';
+import 'wikipedia.dart';
 
 class TelaBusca extends StatefulWidget {
   const TelaBusca({super.key});
@@ -17,6 +20,15 @@ class TelaBusca extends StatefulWidget {
 class _TelaBuscaState extends State<TelaBusca> {
   late final Future<Busca> _busca = _carregar();
   String _consulta = '';
+  late final Future<bool> _temWiki = Wikipedia.instancia.instalados().then(
+    (l) => l.isNotEmpty,
+  );
+  Future<List<(PacoteWiki, EntradaZim)>>? _wiki;
+
+  void _mudou(String v) => setState(() {
+    _consulta = v;
+    _wiki = v.trim().isEmpty ? null : Wikipedia.instancia.buscar(v, limite: 5);
+  });
 
   Future<Busca> _carregar() async {
     final (secoes, sinonimos) = await (
@@ -37,7 +49,7 @@ class _TelaBuscaState extends State<TelaBusca> {
             border: InputBorder.none,
           ),
           textInputAction: TextInputAction.search,
-          onChanged: (v) => setState(() => _consulta = v),
+          onChanged: _mudou,
         ),
       ),
       body: FutureBuilder<Busca>(
@@ -56,11 +68,19 @@ class _TelaBuscaState extends State<TelaBusca> {
             );
           }
           final resultados = snap.data!.buscar(_consulta);
+          final wiki = _WikiNaBusca(temWiki: _temWiki, resultados: _wiki);
           if (resultados.isEmpty) {
-            return const Padding(
-              padding: EdgeInsets.all(16),
-              child: Text(
-                'Nada encontrado. Tente outra palavra, ou use o botão de emergência na tela inicial.',
+            return LarguraLeitura(
+              child: ListView(
+                children: [
+                  const Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text(
+                      'Nada encontrado nos guias. Tente outra palavra, ou use o botão de emergência na tela inicial.',
+                    ),
+                  ),
+                  wiki,
+                ],
               ),
             );
           }
@@ -97,11 +117,50 @@ class _TelaBuscaState extends State<TelaBusca> {
                       ),
                     ),
                   ),
+                wiki,
               ],
             ),
           );
         },
       ),
+    );
+  }
+}
+
+/// Artigos da Wikipédia com o título buscado, se houver pacote baixado.
+class _WikiNaBusca extends StatelessWidget {
+  const _WikiNaBusca({required this.temWiki, required this.resultados});
+
+  final Future<bool> temWiki;
+  final Future<List<(PacoteWiki, EntradaZim)>>? resultados;
+
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder<bool>(
+      future: temWiki,
+      builder: (context, snap) {
+        if (snap.data != true || resultados == null) {
+          return const SizedBox.shrink();
+        }
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 12, 16, 16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'NA WIKIPÉDIA',
+                style: TextStyle(
+                  color: corTextoSuave,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: 1.5,
+                  fontSize: 12,
+                ),
+              ),
+              ResultadosWiki(resultados: resultados!),
+            ],
+          ),
+        );
+      },
     );
   }
 }

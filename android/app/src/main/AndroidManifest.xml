@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Só para baixar os pacotes da Wikipédia, quando a pessoa pede. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:label="Farol"
         android:name="${applicationName}"

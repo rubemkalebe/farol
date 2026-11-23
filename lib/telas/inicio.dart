@@ -4,6 +4,7 @@ import '../dados/conteudo.dart';
 import '../dados/locais.dart';
 import '../dados/mapa_offline.dart';
 import '../dados/preferencias.dart';
+import '../dados/wikipedia.dart';
 import 'busca.dart';
 import 'emergencia.dart';
 import 'escolher_cidade.dart';
@@ -13,6 +14,7 @@ import 'farol_logo.dart';
 import 'ficha.dart';
 import 'largura.dart';
 import 'mapa_offline.dart';
+import 'wikipedia.dart';
 
 const _icones = <String, IconData>{
   'bolt': Icons.bolt,
@@ -35,6 +37,7 @@ class _TelaInicioState extends State<TelaInicio> {
   String? _cidade;
   List<Cidade> _cidades = const [];
   LembreteMapa _lembreteMapa = LembreteMapa.nenhum;
+  bool _semWikipedia = false;
 
   @override
   void initState() {
@@ -47,6 +50,7 @@ class _TelaInicioState extends State<TelaInicio> {
         _cidades = cidades;
         _lembreteMapa = mapa.lembrete();
       });
+      _conferirWikipedia();
       // Primeira vez: pergunta a cidade para mostrar os telefones certos.
       if (cidade == null) {
         WidgetsBinding.instance.addPostFrameCallback((_) => _escolherCidade());
@@ -64,6 +68,17 @@ class _TelaInicioState extends State<TelaInicio> {
     );
     final mapa = await MapaOffline.abrir();
     if (mounted) setState(() => _lembreteMapa = mapa.lembrete());
+  }
+
+  Future<void> _conferirWikipedia() async {
+    final instalados = await Wikipedia.instancia.instalados();
+    if (mounted) setState(() => _semWikipedia = instalados.isEmpty);
+  }
+
+  Future<void> _abrirWikipedia() async {
+    await Navigator.of(context)
+        .push(MaterialPageRoute(builder: (_) => const TelaWikipedia()));
+    await _conferirWikipedia();
   }
 
   String get _rotuloCidade {
@@ -140,6 +155,11 @@ class _TelaInicioState extends State<TelaInicio> {
                         onTap: _abrirMapaOffline,
                       ),
                     ],
+                    if (_semWikipedia &&
+                        _lembreteMapa == LembreteMapa.nenhum) ...[
+                      const SizedBox(height: 12),
+                      _AvisoWikipedia(onTap: _abrirWikipedia),
+                    ],
                     const SizedBox(height: 28),
                     _Rotulo('GUIAS'),
                     const SizedBox(height: 10),
@@ -161,6 +181,14 @@ class _TelaInicioState extends State<TelaInicio> {
                       titulo: 'Mapa sem internet',
                       texto: 'Como deixar o mapa da cidade guardado no app de mapas do celular.',
                       onTap: _abrirMapaOffline,
+                    ),
+                    const SizedBox(height: 10),
+                    _CartaoFerramenta(
+                      icone: Icons.menu_book_outlined,
+                      titulo: 'Wikipédia sem internet',
+                      texto:
+                          'Baixe Medicina e outros pacotes para ler no apagão.',
+                      onTap: _abrirWikipedia,
                     ),
                     const SizedBox(height: 24),
                     Center(
@@ -691,6 +719,62 @@ class _AvisoMapa extends StatelessWidget {
                   ),
                 ),
                 const Icon(Icons.chevron_right, color: corTextoSuave),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Aparece enquanto nenhum pacote da Wikipédia estiver no aparelho (depois
+/// do aviso do mapa, um de cada vez).
+class _AvisoWikipedia extends StatelessWidget {
+  const _AvisoWikipedia({required this.onTap});
+
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      key: const ValueKey('aviso-wikipedia'),
+      color: Colors.transparent,
+      child: Ink(
+        decoration: BoxDecoration(
+          color: corSuperficie,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: corFeixe.withValues(alpha: 0.6)),
+        ),
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(16),
+          child: const Padding(
+            padding: EdgeInsets.all(14),
+            child: Row(
+              children: [
+                Icon(Icons.menu_book_outlined, color: corFeixe, size: 28),
+                SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Baixe a Wikipédia de Medicina',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 15,
+                        ),
+                      ),
+                      SizedBox(height: 2),
+                      Text(
+                        'Sem internet, o celular não abre a Wikipédia. São 116 MB.',
+                        style: TextStyle(color: corTextoSuave, fontSize: 13),
+                      ),
+                    ],
+                  ),
+                ),
+                Icon(Icons.chevron_right, color: corTextoSuave),
               ],
             ),
           ),
