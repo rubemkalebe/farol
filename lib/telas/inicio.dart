@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../dados/conteudo.dart';
 import '../dados/locais.dart';
+import '../dados/mapa_offline.dart';
 import '../dados/preferencias.dart';
 import 'busca.dart';
 import 'emergencia.dart';
@@ -11,6 +12,7 @@ import 'capitulo.dart';
 import 'farol_logo.dart';
 import 'ficha.dart';
 import 'largura.dart';
+import 'mapa_offline.dart';
 
 const _icones = <String, IconData>{
   'bolt': Icons.bolt,
@@ -32,22 +34,36 @@ class _TelaInicioState extends State<TelaInicio> {
   late final Future<List<Capitulo>> _indice = carregarIndice();
   String? _cidade;
   List<Cidade> _cidades = const [];
+  LembreteMapa _lembreteMapa = LembreteMapa.nenhum;
 
   @override
   void initState() {
     super.initState();
-    (lerCidade(), carregarCidades()).wait.then((r) {
+    (lerCidade(), carregarCidades(), MapaOffline.abrir()).wait.then((r) {
       if (!mounted) return;
-      final (cidade, cidades) = r;
+      final (cidade, cidades, mapa) = r;
       setState(() {
         _cidade = cidade;
         _cidades = cidades;
+        _lembreteMapa = mapa.lembrete();
       });
       // Primeira vez: pergunta a cidade para mostrar os telefones certos.
       if (cidade == null) {
         WidgetsBinding.instance.addPostFrameCallback((_) => _escolherCidade());
       }
     });
+  }
+
+  /// Nome da cidade escolhida, ou nulo em "Outra cidade".
+  String? get _nomeCidade =>
+      _cidades.where((c) => c.id == _cidade).firstOrNull?.nome;
+
+  Future<void> _abrirMapaOffline() async {
+    await Navigator.of(context).push<bool>(
+      MaterialPageRoute(builder: (_) => TelaMapaOffline(cidade: _nomeCidade)),
+    );
+    final mapa = await MapaOffline.abrir();
+    if (mounted) setState(() => _lembreteMapa = mapa.lembrete());
   }
 
   String get _rotuloCidade {
@@ -64,9 +80,16 @@ class _TelaInicioState extends State<TelaInicio> {
         builder: (_) => TelaEscolherCidade(cidades: _cidades, atual: _cidade),
       ),
     );
+    final primeiraVez = _cidade == null;
     final id = escolhida ?? _cidade ?? outraCidade;
     await salvarCidade(id);
-    if (mounted) setState(() => _cidade = id);
+    if (!mounted) return;
+    setState(() => _cidade = id);
+    // Quem está montando o kit agora ainda tem internet: é a hora de baixar
+    // o mapa da cidade no app de mapas do celular.
+    if (primeiraVez && _lembreteMapa == LembreteMapa.baixar) {
+      await _abrirMapaOffline();
+    }
   }
 
   @override
@@ -109,6 +132,14 @@ class _TelaInicioState extends State<TelaInicio> {
                         MaterialPageRoute(builder: (_) => const TelaBusca()),
                       ),
                     ),
+                    if (_lembreteMapa != LembreteMapa.nenhum) ...[
+                      const SizedBox(height: 12),
+                      _AvisoMapa(
+                        lembrete: _lembreteMapa,
+                        cidade: _nomeCidade,
+                        onTap: _abrirMapaOffline,
+                      ),
+                    ],
                     const SizedBox(height: 28),
                     _Rotulo('GUIAS'),
                     const SizedBox(height: 10),
@@ -123,6 +154,13 @@ class _TelaInicioState extends State<TelaInicio> {
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute(builder: (_) => const TelaFicha()),
                       ),
+                    ),
+                    const SizedBox(height: 10),
+                    _CartaoFerramenta(
+                      icone: Icons.map_outlined,
+                      titulo: 'Mapa sem internet',
+                      texto: 'Como deixar o mapa da cidade guardado no app de mapas do celular.',
+                      onTap: _abrirMapaOffline,
                     ),
                     const SizedBox(height: 24),
                     Center(
@@ -580,6 +618,81 @@ class _CartaoFerramenta extends StatelessWidget {
               ),
               const Icon(Icons.chevron_right, color: corTextoSuave),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Lembrete discreto do mapa offline: nunca marcou que baixou, ou faz
+/// tempo que marcou.
+class _AvisoMapa extends StatelessWidget {
+  const _AvisoMapa({
+    required this.lembrete,
+    required this.cidade,
+    required this.onTap,
+  });
+
+  final LembreteMapa lembrete;
+  final String? cidade;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final onde = cidade == null ? 'da sua cidade' : 'de $cidade';
+    final (titulo, texto) = lembrete == LembreteMapa.conferir
+        ? (
+            'Seu mapa offline ainda está no celular?',
+            'Faz mais de 6 meses que você marcou. Confira se ele continua lá e atualizado.',
+          )
+        : (
+            'Baixe o mapa $onde',
+            'Enquanto tem internet. Sem sinal, o GPS funciona e o mapa aparece.',
+          );
+    return Material(
+      key: const ValueKey('aviso-mapa'),
+      color: Colors.transparent,
+      child: Ink(
+        decoration: BoxDecoration(
+          color: corSuperficie,
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: corFeixe.withValues(alpha: 0.6)),
+        ),
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(16),
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Row(
+              children: [
+                const Icon(Icons.map_outlined, color: corFeixe, size: 28),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        titulo,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        texto,
+                        style: const TextStyle(
+                          color: corTextoSuave,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.chevron_right, color: corTextoSuave),
+              ],
+            ),
           ),
         ),
       ),

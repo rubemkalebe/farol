@@ -121,8 +121,45 @@ Quem amamenta deve **continuar amamentando**. [fonte: cofen-nt-56-2024-bebes-eme
 - [marcar: vespera-termometro] Se tiver, coloque um termômetro na geladeira e outro no freezer [fonte: cdc-keep-food-safe-after-emergency]
 - [marcar: vespera-dinheiro] Saque dinheiro [fonte: readygov-financial-preparedness]
 - [marcar: vespera-carro] Encha o tanque do carro [geral]
-- [marcar: vespera-mapas] Baixe o mapa offline da sua região (Organic Maps ou Google Maps) [geral]
+- [marcar: vespera-mapas] Confira se o **mapa offline** da sua cidade está no celular e atualizado (veja "Mapa offline da sua cidade", neste guia) [geral]
 - [marcar: vespera-remedios] Confira se os remédios dão para os próximos dias [fonte: readygov-disability]
+
+---
+
+## Mapa offline da sua cidade
+
+O Farol não tem mapa. Quem guarda o mapa é o app de mapas do celular, mas **só se você baixar a área antes**, com internet. Sem sinal, o GPS continua mostrando onde você está. [fonte: google-maps-offline-android] [fonte: apple-maps-offline]
+
+### Google Maps (Android e iPhone)
+
+1. Abra o Google Maps e toque na **sua foto**, no canto de cima.
+2. Toque em **Mapas off-line** e depois em **Selecione seu mapa**.
+3. Ajuste o quadro para cobrir a cidade e os lugares da família, e toque em **Download**.
+4. Ainda em Mapas off-line, abra as **Configurações** (engrenagem) e ligue a **atualização automática**.
+
+[fonte: google-maps-offline-android] [fonte: google-maps-offline-ios]
+
+- **O mapa baixado vence.** Com a atualização automática ligada, ele se renova sozinho no Wi-Fi, 15 dias antes de vencer. [fonte: google-maps-offline-android]
+- Sem internet, o Google Maps faz **só rota de carro**, sem trânsito, e o caminho todo precisa estar dentro da área baixada. **A pé, de bicicleta e de ônibus não funciona.** [fonte: google-maps-offline-android]
+
+### Mapas da Apple (iPhone com iOS 17 ou mais novo)
+
+1. Abra o app **Mapas** e toque na **sua foto** ou nas suas iniciais.
+2. Toque em **Mapas Off-line** e depois em **Adicionar Mapa Off-line**.
+3. Ajuste a área e toque em **Baixar**. O app mostra o tamanho antes.
+4. Confira se **Atualizações Automáticas** está ligado. Ele já vem ligado.
+
+[fonte: apple-maps-offline]
+
+- Sem internet, os Mapas da Apple fazem rota de carro, a pé, de bicicleta e de transporte público dentro da área baixada. [fonte: apple-maps-offline]
+- **Otimizar Armazenamento** pode apagar mapas que você não usa. Desligue essa opção para o mapa ficar guardado. [fonte: apple-maps-offline] [geral]
+- O mapa off-line da Apple não existe em todas as regiões. Se a opção não aparecer, use o Google Maps. [fonte: apple-maps-offline]
+
+### Antes de precisar
+
+- **Teste:** ligue o modo avião e abra o mapa. Se aparecer a sua rua, está pronto. [geral]
+- Baixe também a cidade de parentes ou o caminho até eles. [geral]
+- O mapa ocupa espaço. Confira se o celular tem espaço livre antes de baixar. [geral]
 
 ---
 

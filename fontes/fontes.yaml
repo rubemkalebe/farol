@@ -3615,3 +3615,202 @@ fontes:
     usado_em: [contatos, outros-desastres, preparacao, primeiros-socorros]
     notas: |
       Rede residencial e comercial no bairro Eldorado, em Contagem. "Plantão 24h - Ligue 117".
+
+  # ───────────── Mapas offline (app de mapas do celular) ─────────────
+
+  - id: google-maps-offline-android
+    tema: comunicacao
+    titulo: "Baixar mapas para usar off-line no Google Maps (Android)"
+    orgao: Google (Central de Ajuda do Google Maps)
+    url: https://support.google.com/maps/answer/6291838?hl=pt-BR&co=GENIE.Platform%3DAndroid
+    acessado: 2026-11-23
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Baixar: foto do perfil > "Mapas off-line" > "Selecione seu mapa" > ajustar a área > "Download".
+      Ou: buscar o lugar, deslizar o cartão > "Baixar mapa off-line" > "Download".
+      Atualização: em "Mapas off-line", Configurações > "Atualização automática de mapas off-line".
+      Os mapas tentam se atualizar 15 dias antes de expirar, e só no Wi-Fi. A página manda
+      atualizar "antes que expirem", sem dar o prazo (1 ano aparece só na página de carros
+      com Google integrado, por isso não foi usado).
+      Sem internet: só rota de carro, sem trânsito e sem rotas alternativas, e o trajeto
+      todo precisa estar dentro da área baixada. Transporte público, bicicleta e a pé não.
+      Nomes de menu conferidos na página em pt-BR, parcialmente traduzida por IA: conferir no app.
+
+  - id: google-maps-offline-ios
+    tema: comunicacao
+    titulo: "Baixar mapas para usar off-line no Google Maps (iPhone e iPad)"
+    orgao: Google (Central de Ajuda do Google Maps)
+    url: https://support.google.com/maps/answer/6291838?hl=pt-BR&co=GENIE.Platform%3DiOS
+    acessado: 2026-11-23
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Mesmo caminho pelo perfil > "Mapas off-line" > "Selecione seu mapa" > "Download".
+      Pelo lugar: tocar no nome > "Mais" > "Baixar mapa off-line". Mesma regra de
+      atualização (15 dias antes, Wi-Fi) e mesmas limitações (só carro).
+
+  - id: apple-maps-offline
+    tema: comunicacao
+    titulo: "Como usar mapas off-line no app Mapas"
+    orgao: Apple (Suporte)
+    url: https://support.apple.com/pt-br/105084
+    acessado: 2026-11-23
+    publicado: 2025-12-29
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      "Com o Mapas no iOS 17 ou posterior". Foto ou iniciais > "Mapas Off-line" >
+      "Adicionar Mapa Off-line" > ajustar > "Baixar"; mostra o tamanho antes.
+      "Atualizações Automáticas" vem ligado; download "Apenas Wi-Fi" por padrão.
+      "Otimizar Armazenamento" apaga mapas não usados. Sem internet: rotas de carro,
+      a pé, de bicicleta e de transporte público, com horário de chegada.
+      Mapas off-line "não estão disponíveis em todos os países ou regiões" (cobertura
+      no Brasil não confirmada). Guia do usuário: https://support.apple.com/pt-br/guide/iphone/iphcfb5f5bc6/ios
+
+  # ───────────── Onde ser atendido: Belo Horizonte ─────────────
+
+  - id: pbh-urgencia-emergencia
+    tema: saude
+    titulo: "Urgência e emergência (UPAs e SAMU)"
+    orgao: Prefeitura de Belo Horizonte – Secretaria Municipal de Saúde
+    url: https://prefeitura.pbh.gov.br/saude/atencao-a-saude/urgencia-e-emergencia
+    acessado: 2026-11-23
+    publicado: 2026-10-28  # "atualizado em"
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      UPAs: "Funcionamento 24h, todos os dias da semana". Endereços e telefones das 9 UPAs
+      (Barreiro, Centro-Sul, Leste, Nordeste, Noroeste, Norte, Oeste, Pampulha, Venda Nova).
+      Lista igual em https://prefeitura.pbh.gov.br/saude/informacoes/atencao-a-saude/urgencia-e-emergencia/upa
+      SAMU 192, 24h. A notícia de 2020 dá a UPA Norte na Av. Risoleta Neves, 307; vale a lista atual (2.580, Guarani).
+      UPA Noroeste II funciona no Odilon Behrens (adultos, casos clínicos), sem endereço próprio publicado.
+
+  - id: pbh-sintomas-leves-2026
+    tema: saude
+    titulo: "Pacientes com sintomas leves devem procurar os centros de saúde ou teleconsultas"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/noticias/pacientes-com-sintomas-leves-devem-procurar-os-centros-de-saude-ou-teleconsultas-para-nao
+    acessado: 2026-11-23
+    publicado: 2026-09-08
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Sintomas leves, acompanhamento, vacinas: "o centro de saúde de sua referência", de segunda a sexta.
+      "As UPAs funcionam 24 horas e são estruturadas para atendimentos de casos com sintomas graves":
+      falta de ar intensa, dor no peito, convulsão, suspeita de fratura.
+
+  - id: pbh-upa-oeste-provisoria
+    tema: saude
+    titulo: "UPA Oeste passa a funcionar temporariamente em novo endereço"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/noticias/upa-oeste-passa-funcionar-temporariamente-em-novo-endereco-partir-desta-terca-feira-7
+    acessado: 2026-11-23
+    publicado: 2026-04-07
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: Rua Santa Cruz, 137, por cerca de 18 meses. Conferir de novo quando a reforma acabar.
+
+  - id: pbh-upa-venda-nova-provisoria
+    tema: saude
+    titulo: "UPA Venda Nova passa a funcionar em novo local"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/noticias/upa-venda-nova-passa-funcionar-em-novo-local-partir-desta-terca-feira-1deg
+    acessado: 2026-11-23
+    publicado: 2025-07-01
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: Rua Padre Pedro Pinto, 173. "A mudança é temporária", cerca de 18 meses (deve voltar no início de 2027).
+
+  - id: pbh-upa-barreiro-provisoria
+    tema: saude
+    titulo: "UPA Barreiro vai funcionar temporariamente em novo endereço"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/noticias/upa-barreiro-vai-funcionar-temporariamente-em-novo-endereco-partir-desta-terca-feira-11
+    acessado: 2026-11-23
+    publicado: 2025-11-11
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: Rua Cabo Valério dos Santos, 285, durante a reforma (cerca de 2 anos).
+
+  - id: fhemig-joao-xxiii
+    tema: saude
+    titulo: "Hospital João XXIII"
+    orgao: Fhemig
+    url: https://www.fhemig.mg.gov.br/atendimento/complexo-hospitalar-de-urgencia/hospital-joao-xxiii
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Pronto atendimento 24h: politrauma, acidentes graves, grandes queimados, fraturas, animais
+      peçonhentos e mordeduras, intoxicações e envenenamentos, trauma e intoxicação em crianças.
+      Av. Professor Alfredo Balena, 400, Santa Efigênia, CEP 30130-100. Secretaria (31) 3239-9200 / 9201.
+      CIATox/MG 3239-9275 / 3239-9308 / 3239-9390. A lista da PBH de 2020 dá 3239-9228 / 9357: vale a Fhemig.
+
+  - id: fhemig-joao-paulo-ii
+    tema: saude
+    titulo: "Hospital Infantil João Paulo II"
+    orgao: Fhemig
+    url: https://www.fhemig.mg.gov.br/atendimento/complexo-hospitalar-de-urgencia/hospital-infantil-joao-paulo-ii
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: '"Pronto atendimento 24h" pediátrico. Alameda Ezequiel Dias, 345, Santa Efigênia. Portaria (31) 3239-9050.'
+
+  - id: pbh-hob-perguntas-frequentes
+    tema: saude
+    titulo: "Hospital Metropolitano Odilon Behrens – Perguntas frequentes"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/hospital-municipal-odilon-behrens/perguntas-frequentes
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      Pronto-socorro atende urgência "independentemente do horário": cirurgia geral, ortopedia/trauma,
+      neurologia, vascular, urologia, gineco-obstetrícia, pediatria, odontologia. Telefones 3277-6198 / 6205.
+      Endereço diverge entre fontes (Rua Formiga, 50 na lista de 2020; CEPs diferentes): o app mostra só o
+      bairro e abre o mapa pelo nome do hospital.
+
+  - id: hrtn-site
+    tema: saude
+    titulo: "Hospital Risoleta Tolentino Neves"
+    orgao: Hospital Risoleta Tolentino Neves (Fundep/UFMG, 100% SUS)
+    url: https://www.hrtn.fundep.ufmg.br/
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: '"porta aberta 24 horas/dia". Rua das Gabirobas, 01, Vila Clóris, CEP 31744-012. (31) 3459-3200.'
+
+  - id: fhemig-odete-valadares
+    tema: saude
+    titulo: "Maternidade Odete Valadares"
+    orgao: Fhemig
+    url: https://www.fhemig.mg.gov.br/atendimento/unidades-assistenciais-de-referencia/maternidade-odete-valadares
+    acessado: 2026-11-23
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [contatos]
+    notas: |
+      "Pronto atendimento 24h": urgências ginecológicas e obstétricas e atendimento a vítimas de
+      violência sexual. Av. do Contorno, 9330, Barro Preto. (31) 3298-6000.
+      Fora da lista do app: Hospital Metropolitano Dr. Célio de Castro "não atende por demanda espontânea"
+      (PBH, 12/12/2025); Sofia Feldman não informa 24h no site.

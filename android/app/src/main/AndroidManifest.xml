@@ -45,6 +45,11 @@
             <action android:name="android.intent.action.SENDTO" />
             <data android:scheme="sms" />
         </intent>
+        <!-- "Abrir no mapa": endereço no app de mapas do celular. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="geo" />
+        </intent>
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>

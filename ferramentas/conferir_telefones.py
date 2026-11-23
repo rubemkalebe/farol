@@ -13,6 +13,7 @@ dígitos do número no texto. Saída:
 Termina com erro só se houver AUSENTE. Uso: python3 ferramentas/conferir_telefones.py
 """
 import glob
+import gzip
 import re
 import sys
 import urllib.request
@@ -45,6 +46,9 @@ def baixar(url):
             req = urllib.request.Request(url, headers={'User-Agent': 'farol-conferencia/1.0'})
             with urllib.request.urlopen(req, timeout=20) as r:
                 corpo = r.read()
+                # Alguns sites (ex.: Fhemig) mandam gzip mesmo sem pedido.
+                if corpo[:2] == b'\x1f\x8b':
+                    corpo = gzip.decompress(corpo)
                 # PDF não é lido aqui: precisa de conferência manual.
                 if corpo[:5] == b'%PDF-' or 'pdf' in r.headers.get('Content-Type', ''):
                     _cache[url] = ValueError('PDF')

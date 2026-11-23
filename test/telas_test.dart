@@ -137,7 +137,13 @@ void main() {
     expect(find.text('Natal'), findsNothing);
     await tester.tap(find.text('Mossoró'));
     await tester.pumpAndSettle();
+    // Logo depois da cidade, o passo a passo do mapa offline.
+    expect(find.text('Mapa sem internet'), findsOneWidget);
+    expect(find.textContaining('Baixe o mapa de Mossoró'), findsOneWidget);
+    await tester.tap(find.byKey(const ValueKey('mapa-ja-baixei')));
+    await tester.pumpAndSettle();
     expect(find.text('Mossoró (RN)'), findsOneWidget);
+    expect(find.byKey(const ValueKey('aviso-mapa')), findsNothing);
     expect(
       (await SharedPreferences.getInstance()).getString('cidade'),
       'rn/mossoro',

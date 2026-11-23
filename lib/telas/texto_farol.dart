@@ -4,6 +4,7 @@ import 'package:markdown/markdown.dart' as md;
 import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/fontes.dart';
+import '../dados/mapa_offline.dart';
 import '../dados/marcacoes.dart';
 import '../tema.dart';
 import 'ficha.dart' show ligar;
@@ -43,13 +44,17 @@ class TextoFarol extends StatelessWidget {
             ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
           ],
         ),
-        // tel: abre o discador e sms: abre a mensagem. Outros links não
-        // são seguidos: o app é offline e não abre páginas.
+        // tel: abre o discador, sms: abre a mensagem e mapa: abre o
+        // endereço no app de mapas do celular. Outros links não são
+        // seguidos: o app é offline e não abre páginas.
         onTapLink: (_, href, _) {
           if (href == null) return;
           if (href.startsWith('tel:')) ligar(href.substring(4));
           if (href.startsWith('sms:')) {
             launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
+          }
+          if (href.startsWith('mapa:')) {
+            abrirNoMapa(Uri.decodeComponent(href.substring(5)));
           }
         },
         builders: {

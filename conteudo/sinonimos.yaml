@@ -67,3 +67,8 @@ sinonimos:
   criança: [crianca]
   oxigenio: [aparelho, cpap]
   aparelho: [eletrico, oxigenio]
+  gps: [mapa]
+  rota: [mapa]
+  caminho: [mapa]
+  localizacao: [mapa]
+  maps: [mapa]

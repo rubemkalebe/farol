@@ -3,7 +3,7 @@ uf: mg
 energia: cemig
 agua: copasa
 gas: gasmig
-verificado_em: 2026-11-22
+verificado_em: 2026-11-23
 blocos:
   alagamento-local: |
     - Em BH, as avenidas sobre córregos são fechadas quando a água sobe: Teresa Cristina, Francisco Sá, Silva Lobo, Prudente de Morais, Silviano Brandão, Bernardo Vasconcelos, Vilarinho e outras. [fonte: pbh-bloqueio-vias-chuvas]
@@ -19,6 +19,32 @@ blocos:
     - **Defesa Civil de BH:** [**199**](tel:199), 24 horas. No WhatsApp, procure por "defesacivilbh". [fonte: pbh-periodo-chuvoso-2026-2027]
   deslizamento-local: |
     Em BH, o **Disque Vistoria** é o (31) 3277-6409, em horário comercial; fora dele, ligue 199. [fonte: pbh-urbel-dicas-periodo-chuvoso-2026]
+  hospitais: |
+    ### Onde ser atendido em BH
+
+    - **Sintoma grave** (falta de ar forte, dor no peito, convulsão, suspeita de fratura): **UPA**, aberta 24 horas. [fonte: pbh-sintomas-leves-2026]
+    - **Sintoma leve**, receita, vacina: **centro de saúde**, de segunda a sexta. [fonte: pbh-sintomas-leves-2026]
+    - Não dá para levar a pessoa: [**192**](tel:192) (SAMU). [fonte: pbh-urgencia-emergencia]
+
+    **Hospitais com pronto-socorro 24 horas:**
+
+    - **João XXIII:** acidente grave, queimadura grave, fratura, picada de bicho peçonhento e intoxicação, também em criança. Av. Prof. Alfredo Balena, 400, Santa Efigênia. [(31) 3239-9200](tel:3132399200) · [Abrir no mapa](mapa:Av.%20Professor%20Alfredo%20Balena%2C%20400%2C%20Belo%20Horizonte%20-%20MG) [fonte: fhemig-joao-xxiii]
+    - **Infantil João Paulo II:** pronto atendimento de crianças. Alameda Ezequiel Dias, 345, Santa Efigênia. [(31) 3239-9050](tel:3132399050) · [Abrir no mapa](mapa:Alameda%20Ezequiel%20Dias%2C%20345%2C%20Belo%20Horizonte%20-%20MG) [fonte: fhemig-joao-paulo-ii]
+    - **Odilon Behrens:** pronto-socorro de trauma, cirurgia, gravidez e parto e crianças. Bairro São Cristóvão. [(31) 3277-6198](tel:3132776198) · [Abrir no mapa](mapa:Hospital%20Metropolitano%20Odilon%20Behrens%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-hob-perguntas-frequentes]
+    - **Risoleta Tolentino Neves:** porta aberta 24 horas. Rua das Gabirobas, 1, Vila Clóris. [(31) 3459-3200](tel:3134593200) · [Abrir no mapa](mapa:Rua%20das%20Gabirobas%2C%201%2C%20Belo%20Horizonte%20-%20MG) [fonte: hrtn-site]
+    - **Maternidade Odete Valadares:** urgência na gravidez e ginecológica, e atendimento a vítima de violência sexual. Av. do Contorno, 9330, Barro Preto. [(31) 3298-6000](tel:3132986000) · [Abrir no mapa](mapa:Avenida%20do%20Contorno%2C%209330%2C%20Belo%20Horizonte%20-%20MG) [fonte: fhemig-odete-valadares]
+
+    **UPAs, 24 horas, todos os dias:**
+
+    - **UPA Barreiro:** Rua Cabo Valério dos Santos, 285, Átila de Paiva (endereço provisório durante a reforma). [(31) 3277-5842](tel:3132775842) · [Abrir no mapa](mapa:Rua%20Cabo%20Val%C3%A9rio%20dos%20Santos%2C%20285%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia] [fonte: pbh-upa-barreiro-provisoria]
+    - **UPA Centro-Sul:** Rua Domingos Vieira, 488, Santa Efigênia. [(31) 3238-5900](tel:3132385900) · [Abrir no mapa](mapa:Rua%20Domingos%20Vieira%2C%20488%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Leste:** Av. dos Andradas, 7450, Vera Cruz. [(31) 3277-9030](tel:3132779030) · [Abrir no mapa](mapa:Av.%20dos%20Andradas%2C%207450%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Nordeste:** Rua Joaquim Gouvêa, 560, São Paulo. [(31) 3246-9512](tel:3132469512) · [Abrir no mapa](mapa:Rua%20Joaquim%20Gouv%C3%AAa%2C%20560%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Noroeste:** Rua Pereira Passos, 38, São Cristóvão. [(31) 3277-1347](tel:3132771347) · [Abrir no mapa](mapa:Rua%20Pereira%20Passos%2C%2038%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Norte:** Av. Risoleta Neves, 2580, Guarani. [(31) 3277-6790](tel:3132776790) · [Abrir no mapa](mapa:Av.%20Risoleta%20Neves%2C%202580%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Oeste:** Rua Santa Cruz, 137, Alto Barroca (endereço provisório durante a reforma). [(31) 3277-7044](tel:3132777044) · [Abrir no mapa](mapa:Rua%20Santa%20Cruz%2C%20137%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia] [fonte: pbh-upa-oeste-provisoria]
+    - **UPA Pampulha:** Av. Santa Terezinha, 515, Santa Terezinha. [(31) 3277-8441](tel:3132778441) · [Abrir no mapa](mapa:Av.%20Santa%20Terezinha%2C%20515%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia]
+    - **UPA Venda Nova:** Rua Padre Pedro Pinto, 173, Venda Nova (endereço provisório durante a reforma). [(31) 3277-8909](tel:3132778909) · [Abrir no mapa](mapa:Rua%20Padre%20Pedro%20Pinto%2C%20173%2C%20Belo%20Horizonte%20-%20MG) [fonte: pbh-urgencia-emergencia] [fonte: pbh-upa-venda-nova-provisoria]
   peconhentos-hospital: |
     Em BH, o hospital de referência é o **João XXIII**. [fonte: agenciaminas-mg-peconhentos-2026]
   prefeitura: |
