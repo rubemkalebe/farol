@@ -35,6 +35,10 @@ inicio:
       icone: raio
       secoes: ["primeiros-socorros/Choque elétrico"]
       ligar: ["193", "192"]
+    - texto: Fogo em casa ou no prédio
+      icone: fogo
+      secoes: ["outros-desastres/Incêndio em casa ou prédio"]
+      ligar: ["193"]
     - texto: Queimadura
       icone: fogo
       secoes: ["primeiros-socorros/Queimadura"]
@@ -141,6 +145,10 @@ desastre:
       icone: vento
       secoes: ["outros-desastres/Vendaval e granizo", "outros-desastres/Ciclone, tornado e vendaval forte (mais comum no Sul)"]
       ligar: ["199"]
+    - texto: Sirene de barragem
+      icone: barragem
+      secoes: ["outros-desastres/Rompimento de barragem"]
+      ligar: ["199", "193"]
     - texto: Tremor de terra
       icone: tremor
       secoes: ["outros-desastres/Tremor de terra (terremoto)"]

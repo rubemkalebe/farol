@@ -42,6 +42,7 @@ const iconesEmergencia = <String, IconData>{
   'deslizamento': Icons.landslide,
   'vento': Icons.air,
   'limpeza': Icons.cleaning_services,
+  'barragem': Icons.waves,
 };
 
 // Guarda o roteiro pronto (não a tarefa de carregamento), para não depender

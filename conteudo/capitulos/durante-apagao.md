@@ -30,7 +30,7 @@ Se precisar usar vela:
 
 **Fio caído na rua:** não chegue perto e não toque. Se o fio cair sobre o carro, **fique dentro**. Se pegar fogo, pule para longe sem encostar no carro e no chão ao mesmo tempo. Ligue 193 ou a distribuidora de energia, no [116](tel:116). [fonte: agenciaminas-cemig-fio-partido] [fonte: anatel-sup-codigos]
 
-**Incêndio:** saia de casa imediatamente e ligue 193. [fonte: cbmmg-autoprotecao-incendios]
+**Incêndio:** saia de casa imediatamente e ligue 193. [fonte: cbmmg-autoprotecao-incendios] O passo a passo está em **Outros desastres**, em "Incêndio em casa ou prédio".
 
 ---
 

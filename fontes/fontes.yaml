@@ -475,7 +475,7 @@ fontes:
     publicado: 2026-04-15
     licenca: desconhecida
     redistribuir: verificar
-    usado_em: [durante-apagao]
+    usado_em: [durante-apagao, outros-desastres]
     notas: |
       Risco de vários aparelhos numa tomada e carregadores de baixa qualidade; "não deixar aparelhos carregando sobre superfícies combustíveis".
       Em incêndio, "a prioridade seja deixar o imóvel imediatamente"; 193.
@@ -1274,8 +1274,9 @@ fontes:
     publicado: 2023
     licenca: desconhecida
     redistribuir: verificar
-    usado_em: [primeiros-socorros]
+    usado_em: [primeiros-socorros, outros-desastres]
     notas: |
+      Prevenção: "Feche a válvula do botijão antes de sair de casa e antes de dormir."; "Nunca jogue água sobre o fogo provocado na frigideira pela queima da gordura."
       p.6: "Nunca aplique produtos caseiros como sal, açúcar, pó de café, pasta de dente, pomadas, ovo, manteiga, óleo de cozinha ou qualquer outro."
       p.7: "Queimaduras na face, genitália, mãos e pés são sempre consideradas graves e devem receber atendimento hospitalar imediato."
       p.7: "Não aplique gelo diretamente sobre o local"; "Utilize apenas água em temperatura ambiente para resfriar"
@@ -4093,3 +4094,211 @@ fontes:
     notas: |
       Hospital Municipal Francisca Conceição da Silva: cirurgias eletivas e consultas; "o paciente deve buscar a
       Unidade Básica de Saúde (UBS) de seu bairro ou comunidade para a equipe realizar o encaminhamento". Não é urgência.
+
+  - id: cbmsc-incendio-edificacao
+    tema: seguranca
+    titulo: "Dicas de prevenção – Incêndio em Edificação"
+    orgao: Corpo de Bombeiros Militar de Santa Catarina
+    url: https://www.cbm.sc.gov.br/index.php/dicas-de-prevencao/incendio-em-edificacao
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "ande agachado para um local seguro (pois a fumaça se concentra na parte superior do ambiente) e coloque um pano úmido no nariz".
+      Panela: "Desligue o gás"; "tampar a panela com a tampa ou molhe um pano"; "nunca jogue água"; se não apagar, sair e 193.
+      "Mantenha velas longe de materiais que possam pegar fogo (...) ou as substitua por uma lanterna"; "evite o uso de plugues “T” ou benjamins".
+
+  - id: cbmal-incendio
+    tema: seguranca
+    titulo: "Incêndio"
+    orgao: Corpo de Bombeiros Militar de Alagoas
+    url: https://www.bombeiros.al.gov.br/paginas/view/40/inc%C3%AAndio
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Não perca tempo tentando salvar objetos, salve sua vida"; portas fechadas "mas sem trancá-las".
+      Preso: "Vede as frestas com um cobertor ou tapete"; "próximo de uma janela de preferência com vista para a rua e sinalize sua posição".
+      "Se as roupas pegarem fogo, PARE, DEITE-SE NO CHÃO, E ROLE!"; "Nunca corra"; "Cubra o rosto com as mãos".
+
+  - id: cbmmt-cartilha-orientacoes
+    tema: seguranca
+    titulo: "Cartilha de orientações básicas"
+    orgao: Corpo de Bombeiros Militar de Mato Grosso
+    url: https://www.bombeiros.mt.gov.br/en/-/cartilha-de-orientacoes-basicas
+    acessado: 2026-11-23
+    publicado: 2022-01-27
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Procure rastejar para a saída"; "Toque a porta com sua mão. Se estiver quente, não abra."
+      "Feche todas as portas que ficarem atrás de você"; "Use as escadas – nunca o elevador"; "NÃO RETORNE".
+      "Se você não puder sair, mantenha-se atrás de uma porta fechada." Figuras creditadas ao CBPMESP.
+
+  - id: cbmce-fogo-oleo-panela-2022
+    tema: seguranca
+    titulo: "CBMCE orienta como apagar fogo de óleo na panela"
+    orgao: Corpo de Bombeiros Militar do Ceará
+    url: https://www.bombeiros.ce.gov.br/2022/03/31/cbmce-alerta-como-apagar-fogo-de-oleo-na-panela/
+    acessado: 2026-11-23
+    publicado: 2022-03-31
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Desligue o registro do fogão e feche o registro do botijão de gás."
+      "Após tampar a panela se faz necessário aguardar que esta esfrie, pois se em pouco tempo levantar a tampa, o fogo poderá voltar."
+
+  - id: aen-pr-incendio-apartamentos-2026
+    tema: seguranca
+    titulo: "Corpo de Bombeiros orienta moradores de apartamentos como agir em casos de incêndio"
+    orgao: Agência Estadual de Notícias do Paraná (Corpo de Bombeiros do PR)
+    url: https://www.parana.pr.gov.br/aen/Noticia/Corpo-de-Bombeiros-orienta-moradores-de-apartamentos-como-agir-em-casos-de-incendio
+    acessado: 2026-11-23
+    publicado: 2026-03-18
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Conheça a rota de fuga do seu andar"; "Mantenha portas corta-fogo sempre fechadas"; "Nunca utilize o elevador em caso de incêndio".
+
+  - id: cbmmg-cartilha-botijao
+    tema: seguranca
+    titulo: "Cartilha de Dicas Preventivas – Botijão de Gás"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: https://www.bombeiros.mg.gov.br/storage/files/13/Cartilha%20de%20Dicas%20Preventivas%20-%20Botij%C3%A3o%20de%20G%C3%A1s%20-%20MOBILE.pdf
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Vazamento com fogo: "Acione imediatamente o Corpo de Bombeiros Militar pelo telefone 193", "Retire todas as pessoas do local", "Se possível, feche o registro de gás".
+
+  - id: cedec-mg-resolucao-83-2024-mensagens
+    tema: barragem
+    titulo: "Resolução GMG nº 83/2024, parte 2 (Anexo I: padrão de mensagens e som das sirenes)"
+    orgao: Gabinete Militar do Governador / Defesa Civil de Minas Gerais
+    url: https://www.mg.gov.br/system/files/media/documento_detalhado/2025-02/ResolucaoGMG_n83-2024-51-97_parte2.pdf
+    acessado: 2026-11-23
+    publicado: 2024-04-16
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Nível 3: "Esta é uma situação real de emergência de rompimento de barragem. Siga imediatamente pela rota de fuga até o ponto de encontro mais próximo e aguarde o resgate."
+      Teste: "Este é um teste de sirene. [...] Mantenha a calma e continue com suas atividades." Simulado: "Este é um exercício simulado de rompimento de barragem."
+
+  - id: cedec-mg-resolucao-83-2024
+    tema: barragem
+    titulo: "Resolução GMG nº 83/2024, parte 1"
+    orgao: Gabinete Militar do Governador / Defesa Civil de Minas Gerais
+    url: https://www.mg.gov.br/system/files/media/documento_detalhado/2025-02/ResolucaoGMG_n83-2024-1-50_parte1.pdf
+    acessado: 2026-11-23
+    publicado: 2024-04-16
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. "Ponto de encontro: local seguro fora da área de risco"; "Rota de fuga: caminho seguro, que apresente boas condições de trafegabilidade a pé".
+      Art. 91: "Os exercícios simulados deverão ser realizados anualmente, para a população sem dificuldade de locomoção e para as unidades de ensino".
+
+  - id: lei-12334-2010
+    tema: barragem
+    titulo: "Lei nº 12.334/2010 (Política Nacional de Segurança de Barragens), texto compilado"
+    orgao: Presidência da República
+    url: https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12334.htm
+    acessado: 2026-11-23
+    publicado: 2010-09-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Art. 2º, IX: ZAS é o "trecho do vale a jusante da barragem em que não haja tempo suficiente para intervenção da autoridade competente em situação de emergência".
+      Art. 12, XIII: PAE com "planejamento de rotas de fuga e pontos de encontro, com a respectiva sinalização".
+
+  - id: anm-resolucao-95-2022
+    tema: barragem
+    titulo: "Resolução ANM nº 95/2022"
+    orgao: Agência Nacional de Mineração
+    url: https://www.gov.br/anm/pt-br/itens/arquivos/resolucao_anm_no95.pdf
+    acessado: 2026-11-23
+    publicado: 2022-02-07
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Art. 2º, LI: ZAS delimitada pela maior entre "a distância que corresponda a um tempo de chegada da onda de inundação igual a 30 (trinta) minutos ou 10 km (dez quilômetros)".
+      Em revisão (Audiência Pública ANM nº 1/2025): conferir se saiu norma nova.
+
+  - id: corumba-simulados-barragens-2026
+    tema: barragem
+    titulo: "Prefeitura realiza ações e simulados de emergência em barragens de mineração"
+    orgao: Prefeitura de Corumbá (Defesa Civil municipal)
+    url: https://corumba.ms.gov.br/noticias/prefeitura-realiza-acoes-e-simulados-de-emergencia-em-barragens-de-mineracao
+    acessado: 2026-11-23
+    publicado: 2026-05-21
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "em caso de acionamento de sirene, siga imediatamente pela rota de fuga sinalizada até o ponto de encontro indicado."
+      "Não retorne à área de risco até a liberação oficial das autoridades competentes."
+
+  - id: midr-defesa-civil-alerta-barragens-2024
+    tema: barragem
+    titulo: "Defesa Civil Alerta será usado nas barragens do Rio São Francisco"
+    orgao: Ministério da Integração e do Desenvolvimento Regional
+    url: https://www.gov.br/mdr/pt-br/noticias/defesa-civil-alerta-sera-usado-nas-barragens-do-rio-sao-francisco
+    acessado: 2026-11-23
+    publicado: 2024-08-19
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Barragens da Transposição (inclui RN). "sem a necessidade de qualquer cadastro prévio"; alerta extremo com "sinal sonoro no celular, semelhante a uma sirene".
+
+  - id: ana-snisb-consulta
+    tema: barragem
+    titulo: "SNISB: consultar barragem"
+    orgao: Agência Nacional de Águas e Saneamento Básico
+    url: https://www.snisb.gov.br/consultar-barragem/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Encontre barragens por nome, localização, fiscalizador, entre outros." Inclui barragens de água, energia, resíduos industriais e rejeitos de mineração.
+
+  - id: pbh-pae-barragens
+    tema: barragem
+    titulo: "Planos de Ação de Emergência das Barragens da PBH"
+    orgao: Prefeitura de Belo Horizonte
+    url: https://prefeitura.pbh.gov.br/obras-e-infraestrutura/informacoes/planos-de-acao-de-emergencia-das-barragens-da-pbh
+    acessado: 2026-11-23
+    publicado: 2024-01-31
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Criada em 31/01/2024, atualizada em 02/09/2026. PAE das "barragens de controle de cheias: Pampulha, Córregos Bonsucesso, ...".
+
+  - id: betim-sirenes-barragem-ibirite-2024
+    tema: barragem
+    titulo: "Defesa Civil de Betim participa de testes das sirenes da barragem de Ibirité"
+    orgao: Prefeitura de Betim
+    url: https://www.betim.mg.gov.br/portal/noticias/0/3/13120/defesa-civil-de-betim-participa-de-testes-das-sirenes-da-barragem-de-ibirite
+    acessado: 2026-11-23
+    publicado: 2024-03-20
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Barragem de Ibirité ("Lagoa da Petrobrás", Regap). "simulado de evacuação da área do Recanto da Lagoa, região mais próxima da barragem".
+      "instalação de algumas das placas de sinalização das ZASs, próximo da divisa com Sarzedo".

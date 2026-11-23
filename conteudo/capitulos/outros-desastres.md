@@ -1,6 +1,6 @@
 # Outros desastres
 
-> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, falta d'água, tremor de terra, tsunami, ressaca, ciclone e seca.
+> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, incêndio, barragem, falta d'água, tremor de terra, tsunami, ressaca, ciclone e seca.
 >
 > **Defesa Civil: [199](tel:199) · Bombeiros: [193](tel:193) · Energia: [116](tel:116)**
 
@@ -83,6 +83,24 @@ Durante a chuva, fique longe de encostas e muros de arrimo. [fonte: pbh-periodo-
 
 Rachadura no terreno: cubra com lona até a vistoria. [fonte: sedec-movimentos-de-massa]
 {{deslizamento-local}}
+
+## Rompimento de barragem
+
+**Tocou a sirene da barragem, com a mensagem de emergência? Saia na hora, a pé, pela rota de fuga até o ponto de encontro, e espere o resgate lá.** [fonte: cedec-mg-resolucao-83-2024-mensagens]
+
+- O **ponto de encontro** fica fora da área que a água alcança. A **rota de fuga** é o caminho a pé até ele, marcado com placas. [fonte: cedec-mg-resolucao-83-2024] [fonte: lei-12334-2010]
+- **Não volte** para buscar nada até a Defesa Civil liberar. [fonte: corumba-simulados-barragens-2026]
+- Longe da rota, sem placa à vista: suba para um lugar alto e não atravesse água correndo. [fonte: ready-gov-floods]
+- O **Defesa Civil Alerta** já é usado em barragens: chega no celular sem cadastro, com som de sirene. [fonte: midr-defesa-civil-alerta-barragens-2024]
+
+**Teste e simulado:** antes de um teste, a sirene avisa "Este é um teste de sirene": siga a sua rotina. No simulado, a mensagem diz que é um exercício, e vale participar: é o treino da sua rota. [fonte: cedec-mg-resolucao-83-2024-mensagens] Em MG, o simulado com a população é anual. [fonte: cedec-mg-resolucao-83-2024]
+
+**Mora rio abaixo de uma barragem?**
+
+- O trecho onde não dá tempo de as autoridades chegarem se chama **Zona de Autossalvamento (ZAS)**. Em barragem de mineração, ela vai até onde a onda chega em 30 minutos, ou 10 km, o que for maior. Quem mora ali precisa saber sair sozinho. [fonte: lei-12334-2010] [fonte: anm-resolucao-95-2022]
+- Pergunte à Defesa Civil da sua cidade ([199](tel:199)) se a sua casa fica numa ZAS, qual é a sua rota de fuga e onde fica o ponto de encontro. Anote na Ficha. [geral]
+- As barragens do país podem ser consultadas no **SNISB**, o sistema público da Agência Nacional de Águas. [fonte: ana-snisb-consulta]
+{{barragem-local}}
 
 ---
 
@@ -167,6 +185,45 @@ O ideal é a umidade do ar entre 40% e 70%. [fonte: pbh-tempo-seco-cuidados]
   - Não serve para criança pequena. Quem tem problema de coração ou pulmão, ou está grávida, deve perguntar ao médico antes. [fonte: epa-protect-lungs-smoke]
 - Beba bastante água e não faça exercício ao ar livre. [fonte: ms-queimadas-alerta-risco-2020]
 - **Crianças menores de 5 anos, idosos, grávidas, cardíacos e asmáticos:** tenham os remédios de crise à mão e procurem atendimento cedo se aparecerem sintomas. [fonte: ms-queimadas-saude-a-z] [fonte: ms-queimadas-alerta-risco-2020]
+
+---
+
+## Incêndio em casa ou prédio
+
+**Saia e ligue [193](tel:193). Não perca tempo salvando objetos, e não volte depois de sair.** [fonte: cbmal-incendio] [fonte: cbmmt-cartilha-orientacoes]
+
+**Para sair:**
+
+- A fumaça sobe: **ande abaixado**, ou rastejando, com um pano molhado no nariz e na boca. [fonte: cbmsc-incendio-edificacao] [fonte: cbmmt-cartilha-orientacoes]
+- **Toque a porta antes de abrir.** Se estiver quente, não abra: procure outra saída. [fonte: cbmmt-cartilha-orientacoes]
+- Feche as portas atrás de você, sem trancar. Isso segura o fogo. [fonte: cbmal-incendio] [fonte: cbmmt-cartilha-orientacoes]
+- **Escada, nunca elevador.** [fonte: cbmmt-cartilha-orientacoes] [fonte: aen-pr-incendio-apartamentos-2026]
+
+**Se não der para sair:** [fonte: cbmal-incendio] [fonte: cbmmg-autoprotecao-incendios]
+
+- Fique num cômodo longe do fogo, de porta fechada (sem trancar), e tape as frestas com cobertor, tapete ou toalha.
+- Não se abrigue no banheiro nem na lavanderia.
+- Fique perto de uma janela, de preferência virada para a rua, e **faça sinal** para ser visto. Ligue 193.
+
+**Em prédio:** conheça a rota de fuga do seu andar e deixe as portas corta-fogo sempre fechadas. [fonte: aen-pr-incendio-apartamentos-2026] Se a escada ou o corredor estiverem tomados de fumaça e não der para passar, fique atrás de uma porta fechada e faça como em **Se não der para sair**. [fonte: cbmmt-cartilha-orientacoes]
+
+**Roupa pegando fogo: pare, deite no chão e role.** Não corra: correr aumenta as chamas. Cubra o rosto com as mãos enquanto rola. [fonte: cbmal-incendio] Depois, veja **Queimadura** em Primeiros socorros.
+
+**Panela com óleo pegando fogo:** [fonte: cbmsc-incendio-edificacao] [fonte: cbmce-fogo-oleo-panela-2022]
+
+1. **Nunca jogue água.** Ela espalha o óleo em chamas.
+2. Desligue o fogo e feche o registro do botijão.
+3. Tampe a panela com a tampa ou com um pano molhado. **Espere esfriar antes de destampar**, senão o fogo volta.
+4. Não apagou? Saia de casa e ligue 193.
+
+**Vazamento de gás com fogo:** ligue 193, tire todo mundo de casa e, se der, feche o registro do gás. [fonte: cbmmg-cartilha-botijao] Sem fogo, só o cheiro: veja **Cheiro de gás** em **Contatos de emergência**.
+
+**Para não começar, ainda mais no apagão:**
+
+- Vela longe de cortina, papel e sofá. Melhor ainda: lanterna. [fonte: cbmsc-incendio-edificacao]
+- Não ligue vários aparelhos na mesma tomada nem em benjamim. [fonte: cbmsc-incendio-edificacao] [fonte: cbmmg-autoprotecao-incendios]
+- Não deixe celular carregando em cima de cama, sofá ou almofada. [fonte: cbmmg-autoprotecao-incendios]
+- Feche o registro do botijão antes de dormir e ao sair de casa. [fonte: cbmmg-cartilha-queimaduras]
 
 ---
 

@@ -7,6 +7,7 @@ blocos:
   alertas-locais: ""
   ar-seco-local: ""
   aviso-agua: ""
+  barragem-local: ""
   cadastro-agua: ""
   cadastro-defesa-civil: |
     - [marcar: cad-locais] Anote na Ficha os telefones da Defesa Civil, da empresa de água e do hospital de referência da sua cidade [geral]
