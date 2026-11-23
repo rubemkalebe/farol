@@ -1,0 +1,297 @@
+# Manuais para recomeçar: PDFs gratuitos de órgãos públicos e instituições
+# reconhecidas. O Farol não guarda nem altera os arquivos: o app baixa cada
+# um do endereço de quem publicou. Cada item traz a licença ou o aviso de
+# reprodução como está no manual ou no repositório (conferido em 2026-11-23).
+#
+# Embrapa (Infoteca-e): os PDFs dizem "Todos os direitos reservados" e o
+# repositório diz CC BY-NC-ND 4.0; baixar do próprio site da Embrapa, sem
+# copiar nem alterar, cabe nos dois.
+temas:
+  - tema: Plantar e colher
+    manuais:
+      - id: embrapa-abc-hortalicas
+        titulo: Como plantar hortaliças
+        orgao: Embrapa
+        ano: 2006
+        descricao: Coleção ABC da Agricultura Familiar. Canteiro, semeadura, adubação, rega e colheita.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100094/1/00078760.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/100094
+        tamanho: 0,8 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-horta-pequeno-porte
+        titulo: Como implantar e conduzir uma horta de pequeno porte
+        orgao: Embrapa Pantanal
+        ano: 2012
+        descricao: Cartilha ilustrada para montar uma horta pequena, do terreno à colheita.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/941469/1/CAR05.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/941469
+        tamanho: 17 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-adubacao-alternativa
+        titulo: Adubação alternativa
+        orgao: Embrapa
+        ano: 2006
+        descricao: Coleção ABC. Adubo verde, esterco e composto feitos na própria roça.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100051/1/00078700.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/100051
+        tamanho: 0,4 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-minhocultura
+        titulo: "Minhocultura: produção de húmus"
+        orgao: Embrapa
+        ano: 2014
+        descricao: Coleção ABC. Criar minhocas para fazer adubo com restos de comida e esterco.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1022410/1/ABCMinhoculturaed022014.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1022410
+        tamanho: 1,2 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-milho-500
+        titulo: "Milho: o produtor pergunta, a Embrapa responde"
+        orgao: Embrapa
+        ano: 2011
+        descricao: Coleção 500 Perguntas. Plantio, pragas, colheita e armazenamento do milho.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/921542/1/500perguntasmilho.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/921542
+        tamanho: 9 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-feijao-500
+        titulo: "Feijão: o produtor pergunta, a Embrapa responde"
+        orgao: Embrapa
+        ano: 2014
+        descricao: Coleção 500 Perguntas. Do preparo do solo ao armazenamento do feijão.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1011664/1/500-perguntas-feijao.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1011664
+        tamanho: 5 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-mandioca-500
+        titulo: "Mandioca: o produtor pergunta, a Embrapa responde"
+        orgao: Embrapa
+        ano: 2006
+        descricao: Coleção 500 Perguntas. Plantio, colheita e uso da mandioca, farinha e polvilho.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/120506/1/500perguntasmandioca.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/120506
+        tamanho: 14 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-sementes-crioulas
+        titulo: "Sementes crioulas: da colheita ao armazenamento"
+        orgao: Embrapa
+        ano: 2025
+        descricao: Como colher, secar e guardar sementes para plantar de novo no ano seguinte.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1172471/1/circular-tecnica-99sementes6-02.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1172471
+        tamanho: 1,5 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: fao-armazenamento-sementes
+        titulo: Armazenamento de sementes e cereais para pequenos agricultores
+        orgao: FAO
+        ano: 2014
+        descricao: Silos e paióis simples, controle de pragas e cuidados para os grãos não estragarem.
+        url: https://www.fao.org/3/a-i3769pt.pdf
+        pagina: https://www.fao.org/3/a-i3769pt.pdf
+        tamanho: 2,3 MB
+        licenca: "© FAO 2014: pode ser copiado, baixado e impresso para uso não comercial, citando a FAO."
+      - id: fao-variedades-sementes
+        titulo: Variedades de sementes apropriadas para pequenos agricultores
+        orgao: FAO
+        ano: 2014
+        descricao: Como escolher e manter variedades de sementes adaptadas ao lugar.
+        url: https://www.fao.org/3/a-i3768pt.pdf
+        pagina: https://www.fao.org/3/a-i3768pt.pdf
+        tamanho: 1,9 MB
+        licenca: "© FAO 2014: pode ser copiado, baixado e impresso para uso não comercial, citando a FAO."
+
+  - tema: Criar animais
+    manuais:
+      - id: embrapa-galinhas-caipiras
+        titulo: Criação de galinhas caipiras
+        orgao: Embrapa
+        ano: 2007
+        descricao: Coleção ABC. Galinheiro, alimentação, choco, pintinhos e saúde das aves.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/126298/1/00081600.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/126298
+        tamanho: 1,2 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-caprinos-ovinos-500
+        titulo: "Caprinos e ovinos de corte: o produtor pergunta, a Embrapa responde"
+        orgao: Embrapa
+        ano: 2005
+        descricao: Coleção 500 Perguntas. Criação de cabras e ovelhas, alimentação e doenças.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/117241/1/500PCaprinoseOvinosdeCorteed012005.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/117241
+        tamanho: 4 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-criacoes-seca
+        titulo: Alimentação das criações na seca
+        orgao: Embrapa
+        ano: 2006
+        descricao: Coleção ABC. Como guardar comida para os animais e o que dar quando o pasto acaba.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100073/1/00078710.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/100073
+        tamanho: 0,6 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+
+  - tema: Guardar comida
+    manuais:
+      - id: embrapa-conservas-frutas
+        titulo: Conservas caseiras de frutas
+        orgao: Embrapa
+        ano: 2006
+        descricao: Coleção ABC. Doces, geleias e compotas para a fruta durar meses.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/100108/1/00078780.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/100108
+        tamanho: 0,2 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-hortalicas-conserva
+        titulo: Hortaliças em conserva
+        orgao: Embrapa
+        ano: 2006
+        descricao: Picles e conservas de legumes, com os cuidados de higiene para não estragar.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/118592/1/00078030.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/118592
+        tamanho: 4,4 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: embrapa-secador-solar
+        titulo: Construção de secador solar
+        orgao: Embrapa Florestas
+        ano: 2022
+        descricao: Como montar um secador que usa o sol para desidratar frutas, legumes e ervas.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1145471/1/EmbrapaFlorestas-2022-ComunicadoTecnico479-1.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1145471
+        tamanho: 2,2 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+
+  - tema: Água
+    manuais:
+      - id: ms-tratamento-agua-casa
+        titulo: Tratamento da água em casa e cuidados com os alimentos
+        orgao: Ministério da Saúde
+        ano: 2023
+        descricao: Cartilha curta. Filtrar, ferver ou pôr hipoclorito na água de beber.
+        url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/doencas-diarreicas-agudas/cartilha-tratamento-intradomiciliar-da-agua-e-cuidados-com-alimentos/@@download/file
+        pagina: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/svsa/doencas-diarreicas-agudas/cartilha-tratamento-intradomiciliar-da-agua-e-cuidados-com-alimentos/view
+        tamanho: 0,5 MB
+        licenca: Portal gov.br, CC BY-ND 3.0.
+      - id: embrapa-clorador-pastilhas
+        titulo: Como montar e usar o clorador de pastilhas
+        orgao: Embrapa Gado de Leite
+        ano: 2014
+        descricao: Cartilha com desenhos para clorar a água do poço ou da caixa na roça.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1004074/1/Cnpgl2014CartilhaCloradorcompleta.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1004074
+        tamanho: 1,5 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: funasa-clorador-simplificado
+        titulo: Cloração de água em pequenas comunidades
+        orgao: Funasa
+        ano: 2014
+        descricao: Como montar e operar o clorador simplificado da Funasa para um poço ou rede pequena.
+        url: https://repositorio.funasa.gov.br/bitstream/handle/123456789/502/08%20-%20Manual%20de%20Clora%c3%a7%c3%a3o%20de%20%c3%81gua%20em%20Pequenas%20Comunidades%20Utilizando%20o%20Clorador%20Simplificado%20Desenvovildo%20pela%20Funasa%202014.pdf?sequence=1&isAllowed=y
+        pagina: https://repositorio.funasa.gov.br/handle/123456789/502
+        tamanho: 4,7 MB
+        licenca: CC BY-NC-SA 4.0. Reprodução permitida citando a fonte.
+      - id: funasa-salta-z
+        titulo: "SALTA-z: filtro e dosador para tratar água"
+        orgao: Funasa
+        ano: 2017
+        descricao: Como construir um sistema simples de filtro e cloro para abastecer uma comunidade.
+        url: https://repositorio.funasa.gov.br/bitstream/handle/123456789/476/Manual%20da%20SALTA-z%20WEB.pdf?sequence=1&isAllowed=y
+        pagina: https://repositorio.funasa.gov.br/handle/123456789/476
+        tamanho: 0,9 MB
+        licenca: CC BY-NC-SA 4.0. Reprodução permitida citando a fonte.
+      - id: embrapa-abc-cisternas
+        titulo: Cisternas
+        orgao: Embrapa
+        ano: 2004
+        descricao: Coleção ABC. Guardar água da chuva para beber e cozinhar na seca.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/155843/1/ID31780.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/155843
+        tamanho: 4 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: asa-cisterna-placas
+        titulo: "Cisterna de placas: passo a passo da construção"
+        orgao: ASA Brasil
+        ano: 2021
+        descricao: Construção ilustrada da cisterna de 16 mil litros do programa Cisternas.
+        url: https://asabrasil.org.br/wp-content/uploads/2021/07/2021-Cisterna-de-Placas-passo-a-passo-da-construcao.pdf
+        pagina: https://asabrasil.org.br/
+        tamanho: 8,4 MB
+        licenca: Publicação gratuita da ASA Brasil, baixada do site da ASA.
+      - id: funasa-cisterna-livreto
+        titulo: "Cisterna: uso, manutenção e conservação"
+        orgao: Funasa
+        ano: 2026
+        descricao: Limpar, desinfetar e cuidar da cisterna para a água continuar boa.
+        url: https://repositorio.funasa.gov.br/bitstream/handle/123456789/837/Livreto%20do%20benefici%c3%a1rio_CISTERNA_ocred.pdf?sequence=1&isAllowed=y
+        pagina: https://repositorio.funasa.gov.br/handle/123456789/837
+        tamanho: 18 MB
+        licenca: CC BY-NC-SA 4.0. Reprodução permitida citando a fonte.
+
+  - tema: Banheiro e esgoto
+    manuais:
+      - id: funasa-saneamento-domiciliar
+        titulo: "Saneamento domiciliar: como usar e cuidar"
+        orgao: Funasa
+        ano: 2014
+        descricao: Banheiro, fossa séptica, sumidouro, caixa d'água e filtro da casa.
+        url: https://repositorio.funasa.gov.br/bitstream/handle/123456789/578/Saneamento%20Domiciliar%20Manual%20de%20instrucoes%20de%20%20uso%20das%20melhorias%20sanit%c3%a1rias%20domiciliares%202014.pdf?sequence=1&isAllowed=y
+        pagina: https://repositorio.funasa.gov.br/handle/123456789/578
+        tamanho: 7,4 MB
+        licenca: CC BY-NC-SA 4.0. Reprodução permitida citando a fonte.
+      - id: embrapa-fossa-septica
+        titulo: Como montar e usar a fossa séptica modelo Embrapa
+        orgao: Embrapa Gado de Leite
+        ano: 2014
+        descricao: Cartilha com desenhos da fossa biodigestora feita com caixas d'água.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1004077/1/Cnpgl2014CartilhaFossaSepticacompleta.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1004077
+        tamanho: 1,7 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+
+  - tema: Construir e aquecer
+    manuais:
+      - id: usp-tecnicas-construcao
+        titulo: "Técnicas e saberes da construção civil"
+        orgao: USP
+        ano: 2022
+        descricao: Cartilha ilustrada para quem vai construir ou reformar a própria casa.
+        url: https://livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/download/960/871/3173?inline=1
+        pagina: https://livrosabertos.abcd.usp.br/portaldelivrosUSP/catalog/book/960
+        tamanho: 5,7 MB
+        licenca: Acesso aberto, CC BY-NC-SA 4.0.
+      - id: embrapa-eco-habitacao
+        titulo: Tecnologias sociais de eco-habitação
+        orgao: Embrapa Agroindústria Tropical
+        ano: 2019
+        descricao: Casa de adobe e outras técnicas de construção com terra e material da região.
+        url: https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1109190/1/DOC19002.pdf
+        pagina: https://www.infoteca.cnptia.embrapa.br/infoteca/handle/doc/1109190
+        tamanho: 1,9 MB
+        licenca: Embrapa, acesso aberto (repositório em CC BY-NC-ND 4.0).
+      - id: ufv-fogao-lenha
+        titulo: Fogão a lenha sem fumaça
+        orgao: UFV
+        descricao: Medidas e montagem de um fogão a lenha que gasta menos lenha e tira a fumaça da casa.
+        url: https://www.ambiagro.ufv.br/wp-content/uploads/2017/10/Fog%C3%A3o-a-Lenha-sem-Fuma%C3%A7a.pdf
+        pagina: https://www.ambiagro.ufv.br/
+        tamanho: 0,3 MB
+        licenca: Publicação gratuita da UFV, baixada do site da universidade.
+      - id: celesc-aquecedor-solar
+        titulo: Aquecedor solar feito com garrafas PET
+        orgao: Celesc
+        descricao: Manual de construção e instalação de aquecedor de água com material reciclado.
+        url: https://www.celesc.com.br/arquivos/manuais/manual-aquecedor-solar.pdf
+        pagina: https://www.celesc.com.br/
+        tamanho: 7,8 MB
+        licenca: Publicação gratuita da Celesc, baixada do site da Celesc.
+
+  - tema: Saúde sem médico por perto
+    manuais:
+      - id: ms-guia-agente-comunitario
+        titulo: Guia prático do agente comunitário de saúde
+        orgao: Ministério da Saúde
+        ano: 2009
+        descricao: Cuidados com crianças, gestantes, idosos e doenças comuns, para quem cuida da comunidade.
+        url: https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_agente_comunitario_saude.pdf
+        pagina: https://bvsms.saude.gov.br/bvs/publicacoes/guia_pratico_agente_comunitario_saude.pdf
+        tamanho: 8,8 MB
+        licenca: Reprodução permitida citando a fonte, sem fins comerciais.

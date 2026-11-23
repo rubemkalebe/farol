@@ -51,6 +51,8 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 
 **Biblioteca sem internet:** o app baixa, a pedido, pacotes em português feitos pelo Kiwix e lê tudo sem internet. Wikipédia (Medicina, 116 MB; artigos principais; a Wikipédia inteira), com busca pelo título também na busca geral. E uma biblioteca para um apagão longo: Vikidia (enciclopédia para crianças), quase mil livros em domínio público do Projeto Gutenberg, Wikilivros, Wikiversidade, Wikivoyage, Wikcionário e Wikisource. Em inglês, a Appropedia (tecnologia simples: água, energia solar, saneamento) e os guias de conserto do iFixit (3,4 GB, menu em português). Nos pacotes que trazem fotos (Vikidia, Appropedia), o leitor mostra as imagens. O leitor do formato ZIM é do próprio Farol, em Dart, sem app extra.
 
+**Manuais para recomeçar:** uma estante de PDFs gratuitos de órgãos públicos e instituições reconhecidas (Embrapa, Funasa, Ministério da Saúde, FAO, USP, ASA, UFV, Celesc): horta, milho, feijão, mandioca, sementes, galinhas, cabras, conservas, secador solar, tratamento de água, cisterna, fossa séptica, construção, fogão a lenha e aquecedor solar. O app baixa cada PDF direto do site de quem publicou, sem copiar nem alterar, e lê no próprio Farol, lembrando a página onde a pessoa parou. A lista fica em `conteudo/estante.yaml`, com a licença de cada manual.
+
 Em estudo: manuais oficiais completos e livros em domínio público.
 
 > **Aviso:** o Farol resume orientações de órgãos oficiais e cita a fonte de cada uma. Ele não substitui atendimento médico nem as instruções das autoridades locais. Em emergência, ligue 192 (SAMU) ou 193 (Bombeiros).
@@ -73,3 +75,4 @@ flutter build apk      # APK para instalar à mão no Android
 - Textos em `conteudo/`: CC BY-SA 4.0 (`conteudo/LICENSE.md`)
 - Materiais de terceiros: licença dos autores, registrada em `fontes/fontes.yaml`
 - Pacotes da biblioteca: baixados do Kiwix direto no aparelho (não ficam no repositório). Projetos Wiki em CC BY-SA (Vikidia 3.0, os demais 4.0, Appropedia incluída); livros do Projeto Gutenberg em domínio público; guias do iFixit em CC BY-NC-SA 3.0 (uso não comercial, como o Farol)
+- Manuais para recomeçar: não ficam no repositório; cada um segue a licença de quem publicou (anotada em `conteudo/estante.yaml`) e é baixado do site oficial.

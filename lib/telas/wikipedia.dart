@@ -8,6 +8,7 @@ import '../dados/artigo_wiki.dart';
 import '../dados/wikipedia.dart';
 import '../dados/zim.dart';
 import '../tema.dart';
+import 'estante.dart';
 import 'largura.dart';
 
 const _credito =
@@ -157,6 +158,25 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
                       style: t.bodyLarge?.copyWith(fontWeight: FontWeight.w700),
                     ),
                   ),
+                Card(
+                  child: ListTile(
+                    key: const ValueKey('abrir-estante'),
+                    leading: const Icon(Icons.menu_book, color: corFeixe),
+                    title: const Text(
+                      'Manuais para recomeçar',
+                      style: TextStyle(fontWeight: FontWeight.w800),
+                    ),
+                    subtitle: const Text(
+                      'PDFs de órgãos públicos: plantar, criar animais, '
+                      'água, saneamento, saúde sem médico.',
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const TelaEstante()),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20),
                 Text(
                   'WIKIPÉDIA',
                   style: t.labelMedium?.copyWith(

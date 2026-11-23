@@ -195,8 +195,9 @@ class _TelaInicioState extends State<TelaInicio> {
                       icone: Icons.menu_book_outlined,
                       titulo: 'Biblioteca sem internet',
                       texto:
-                          'Wikipédia, livros, dicionário e enciclopédia para '
-                          'crianças, baixados para ler no apagão.',
+                          'Wikipédia, livros, dicionário e manuais para '
+                          'plantar, criar animais e cuidar da água, baixados '
+                          'para ler sem internet.',
                       onTap: _abrirWikipedia,
                     ),
                     if (_podeEnviar) ...[

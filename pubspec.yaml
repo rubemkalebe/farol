@@ -46,6 +46,7 @@ dependencies:
   flutter_widget_from_html_core: ^0.17.4
   html: ^0.15.7
   pdf: ^3.13.1
+  pdfx: ^2.11.0
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +75,7 @@ flutter:
     - conteudo/indice.yaml
     - conteudo/emergencia.yaml
     - conteudo/sinonimos.yaml
+    - conteudo/estante.yaml
     - conteudo/capitulos/
     - fontes/fontes.yaml
     - locais/
