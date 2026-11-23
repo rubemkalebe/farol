@@ -38,5 +38,7 @@ blocos:
   peconhentos-hospital: |
     A lista de hospitais com soro, por estado, está no site do Ministério da Saúde. Descubra o da sua cidade **antes** de precisar e anote na Ficha. [fonte: ms-hospitais-referencia-peconhentos-rn] [geral]
   policia-local: ""
+  radios-locais: |
+    Descubra **antes** quais rádios da sua cidade dão notícias locais, anote a frequência na Ficha e deixe uma sintonizada no rádio do kit. [geral]
   prefeitura: |
     - **156** costuma ser a prefeitura. Confira o da sua cidade e anote na Ficha. [fonte: anatel-sup-codigos]

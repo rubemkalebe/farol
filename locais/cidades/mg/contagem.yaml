@@ -12,6 +12,14 @@ blocos:
     - **Defesa Civil de Contagem:** [**199**](tel:199), grátis, 24 horas. Os alertas de chuva chegam pelo SMS **40199**: mande o seu CEP. [fonte: contagem-canais-oficiais] [fonte: contagem-sms-alertas]
   ar-seco-local: |
     Em Contagem, a Defesa Civil pede: **nada de queimada** para limpar lote ou queimar lixo no tempo seco. [fonte: contagem-quando-chamar-defesa-civil]
+  radios-locais: |
+    **Rádios para notícias de Contagem e da Grande BH:**
+
+    | Rádio | Onde sintonizar |
+    |---|---|
+    | **Itatiaia** | FM **95,7** ou AM **610** [fonte: itatiaia-74-anos] [fonte: mcom-dados-radiodifusao] |
+    | **Inconfidência** (do Governo de Minas) | AM **880** ou FM **100,9** [fonte: inconfidencia-site] |
+    | **UFMG Educativa** (pública) | FM **104,5**, para a Grande BH [fonte: ufmg-educativa-sobre] |
   cadastro-defesa-civil: |
     - [marcar: cad-contagem] Em Contagem, a Defesa Civil atende no **199**, de graça e 24 horas [fonte: contagem-quando-chamar-defesa-civil]
   defesa-civil-local: |

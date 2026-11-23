@@ -7,6 +7,13 @@ verificado_em: 2026-11-23
 blocos:
   alertas-locais: |
     - Em Natal, a Prefeitura manda **alertas de risco pelo WhatsApp da Estela**: (84) 3232-4900. Ocorrências pelo [190](tel:190). [fonte: natal-defesa-civil-el-nino-2026]
+  radios-locais: |
+    **Rádios públicas em Natal:**
+
+    | Rádio | Onde sintonizar |
+    |---|---|
+    | **Universitária** (UFRN) | FM **88,9** [fonte: ufrn-radio-universitaria] |
+    | **IFRN FM** (rede da EBC) | FM **95,3** [fonte: agenciagov-ifrn-fm-2026] |
   cadastro-defesa-civil: |
     - [marcar: cad-natal] Em Natal, salve o WhatsApp da **Estela**, da Prefeitura: (84) 3232-4900, para avisar ocorrências e receber alertas de risco [fonte: natal-defesa-civil-el-nino-2026]
   defesa-civil-local: |

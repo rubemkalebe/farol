@@ -9,6 +9,7 @@ import 'ficha.dart' show ligar;
 import 'texto_farol.dart';
 
 const _nomes = {
+  '188': 'CVV',
   '190': 'Polícia',
   '192': 'SAMU',
   '193': 'Bombeiros',

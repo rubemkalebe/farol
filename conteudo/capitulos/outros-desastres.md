@@ -1,6 +1,6 @@
 # Outros desastres
 
-> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, incêndio, barragem, falta d'água, tremor de terra, tsunami, ressaca, ciclone e seca.
+> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, incêndio, barragem, falta d'água, tremor de terra, tsunami, ressaca, ciclone, seca e apoio emocional.
 >
 > **Defesa Civil: [199](tel:199) · Bombeiros: [193](tel:193) · Energia: [116](tel:116)**
 
@@ -357,3 +357,39 @@ Em 2004, o **Catarina** atingiu Santa Catarina e o Rio Grande do Sul com ventos 
 **Saúde:** com pouca água aumentam a **desidratação** (cuidado com crianças e idosos) e a diarreia. Para higiene, use álcool em gel quando faltar água. [fonte: ms-secas-pagina]
 
 **Operação Carro-Pipa:** atende a zona rural do semiárido em municípios com decreto de emergência. O pedido é feito pela **Defesa Civil do município**, não pelo morador. [fonte: govbr-servico-carro-pipa] Em setembro de 2026, 123 cidades do RN estavam em emergência por seca. [fonte: agenciabrasil-rn-123-municipios-2026]
+
+---
+
+## Apoio emocional depois do susto
+
+**Está pensando em se machucar ou em morrer, ou conhece alguém assim?** Ligue para o **CVV, [188](tel:188)**: 24 horas, sem custo de ligação. Se o perigo é agora, ligue [192](tel:192) e **não deixe a pessoa sozinha**. [fonte: cvv-home] [fonte: ms-suicidio-prevencao]
+
+**É normal, depois de um desastre:** medo, angústia, raiva, tristeza, choro, preocupação com o futuro, insônia, comer de menos ou demais, sensação de estar num filme. [fonte: ms-respostas-emocionais-pcp-2026] A maioria das pessoas melhora com o tempo, ainda mais quando recebe ajuda e tem o básico resolvido. [fonte: opas-primeiros-cuidados-psicologicos]
+
+**Para se cuidar:** [fonte: ms-perdas-lutos-2026] [fonte: fiocruz-saude-mental-recomendacoes]
+
+- Converse com pessoas de confiança.
+- Diminua o tempo vendo e ouvindo notícias do desastre.
+- Durma, coma e continue tomando os remédios de sempre.
+- Não use álcool, cigarro ou outras drogas para aguentar.
+- Ajudar os vizinhos também ajuda você.
+
+**Para ajudar alguém:** observar, escutar e aproximar. [fonte: opas-primeiros-cuidados-psicologicos]
+
+- Ofereça ajuda prática: água, comida, um lugar para sentar, um telefone. [fonte: ms-respostas-emocionais-pcp-2026] [fonte: opas-primeiros-cuidados-psicologicos]
+- Escute num lugar calmo, **sem pressionar a pessoa a falar**. Ficar junto em silêncio também ajuda. [fonte: ms-respostas-emocionais-pcp-2026] [fonte: opas-primeiros-cuidados-psicologicos]
+- Não prometa o que não pode cumprir e não invente informação. [fonte: opas-primeiros-cuidados-psicologicos]
+- Aproxime a pessoa da família e dos amigos. [fonte: opas-primeiros-cuidados-psicologicos]
+
+**Crianças:**
+
+- É comum voltarem a fazer xixi na cama ou chupar o dedo, ficarem grudadas nos adultos, com medo, dormindo mal ou mais agressivas. Tenha paciência. [fonte: opas-primeiros-cuidados-psicologicos] [fonte: sbp-saude-mental-catastrofe-2024] [fonte: ms-perdas-lutos-criancas-2026]
+- **Mantenha a família junta** e deixe a criança perto de você. [fonte: sbp-saude-mental-catastrofe-2024] [fonte: opas-primeiros-cuidados-psicologicos]
+- Explique o que aconteceu com a verdade, em palavras simples e sem detalhes assustadores. Não prometa que "nunca mais vai acontecer". Deixe perguntar; se não souber a resposta, descubram juntos. [fonte: unicef-falar-criancas-desastres] [fonte: opas-primeiros-cuidados-psicologicos]
+- Diga que a culpa não é dela. [fonte: opas-primeiros-cuidados-psicologicos]
+- Volte à rotina assim que der e abra espaço para brincar. [fonte: unicef-falar-criancas-desastres] [fonte: opas-primeiros-cuidados-psicologicos]
+- Proteja a criança de imagens e notícias assustadoras. [fonte: sbp-saude-mental-catastrofe-2024]
+- A criança sente o que vê em você: cuide de você também. [fonte: unicef-falar-criancas-desastres]
+
+**Procure ajuda (posto de saúde, CAPS ou CVV)** se o sofrimento não passa, se a pessoa não consegue cuidar de si ou dos filhos, se não dá conta da rotina, se começou a beber ou usar drogas para aguentar, ou se fala em se ferir. [fonte: opas-primeiros-cuidados-psicologicos] [fonte: fiocruz-saude-mental-recomendacoes] [fonte: ms-suicidio-prevencao]
+

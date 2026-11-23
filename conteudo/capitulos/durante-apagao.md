@@ -186,6 +186,8 @@ O tamanho da bateria do seu celular aparece nas especificações do modelo (proc
 
 **Rádio a pilha ou de manivela:** faz parte do kit de emergência, junto com pilhas extras. [fonte: readygov-build-a-kit] Ele funciona sem internet e sem rede de celular, e é por ele que chegam as notícias locais quando o resto cai. [geral] Alguns celulares Android têm rádio FM que funciona com o fone de ouvido plugado, sem gastar internet. [geral]
 
+{{radios-locais}}
+
 **Alertas da Defesa Civil:**
 
 - O **Defesa Civil Alerta** aparece sozinho na tela de celulares compatíveis ligados em 4G ou 5G, sem cadastro. Nos alertas graves, o celular vibra e toca como uma sirene. [fonte: anatel-defesa-civil-alerta] [fonte: agenciagov-defesa-civil-alerta]

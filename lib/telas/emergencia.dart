@@ -47,6 +47,7 @@ const iconesEmergencia = <String, IconData>{
   'alergia': Icons.sick,
   'frio': Icons.ac_unit,
   'bebe': Icons.child_friendly,
+  'apoio': Icons.volunteer_activism,
 };
 
 // Guarda o roteiro pronto (não a tarefa de carregamento), para não depender

@@ -93,6 +93,10 @@ inicio:
       icone: gas
       secoes: ["contatos/Energia, água e gás"]
       ligar: ["193"]
+    - texto: Alguém pensando em se machucar ou em morrer
+      icone: apoio
+      secoes: ["outros-desastres/Apoio emocional depois do susto"]
+      ligar: ["188", "192"]
     - texto: Faltou energia
       icone: energia
       vai: apagao
@@ -177,6 +181,10 @@ desastre:
       icone: fogo
       secoes: ["outros-desastres/Fogo em mato ou lote", "outros-desastres/Fumaça de queimadas"]
       ligar: ["193"]
+    - texto: Medo, angústia, criança assustada depois do desastre
+      icone: apoio
+      secoes: ["outros-desastres/Apoio emocional depois do susto"]
+      ligar: ["188"]
     - texto: Depois da enchente (limpeza, comida, água)
       icone: limpeza
       secoes: ["outros-desastres/Depois da enchente"]

@@ -1742,7 +1742,7 @@ fontes:
     publicado: null
     licenca: "Copyright 2026 CVV. Todos os direitos reservados."
     redistribuir: nao
-    usado_em: [contatos]
+    usado_em: [contatos, outros-desastres]
     notas: |
       "Ligue gratuitamente para 188, de qualquer lugar do Brasil, 24 horas por dia, todos os dias."
       "O CVV oferece apoio emocional gratuito, sigiloso e voluntário"; também chat e e-mail.
@@ -4598,3 +4598,194 @@ fontes:
       PDF. Força "sem bloquear a respiração"; "Nunca tente puxar a cabeça do bebê"; "segurar firmemente o recém-nascido".
       Não chorou: "friccionando suas costas". "Não existe a necessidade de corte imediato do cordão umbilical"; placenta "nos próximos 30 minutos"; "Não se deve puxar o cordão umbilical".
       Transportar "a mãe, o bebê e a placenta" para a maternidade. Amamentação: diverge do MS e SAMU-SP (mais recentes, prevalecem).
+
+  - id: ms-suicidio-prevencao
+    tema: saude-mental
+    titulo: "Suicídio: prevenção"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/suicidio-prevencao
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Onde buscar ajuda: "CAPS e Unidades Básicas de Saúde [...] UPA 24H, SAMU 192, Pronto Socorro; Hospitais; Centro de Valorização da Vida – 188 (ligação gratuita)."
+      "Se você acha que essa pessoa está em perigo imediato, não a deixe sozinha."
+
+  - id: ms-respostas-emocionais-pcp-2026
+    tema: saude-mental
+    titulo: "Respostas Emocionais e Primeiros Cuidados Psicológicos em Desastres e Emergências (Série Saúde Mental e Atenção Psicossocial em Desastres, vol. 1)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/cartilhas/2026/respostas-emocionais-e-primeiros-cuidados-psicologicos-em-desastres-e-emergencias
+    acessado: 2026-11-23
+    publicado: 2026-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Reações esperadas: "ANGÚSTIA", "PREOCUPAÇÃO QUANTO AO FUTURO", "RAIVA", "TRISTEZA", "CHORO", "FALTA OU EXCESSO DE APETITE", "INSÔNIA", "SENSAÇÃO DE ESTAR EM UM FILME".
+      "Oferecer apoio prático, de forma não invasiva"; "Buscar lugar silencioso para conversar, escutando ativamente, mas sem pressionar a pessoa a falar".
+
+  - id: ms-perdas-lutos-2026
+    tema: saude-mental
+    titulo: "Perdas e Lutos (Série Saúde Mental e Atenção Psicossocial em Desastres)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/enchentes/publicacoes/cartilha-perdas-e-lutos
+    acessado: 2026-11-23
+    publicado: 2026-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. "Promover comportamentos de autocuidado (ex.: reduzir exposição a notícias), hábitos saudáveis, manutenção das medicações de uso regular e higiene do sono".
+
+  - id: ms-perdas-lutos-criancas-2026
+    tema: saude-mental
+    titulo: "Perdas e Lutos – Crianças e Adolescentes (Série Saúde Mental e Atenção Psicossocial em Desastres, vol. 4)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/centrais-de-conteudo/publicacoes/cartilhas/2026/cartilha-perdas-e-lutos-criancas-e-adolescentes.pdf/@@download/file
+    acessado: 2026-11-23
+    publicado: 2026-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Reações: "Medo", "Alterações no sono", "Choro recorrente", "Agressividade".
+
+  - id: opas-primeiros-cuidados-psicologicos
+    tema: saude-mental
+    titulo: "Primeiros cuidados psicológicos: guia para trabalhadores de campo"
+    orgao: Organização Pan-Americana da Saúde / OMS
+    url: https://iris.paho.org/server/api/core/bitstreams/7d01927e-5cc0-497c-9685-531668dfc2d6/content
+    acessado: 2026-11-23
+    publicado: 2015
+    licenca: CC BY-NC-SA 3.0 IGO
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. p.13: "observar, escutar e aproximar". "Não faça falsas promessas ou forneça falsas informações"; ficar junto "mesmo em silêncio"; "Aproxime as pessoas de entes queridos".
+      p.20: "A maioria das pessoas se recupera bem com o passar do tempo"; mais ajuda "se não puderem manter sua rotina diária". p.12: "não conseguirem cuidar de si ou dos próprios filhos"; "Pessoas que podem ferir a si mesmas".
+      p.30-32 (crianças): regressão ("urinar na cama ou chupar o dedo"); "Mantenha, o máximo possível, rotinas e horários"; "Dê respostas simples sobre o que aconteceu, sem detalhes amedrontadores"; "Explique que não são culpadas".
+
+  - id: fiocruz-saude-mental-recomendacoes
+    tema: saude-mental
+    titulo: "Saúde mental e atenção psicossocial na pandemia COVID-19: recomendações gerais"
+    orgao: Fiocruz / CEPEDES
+    url: https://api.arca.fiocruz.br/api/core/bitstreams/bdce6d60-ad20-4f4e-b6b3-d43c21d456f3/content
+    acessado: 2026-11-23
+    publicado: 2020
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. "procurando pessoas de confiança para conversar"; "Evitar o uso do tabaco, álcool ou outras drogas para lidar com as emoções"; "Reduzir o tempo que passa assistindo ou ouvindo coberturas midiáticas"; "Estimular o espírito solidário".
+      Encaminhar: "Sintomas persistentes; Sofrimento intenso; [...] conduta suicida; Comprometimento significativo do funcionamento social e cotidiano; [...] alcoolismo".
+
+  - id: sbp-saude-mental-catastrofe-2024
+    tema: saude-mental
+    titulo: "Documento Científico nº 157: Promoção de Saúde Mental de crianças e adolescentes em situações de catástrofe"
+    orgao: Sociedade Brasileira de Pediatria
+    url: https://www.sbp.com.br/fileadmin/user_upload/24560a-DC_Promoc_SaudeMental_de_crc_e_adl_situacoes_catastrofe.pdf
+    acessado: 2026-11-23
+    publicado: 2024-06-17
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      PDF. Regressão: "chupar o dedo, urinar na cama, ou se manterem agarradas aos pais". "Deve-se garantir que as famílias permaneçam unidas".
+      Proteger de "conteúdos inadequados e sensacionalistas das mídias".
+
+  - id: unicef-falar-criancas-desastres
+    tema: saude-mental
+    titulo: "Como falar com crianças e adolescentes durante e após desastres?"
+    orgao: UNICEF Brasil
+    url: https://www.unicef.org/brazil/como-falar-com-criancas-e-adolescentes-durante-e-apos-desastres
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "As crianças sentirão o mesmo que veem em você"; "Explique de forma real e simples o que está acontecendo. Evite mentir, como dizer que 'isso não vai acontecer de novo'."
+      "Se não souber responder, proponha descobrirem juntos"; "retomar uma rotina e procure proporcionar espaços de brincadeira"; "Cuide-se".
+
+  - id: mcom-dados-radiodifusao
+    tema: radio
+    titulo: "Dados de radiodifusão (SCR/Mosaico): rádio FM e OM, TV"
+    orgao: Ministério das Comunicações (dados de licenciamento da Anatel)
+    url: https://s3.mcom.gov.br/radcom/SCR_DADOS_RADIODIFUSAO_TV_GTVD_RTV_RTVD_FM_OM.csv
+    acessado: 2026-11-23
+    publicado: 2026-11
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      CSV atualizado todo mês; catálogo em https://www.gov.br/mcom/pt-br/acesso-a-informacao/dados-abertos
+      Nova Lima 610,0 kHz "RADIO ITATIAIA S.A", classe A, Canal Licenciado. BH 880,0 kHz Rádio Inconfidência (Governo de MG), classe A, Canal Licenciado.
+      Mossoró 1170,0 kHz "RADIO DIFUSORA DE MOSSORO SA", classe B, "RF vencida, aguardando Ato de renovação de RF" (situação cadastral; a rádio segue com site ativo).
+
+  - id: itatiaia-74-anos
+    tema: radio
+    titulo: "Itatiaia, 74 anos de cumplicidade com os mineiros"
+    orgao: Rádio Itatiaia
+    url: https://www.itatiaia.com.br/colunas/eduardo-costa/itatiaia-74-anos-de-cumplicidade-com-os-mineiros/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Em 2000, além de permanecer no AM, passou a ser transmitida também pela FM 95,7". AM 610 conferido na base do MCom.
+
+  - id: inconfidencia-site
+    tema: radio
+    titulo: "Rádio Inconfidência"
+    orgao: Rádio Inconfidência (Governo de Minas Gerais)
+    url: https://www.inconfidencia.com.br/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Rádio Inconfidência FM 100,9 Brasileiríssima + AM 880 O gigante do ar".
+
+  - id: ufmg-educativa-sobre
+    tema: radio
+    titulo: "Sobre a Rádio UFMG Educativa"
+    orgao: Universidade Federal de Minas Gerais
+    url: https://www.ufmg.br/comunicacao/radio-ufmg-educativa/sobre-a-radio/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Parceria entre a UFMG e a EBC, a Rádio UFMG Educativa transmite 24 horas [...] na freqüência 104,5 FM para a Grande BH".
+
+  - id: ufrn-radio-universitaria
+    tema: radio
+    titulo: "Rádio Universitária inscreve para festival de música potiguar brasileira"
+    orgao: Universidade Federal do Rio Grande do Norte (CCHLA)
+    url: https://cchla.ufrn.br/sem-categoria/radio-universitaria-inscreve-para-festival-musica-potiguar-brasileira/
+    acessado: 2026-11-23
+    publicado: 2019-08-01
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "A Rádio Universitária FM (88,9), vinculada à Superintendência de Comunicação (Comunica), da UFRN". Natal 88,9 licenciado na base do MCom.
+
+  - id: agenciagov-ifrn-fm-2026
+    tema: radio
+    titulo: "EBC e IFRN inauguram nova rádio pública em Natal (RN)"
+    orgao: Agência Gov (EBC)
+    url: https://agenciagov.ebc.com.br/noticias/202606/ebc-e-ifrn-inauguram-nova-radio-publica-em-natal-rn
+    acessado: 2026-11-23
+    publicado: 2026-06-15
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Rádio IFRN FM iniciou transmissões no dial 95,3 FM". Retransmite a programação nacional da EBC.
