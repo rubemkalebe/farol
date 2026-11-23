@@ -237,6 +237,40 @@ e vista em <a href="https://who.int">OMS</a>.</p><figure><img src="a.png"></figu
     expect(a.corpo, isNot(contains('Referências')));
   });
 
+  test('guia do iFixit: passos com fotos, avisos, sem site em volta', () {
+    const pagina = '''
+<html><head><title>Troca da bateria</title></head><body><div id="mainBody">
+<!-- MAIN BODY -->
+<h1 class="guide-intro-title">Troca da bateria</h1>
+<div class="stats-container">12 visualizações</div>
+<div id="tools-and-parts"><a href="../../home/unavailable_offline?url=/products/x"><img src="../../images/a.standard" width="80"></a> Chave P2</div>
+<li class="step"><h2>Passo 1</h2>
+<div class="step-main-media"><img src="../../images/foto1.standard" width="575"></div>
+<div class="step-thumbnails"><img src="../../images/foto1.standard" width="110" alt="T2yIKTYtWTOpeGir"><img src="../../images/foto2.standard" width="110"></div>
+<ul><li class="level-0 bullet-line-icon-caution"><div class="bullet"></div><p>Descarregue a bateria.</p></li>
+<li class="level-0"><p>Tire os <a href="../../Device/Parafuso">parafusos</a>.</p></li></ul>
+<div class="js-comments">Comentário de alguém</div></li>
+<div class="guide-comments-container"><h3>29 comentários</h3></div>
+<footer>© iFixit</footer>
+</div></body></html>''';
+    final a = limparArtigo(pagina, imagens: true);
+    expect(a.titulo, 'Troca da bateria');
+    expect(a.corpo, isNot(contains('MAIN BODY')));
+    expect(a.corpo, isNot(contains('<h1')));
+    expect(a.corpo, isNot(contains('visualizações')));
+    expect(a.corpo, isNot(contains('comentários')));
+    expect(a.corpo, isNot(contains('Comentário de alguém')));
+    expect(a.corpo, isNot(contains('© iFixit')));
+    expect(a.corpo, contains('Chave P2'));
+    expect(a.corpo, isNot(contains('unavailable_offline')));
+    expect(a.corpo, contains('<strong>Cuidado: </strong>Descarregue'));
+    expect(a.corpo, contains('href="wiki:../../Device/Parafuso"'));
+    // A foto grande repete a primeira miniatura: cada foto aparece uma vez.
+    expect('<img'.allMatches(a.corpo).length, 2);
+    expect(a.corpo, contains('$esquemaImagem../../images/foto2.standard'));
+    expect(a.corpo, isNot(contains('T2yIKTYtWTOpeGir')));
+  });
+
   test('pacote com imagens: mantém fotos, tira ícones, SVG e o link', () {
     const pagina = '''
 <html><body><div id="mw-content-text">

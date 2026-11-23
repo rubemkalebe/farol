@@ -8,8 +8,37 @@ const esquemaWiki = 'wiki:';
 /// arquivo ZIM, relativo ao artigo.
 const esquemaImagem = 'zimimg:';
 
-/// Imagens que o leitor sabe mostrar (SVG e fórmulas ficam de fora).
-final _imagemLegivel = RegExp(r'\.(jpe?g|png|gif|webp)$', caseSensitive: false);
+/// Desenhos vetoriais (SVG, fórmulas) o leitor não mostra. As fotos do
+/// iFixit vêm sem extensão ("X.standard"), então o resto passa.
+final _imagemVetorial = RegExp(r'\.svgz?$', caseSensitive: false);
+
+/// Partes do site do iFixit fora do guia: comentários, autor, rodapé,
+/// botões, ícones e fotos dos produtos da loja.
+const _foraIfixit = [
+  'footer',
+  'svg',
+  '.actionbar-portal',
+  '#author-container',
+  '.guide-author',
+  '.stats-container',
+  '.statuses',
+  '.js-comments',
+  '.comments-container',
+  '.comments-button-container',
+  '.step-comments',
+  '.guide-comments-container',
+  '.lang',
+  '#mobile-wiki-toc',
+  '#mobile-skeleton-toc',
+  '.react-component',
+  '.bullet',
+  '.clearer',
+  'img[src*="cart-products"]',
+  '#tools-and-parts img',
+  '.deviceToolsContainer img',
+  'h1.guide-intro-title',
+  'h1.banner-title',
+];
 
 /// Partes que só fazem sentido com imagem: saem dos pacotes sem imagem.
 const _soComImagem = {'figure', 'img', '.thumb', '.gallery'};
@@ -80,8 +109,11 @@ ArtigoLimpo limparArtigo(
       doc.querySelector('#firstHeading')?.text.trim() ??
       doc.querySelector('title')?.text.trim() ??
       tituloPadrao;
+  final ifixit = doc.querySelector('#mainBody');
+  if (ifixit != null) _prepararIfixit(ifixit);
   final raiz =
       doc.querySelector('#mw-content-text') ??
+      ifixit ??
       doc.querySelector('.mw-parser-output') ??
       doc.body ??
       doc.documentElement!;
@@ -112,6 +144,15 @@ ArtigoLimpo limparArtigo(
 
   if (imagens) _prepararImagens(raiz);
 
+  // Comentários do HTML ("<!-- MAIN BODY -->") não são texto do artigo.
+  void semComentarios(Node n) {
+    for (final f in n.nodes.toList()) {
+      f is Comment ? f.remove() : semComentarios(f);
+    }
+  }
+
+  semComentarios(raiz);
+
   // Tabela com largura fixa ("width: 25%", flutuando à direita) fica
   // espremida na tela do celular: deixa ocupar a largura que precisar.
   for (final t in raiz.querySelectorAll('table, td, th').toList()) {
@@ -127,7 +168,11 @@ ArtigoLimpo limparArtigo(
         !href.startsWith('#') &&
         !href.startsWith('//') &&
         !href.contains(':') &&
-        !RegExp(r'(\.(epub|pdf)|_cover\.\d+\.html)$').hasMatch(href);
+        !RegExp(r'(\.(epub|pdf)|_cover\.\d+\.html)$').hasMatch(href) &&
+        // iFixit: loja e sites de fora viram página "indisponível".
+        !href.contains('unavailable_offline') &&
+        !href.contains('not_yet_available') &&
+        !href.contains('external_content');
     if (interno) {
       a.attributes
         ..clear()
@@ -141,6 +186,33 @@ ArtigoLimpo limparArtigo(
   return ArtigoLimpo(titulo, raiz.innerHtml.trim());
 }
 
+/// Guia do iFixit: tira o que é do site e deixa cada passo com as fotos
+/// uma vez só (a foto grande repete a primeira miniatura) e os avisos
+/// marcados.
+void _prepararIfixit(Element raiz) {
+  for (final seletor in _foraIfixit) {
+    for (final e in raiz.querySelectorAll(seletor).toList()) {
+      e.remove();
+    }
+  }
+  for (final passo in raiz.querySelectorAll('.step').toList()) {
+    if (passo.querySelector('.step-thumbnails img') != null) {
+      for (final e in passo.querySelectorAll('.step-main-media').toList()) {
+        e.remove();
+      }
+    }
+  }
+  for (final (classe, aviso) in [
+    ('bullet-line-icon-caution', 'Cuidado: '),
+    ('bullet-line-icon-note', 'Obs.: '),
+  ]) {
+    for (final li in raiz.querySelectorAll('li.$classe').toList()) {
+      final p = li.querySelector('p') ?? li;
+      p.nodes.insert(0, Element.tag('strong')..text = aviso);
+    }
+  }
+}
+
 /// Deixa só as imagens que o leitor mostra, com o caminho no arquivo, e
 /// tira o link em volta delas (levaria à página do arquivo da imagem).
 void _prepararImagens(Element raiz) {
@@ -151,19 +223,27 @@ void _prepararImagens(Element raiz) {
         src.isNotEmpty && !src.contains(':') && !src.startsWith('//');
     // Ícones e bandeirinhas (menos de 40 px) só poluem a leitura.
     if (!interna ||
-        !_imagemLegivel.hasMatch(src) ||
+        _imagemVetorial.hasMatch(src) ||
         (largura > 0 && largura < 40)) {
       img.remove();
       continue;
     }
-    final alt = img.attributes['alt'] ?? '';
+    var alt = img.attributes['alt'] ?? '';
+    // O iFixit põe o código da foto no alt: não serve de descrição.
+    if (RegExp(r'^[A-Za-z0-9]{16}$').hasMatch(alt)) alt = '';
     img.attributes
       ..clear()
       ..['src'] = '$esquemaImagem${_caminho(src)}'
       ..['alt'] = alt;
     final link = img.parent;
     if (link != null && link.localName == 'a') {
-      link.replaceWith(img);
+      if (link.text.trim().isEmpty) {
+        link.replaceWith(img);
+      } else {
+        // Miniatura de uma lista de links (categorias, outros guias): fica
+        // só o nome, senão a lista vira uma pilha de fotos grandes.
+        img.remove();
+      }
     }
   }
   // Figuras que ficaram sem imagem (SVG, ícones) saem inteiras.
@@ -189,16 +269,31 @@ String _caminho(String href) {
 /// [tamanho] caracteres, sem cortar parágrafo, para o celular não travar.
 List<String> dividirEmPartes(String corpo, {int tamanho = 60000}) {
   if (corpo.length <= tamanho * 1.3) return [corpo];
-  var nos = html.parseFragment(corpo).nodes.toList();
-  while (nos.length == 1 &&
-      nos.first is Element &&
-      nos.first.nodes.isNotEmpty) {
-    nos = nos.first.nodes.toList();
+  // Pedaços em ordem: um bloco maior que uma parte (o guia inteiro dentro
+  // de uma <div>, por exemplo) é aberto nos blocos de dentro.
+  final pedacos = <String>[];
+  void juntar(Node n) {
+    if (n is Comment) return;
+    if (n is Element) {
+      final h = n.outerHtml;
+      if (h.length > tamanho && n.children.isNotEmpty) {
+        for (final f in n.nodes) {
+          juntar(f);
+        }
+      } else {
+        pedacos.add(h);
+      }
+    } else if ((n.text ?? '').trim().isNotEmpty) {
+      pedacos.add(n.text!);
+    }
+  }
+
+  for (final n in html.parseFragment(corpo).nodes) {
+    juntar(n);
   }
   final partes = <String>[];
   final atual = StringBuffer();
-  for (final n in nos) {
-    final pedaco = n is Element ? n.outerHtml : (n.text ?? '');
+  for (final pedaco in pedacos) {
     if (atual.length > 0 && atual.length + pedaco.length > tamanho) {
       partes.add(atual.toString());
       atual.clear();

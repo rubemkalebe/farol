@@ -27,8 +27,11 @@ class PacoteWiki {
   /// os da biblioteca, só na busca da tela de pacotes.
   bool get daWikipedia => pasta == 'wikipedia';
 
-  /// Pacotes "maxi" trazem as fotos e figuras dentro do arquivo.
-  bool get comImagens => id.contains('_maxi');
+  /// Pacotes "maxi" e o iFixit trazem as fotos dentro do arquivo.
+  bool get comImagens => id.contains('_maxi') || pasta == 'ifixit';
+
+  /// Pacotes que se navegam pela página inicial (categorias), além da busca.
+  bool get temInicio => pasta == 'ifixit';
 
   /// Nome do arquivo no Kiwix, sem a data (ex.: wikipedia_pt_medicine_nopic).
   final String id;
@@ -167,6 +170,20 @@ const pacotesWiki = [
     versao: '2026-02',
     pasta: 'other',
     fonte: 'Appropedia',
+  ),
+  PacoteWiki(
+    id: 'ifixit_pt_all',
+    titulo: 'iFixit: guias de conserto',
+    descricao:
+        'Passo a passo com fotos para consertar celular, computador, '
+        'eletrodoméstico, carro e ferramenta. Menu em português, mas a '
+        'maioria dos guias está em inglês. Muito pesado: melhor num '
+        'cartão de memória ou num tablet só para isso.',
+    tamanho: '3,4 GB',
+    versao: '2026-03',
+    pasta: 'ifixit',
+    fonte: 'iFixit e seus autores',
+    licenca: 'CC BY-NC-SA 3.0',
   ),
 ];
 

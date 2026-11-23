@@ -64,6 +64,21 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
         : _wiki.buscar(_termo, biblioteca: true);
   });
 
+  /// Abre a página inicial do pacote (no iFixit, as categorias de
+  /// aparelhos), para navegar sem saber o nome do que procurar.
+  Future<void> _abrirInicio(PacoteWiki p) async {
+    try {
+      final zim = await _wiki.abrir(p);
+      final inicio = await zim.paginaInicial();
+      if (mounted) abrirArtigoWiki(context, p, inicio);
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text('Não deu para abrir o pacote: $e')),
+      );
+    }
+  }
+
   Future<void> _apagar(PacoteWiki p) async {
     final sim = await showDialog<bool>(
       context: context,
@@ -99,7 +114,10 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
         ? () => Navigator.of(
             context,
           ).push(MaterialPageRoute(builder: (_) => TelaListaPacote(pacote: p)))
+        : p.temInicio
+        ? () => _abrirInicio(p)
         : null,
+    textoListar: p.temInicio ? 'Abrir' : 'Ver todos',
   );
 
   @override
@@ -197,10 +215,12 @@ class _CartaoPacote extends StatelessWidget {
     required this.aoParar,
     required this.aoApagar,
     this.aoListar,
+    this.textoListar = 'Ver todos',
   });
 
   final PacoteWiki pacote;
   final VoidCallback? aoListar;
+  final String textoListar;
   final bool instalado;
   final Download? download;
   final VoidCallback aoBaixar;
@@ -222,7 +242,7 @@ class _CartaoPacote extends StatelessWidget {
             FilledButton.tonal(
               key: ValueKey('listar-${pacote.id}'),
               onPressed: aoListar,
-              child: const Text('Ver todos'),
+              child: Text(textoListar),
             ),
         ],
       );
