@@ -78,7 +78,9 @@ class _TelaInicioState extends State<TelaInicio> {
 
   Future<void> _conferirWikipedia() async {
     final instalados = await Wikipedia.instancia.instalados();
-    if (mounted) setState(() => _semWikipedia = instalados.isEmpty);
+    if (mounted) {
+      setState(() => _semWikipedia = !instalados.any((p) => p.daWikipedia));
+    }
   }
 
   Future<void> _abrirWikipedia() async {
@@ -191,9 +193,10 @@ class _TelaInicioState extends State<TelaInicio> {
                     const SizedBox(height: 10),
                     _CartaoFerramenta(
                       icone: Icons.menu_book_outlined,
-                      titulo: 'Wikipédia sem internet',
+                      titulo: 'Biblioteca sem internet',
                       texto:
-                          'Baixe Medicina e outros pacotes para ler no apagão.',
+                          'Wikipédia, livros, dicionário e enciclopédia para '
+                          'crianças, baixados para ler no apagão.',
                       onTap: _abrirWikipedia,
                     ),
                     if (_podeEnviar) ...[
@@ -201,8 +204,7 @@ class _TelaInicioState extends State<TelaInicio> {
                       _CartaoFerramenta(
                         icone: Icons.share_outlined,
                         titulo: 'Passar o Farol adiante',
-                        texto:
-                            'Mande o app para outro celular, sem internet.',
+                        texto: 'Mande o app para outro celular, sem internet.',
                         onTap: () => Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (_) => const TelaPassarAdiante(),

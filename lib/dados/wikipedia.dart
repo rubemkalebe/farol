@@ -18,7 +18,14 @@ class PacoteWiki {
     required this.tamanho,
     required this.versao,
     this.sugerido = false,
+    this.pasta = 'wikipedia',
+    this.fonte = 'Wikipédia',
+    this.licenca = 'CC BY-SA 4.0',
   });
+
+  /// Grupo da tela: os pacotes da Wikipédia entram na busca geral do app;
+  /// os da biblioteca, só na busca da tela de pacotes.
+  bool get daWikipedia => pasta == 'wikipedia';
 
   /// Nome do arquivo no Kiwix, sem a data (ex.: wikipedia_pt_medicine_nopic).
   final String id;
@@ -31,6 +38,13 @@ class PacoteWiki {
   /// Versão conhecida, usada se a lista do servidor não abrir.
   final String versao;
   final bool sugerido;
+
+  /// Pasta no servidor do Kiwix (wikipedia, vikidia, gutenberg...).
+  final String pasta;
+
+  /// Nome do projeto de origem, para o crédito ("Wikipédia", "Vikidia").
+  final String fonte;
+  final String licenca;
 }
 
 const pacotesWiki = [
@@ -72,9 +86,77 @@ const pacotesWiki = [
     tamanho: '6,6 GB',
     versao: '2026-05',
   ),
+  // Biblioteca: para ler, estudar e passar o tempo num apagão longo.
+  PacoteWiki(
+    id: 'vikidia_pt_all_maxi',
+    titulo: 'Vikidia (para crianças)',
+    descricao: 'Enciclopédia escrita para crianças de 8 a 13 anos.',
+    tamanho: '18 MB',
+    versao: '2026-09',
+    pasta: 'vikidia',
+    fonte: 'Vikidia',
+    licenca: 'CC BY-SA 3.0',
+  ),
+  PacoteWiki(
+    id: 'gutenberg_pt_all',
+    titulo: 'Livros em domínio público',
+    descricao:
+        'Quase mil livros em português do Projeto Gutenberg: Machado de '
+        'Assis, Camões, Eça de Queirós, José de Alencar e outros.',
+    tamanho: '499 MB',
+    versao: '2025-10',
+    pasta: 'gutenberg',
+    fonte: 'Projeto Gutenberg',
+    licenca: 'domínio público',
+  ),
+  PacoteWiki(
+    id: 'wikibooks_pt_all_nopic',
+    titulo: 'Wikilivros',
+    descricao: 'Livros escritos em grupo: receitas, cursos, manuais.',
+    tamanho: '55 MB',
+    versao: '2026-10',
+    pasta: 'wikibooks',
+    fonte: 'Wikilivros',
+  ),
+  PacoteWiki(
+    id: 'wikiversity_pt_all_nopic',
+    titulo: 'Wikiversidade',
+    descricao: 'Material de cursos e aulas.',
+    tamanho: '44 MB',
+    versao: '2026-10',
+    pasta: 'wikiversity',
+    fonte: 'Wikiversidade',
+  ),
+  PacoteWiki(
+    id: 'wikivoyage_pt_all_nopic',
+    titulo: 'Wikivoyage',
+    descricao: 'Guia de cidades e lugares.',
+    tamanho: '17 MB',
+    versao: '2026-09',
+    pasta: 'wikivoyage',
+    fonte: 'Wikivoyage',
+  ),
+  PacoteWiki(
+    id: 'wiktionary_pt_all_nopic',
+    titulo: 'Wikcionário',
+    descricao: 'Dicionário: significado das palavras.',
+    tamanho: '353 MB',
+    versao: '2026-09',
+    pasta: 'wiktionary',
+    fonte: 'Wikcionário',
+  ),
+  PacoteWiki(
+    id: 'wikisource_pt_all_nopic',
+    titulo: 'Wikisource',
+    descricao: 'Textos históricos, leis e obras clássicas. Pesado.',
+    tamanho: '1,5 GB',
+    versao: '2026-10',
+    pasta: 'wikisource',
+    fonte: 'Wikisource',
+  ),
 ];
 
-const servidorKiwix = 'https://download.kiwix.org/zim/wikipedia/';
+const servidorKiwix = 'https://download.kiwix.org/zim/';
 
 /// Versão mais nova de cada pacote na lista do servidor (AAAA-MM).
 @visibleForTesting
@@ -150,17 +232,20 @@ class Wikipedia extends ChangeNotifier {
       _abertos[p.id] ??= _arquivo(p).then((f) => Zim.abrir(f.path));
 
   /// Busca pelo título em todos os pacotes baixados, sem repetir título.
+  /// Só os pacotes da Wikipédia, a não ser que [biblioteca] seja true.
   Future<List<(PacoteWiki, EntradaZim)>> buscar(
     String termo, {
     int limite = 8,
+    bool biblioteca = false,
   }) async {
     final achados = <(PacoteWiki, EntradaZim)>[];
     final vistos = <String>{};
     for (final p in await instalados()) {
+      if (!biblioteca && !p.daWikipedia) continue;
       try {
         final zim = await abrir(p);
         for (final e in await zim.buscarTitulo(termo, limite: limite)) {
-          if (vistos.add(e.titulo)) achados.add((p, e));
+          if (vistos.add('${p.fonte}/${e.titulo}')) achados.add((p, e));
         }
       } catch (_) {
         // Arquivo estragado não derruba a busca dos guias.
@@ -179,7 +264,7 @@ class Wikipedia extends ChangeNotifier {
       ..connectionTimeout = const Duration(seconds: 30);
     try {
       final versao = await _versao(cliente, p);
-      final url = Uri.parse('$servidor${p.id}_$versao.zim');
+      final url = Uri.parse('$servidor${p.pasta}/${p.id}_$versao.zim');
       final esperado = await _sha256(cliente, url);
 
       // Continua de onde parou, se já houver parte baixada.
@@ -272,7 +357,7 @@ class Wikipedia extends ChangeNotifier {
 
   Future<String> _versao(HttpClient c, PacoteWiki p) async {
     try {
-      final req = await c.getUrl(Uri.parse(servidor));
+      final req = await c.getUrl(Uri.parse('$servidor${p.pasta}/'));
       final resp = await req.close();
       final texto = await resp.transform(utf8.decoder).join();
       return versaoMaisNova(texto, p.id) ?? p.versao;

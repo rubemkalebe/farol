@@ -42,6 +42,10 @@ const _foraSeletores = [
   '.thumb',
   '.gallery',
   '.mw-empty-elt',
+  '.catlinks',
+  '.zim-footer',
+  '.scribunto-error',
+  'strong.error',
 ];
 
 class ArtigoLimpo {
@@ -93,7 +97,8 @@ ArtigoLimpo limparArtigo(String pagina, {String tituloPadrao = ''}) {
         href.isNotEmpty &&
         !href.startsWith('#') &&
         !href.startsWith('//') &&
-        !href.contains(':');
+        !href.contains(':') &&
+        !RegExp(r'(\.(epub|pdf)|_cover\.\d+\.html)$').hasMatch(href);
     if (interno) {
       a.attributes
         ..clear()
@@ -118,6 +123,44 @@ String _caminho(String href) {
   } catch (_) {
     return c;
   }
+}
+
+/// Divide um texto muito longo (um livro inteiro) em partes de uns
+/// [tamanho] caracteres, sem cortar parágrafo, para o celular não travar.
+List<String> dividirEmPartes(String corpo, {int tamanho = 60000}) {
+  if (corpo.length <= tamanho * 1.3) return [corpo];
+  var nos = html.parseFragment(corpo).nodes.toList();
+  while (nos.length == 1 &&
+      nos.first is Element &&
+      nos.first.nodes.isNotEmpty) {
+    nos = nos.first.nodes.toList();
+  }
+  final partes = <String>[];
+  final atual = StringBuffer();
+  for (final n in nos) {
+    final pedaco = n is Element ? n.outerHtml : (n.text ?? '');
+    if (atual.length > 0 && atual.length + pedaco.length > tamanho) {
+      partes.add(atual.toString());
+      atual.clear();
+    }
+    atual.write(pedaco);
+  }
+  if (atual.isNotEmpty) partes.add(atual.toString());
+  return partes;
+}
+
+/// Caminho de um link relativo ao artigo atual, como o navegador faria:
+/// em "Curso/Aula_1", "../Outro" vira "Outro" e "Aula_2" vira "Curso/Aula_2".
+String resolverCaminho(String atual, String link) {
+  final partes = atual.split('/')..removeLast();
+  for (final p in link.split('/')) {
+    if (p == '..') {
+      if (partes.isNotEmpty) partes.removeLast();
+    } else if (p != '.' && p.isNotEmpty) {
+      partes.add(p);
+    }
+  }
+  return partes.join('/');
 }
 
 Element? _subirAte(Element e, String tag) {

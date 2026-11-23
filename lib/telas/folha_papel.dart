@@ -47,10 +47,8 @@ Future<void> compartilharFolhaPapel(BuildContext context) async {
   try {
     final cidadeId = await lerCidade();
     final cidades = await carregarCidades();
-    final nome = cidades
-            .where((c) => c.id == cidadeId)
-            .map((c) => c.nome)
-            .firstOrNull ??
+    final nome =
+        cidades.where((c) => c.id == cidadeId).map((c) => c.nome).firstOrNull ??
         'números nacionais';
     final capitulo = (await carregarIndice()).firstWhere(
       (c) => c.id == 'contatos',
@@ -59,9 +57,8 @@ Future<void> compartilharFolhaPapel(BuildContext context) async {
       await carregarCapitulo(capitulo),
       await blocosDaCidadeEscolhida(),
     );
-    Future<pw.Font> fonte(String arquivo) async => pw.Font.ttf(
-      await rootBundle.load('assets/fontes/atkinson/$arquivo'),
-    );
+    Future<pw.Font> fonte(String arquivo) async =>
+        pw.Font.ttf(await rootBundle.load('assets/fontes/atkinson/$arquivo'));
     final bytes = await gerarFolhaPapel(
       cidade: nome,
       telefones: telefonesParaPapel(markdown),

@@ -122,15 +122,43 @@ class Zim {
     ];
   }();
 
-  /// Artigos cujo título começa com [prefixo]. A primeira letra não
-  /// diferencia maiúscula, como na Wikipédia.
+  /// Artigos cujo título começa com [prefixo]. A ordem dos títulos no
+  /// arquivo diferencia maiúsculas, então a busca tenta o jeito digitado,
+  /// a primeira letra maiúscula, Cada Palavra Maiúscula e tudo minúsculo
+  /// (Wikcionário usa minúsculas; livros usam maiúscula em cada palavra).
   Future<List<EntradaZim>> buscarTitulo(
     String prefixo, {
     int limite = 10,
   }) async {
     final termo = prefixo.trim();
     if (termo.isEmpty) return const [];
-    final alvo = termo[0].toUpperCase() + termo.substring(1);
+    String maiuscula(String p) =>
+        p.isEmpty ? p : p[0].toUpperCase() + p.substring(1);
+    final variantes = <String>{
+      maiuscula(termo),
+      termo,
+      termo.split(' ').map(maiuscula).join(' '),
+      termo.toLowerCase(),
+    };
+    final achados = <EntradaZim>[];
+    // Títulos diferentes que levam ao mesmo artigo ("Dengue (doença)" →
+    // "Dengue") aparecem uma vez só.
+    final destinos = <int>{};
+    for (final v in variantes) {
+      for (final e in await _buscarExato(v, limite)) {
+        final destino = e.ehRedirecionamento
+            ? (await resolver(e)).indice
+            : e.indice;
+        if (destinos.add(destino)) achados.add(e);
+      }
+    }
+    achados.sort(
+      (a, b) => a.titulo.toLowerCase().compareTo(b.titulo.toLowerCase()),
+    );
+    return achados.take(limite).toList();
+  }
+
+  Future<List<EntradaZim>> _buscarExato(String alvo, int limite) async {
     final ordem = await _ordemTitulos();
     var lo = 0, hi = ordem.length;
     while (lo < hi) {
@@ -143,19 +171,22 @@ class Zim {
       }
     }
     final achados = <EntradaZim>[];
-    // Títulos diferentes que levam ao mesmo artigo ("Dengue (doença)" →
-    // "Dengue") aparecem uma vez só.
-    final destinos = <int>{};
     for (var i = lo; i < ordem.length && achados.length < limite; i++) {
       final e = await entrada(ordem[i]);
       if (!e.titulo.startsWith(alvo)) break;
-      if (!e.ehArtigo) continue;
-      final destino = e.ehRedirecionamento
-          ? (await resolver(e)).indice
-          : e.indice;
-      if (destinos.add(destino)) achados.add(e);
+      if (e.ehArtigo && e.ehLegivel) achados.add(e);
     }
     return achados;
+  }
+
+  /// Todas as páginas legíveis em ordem de título (para listar os livros).
+  Future<List<EntradaZim>> todosTitulos() async {
+    final lista = <EntradaZim>[];
+    for (final i in await _ordemTitulos()) {
+      final e = await entrada(i);
+      if (e.ehArtigo && e.ehLegivel && !e.ehRedirecionamento) lista.add(e);
+    }
+    return lista;
   }
 
   Future<EntradaZim> resolver(EntradaZim e) async {
@@ -265,8 +296,21 @@ class EntradaZim {
 
   bool get ehRedirecionamento => mime == 0xffff;
   bool get ehArtigo => namespace == 'C' || namespace == 'A';
+
+  /// Fora da busca: capas e arquivos para baixar dos livros (Gutenberg).
+  bool get ehLegivel =>
+      !_capaOuArquivo.hasMatch(url) && !url.startsWith('_') && url != 'favicon';
+
+  /// Título para mostrar: sem o número e o ".html" dos livros
+  /// ("Dom Casmurro.55752.html" → "Dom Casmurro").
+  String get tituloLegivel => titulo.replaceFirst(_sufixoLivro, '');
   String get chave => '$namespace/$url';
 }
+
+final _capaOuArquivo = RegExp(
+  r'(_cover\.\d+\.html|\.(epub|pdf|css|js|png|jpe?g|svg|webp|ico))$',
+);
+final _sufixoLivro = RegExp(r'\.\d+\.html$');
 
 class _Cabecalho {
   const _Cabecalho({

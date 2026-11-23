@@ -11,9 +11,15 @@ import '../tema.dart';
 import 'largura.dart';
 
 const _credito =
-    'Conteúdo da Wikipédia, licença CC BY-SA 4.0, empacotado pelo Kiwix. '
-    'Pode estar desatualizado ou ter erros: em emergência, siga os guias do '
+    'Wikipédia, Vikidia e demais projetos Wiki: licença CC BY-SA. Livros do '
+    'Projeto Gutenberg: domínio público. Tudo empacotado pelo Kiwix. Pode '
+    'estar desatualizado ou ter erros: em emergência, siga os guias do '
     'Farol e ligue 192.';
+
+String _creditoDe(PacoteWiki p) =>
+    'Conteúdo: ${p.fonte}, ${p.licenca == 'domínio público' ? 'em domínio público' : 'licença ${p.licenca}'}, '
+    'empacotado pelo Kiwix. Pode estar desatualizado ou ter erros: em '
+    'emergência, siga os guias do Farol e ligue 192.';
 
 /// Pacotes da Wikipédia para baixar e busca nos que já estão no aparelho.
 class TelaWikipedia extends StatefulWidget {
@@ -45,13 +51,17 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
     if (!mounted) return;
     setState(() {
       _instalados = _wiki.instalados();
-      if (_termo.isNotEmpty) _resultados = _wiki.buscar(_termo);
+      if (_termo.isNotEmpty) {
+        _resultados = _wiki.buscar(_termo, biblioteca: true);
+      }
     });
   }
 
   void _buscar(String v) => setState(() {
     _termo = v.trim();
-    _resultados = _termo.isEmpty ? null : _wiki.buscar(_termo);
+    _resultados = _termo.isEmpty
+        ? null
+        : _wiki.buscar(_termo, biblioteca: true);
   });
 
   Future<void> _apagar(PacoteWiki p) async {
@@ -78,11 +88,25 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
     if (sim == true) await _wiki.apagar(p);
   }
 
+  Widget _cartao(PacoteWiki p, List<PacoteWiki> instalados) => _CartaoPacote(
+    pacote: p,
+    instalado: instalados.contains(p),
+    download: _wiki.downloads[p.id],
+    aoBaixar: () => _wiki.baixar(p),
+    aoParar: () => _wiki.cancelar(p),
+    aoApagar: () => _apagar(p),
+    aoListar: p.pasta == 'gutenberg'
+        ? () => Navigator.of(
+            context,
+          ).push(MaterialPageRoute(builder: (_) => TelaListaPacote(pacote: p)))
+        : null,
+  );
+
   @override
   Widget build(BuildContext context) {
     final t = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: AppBar(title: const Text('Wikipédia sem internet')),
+      appBar: AppBar(title: const Text('Biblioteca sem internet')),
       body: FutureBuilder<List<PacoteWiki>>(
         future: _instalados,
         builder: (context, snap) {
@@ -96,7 +120,7 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
                     key: const ValueKey('busca-wiki'),
                     decoration: const InputDecoration(
                       prefixIcon: Icon(Icons.search),
-                      hintText: 'Buscar artigo. Ex.: dengue, hipotermia',
+                      hintText: 'Buscar pelo título. Ex.: dengue, Dom Casmurro',
                       border: OutlineInputBorder(),
                     ),
                     textInputAction: TextInputAction.search,
@@ -109,13 +133,14 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: Text(
-                      'Sem internet, o celular não abre a Wikipédia. Baixe '
-                      'agora um pacote para ler depois, mesmo no apagão.',
+                      'Sem internet, o celular não abre a Wikipédia nem '
+                      'livros. Baixe agora o que quiser ler depois, mesmo '
+                      'num apagão longo.',
                       style: t.bodyLarge?.copyWith(fontWeight: FontWeight.w700),
                     ),
                   ),
                 Text(
-                  'PACOTES',
+                  'WIKIPÉDIA',
                   style: t.labelMedium?.copyWith(
                     color: corTextoSuave,
                     letterSpacing: 1.5,
@@ -129,15 +154,26 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
                   style: t.bodySmall?.copyWith(color: corTextoSuave),
                 ),
                 const SizedBox(height: 10),
-                for (final p in pacotesWiki)
-                  _CartaoPacote(
-                    pacote: p,
-                    instalado: instalados.contains(p),
-                    download: _wiki.downloads[p.id],
-                    aoBaixar: () => _wiki.baixar(p),
-                    aoParar: () => _wiki.cancelar(p),
-                    aoApagar: () => _apagar(p),
+                for (final p in pacotesWiki.where((p) => p.daWikipedia))
+                  _cartao(p, instalados),
+                const SizedBox(height: 20),
+                Text(
+                  'BIBLIOTECA',
+                  style: t.labelMedium?.copyWith(
+                    color: corTextoSuave,
+                    letterSpacing: 1.5,
+                    fontWeight: FontWeight.w800,
                   ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  'Para ler, estudar e passar o tempo se a falta de energia '
+                  'durar muito. Todos opcionais.',
+                  style: t.bodySmall?.copyWith(color: corTextoSuave),
+                ),
+                const SizedBox(height: 10),
+                for (final p in pacotesWiki.where((p) => !p.daWikipedia))
+                  _cartao(p, instalados),
                 const SizedBox(height: 16),
                 Text(
                   _credito,
@@ -160,9 +196,11 @@ class _CartaoPacote extends StatelessWidget {
     required this.aoBaixar,
     required this.aoParar,
     required this.aoApagar,
+    this.aoListar,
   });
 
   final PacoteWiki pacote;
+  final VoidCallback? aoListar;
   final bool instalado;
   final Download? download;
   final VoidCallback aoBaixar;
@@ -176,7 +214,18 @@ class _CartaoPacote extends StatelessWidget {
     final String? estado;
     if (instalado) {
       estado = 'Baixado: funciona sem internet';
-      acao = TextButton(onPressed: aoApagar, child: const Text('Apagar'));
+      acao = Wrap(
+        spacing: 4,
+        children: [
+          TextButton(onPressed: aoApagar, child: const Text('Apagar')),
+          if (aoListar != null)
+            FilledButton.tonal(
+              key: ValueKey('listar-${pacote.id}'),
+              onPressed: aoListar,
+              child: const Text('Ver todos'),
+            ),
+        ],
+      );
     } else if (d == null) {
       estado = null;
       acao = FilledButton.tonal(
@@ -304,11 +353,11 @@ class ResultadosWiki extends StatelessWidget {
                 contentPadding: EdgeInsets.zero,
                 leading: const Icon(Icons.menu_book_outlined, color: corFeixe),
                 title: Text(
-                  e.titulo,
+                  e.tituloLegivel,
                   style: const TextStyle(fontWeight: FontWeight.w700),
                 ),
                 subtitle: Text(
-                  'Wikipédia · ${p.titulo}',
+                  p.daWikipedia ? 'Wikipédia · ${p.titulo}' : p.titulo,
                   style: const TextStyle(fontSize: 12, color: corTextoSuave),
                 ),
                 onTap: () => abrirArtigoWiki(context, p, e),
@@ -328,8 +377,10 @@ void abrirArtigoWiki(BuildContext context, PacoteWiki p, EntradaZim e) {
   );
 }
 
-ArtigoLimpo _limpar((String, String) a) =>
-    limparArtigo(a.$1, tituloPadrao: a.$2);
+(String, List<String>) _limpar((String, String) a) {
+  final artigo = limparArtigo(a.$1, tituloPadrao: a.$2);
+  return (artigo.titulo, dividirEmPartes(artigo.corpo));
+}
 
 class TelaArtigoWiki extends StatefulWidget {
   const TelaArtigoWiki({
@@ -346,21 +397,25 @@ class TelaArtigoWiki extends StatefulWidget {
 }
 
 class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
-  late final Future<ArtigoLimpo> _artigo = _carregar();
+  late final Future<(String, List<String>)> _artigo = _carregar();
+  int _parte = 0;
 
-  Future<ArtigoLimpo> _carregar() async {
+  Future<(String, List<String>)> _carregar() async {
     final zim = await Wikipedia.instancia.abrir(widget.pacote);
     final bytes = await zim.conteudo(widget.entrada);
     final pagina = utf8.decode(bytes, allowMalformed: true);
     // Artigos grandes passam de 300 mil caracteres: limpa fora da tela.
-    return compute(_limpar, (pagina, widget.entrada.titulo));
+    return compute(_limpar, (pagina, widget.entrada.tituloLegivel));
   }
 
   Future<bool> _link(String url) async {
     if (!url.startsWith(esquemaWiki)) return true;
     final caminho = url.substring(esquemaWiki.length);
     final zim = await Wikipedia.instancia.abrir(widget.pacote);
-    final e = await zim.artigo(caminho);
+    final atual = (await zim.resolver(widget.entrada)).url;
+    final e =
+        await zim.artigo(resolverCaminho(atual, caminho)) ??
+        await zim.artigo(caminho);
     if (!mounted) return true;
     if (e == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -376,8 +431,8 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
   Widget build(BuildContext context) {
     final t = Theme.of(context).textTheme;
     return Scaffold(
-      appBar: AppBar(title: Text(widget.entrada.titulo)),
-      body: FutureBuilder<ArtigoLimpo>(
+      appBar: AppBar(title: Text(widget.entrada.tituloLegivel)),
+      body: FutureBuilder<(String, List<String>)>(
         future: _artigo,
         builder: (context, snap) {
           if (snap.hasError) {
@@ -389,13 +444,28 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
           if (!snap.hasData) {
             return const Center(child: CircularProgressIndicator());
           }
-          final a = snap.data!;
-          return LarguraLeitura(
+          final (titulo, partes) = snap.data!;
+          final n = partes.length;
+          final esc = const HtmlEscape().convert;
+          final origem = widget.pacote.daWikipedia
+              ? 'Wikipédia · ${widget.pacote.titulo}'
+              : widget.pacote.titulo;
+          final html = StringBuffer()
+            ..write('<h1>${esc(titulo)}</h1>')
+            ..write(
+              '<p class="farol-fonte">${esc(origem)}'
+              '${n > 1 ? ' · parte ${_parte + 1} de $n' : ''}</p>',
+            )
+            ..write(partes[_parte]);
+          if (_parte == n - 1) {
+            html.write(
+              '<hr><p class="farol-fonte">${esc(_creditoDe(widget.pacote))}</p>',
+            );
+          }
+          final leitor = LarguraLeitura(
             child: HtmlWidget(
-              '<h1>${const HtmlEscape().convert(a.titulo)}</h1>'
-              '<p class="farol-fonte">Wikipédia · ${const HtmlEscape().convert(widget.pacote.titulo)}</p>'
-              '${a.corpo}'
-              '<hr><p class="farol-fonte">${const HtmlEscape().convert(_credito)}</p>',
+              html.toString(),
+              key: ValueKey(_parte),
               renderMode: const ListViewMode(
                 padding: EdgeInsets.fromLTRB(16, 8, 16, 32),
               ),
@@ -414,6 +484,129 @@ class _TelaArtigoWikiState extends State<TelaArtigoWiki> {
                 },
                 _ => null,
               },
+            ),
+          );
+          if (n == 1) return leitor;
+          return Column(
+            children: [
+              Expanded(child: leitor),
+              SafeArea(
+                top: false,
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(8, 4, 8, 8),
+                  child: Row(
+                    children: [
+                      TextButton.icon(
+                        onPressed: _parte == 0
+                            ? null
+                            : () => setState(() => _parte--),
+                        icon: const Icon(Icons.chevron_left),
+                        label: const Text('Anterior'),
+                      ),
+                      Expanded(
+                        child: Text(
+                          'Parte ${_parte + 1} de $n',
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(color: corTextoSuave),
+                        ),
+                      ),
+                      TextButton.icon(
+                        key: const ValueKey('proxima-parte'),
+                        onPressed: _parte == n - 1
+                            ? null
+                            : () => setState(() => _parte++),
+                        icon: const Icon(Icons.chevron_right),
+                        label: const Text('Próxima'),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+}
+
+/// Lista completa de um pacote (os livros do Gutenberg), com filtro.
+class TelaListaPacote extends StatefulWidget {
+  const TelaListaPacote({super.key, required this.pacote});
+
+  final PacoteWiki pacote;
+
+  @override
+  State<TelaListaPacote> createState() => _TelaListaPacoteState();
+}
+
+class _TelaListaPacoteState extends State<TelaListaPacote> {
+  late final Future<List<EntradaZim>> _todos = Wikipedia.instancia
+      .abrir(widget.pacote)
+      .then((z) => z.todosTitulos());
+  String _filtro = '';
+
+  static String _semAcento(String s) {
+    const de = 'áàâãäéèêëíìîïóòôõöúùûüçÁÀÂÃÄÉÈÊËÍÌÎÏÓÒÔÕÖÚÙÛÜÇ';
+    const para = 'aaaaaeeeeiiiiooooouuuucAAAAAEEEEIIIIOOOOOUUUUC';
+    final b = StringBuffer();
+    for (final r in s.runes) {
+      final c = String.fromCharCode(r);
+      final i = de.indexOf(c);
+      b.write(i < 0 ? c : para[i]);
+    }
+    return b.toString().toLowerCase();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(widget.pacote.titulo)),
+      body: FutureBuilder<List<EntradaZim>>(
+        future: _todos,
+        builder: (context, snap) {
+          if (snap.hasError) {
+            return Padding(
+              padding: const EdgeInsets.all(16),
+              child: Text('Não deu para abrir a lista: ${snap.error}'),
+            );
+          }
+          if (!snap.hasData) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          final f = _semAcento(_filtro);
+          final lista = f.isEmpty
+              ? snap.data!
+              : [
+                  for (final e in snap.data!)
+                    if (_semAcento(e.tituloLegivel).contains(f)) e,
+                ];
+          return LarguraLeitura(
+            child: Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
+                  child: TextField(
+                    key: const ValueKey('filtro-lista'),
+                    decoration: InputDecoration(
+                      prefixIcon: const Icon(Icons.search),
+                      hintText: 'Filtrar ${snap.data!.length} títulos',
+                      border: const OutlineInputBorder(),
+                    ),
+                    onChanged: (v) => setState(() => _filtro = v.trim()),
+                  ),
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    itemCount: lista.length,
+                    itemBuilder: (context, i) => ListTile(
+                      title: Text(lista[i].tituloLegivel),
+                      onTap: () =>
+                          abrirArtigoWiki(context, widget.pacote, lista[i]),
+                    ),
+                  ),
+                ),
+              ],
             ),
           );
         },

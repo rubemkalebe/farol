@@ -123,6 +123,19 @@ void main() {
             ),
             ('C', 'Febre', 'Febre', '<p>Temperatura alta.</p>'),
             ('C', '_mw_/estilo.css', '_mw_/estilo.css', 'body{}'),
+            ('C', 'água', 'água', '<p>Líquido.</p>'),
+            (
+              'C',
+              'Dom_Casmurro.55752.html',
+              'Dom Casmurro.55752.html',
+              '<p>Livro.</p>',
+            ),
+            (
+              'C',
+              'Dom_Casmurro_cover.55752.html',
+              'Dom Casmurro_cover.55752.html',
+              '<img>',
+            ),
           ],
           redirecionamentos: {'Febre_alta': 'Febre'},
         ),
@@ -147,6 +160,29 @@ void main() {
     },
   );
 
+  test('acha minúsculas, cada palavra maiúscula e esconde capas', () async {
+    expect((await zim.buscarTitulo('água')).map((e) => e.titulo), ['água']);
+    final livro = await zim.buscarTitulo('dom casmurro');
+    expect(livro.map((e) => e.tituloLegivel), ['Dom Casmurro']);
+    expect(
+      (await zim.todosTitulos()).map((e) => e.url),
+      isNot(contains('Dom_Casmurro_cover.55752.html')),
+    );
+  });
+
+  test('links relativos e livro longo em partes', () {
+    expect(resolverCaminho('Curso/Aula_1', '../Outro'), 'Outro');
+    expect(resolverCaminho('Curso/Aula_1', 'Aula_2'), 'Curso/Aula_2');
+    expect(resolverCaminho('Febre', 'Dengue'), 'Dengue');
+    final livro =
+        '<div>${List.filled(300, '<p>${'x' * 1000}</p>').join()}</div>';
+    final partes = dividirEmPartes(livro, tamanho: 60000);
+    expect(partes.length, greaterThan(4));
+    expect(partes.every((p) => p.startsWith('<p>')), isTrue);
+    expect(partes.join().length, 300 * '<p></p>'.length + 300000);
+    expect(dividirEmPartes('<p>curto</p>'), ['<p>curto</p>']);
+  });
+
   test('abre o conteúdo e segue redirecionamento', () async {
     final dengue = (await zim.buscarTitulo('Dengue', limite: 1)).single;
     expect(utf8.decode(await zim.conteudo(dengue)), contains('Aedes'));
@@ -159,7 +195,7 @@ void main() {
     final r = await Future.wait([
       for (final t in ['D', 'De', 'Den', 'F', 'Fe']) zim.buscarTitulo(t),
     ]);
-    expect(r.map((l) => l.length), [2, 2, 2, 1, 1]);
+    expect(r.map((l) => l.length), [3, 2, 2, 1, 1]);
   });
 
   test('recusa arquivo que não é ZIM', () async {

@@ -18,10 +18,10 @@ Future<(HttpServer, List<String>)> servidor(
     final r = req.response;
     final range = req.headers.value(HttpHeaders.rangeHeader);
     pedidos.add('${req.uri.path}${range == null ? '' : ' $range'}');
-    if (req.uri.path == '/') {
+    if (req.uri.path == '/wikipedia/') {
       r.write('<a href="wikipedia_pt_medicine_nopic_2026-10.zim">');
       r.write('<a href="$nome">');
-    } else if (req.uri.path == '/$nome') {
+    } else if (req.uri.path == '/wikipedia/$nome') {
       var ini = 0;
       if (range != null) {
         ini = int.parse(RegExp(r'bytes=(\d+)-').firstMatch(range)![1]!);
@@ -29,7 +29,7 @@ Future<(HttpServer, List<String>)> servidor(
       }
       r.contentLength = arquivo.length - ini;
       r.add(arquivo.sublist(ini));
-    } else if (req.uri.path == '/$nome.sha256') {
+    } else if (req.uri.path == '/wikipedia/$nome.sha256') {
       r.write('${sha ?? sha256.convert(arquivo)}  $nome\n');
     } else {
       r.statusCode = HttpStatus.notFound;
@@ -65,7 +65,10 @@ void main() {
     expect(await wiki.instalados(), [medicina]);
     final f = File('${pasta.path}/${medicina.id}.zim');
     expect(await f.readAsBytes(), arquivo);
-    expect(pedidos, contains('/wikipedia_pt_medicine_nopic_2026-11.zim'));
+    expect(
+      pedidos,
+      contains('/wikipedia/wikipedia_pt_medicine_nopic_2026-11.zim'),
+    );
   });
 
   test('continua de onde parou', () async {
@@ -78,7 +81,9 @@ void main() {
 
     expect(
       pedidos,
-      contains('/wikipedia_pt_medicine_nopic_2026-11.zim bytes=120000-'),
+      contains(
+        '/wikipedia/wikipedia_pt_medicine_nopic_2026-11.zim bytes=120000-',
+      ),
     );
     expect(
       await File('${pasta.path}/${medicina.id}.zim').readAsBytes(),
