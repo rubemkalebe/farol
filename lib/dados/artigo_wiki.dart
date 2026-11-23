@@ -1,6 +1,9 @@
 import 'package:html/dom.dart';
 import 'package:html/parser.dart' as html;
 
+/// Nome do site no fim do título da página ("Título | LOW←TECH MAGAZINE").
+final sufixoSite = RegExp(r'\s+\|\s+LOW←TECH MAGAZINE$');
+
 /// Esquema dos links entre artigos depois da limpeza.
 const esquemaWiki = 'wiki:';
 
@@ -107,13 +110,16 @@ ArtigoLimpo limparArtigo(
   final doc = html.parse(pagina);
   final titulo =
       doc.querySelector('#firstHeading')?.text.trim() ??
-      doc.querySelector('title')?.text.trim() ??
+      doc.querySelector('title')?.text.trim().replaceFirst(sufixoSite, '') ??
       tituloPadrao;
   final ifixit = doc.querySelector('#mainBody');
   if (ifixit != null) _prepararIfixit(ifixit);
   final raiz =
       doc.querySelector('#mw-content-text') ??
       ifixit ??
+      _semMenus(
+        doc.querySelector('main article') ?? doc.querySelector('main'),
+      ) ??
       doc.querySelector('.mw-parser-output') ??
       doc.body ??
       doc.documentElement!;
@@ -153,6 +159,12 @@ ArtigoLimpo limparArtigo(
 
   semComentarios(raiz);
 
+  // Imagem de fundo pelo estilo ("background-image: url(...)") o leitor
+  // tentaria buscar na internet: sai o estilo inteiro.
+  for (final e in raiz.querySelectorAll('[style*="url("]').toList()) {
+    e.attributes.remove('style');
+  }
+
   // Tabela com largura fixa ("width: 25%", flutuando à direita) fica
   // espremida na tela do celular: deixa ocupar a largura que precisar.
   for (final t in raiz.querySelectorAll('table, td, th').toList()) {
@@ -184,6 +196,23 @@ ArtigoLimpo limparArtigo(
   }
 
   return ArtigoLimpo(titulo, raiz.innerHtml.trim());
+}
+
+/// Sites comuns arquivados (Low-tech Magazine): o texto fica em
+/// <main><article>; tira idiomas, comentários, relacionados e notas.
+Element? _semMenus(Element? artigo) {
+  if (artigo == null) return null;
+  for (final e
+      in artigo
+          .querySelectorAll(
+            'nav, svg, #languages, #comments, #related, #reference, '
+            'header.entry-header h1, '
+            '.comments, .imgindicator, .post-footer',
+          )
+          .toList()) {
+    e.remove();
+  }
+  return artigo;
 }
 
 /// Guia do iFixit: tira o que é do site e deixa cada passo com as fotos

@@ -303,7 +303,8 @@ class EntradaZim {
 
   /// Título para mostrar: sem o número e o ".html" dos livros
   /// ("Dom Casmurro.55752.html" → "Dom Casmurro").
-  String get tituloLegivel => titulo.replaceFirst(_sufixoLivro, '');
+  String get tituloLegivel =>
+      titulo.replaceFirst(_sufixoLivro, '').replaceFirst(_sufixoSite, '');
   String get chave => '$namespace/$url';
 }
 
@@ -311,6 +312,7 @@ final _capaOuArquivo = RegExp(
   r'(_cover\.\d+\.html|\.(epub|pdf|css|js|png|jpe?g|svg|webp|ico))$',
 );
 final _sufixoLivro = RegExp(r'\.\d+\.html$');
+final _sufixoSite = RegExp(r'\s+\|\s+LOW←TECH MAGAZINE$');
 
 class _Cabecalho {
   const _Cabecalho({

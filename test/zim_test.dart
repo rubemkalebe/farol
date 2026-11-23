@@ -271,6 +271,38 @@ e vista em <a href="https://who.int">OMS</a>.</p><figure><img src="a.png"></figu
     expect(a.corpo, isNot(contains('T2yIKTYtWTOpeGir')));
   });
 
+  test('site arquivado: só o artigo, sem menus e sem imagem de fundo', () {
+    const pagina = '''
+<html><head><title>Chuveiro neblina | LOW←TECH MAGAZINE</title></head><body>
+<header class="site-header"><nav id="menu">Sobre · Doe</nav></header>
+<main class="article"><article>
+<header class="entry-header"><h1>Chuveiro neblina</h1><nav id="languages">English</nav></header>
+<section id="content"><p>Usa pouca água.</p>
+<div class="featured" style="background-image: url(&quot;foto.png&quot;);">x</div>
+<figure><img src="images/dithers/kit.png" alt="Kit"><div class="imgindicator">View original image</div></figure>
+<div class="post-footer"><a href="https://paypal.me/x">Doe</a></div></section>
+<section id="comments">Comentário</section><section id="related">Leia também</section>
+</article></main>
+<footer class="site-footer">© Autor</footer></body></html>''';
+    final a = limparArtigo(pagina, imagens: true);
+    expect(a.titulo, 'Chuveiro neblina');
+    expect(a.corpo, contains('Usa pouca água.'));
+    for (final fora in [
+      'Sobre',
+      'English',
+      '<h1',
+      'background-image',
+      'View original',
+      'Doe',
+      'Comentário',
+      'Leia também',
+      '© Autor',
+    ]) {
+      expect(a.corpo, isNot(contains(fora)), reason: fora);
+    }
+    expect(a.corpo, contains('${esquemaImagem}images/dithers/kit.png'));
+  });
+
   test('pacote com imagens: mantém fotos, tira ícones, SVG e o link', () {
     const pagina = '''
 <html><body><div id="mw-content-text">

@@ -28,10 +28,11 @@ class PacoteWiki {
   bool get daWikipedia => pasta == 'wikipedia';
 
   /// Pacotes "maxi" e o iFixit trazem as fotos dentro do arquivo.
-  bool get comImagens => id.contains('_maxi') || pasta == 'ifixit';
+  bool get comImagens =>
+      id.contains('_maxi') || pasta == 'ifixit' || pasta == 'zimit';
 
   /// Pacotes que se navegam pela página inicial (categorias), além da busca.
-  bool get temInicio => pasta == 'ifixit';
+  bool get temInicio => pasta == 'ifixit' || pasta == 'zimit';
 
   /// Nome do arquivo no Kiwix, sem a data (ex.: wikipedia_pt_medicine_nopic).
   final String id;
@@ -184,6 +185,19 @@ const pacotesWiki = [
     pasta: 'ifixit',
     fonte: 'iFixit e seus autores',
     licenca: 'CC BY-NC-SA 3.0',
+  ),
+  PacoteWiki(
+    id: 'solar.lowtechmagazine.com_mul_all',
+    titulo: 'Low-tech Magazine (em inglês)',
+    descricao:
+        'Uns 500 artigos sobre viver com pouca energia: aquecer o corpo em '
+        'vez da casa, energia solar sem bateria, moinhos, bicicletas, '
+        'técnicas antigas que voltam a servir. Só 9 em português.',
+    tamanho: '670 MB',
+    versao: '2025-01',
+    pasta: 'zimit',
+    fonte: 'Low-tech Magazine, de Kris De Decker',
+    licenca: '© Kris De Decker',
   ),
 ];
 

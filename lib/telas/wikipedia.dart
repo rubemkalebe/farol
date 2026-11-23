@@ -18,7 +18,11 @@ const _credito =
     'Farol e ligue 192.';
 
 String _creditoDe(PacoteWiki p) =>
-    'Conteúdo: ${p.fonte}, ${p.licenca == 'domínio público' ? 'em domínio público' : 'licença ${p.licenca}'}, '
+    'Conteúdo: ${p.fonte}, ${p.licenca == 'domínio público'
+        ? 'em domínio público'
+        : p.licenca.startsWith('©')
+        ? p.licenca
+        : 'licença ${p.licenca}'}, '
     'empacotado pelo Kiwix. Pode estar desatualizado ou ter erros: em '
     'emergência, siga os guias do Farol e ligue 192.';
 
