@@ -1860,7 +1860,7 @@ fontes:
     publicado: null
     licenca: "CC BY-ND 3.0"
     redistribuir: verificar
-    usado_em: [contatos]
+    usado_em: [contatos, primeiros-socorros]
     notas: |
       "A ligação é gratuita, para telefones fixo e móvel"; 24 horas. "siga as orientações do Médico Regulador".
       Em acidente: quantas vítimas, se estão conscientes, se há presos nas ferragens.
@@ -4302,3 +4302,299 @@ fontes:
     notas: |
       Barragem de Ibirité ("Lagoa da Petrobrás", Regap). "simulado de evacuação da área do Recanto da Lagoa, região mais próxima da barragem".
       "instalação de algumas das placas de sinalização das ZASs, próximo da divisa com Sarzedo".
+
+  - id: sobrasa-manual-emergencias-aquaticas-2023
+    tema: afogamento
+    titulo: "Afogamentos – Manual resumido de Emergências Aquáticas 2023"
+    orgao: Sociedade Brasileira de Salvamento Aquático (SOBRASA)
+    url: https://www.sobrasa.org/new_sobrasa/arquivos/baixar/Manual_de_emergencias_aquaticas.pdf
+    acessado: 2026-11-23
+    publicado: 2023
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. p.30: "NÃO ENTRE na água para salvar, LIGUE 193, JOGUE material flutuante"; "Mesmo em nível baixo, balde, tanque, bacia e banheira devem ser esvaziados."
+      p.44-45: cabo, galho, cabo de vassoura; "ofereça sempre o pé ao invés da mão"; garrafa de 2 litros fechada, isopor, bola.
+      p.53-55: drenagem e Heimlich "nunca"; posição lateral; "realize 5 ventilações boca-a-boca iniciais".
+      p.57: grau 1 (só tosse) "observação de 15 a 30 min"; espuma: "Observação hospitalar por 24 h"; dificuldade na respiração entre os sinais graves.
+
+  - id: sobrasa-abc-primeiros-socorros
+    tema: afogamento
+    titulo: "Manual de bolso ABC dos Primeiros Socorros (versão março/2019)"
+    orgao: Sociedade Brasileira de Salvamento Aquático (SOBRASA)
+    url: https://sobrasa.org/dowloads/Primeiros_socorros/manual_ABC_dos_Primeiros_Socorros.pdf
+    acessado: 2026-11-23
+    publicado: 2019-03
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Afogamento: "a ventilação vem antes e começa com 5 boca-a-boca", depois 30 compressões e 2 ventilações.
+      Hipotermia: retirar "da água, vento"; "remova roupa molhada e envolva com cobertores"; "forneça líquidos aquecidos, mas nunca álcool"; "Inicie sempre RCP em vítimas hipotérmicas".
+      Divergência: manda banho morno a 38 ºC; NHS e SAMU vetam calor direto. Vale o mais seguro (sem banho quente).
+
+  - id: ms-protocolos-sbv-samu
+    tema: saude
+    titulo: "Protocolos de Suporte Básico de Vida – SAMU 192"
+    orgao: Ministério da Saúde
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/protocolo_suporte_basico_vida.pdf
+    acessado: 2026-11-23
+    publicado: 2016
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF para profissionais. BT22 Afogamento: posição de recuperação; "retirada de roupas molhadas". BPed 27: "todos os pacientes pediátricos vítimas de submersão, mesmo que assintomáticos, devem ser transportados para o hospital".
+      BC17 Hipotermia: grupos de risco (idosos, crianças, moradores de rua, afogamento); cessam os tremores na moderada; "Não utilizar compressas quentes ou massagear as extremidades"; posição horizontal; evitar manuseio brusco.
+
+  - id: cbmmg-cartilha-afogamentos
+    tema: afogamento
+    titulo: "Cartilha de Dicas Preventivas – Afogamentos"
+    orgao: Corpo de Bombeiros Militar de Minas Gerais
+    url: https://www.bombeiros.mg.gov.br/storage/files/13/Cartilha%20de%20Dicas%20Preventivas%20-%20Afogamentos%20-%20MOBILE.pdf
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. "Nunca se coloque em risco para ajudar outra pessoa"; "objeto flutuante, cordas ou galhos"; "ligue 193".
+
+  - id: bvs-acidentes-afogamento
+    tema: afogamento
+    titulo: "Acidentes por afogamento"
+    orgao: Biblioteca Virtual em Saúde do Ministério da Saúde
+    url: https://bvsms.saude.gov.br/acidentes-por-afogamento/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "qualquer reservatório de líquidos (baldes, bacias, banheiras, tanques) deverá ser esvaziado após uso"; cisternas, tonéis e poços "trancados ou com alguma proteção"; "tampa do vaso sanitário fechada".
+
+  - id: ms-nota-tecnica-frio-2025
+    tema: frio
+    titulo: "Nota Técnica nº 5/2025-CGPRESP/DEMSP/SVSA/MS (ondas de frio)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/e/emergencias-climaticas/notas-tecnicas-e-informativas/nota-tecnica-no-5-2025-cgpresp-demsp-svsa-ms
+    acessado: 2026-11-23
+    publicado: 2025-04-09
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Sinais: "tremores, sensação de muito cansaço ou exaustão, confusão mental, [...] fala arrastada e sonolência".
+      "Roupas úmidas ou molhadas devem ser retiradas o mais rápido possível"; cobertores; evitar álcool; confusão mental → "buscar ajuda médica".
+
+  - id: sms-sp-baixas-temperaturas-2024
+    tema: frio
+    titulo: "Informe Técnico 02/2024 – baixas temperaturas"
+    orgao: Prefeitura de São Paulo (COVISA)
+    url: https://prefeitura.sp.gov.br/cidade/secretarias/upload/saude/informe_tecnico_baixas_temperaturas_01_07_24.pdf
+    acessado: 2026-11-23
+    publicado: 2024-07-01
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Sinais: "tremores, pele fria, [...] confusão mental, fala lenta e confusa, sonolência e fraqueza."
+
+  - id: nhs-hypothermia
+    tema: frio
+    titulo: "Hypothermia"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/hypothermia/
+    acessado: 2026-11-23
+    publicado: 2023-06-09
+    licenca: Open Government Licence v3.0
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "making sure their head is covered"; drink "if they're fully awake"; "do not use a hot bath, hot water bottle or heat lamp"; "do not rub their arms, legs, feet or hands".
+      Fonte estrangeira: só para o que as brasileiras não dizem (cabeça, bem acordada).
+
+  - id: asbai-anafilaxia-o-que-fazer
+    tema: alergia
+    titulo: "O que fazer imediatamente diante de uma suspeita de anafilaxia?"
+    orgao: Associação Brasileira de Alergia e Imunologia (ASBAI)
+    url: https://asbai.org.br/o-que-fazer-imediatamente-diante-de-uma-suspeita-de-anafilaxia/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Aplicar na parte externa da coxa, mesmo sobre a roupa"; "Na dúvida, aplique"; "Ligue para o SAMU (192) ou Bombeiros (193)".
+      "Deitado de costas com pernas elevadas"; "NUNCA ficar em pé ou andar"; falta de ar → sentar; inconsciente → de lado; "Gestantes → deitadas sobre lado esquerdo".
+      "Não tome nem ofereça líquidos ou medicamentos por via oral"; "destranque a porta/portão e deite próximo a porta de entrada".
+      "Antialérgicos, corticoides ou inalações NÃO tratam anafilaxia"; 2ª dose se persistir "após 5–15 minutos".
+
+  - id: asbai-anafilaxia-brasil
+    tema: alergia
+    titulo: "Anafilaxia Brasil"
+    orgao: Associação Brasileira de Alergia e Imunologia (ASBAI)
+    url: https://asbai.org.br/anafilaxia-brasil/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      Sinais: falta de ar, chiado, rouquidão, "Inchaço de língua ou garganta", placas, tontura, desmaio, vômitos repetidos.
+      "Regra prática": comprometimento respiratório ou queda de pressão → anafilaxia, "mesmo sem sintomas de pele".
+
+  - id: sbp-anafilaxia-2025
+    tema: alergia
+    titulo: "Anafilaxia: quando cada segundo conta!"
+    orgao: Sociedade Brasileira de Pediatria
+    url: https://www.sbp.com.br/pediatria-para-familias/cuidados-com-a-saude/anafilaxia-quando-cada-segundo-conta/
+    acessado: 2026-11-23
+    publicado: 2025-10
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "Acionar o SAMU (192) [...] e informar que se trata de um caso de anafilaxia"; segunda dose se não melhorar "em 5 a 15 minutos"; "Mesmo que melhore, vá para o hospital para observação."
+      Divergência: NHS diz 5 min; protocolo de Curitiba 15-20 min. Vale 5 a 15 (SBP + ASBAI).
+
+  - id: asbai-importadoras-adrenalina
+    tema: alergia
+    titulo: "Lista consolidada de importadoras de adrenalina autoinjetável"
+    orgao: Associação Brasileira de Alergia e Imunologia (ASBAI)
+    url: https://asbai.org.br/lista-consolidada-de-importadoras-de-adrenalina-autoinjetavel/
+    acessado: 2026-11-23
+    publicado: null  # a página não mostra data
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "nenhuma adrenalina auto-injetável possui registro sanitário regular no Brasil"; acesso "exclusivamente por importação excepcional", com prescrição médica.
+
+  - id: ms-cab25-respiratorias-2010
+    tema: asma
+    titulo: "Cadernos de Atenção Básica nº 25 – Doenças Respiratórias Crônicas"
+    orgao: Ministério da Saúde
+    url: https://bvsms.saude.gov.br/bvs/publicacoes/doencas_respiratorias_cronicas.pdf
+    acessado: 2026-11-23
+    publicado: 2010
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. p.40: "Não há diferença na eficácia terapêutica quando os broncodilatadores de ação rápida são administrados por meio de aerossóis (bombinhas) – especialmente quando acoplados a espaçadores – ou nebulização"; espaçador artesanal com "garrafas de água mineral".
+      Quadro 4.7: crise grave fala só "Palavras"; retrações acentuadas; cianose; confusão.
+
+  - id: pbh-folder-espacador-2026
+    tema: asma
+    titulo: "Folder: como usar o espaçador"
+    orgao: Prefeitura de Belo Horizonte (Secretaria Municipal de Saúde)
+    url: https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/saude/2026/29-09-26_smsa_folder-espacador.pdf
+    acessado: 2026-11-23
+    publicado: 2026-09-29
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. "Use apenas 1 jato do medicamento por vez. Se precisar de mais de um jato, espere de 30 a 60 segundos antes de realizar o próximo."
+
+  - id: pbh-espacador-artesanal-2026
+    tema: asma
+    titulo: "Folder: espaçador artesanal"
+    orgao: Prefeitura de Belo Horizonte (Secretaria Municipal de Saúde)
+    url: https://prefeitura.pbh.gov.br/sites/default/files/estrutura-de-governo/saude/2026/30-09-26_smsa_espacador-artesanal.pdf
+    acessado: 2026-11-23
+    publicado: 2026-09-30
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Espaçador com garrafa PET de 500 ml. "Não faça o espaçador com crianças por perto".
+
+  - id: nhs-asthma
+    tema: asma
+    titulo: "Asthma – How to treat an asthma attack"
+    orgao: NHS (Reino Unido)
+    url: https://www.nhs.uk/conditions/asthma/
+    acessado: 2026-11-23
+    publicado: 2025-04-07
+    licenca: Open Government Licence v3.0
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "sit up straight"; "take 1 puff every 30 to 60 seconds until you feel better, up to a maximum of 10 puffs"; espaçador se tiver.
+      Ligar se piorar, se não melhorar após a dose máxima ou se não tiver bombinha; "If symptoms are no better after 10 minutes and an ambulance has not arrived", repetir até a mesma dose.
+      Esquema para leigo; os do MS (CAB 25) e SBP são protocolos profissionais. Intervalo confirmado pelo folder da PBH.
+
+  - id: medlineplus-asthma-emergency
+    tema: asma
+    titulo: "Asthma – what to ask / when to call"
+    orgao: MedlinePlus (Biblioteca Nacional de Medicina dos EUA)
+    url: https://medlineplus.gov/ency/patientinstructions/000062.htm
+    acessado: 2026-11-23
+    publicado: 2026-01-14
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      "trouble walking or talking because it is so hard to breathe"; "Your lips or fingernails are blue or gray"; "You are confused or less responsive than usual."
+
+  - id: ms-queimadas-recomendacoes-2026
+    tema: asma
+    titulo: "Queimadas e incêndios florestais: alerta de risco sanitário e recomendações para a população (2ª ed.)"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/composicao/svsa/saude-ambiental/vigiar/publicacoes/queimadas-e-incendios-florestais-alerta-de-risco-sanitario-e-recomendacoes-para-a-populacao
+    acessado: 2026-11-23
+    publicado: 2026
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Fumaça "pode agravar doenças preexistentes, como rinite, asma"; manter medicamentos disponíveis; "Manter portas e janelas fechadas".
+
+  - id: ms-protocolos-sbv-samu-2016
+    tema: parto
+    titulo: "Protocolos de Intervenção para o SAMU 192 – Suporte Básico de Vida"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/composicao/saes/samu-192/publicacoes/protocolo-de-suporte-basico-de-vida-1-2.pdf
+    acessado: 2026-11-23
+    publicado: 2016-01
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF para profissionais (482 p.). BGO2 p.297-299: sinais ("duas ou mais em 10 minutos", "puxos espontâneos", apresentação na vulva); "contato imediato com a Regulação Médica";
+      "posição que ofereça maior conforto"; circular "Se frouxa, liberar e desfazer com o dedo indicador"; RN sobre o abdome, coberto "inclusive cabeça (exceto face) sem tracionar o cordão";
+      "contato pele a pele imediato e contínuo"; placenta "em saco plástico e encaminhar junto"; "Não recomendar amamentação do RN até a chegada ao hospital".
+      BPed10 p.339-340: "Secar o corpo e a cabeça"; "sem ventiladores ou ar condicionado". BGO4-6: prematuro, sangramento, apresentação não cefálica → "decúbito lateral esquerdo sob aquecimento".
+      BGO7: hemorragia puerperal sem massagem uterina (CBMGO e SAMU-SP citam massagem; para leigo, fica a orientação do 192).
+
+  - id: sp-samu-manual-sbv-2026
+    tema: parto
+    titulo: "Manual de protocolos operacionais do SAMU 192 São Paulo – URAM, SBV e SBV-E"
+    orgao: Prefeitura de São Paulo (Secretaria Municipal da Saúde)
+    url: https://prefeitura.sp.gov.br/documents/d/saude/manual-sbv-sbv-e-2026-atualizado-10-03-2026-pdf-1
+    acessado: 2026-11-23
+    publicado: 2026-02-02
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. POP 065: "Contrações de 2 em 2 minutos"; "Vontade intensa de evacuar"; "Siga as orientações do médico regulador"; "Atente-se para não tracionar o cordão";
+      pélvico e prolapso: "Não estimule a ocorrência do parto". POP 066: não amamentar até o hospital. POP 067 4.3: "Realize o estímulo tátil no dorso, de modo delicado e no máximo de 2 vezes".
+
+  - id: cbmgo-manual-resgate-pre-hospitalar
+    tema: parto
+    titulo: "Manual Operacional de Bombeiros – Resgate Pré-Hospitalar (Seção 30)"
+    orgao: Corpo de Bombeiros Militar de Goiás
+    url: https://www.bombeiros.go.gov.br/wp-content/uploads/2015/12/MANUAL-DE-RESGATE-PR%C3%89-HOSPITALAR.pdf
+    acessado: 2026-11-23
+    publicado: 2016
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [primeiros-socorros]
+    notas: |
+      PDF. Força "sem bloquear a respiração"; "Nunca tente puxar a cabeça do bebê"; "segurar firmemente o recém-nascido".
+      Não chorou: "friccionando suas costas". "Não existe a necessidade de corte imediato do cordão umbilical"; placenta "nos próximos 30 minutos"; "Não se deve puxar o cordão umbilical".
+      Transportar "a mãe, o bebê e a placenta" para a maternidade. Amamentação: diverge do MS e SAMU-SP (mais recentes, prevalecem).

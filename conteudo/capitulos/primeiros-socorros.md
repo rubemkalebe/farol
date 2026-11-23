@@ -30,6 +30,26 @@
 
 ---
 
+## Afogamento
+
+**Não entre na água para salvar.** Ligue [193](tel:193) e jogue algo que boie: garrafa PET fechada, isopor, bola, boia. Se a pessoa estiver perto, estenda um galho, cabo de vassoura ou corda. Na margem, ofereça o pé, não a mão. [fonte: sobrasa-manual-emergencias-aquaticas-2023] [fonte: cbmmg-cartilha-afogamentos]
+
+**Fora da água:** [fonte: sobrasa-manual-emergencias-aquaticas-2023]
+
+1. Chame a pessoa. Se ela responde, deite-a **de lado** e mantenha aquecida.
+2. Se não responde, ligue 192 ou 193 e veja se respira.
+3. Respira: deixe **de lado**, na posição de recuperação. Ela pode vomitar. [fonte: ms-protocolos-sbv-samu]
+4. **Não respira:** no afogamento, o ar vem primeiro. Se souber, comece com **5 respirações boca a boca** e depois siga a RCP, com 30 compressões e 2 respirações. Se não souber fazer respiração, comprima mesmo assim. [fonte: sobrasa-abc-primeiros-socorros] [fonte: sbc-diretriz-rcp-2019]
+
+- **Não aperte a barriga nem tente tirar a água.** Isso faz mal. [fonte: sobrasa-manual-emergencias-aquaticas-2023] [fonte: sbc-diretriz-rcp-2019]
+- Tire a roupa molhada e cubra com cobertor. [fonte: ms-protocolos-sbv-samu]
+- **Criança que se afogou vai ao hospital, mesmo parecendo bem.** Os problemas para respirar podem aparecer horas depois. [fonte: ms-protocolos-sbv-samu]
+- Adulto com **espuma na boca ou no nariz** ou dificuldade para respirar também vai ao hospital. Se só tosse, fique observando por 15 a 30 minutos antes de deixar ir. [fonte: sobrasa-manual-emergencias-aquaticas-2023]
+
+**Criança se afoga em pouca água e sem barulho.** Esvazie balde, bacia, tanque e banheira depois de usar. Tampe caixa d'água, cisterna, tonel e poço, e deixe a tampa do vaso fechada. Isso vale para a água guardada no apagão. [fonte: sobrasa-manual-emergencias-aquaticas-2023] [fonte: bvs-acidentes-afogamento]
+
+---
+
 ## Engasgo
 
 **Se a pessoa tosse, fala ou chora: deixe tossir.** Incentive a tosse e fique junto. [fonte: sbc-diretriz-rcp-2019]
@@ -59,6 +79,38 @@
 **Se desmaiar:** deite no chão, ligue 192 e **comece a RCP**. Antes de cada respiração, olhe a boca. Só tire o objeto se estiver vendo. **Nunca enfie o dedo às cegas.** [fonte: sbc-diretriz-rcp-2019]
 
 **Depois:** quem levou compressões no abdômen precisa ir ao hospital, mesmo que pareça bem. [fonte: sbc-diretriz-rcp-2019]
+
+---
+
+## Reação alérgica grave (anafilaxia)
+
+**Sinais**, minutos depois de comida, picada de inseto ou remédio: falta de ar, chiado no peito, rouquidão, **inchaço na língua, nos lábios ou na garganta**, placas vermelhas pelo corpo, tontura, desmaio, vômitos repetidos. Falta de ar ou desmaio depois do contato já basta para suspeitar, mesmo sem nada na pele. [fonte: asbai-anafilaxia-brasil] [fonte: sbp-anafilaxia-2025]
+
+1. **Ligue 192** e diga que é anafilaxia. [fonte: sbp-anafilaxia-2025] [fonte: asbai-anafilaxia-o-que-fazer]
+2. **Tem caneta de adrenalina? Aplique já**, na parte de fora da coxa, mesmo por cima da roupa. Na dúvida, aplique. [fonte: asbai-anafilaxia-o-que-fazer]
+3. **Deite a pessoa com as pernas para cima. Ela não deve ficar em pé nem andar.** Com muita falta de ar, deixe sentada. Grávida, deitada sobre o lado esquerdo. Desmaiou, de lado. [fonte: asbai-anafilaxia-o-que-fazer]
+4. Não melhorou em **5 a 15 minutos** e há outra caneta? Aplique a segunda. [fonte: sbp-anafilaxia-2025] [fonte: asbai-anafilaxia-o-que-fazer]
+5. Afaste a causa, se der (tire o ferrão, pare de comer). Não dê nada pela boca. [fonte: asbai-anafilaxia-o-que-fazer]
+6. **Mesmo que melhore, vá ao hospital.** Os sintomas podem voltar. [fonte: sbp-anafilaxia-2025]
+
+- **Antialérgico e corticoide não tratam anafilaxia** e não substituem a adrenalina. [fonte: asbai-anafilaxia-o-que-fazer]
+- Sozinho em casa? Destranque a porta e deite perto da entrada. [fonte: asbai-anafilaxia-o-que-fazer]
+- A caneta de adrenalina não tem registro no Brasil e só chega por importação, com receita. Quem já teve anafilaxia deve conversar com o médico sobre isso. [fonte: asbai-importadoras-adrenalina]
+
+---
+
+## Crise de asma e falta de ar
+
+**Sinais de crise grave:** não consegue falar uma frase inteira, só palavras soltas; afunda as costelas para respirar; **lábios ou unhas roxos**; confusão. [fonte: ms-cab25-respiratorias-2010] [fonte: medlineplus-asthma-emergency]
+
+1. Sente a pessoa **com a coluna reta** e ajude a manter a calma. [fonte: nhs-asthma]
+2. Use a **bombinha de alívio** dela (a azul, de salbutamol), de preferência com espaçador: **1 jato por vez, esperando 30 a 60 segundos entre um e outro, até 10 jatos.** Se o médico passou outro esquema, siga o dele. [fonte: nhs-asthma] [fonte: pbh-folder-espacador-2026]
+3. **Ligue 192** se piorar a qualquer momento, se não melhorar depois dos 10 jatos, se os lábios ficarem roxos ou se não houver bombinha. [fonte: nhs-asthma] [fonte: medlineplus-asthma-emergency]
+4. Passaram 10 minutos, não melhorou e o socorro não chegou: repita até 10 jatos. [fonte: nhs-asthma]
+
+- **Sem energia para o nebulizador? A bombinha com espaçador funciona igual.** [fonte: ms-cab25-respiratorias-2010]
+- Sem espaçador, dá para fazer um com garrafa PET de 500 ml. Faça longe das crianças. [fonte: ms-cab25-respiratorias-2010] [fonte: pbh-espacador-artesanal-2026]
+- Fumaça de queimada piora a asma: deixe portas e janelas fechadas e a bombinha à mão. [fonte: ms-queimadas-recomendacoes-2026]
 
 ---
 
@@ -291,6 +343,23 @@ Sinais de gravidade: suor, muita saliva, lágrimas, enjoo e vômito. [fonte: ms-
 
 ---
 
+## Hipotermia (frio demais)
+
+Acontece com quem ficou **molhado por horas** (enchente, chuva), dormiu no frio ou saiu da água. Idosos, crianças e pessoas em situação de rua correm mais risco. [fonte: ms-protocolos-sbv-samu]
+
+**Sinais:** tremor, pele fria, fala arrastada, confusão, sonolência, fraqueza. **Parou de tremer, mas continua frio e confuso? Piorou.** [fonte: ms-nota-tecnica-frio-2025] [fonte: sms-sp-baixas-temperaturas-2024] [fonte: ms-protocolos-sbv-samu]
+
+1. Leve a pessoa para um lugar abrigado do vento e da água. [fonte: sobrasa-abc-primeiros-socorros]
+2. **Tire a roupa molhada** e enrole em cobertores, cobrindo também a cabeça. [fonte: ms-nota-tecnica-frio-2025] [fonte: sobrasa-abc-primeiros-socorros] [fonte: nhs-hypothermia]
+3. Deixe deitada e mexa nela com cuidado. [fonte: ms-protocolos-sbv-samu]
+4. **Bebida quente, só se estiver bem acordada.** Nunca álcool. [fonte: sobrasa-abc-primeiros-socorros] [fonte: nhs-hypothermia]
+5. Confusa, sonolenta ou piorando: **ligue 192.** [fonte: ms-nota-tecnica-frio-2025] [fonte: ms-samu-192]
+
+- **Não esfregue braços e pernas e não use bolsa de água quente, banho quente ou aquecedor direto na pele.** [fonte: ms-protocolos-sbv-samu] [fonte: nhs-hypothermia]
+- Não respira: comece a RCP e não desista, mesmo que pareça tarde. [fonte: sobrasa-abc-primeiros-socorros]
+
+---
+
 ## Pancada na cabeça
 
 **Ligue 192 ou vá ao pronto-socorro se a pessoa:** [fonte: nhs-head-injury] [fonte: sbp-tce-leve-infancia]
@@ -375,3 +444,31 @@ Para **1 copo de 200 ml** de água filtrada ou fervida:
 **Como dar:** em pequenas colheradas, depois de cada evacuação ou vômito. Se vomitar, espere 10 minutos e ofereça de novo, devagar. O soro não cura a diarreia, mas evita a desidratação, que pode matar. [fonte: ms-caderneta-crianca-2025]
 
 **Ligue 192 ou vá ao pronto-socorro se** a criança não consegue beber ou mamar, vomita tudo, está muito sonolenta ou tem convulsão. [fonte: ms-caderneta-crianca-2025]
+
+---
+
+## Parto que começa antes do hospital
+
+**Ligue 192 já** e siga o que o atendente disser. Ele orienta passo a passo. [fonte: ms-protocolos-sbv-samu-2016] [fonte: sp-samu-manual-sbv-2026]
+
+**O bebê está vindo** quando há contrações fortes a cada 2 minutos ou menos, vontade forte de fazer força (parece vontade de evacuar), pressão embaixo ou a cabeça já aparece. [fonte: ms-protocolos-sbv-samu-2016] [fonte: sp-samu-manual-sbv-2026]
+
+1. Lave as mãos e forre o lugar com lençóis ou toalhas limpas. [geral] Feche portas e janelas e desligue ventilador e ar-condicionado. [fonte: ms-protocolos-sbv-samu-2016]
+2. A mãe fica na posição mais confortável: deitada com os joelhos dobrados e afastados, recostada ou de cócoras. [fonte: ms-protocolos-sbv-samu-2016]
+3. Na contração, ela faz força sem prender a respiração. No intervalo, respira devagar. [fonte: cbmgo-manual-resgate-pre-hospitalar]
+4. **Apoie a cabeça do bebê com a mão para ela não sair de uma vez. Nunca puxe o bebê.** Ele sai escorregadio: segure firme. [fonte: cbmgo-manual-resgate-pre-hospitalar] [fonte: ms-protocolos-sbv-samu-2016]
+5. Cordão enrolado no pescoço e frouxo: passe por cima da cabeça com o dedo. Apertado, avise o 192. [fonte: ms-protocolos-sbv-samu-2016] [fonte: sp-samu-manual-sbv-2026]
+
+**Depois que nasce:** [fonte: ms-protocolos-sbv-samu-2016]
+
+- **Seque o bebê**, corpo e cabeça, e troque o pano molhado por um seco.
+- Ponha **pele com pele** sobre a barriga e o peito da mãe e cubra os dois, cabeça do bebê também (o rosto fica livre).
+- Veja se ele chora ou respira. Não chorou: esfregue as costas dele com delicadeza e avise o 192. [fonte: sp-samu-manual-sbv-2026] [fonte: cbmgo-manual-resgate-pre-hospitalar]
+- **Não puxe o cordão e não corte sem material esterilizado.** Não há pressa para cortar: o hospital faz isso. [fonte: cbmgo-manual-resgate-pre-hospitalar] [fonte: sp-samu-manual-sbv-2026]
+- A placenta sai sozinha, em geral em até 30 minutos. Não puxe. Guarde num saco plástico e leve ao hospital. [fonte: cbmgo-manual-resgate-pre-hospitalar] [fonte: ms-protocolos-sbv-samu-2016]
+- Espere o hospital para amamentar, a não ser que o 192 oriente outra coisa. [fonte: ms-protocolos-sbv-samu-2016] [fonte: sp-samu-manual-sbv-2026]
+- **Sangramento forte da mãe depois do parto:** ligue de novo para o 192, mantenha os dois aquecidos e siga a orientação. [fonte: ms-protocolos-sbv-samu-2016]
+- Mãe, bebê e placenta vão para a maternidade, mesmo que tudo pareça bem. [fonte: cbmgo-manual-resgate-pre-hospitalar]
+
+**Casos de risco: ligue 192 e deite a mãe sobre o lado esquerdo, aquecida.** Bebê antes do tempo, sangramento antes do parto, ou se aparecer primeiro o pé, o bumbum, o braço ou o cordão. [fonte: ms-protocolos-sbv-samu-2016] Nesses casos, não incentive a força: espere o socorro. [fonte: sp-samu-manual-sbv-2026]
+

@@ -31,6 +31,22 @@ inicio:
       icone: tremor
       secoes: ["primeiros-socorros/Convulsão", "primeiros-socorros/Posição de recuperação (de lado)"]
       ligar: ["192"]
+    - texto: Afogamento (tirou alguém da água)
+      icone: afogamento
+      secoes: ["primeiros-socorros/Afogamento"]
+      ligar: ["193", "192"]
+    - texto: Inchaço na boca ou garganta, falta de ar depois de comida, picada ou remédio
+      icone: alergia
+      secoes: ["primeiros-socorros/Reação alérgica grave (anafilaxia)"]
+      ligar: ["192"]
+    - texto: Crise de asma, chiado, falta de ar
+      icone: ar
+      secoes: ["primeiros-socorros/Crise de asma e falta de ar"]
+      ligar: ["192"]
+    - texto: Bebê nascendo
+      icone: bebe
+      secoes: ["primeiros-socorros/Parto que começa antes do hospital"]
+      ligar: ["192"]
     - texto: Choque elétrico
       icone: raio
       secoes: ["primeiros-socorros/Choque elétrico"]
@@ -64,6 +80,10 @@ inicio:
     - texto: Calor demais, pele quente e seca, confusão
       icone: calor
       secoes: ["primeiros-socorros/Insolação e calor"]
+      ligar: ["192"]
+    - texto: Frio demais, molhado, tremendo ou confuso
+      icone: frio
+      secoes: ["primeiros-socorros/Hipotermia (frio demais)"]
       ligar: ["192"]
     - texto: Gerador, fogareiro ou fumaça em lugar fechado
       icone: fumaca
