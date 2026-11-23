@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/ficha.dart';
 import '../tema.dart';
+import 'folha_papel.dart';
 import 'largura.dart';
 
 class TelaFicha extends StatefulWidget {
@@ -46,6 +47,10 @@ class _TelaFichaState extends State<TelaFicha> {
           PopupMenuButton<String>(
             onSelected: (op) async {
               final texto = _ficha!.comoTexto();
+              if (op == 'papel') {
+                await compartilharFolhaPapel(context);
+                return;
+              }
               if (op == 'copiar') {
                 await Clipboard.setData(ClipboardData(text: texto));
                 if (context.mounted) {
@@ -60,6 +65,10 @@ class _TelaFichaState extends State<TelaFicha> {
             itemBuilder: (_) => const [
               PopupMenuItem(value: 'copiar', child: Text('Copiar texto')),
               PopupMenuItem(value: 'compartilhar', child: Text('Compartilhar')),
+              PopupMenuItem(
+                value: 'papel',
+                child: Text('Folha para imprimir (PDF)'),
+              ),
             ],
           ),
         ],

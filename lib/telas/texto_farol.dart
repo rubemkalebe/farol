@@ -8,6 +8,7 @@ import '../dados/mapa_offline.dart';
 import '../dados/marcacoes.dart';
 import '../tema.dart';
 import 'ficha.dart' show ligar;
+import 'folha_papel.dart';
 import 'largura.dart';
 
 /// Texto de um guia: Markdown com ícones de fonte, orientação geral,
@@ -53,6 +54,7 @@ class TextoFarol extends StatelessWidget {
           if (href.startsWith('sms:')) {
             launchUrl(Uri(scheme: 'sms', path: href.substring(4)));
           }
+          if (href == 'farol:folha') compartilharFolhaPapel(context);
           if (href.startsWith('mapa:')) {
             abrirNoMapa(Uri.decodeComponent(href.substring(5)));
           }

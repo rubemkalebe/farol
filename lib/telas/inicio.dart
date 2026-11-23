@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../dados/conteudo.dart';
 import '../dados/locais.dart';
 import '../dados/mapa_offline.dart';
+import '../dados/passar_adiante.dart';
 import '../dados/preferencias.dart';
 import '../dados/wikipedia.dart';
 import 'busca.dart';
@@ -14,6 +15,7 @@ import 'farol_logo.dart';
 import 'ficha.dart';
 import 'largura.dart';
 import 'mapa_offline.dart';
+import 'passar_adiante.dart';
 import 'wikipedia.dart';
 
 const _icones = <String, IconData>{
@@ -38,6 +40,7 @@ class _TelaInicioState extends State<TelaInicio> {
   List<Cidade> _cidades = const [];
   LembreteMapa _lembreteMapa = LembreteMapa.nenhum;
   bool _semWikipedia = false;
+  bool _podeEnviar = false;
 
   @override
   void initState() {
@@ -51,6 +54,9 @@ class _TelaInicioState extends State<TelaInicio> {
         _lembreteMapa = mapa.lembrete();
       });
       _conferirWikipedia();
+      apkInteiro().then((v) {
+        if (mounted && v) setState(() => _podeEnviar = true);
+      });
       // Primeira vez: pergunta a cidade para mostrar os telefones certos.
       if (cidade == null) {
         WidgetsBinding.instance.addPostFrameCallback((_) => _escolherCidade());
@@ -190,6 +196,20 @@ class _TelaInicioState extends State<TelaInicio> {
                           'Baixe Medicina e outros pacotes para ler no apagão.',
                       onTap: _abrirWikipedia,
                     ),
+                    if (_podeEnviar) ...[
+                      const SizedBox(height: 10),
+                      _CartaoFerramenta(
+                        icone: Icons.share_outlined,
+                        titulo: 'Passar o Farol adiante',
+                        texto:
+                            'Mande o app para outro celular, sem internet.',
+                        onTap: () => Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (_) => const TelaPassarAdiante(),
+                          ),
+                        ),
+                      ),
+                    ],
                     const SizedBox(height: 24),
                     Center(
                       child: Text(

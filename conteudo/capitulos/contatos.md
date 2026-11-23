@@ -99,3 +99,5 @@ Trote é crime, e as ligações são identificadas. [fonte: sids-emergencias-mg]
 ## Anote em papel
 
 A bateria acaba. Copie em papel os números mais importantes e os contatos da família, e deixe uma cópia com cada pessoa da casa. [fonte: sp-sempre-alerta-plano-familiar]
+
+[**Gerar a folha para imprimir**](farol:folha): os telefones desta página, da sua cidade, e, se você quiser, a Ficha da família, num PDF para imprimir ou mandar para alguém imprimir.

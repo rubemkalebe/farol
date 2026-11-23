@@ -41,6 +41,10 @@ Para a hora do aperto: o botão **"O que está acontecendo?"** leva direto ao tr
 
 Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios e contatos, salva só no aparelho), **checklists** que ficam marcadas e **números que ligam com um toque**.
 
+**Folha para imprimir:** um PDF com os telefones da cidade e, se a pessoa quiser, a Ficha da família, para imprimir ou mandar alguém imprimir.
+
+**Passar o Farol adiante** (Android): o app manda a si mesmo, como arquivo .apk, para outro celular por Quick Share ou Bluetooth, sem internet.
+
 **Onde ser atendido:** hospitais com pronto-socorro e UPAs 24 horas de cada cidade, com telefone e um botão que abre o endereço no app de mapas do celular.
 
 **Mapa sem internet:** o Farol não tem mapa próprio. Ele ensina a guardar o mapa da cidade no Google Maps ou nos Mapas da Apple e lembra de conferir de tempos em tempos.

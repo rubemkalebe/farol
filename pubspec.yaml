@@ -45,6 +45,7 @@ dependencies:
   path_provider: ^2.1.6
   flutter_widget_from_html_core: ^0.17.4
   html: ^0.15.7
+  pdf: ^3.13.1
 
 dev_dependencies:
   flutter_test:
