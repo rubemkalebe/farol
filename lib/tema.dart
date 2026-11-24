@@ -49,6 +49,7 @@ final _base = ThemeData(
     surfaceTintColor: Colors.transparent,
     centerTitle: false,
     titleTextStyle: TextStyle(
+      fontFamily: fonteFarol,
       fontSize: 20,
       fontWeight: FontWeight.w800,
       color: corTexto,
@@ -68,7 +69,7 @@ final _base = ThemeData(
   inputDecorationTheme: InputDecorationTheme(
     filled: true,
     fillColor: corSuperficie,
-    hintStyle: const TextStyle(color: corTextoSuave),
+    hintStyle: const TextStyle(fontFamily: fonteFarol, color: corTextoSuave),
     contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 14),
     border: OutlineInputBorder(
       borderRadius: BorderRadius.circular(28),
@@ -87,7 +88,11 @@ final _base = ThemeData(
     backgroundColor: corSuperficie,
     side: BorderSide(color: corBorda),
     shape: StadiumBorder(),
-    labelStyle: TextStyle(color: corTexto, fontWeight: FontWeight.w600),
+    labelStyle: TextStyle(
+      fontFamily: fonteFarol,
+      color: corTexto,
+      fontWeight: FontWeight.w600,
+    ),
   ),
   bottomSheetTheme: const BottomSheetThemeData(
     backgroundColor: corSuperficieAlta,

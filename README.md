@@ -1,12 +1,36 @@
+<p align="center"><img src="docs/previa-social.png" alt="Farol: app de emergência que funciona sem internet" width="720"></p>
+
 # FAROL
 
 **Ferramentas e Apoio para Rotinas Off-Line**
 
-App de emergência que funciona sem internet, pensado para apagões e outros desastres no Brasil. Prioridade para o celular: num apagão de dias, o que fica ligado é o celular com um powerbank.
+[![Licença MIT](https://img.shields.io/badge/c%C3%B3digo-MIT-yellow)](LICENSE) [![Conteúdo CC BY-SA 4.0](https://img.shields.io/badge/conte%C3%BAdo-CC%20BY--SA%204.0-blue)](conteudo/LICENSE.md) ![Android](https://img.shields.io/badge/Android-primeiro-3DDC84) ![Flutter](https://img.shields.io/badge/Flutter-02569B) ![Sem internet](https://img.shields.io/badge/funciona-sem%20internet-informational)
+
+App de emergência **gratuito, de código aberto e que funciona sem internet**, para **apagão**, **enchente**, **deslizamento**, **calor extremo**, **falta d'água** e outros desastres no Brasil. Traz **primeiros socorros** (RCP, engasgo, sangramento, queimadura) com a fonte oficial de cada orientação, os **telefones de emergência** da sua cidade (SAMU 192, Bombeiros 193, Defesa Civil 199, concessionária de energia), **kit de emergência** com checklist e uma **biblioteca offline** com Wikipédia, livros e manuais para baixar.
+
+Prioridade para o celular: num apagão de dias, o que fica ligado é o celular com um powerbank.
+
+<p align="center">
+  <img src="docs/telas/1-inicio.png" alt="Tela inicial: botão O que está acontecendo, busca e guias" width="170">
+  <img src="docs/telas/2-emergencia.png" alt="Emergência: RCP passo a passo com botão de ligar 192" width="170">
+  <img src="docs/telas/3-guia.png" alt="Guia Durante o apagão" width="170">
+  <img src="docs/telas/4-biblioteca.png" alt="Biblioteca sem internet: Wikipédia e manuais" width="170">
+  <img src="docs/telas/5-passar.png" alt="Passar a biblioteca para outro celular pelo Wi-Fi" width="170">
+</p>
 
 - **Plataformas:** Android primeiro. O mesmo código gera Windows, Linux, macOS e web (PWA); iOS depois.
 - **Idioma:** português do Brasil.
-- **Público:** uso pessoal e do círculo próximo. O código é aberto para quem quiser usar ou adaptar.
+- **Instalar:** por enquanto, gere o APK (veja [Rodar](#rodar)) ou receba de quem já tem: o Farol passa a si mesmo de celular para celular, sem internet.
+- **Código aberto:** use, adapte para a sua cidade ou contribua (veja [Contribuir](#contribuir)).
+
+### Por que o Farol
+
+- **Tudo funciona sem sinal:** os guias e os telefones vêm dentro do app. Internet só para baixar extras, quando a pessoa pede.
+- **Fonte oficial em cada orientação:** Ministério da Saúde, Defesa Civil, Corpo de Bombeiros, Sociedade Brasileira de Pediatria, CDC e NHS. Toque em "fonte" e veja de onde veio.
+- **Para a hora do aperto:** o botão "O que está acontecendo?" leva direto ao que fazer, com botão grande de ligar, e a busca entende o jeito que a gente fala ("engasgou", "picou", "faltou luz").
+- **Para um apagão longo:** Wikipédia (Medicina e mais), livros em domínio público, guias de conserto e manuais da Embrapa, Funasa e Ministério da Saúde para plantar, tratar água e construir.
+- **Passa adiante sem internet:** o app e a biblioteca vão de um celular para o outro pelo Wi-Fi do próprio celular.
+- **Sem conta, sem anúncio, sem rastreio:** a ficha da família fica só no aparelho.
 
 ## Acessibilidade
 
@@ -78,3 +102,8 @@ flutter build apk      # APK para instalar à mão no Android
 - Materiais de terceiros: licença dos autores, registrada em `fontes/fontes.yaml`
 - Pacotes da biblioteca: baixados do Kiwix direto no aparelho (não ficam no repositório). Projetos Wiki em CC BY-SA (Vikidia 3.0, os demais 4.0, Appropedia incluída); livros do Projeto Gutenberg em domínio público; guias do iFixit em CC BY-NC-SA 3.0 (uso não comercial, como o Farol)
 - Manuais para recomeçar: não ficam no repositório; cada um segue a licença de quem publicou (anotada em `conteudo/estante.yaml`) e é baixado do site oficial.
+
+## In English
+
+**Farol** ("lighthouse") is a free, open-source **offline emergency app** for Brazil, written in Flutter. It works with no internet or cell signal during **blackouts**, **floods**, **landslides**, **heat waves** and **water outages**. It bundles **first aid** guides (CPR, choking, bleeding, burns), each step linked to its official source (Brazilian Ministry of Health, Civil Defense, CDC, NHS…), **local emergency phone numbers** per city, a 72-hour **emergency kit** checklist and a family medical card stored only on the device. An optional **offline library** downloads Wikipedia, Project Gutenberg books, iFixit repair guides, Appropedia and public-domain manuals (farming, water treatment, sanitation) through a pure-Dart **ZIM (Kiwix) reader**. Phones can pass the app and the library to each other over a local Wi-Fi hotspot, with no internet. The content is in Brazilian Portuguese; code is MIT, texts are CC BY-SA 4.0.
+
