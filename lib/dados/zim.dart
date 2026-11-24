@@ -197,8 +197,12 @@ class Zim {
     return atual;
   }
 
-  Future<EntradaZim> paginaInicial() async =>
-      resolver(await entrada(_h.mainPage));
+  Future<EntradaZim> paginaInicial() async {
+    if (_h.mainPage == 0xFFFFFFFF) {
+      throw const FormatException('este pacote não tem página inicial');
+    }
+    return resolver(await entrada(_h.mainPage));
+  }
 
   Future<Uint8List> conteudo(EntradaZim e) async {
     final real = await resolver(e);

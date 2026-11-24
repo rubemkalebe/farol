@@ -32,7 +32,7 @@ class PacoteWiki {
       id.contains('_maxi') || pasta == 'ifixit' || pasta == 'zimit';
 
   /// Pacotes que se navegam pela página inicial (categorias), além da busca.
-  bool get temInicio => pasta == 'ifixit' || pasta == 'zimit';
+  bool get temInicio => pasta != 'gutenberg';
 
   /// Nome do arquivo no Kiwix, sem a data (ex.: wikipedia_pt_medicine_nopic).
   final String id;

@@ -69,8 +69,9 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
         : _wiki.buscar(_termo, biblioteca: true);
   });
 
-  /// Abre a página inicial do pacote (no iFixit, as categorias de
-  /// aparelhos), para navegar sem saber o nome do que procurar.
+  /// Abre a página inicial do pacote (na Wikipédia, a lista de artigos;
+  /// no iFixit, as categorias de aparelhos), para navegar sem saber o nome
+  /// do que procurar.
   Future<void> _abrirInicio(PacoteWiki p) async {
     try {
       final zim = await _wiki.abrir(p);
@@ -257,7 +258,8 @@ class _CartaoPacote extends StatelessWidget {
     final Widget acao;
     final String? estado;
     if (instalado) {
-      estado = 'Baixado: funciona sem internet';
+      estado =
+          'Baixado: toque em $textoListar ou busque pelo título lá em cima';
       acao = Wrap(
         spacing: 4,
         children: [
