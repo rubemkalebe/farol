@@ -5507,3 +5507,126 @@ fontes:
     notas: |
       "É o documento que informa todos os seus vínculos, remunerações e contribuições
       previdenciárias". Gratuito, pelo Meu INSS: "você não precisa ir ao INSS". Conta gov.br bronze.
+
+  # ─────────────────────────── Banheiro sem água ───────────────────────────
+  # Nenhuma fonte oficial brasileira ensina descarga com balde nem banheiro de saco.
+  # Usamos órgãos públicos dos EUA, da Noruega, da Suécia e da Alemanha.
+
+  - id: nps-descarga-balde
+    tema: agua
+    titulo: "At-Home Conservation Guide: Bucket Flush"
+    orgao: US National Park Service (Grand Canyon)
+    url: https://www.nps.gov/grca/getinvolved/upload/Grand-Canyon-Community-At-Home-Conservation-Guide-Bucket-Flush.pdf
+    acessado: 2026-11-24
+    publicado: 2026-10
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: sim
+    usado_em: [durante-apagao]
+    notas: |
+      "Standard gravity-fed toilets only." "A gallon or two often works; the amount varies by
+      toilet." (4 a 8 litros) "Pour steadily into the bowl, then faster to trigger a flush…
+      Stop if water rises without draining." "Stop using a toilet that does not drain normally."
+
+  - id: oslo-agua-higiene
+    tema: agua
+    titulo: "Vann og hygiene (Egenberedskap)"
+    orgao: Prefeitura de Oslo (Oslo kommune), Noruega
+    url: https://www.oslo.kommune.no/beredskap/egenberedskap/slik-kan-du-forberede-deg/vann-og-hygiene/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      Sem água, "sisternen på wc blir ikke etterfylt" (a caixa da descarga não enche).
+      A água guardada provavelmente é pouca para gastar na descarga.
+      "Bruk helst dobbel pose" (saco duplo); tirar o ar e fechar "med doble knuter".
+      Saco no lixo comum (regra de Oslo; no Brasil, o texto manda perguntar à prefeitura).
+
+  - id: covisa-sp-agua-reuso
+    tema: agua
+    titulo: "Orientações sobre armazenamento e uso de água"
+    orgao: Prefeitura de São Paulo (COVISA)
+    url: https://www.prefeitura.sp.gov.br/cidade/secretarias/upload/saude/orientacoes_agua_Covisa.pdf
+    acessado: 2026-11-24
+    publicado: 2015-04-08
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      Água da máquina e da chuva: "NÃO POTÁVEIS". "Utilize-as somente em locais que não
+      ofereçam risco à saúde". Não cita descarga; por isso o Farol limita a água de reuso à
+      descarga, num balde marcado, e proíbe beber ou se lavar com ela.
+
+  - id: ncdhhs-banheiro-emergencia
+    tema: agua
+    titulo: "Toilet Use During an Emergency"
+    orgao: Departamento de Saúde da Carolina do Norte (NC DHHS), EUA
+    url: https://www.ncdhhs.gov/toilet-use-during-emergency/open
+    acessado: 2026-11-24
+    publicado: 2024-10
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "If your toilet won't flush, you don't have water to flush with or your sewage system
+      isn't working". "Turn off the water valve and flush out any water still in the bowl."
+      "Line your toilet bowl with a plastic bag inside another kitchen garbage bag."
+      "kitty litter, peat moss, lime, bleach or disinfectant". "Properly store bags away from
+      kids and animals". Água sanitária sem dose: o Farol não dá dose.
+
+  - id: kingcounty-banheiro-emergencia
+    tema: agua
+    titulo: "Emergency toilets"
+    orgao: Public Health – Seattle & King County, EUA
+    url: https://kingcounty.gov/depts/health/emergency-preparedness/preparing-yourself/emergency-toilets.aspx
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "two heavy-duty plastic garbage bags". "Place cat litter, fireplace ashes, or sawdust
+      into the bottom of the bags." Lixo comum só quando as autoridades anunciarem.
+
+  - id: krisinformation-banheiro
+    tema: agua
+    titulo: "Toilets and hygiene during a crisis"
+    orgao: Krisinformation.se (governo da Suécia)
+    url: https://www.krisinformation.se/en/hazards-and-risks/home-preparedness/toilets-and-hygiene-during-a-crisis/
+    acessado: 2026-11-24
+    publicado: 2026-11-09
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [durante-apagao, preparacao]
+    notas: |
+      "Without electricity, the water supply and sewage system won't work." Kit: papel
+      higiênico, lenço umedecido, álcool em gel, sacos de lixo, serragem, "a bucket with a lid".
+
+  - id: bbk-higiene
+    tema: agua
+    titulo: "Hygiene (Personal Preparedness)"
+    orgao: BBK, Defesa Civil da Alemanha
+    url: https://bbk.bund.de/EN/Prepare-for-disasters/Personal-Preparedness/Hygiene/hygiene.html
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [durante-apagao]
+    notas: |
+      "Use household gloves." "Use hand disinfectants." "Also remember water for flushing the toilet."
+
+  - id: ses-rs-guia-chuvas-2026
+    tema: agua
+    titulo: "Guia básico de orientações em saúde: chuvas intensas (2026)"
+    orgao: Secretaria da Saúde do Rio Grande do Sul (CEVS)
+    url: https://saude.rs.gov.br/upload/arquivos/202607/28140534-guia-enchentes-2026-cevs-ses-rs.pdf
+    acessado: 2026-11-24
+    publicado: 2026-07
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [durante-apagao]
+    notas: |
+      "Lave as mãos com frequência com água e sabão. Na ausência destes utilizar álcool gel 70%".
+      Lavar as mãos "após usar o banheiro". Hepatite A por "contaminação por esgoto ou dejetos
+      humanos". Diarreia: reduzir risco "praticando hábitos de higiene".

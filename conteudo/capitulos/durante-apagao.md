@@ -98,6 +98,35 @@ Congelado que ainda tem cristais de gelo pode voltar para o freezer. [fonte: cdc
 
 ---
 
+## Banheiro sem água
+
+Sem energia, a bomba do prédio e a do bairro podem parar, e a caixa da descarga não enche de novo. [fonte: krisinformation-banheiro] [fonte: oslo-agua-higiene]
+
+### Descarga com balde
+
+Se o esgoto estiver funcionando, dá para dar descarga jogando água direto no vaso. [fonte: nps-descarga-balde]
+
+- Use **uns 4 a 8 litros** de uma vez: despeje primeiro devagar e depois rápido, até o vaso esvaziar. [fonte: nps-descarga-balde]
+- Use **água que não serve para beber**, como a da máquina de lavar ou a da chuva, num balde marcado. Nunca use essa água para beber nem para se lavar. A água potável guardada é para beber. [fonte: covisa-sp-agua-reuso] [fonte: oslo-agua-higiene]
+- **Se a água subir no vaso e não descer, pare.** Não dê mais descarga e passe para o saco. [fonte: nps-descarga-balde]
+
+### Banheiro de saco
+
+Quando não houver água para a descarga, ou o esgoto não estiver funcionando, como em enchente: [fonte: ncdhhs-banheiro-emergencia]
+
+1. Feche o registro do vaso e dê a última descarga para esvaziar. [fonte: ncdhhs-banheiro-emergencia]
+2. Forre o vaso, ou um balde com tampa, com **dois sacos de lixo resistentes**, um dentro do outro. [fonte: ncdhhs-banheiro-emergencia] [fonte: kingcounty-banheiro-emergencia]
+3. Ponha no fundo **areia de gato, serragem ou cinza**, e cubra de novo depois de cada uso. [fonte: kingcounty-banheiro-emergencia] [fonte: ncdhhs-banheiro-emergencia]
+4. Para trocar, tire o ar, feche o saco com **nó duplo** e guarde num lugar fechado, **longe de crianças e animais**. [fonte: oslo-agua-higiene] [fonte: ncdhhs-banheiro-emergencia]
+5. Pergunte à prefeitura ou à coleta de lixo como descartar. [fonte: kingcounty-banheiro-emergencia]
+
+### Mãos limpas
+
+- Lave as mãos com água e sabão depois de usar o banheiro. Sem água e sabão, use **álcool em gel 70%**. [fonte: ses-rs-guia-chuvas-2026]
+- Use luvas para trocar o saco. Contato com fezes transmite diarreia e hepatite A. [fonte: bbk-higiene] [fonte: ses-rs-guia-chuvas-2026]
+
+---
+
 ## Remédios que ficam na geladeira
 
 **Cada remédio é diferente: confira a bula e a embalagem.** [fonte: rs-ses-medicamentos-falta-energia]

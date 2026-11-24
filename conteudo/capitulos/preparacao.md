@@ -89,7 +89,7 @@ O Pix funcionou normalmente durante a enchente do RS. [fonte: mj-senacon-febraba
 
 - [marcar: higiene] Sabonete, papel higiênico, escova e pasta de dente, absorventes [fonte: maceio-defesa-civil-kit-72h]
 - [marcar: alcool-gel] Álcool em gel e lenço umedecido, para quando faltar água [geral]
-- [marcar: sacos-lixo] Sacos de lixo resistentes [geral]
+- [marcar: sacos-lixo] **Banheiro de emergência:** sacos de lixo resistentes, balde com tampa, areia de gato ou serragem e luvas (veja "Banheiro sem água", em Durante o apagão) [fonte: krisinformation-banheiro] [fonte: readygov-build-a-kit]
 - [marcar: roupas] Uma muda de roupa e calçado para cada pessoa [fonte: sp-sempre-alerta-plano-familiar]
 - [marcar: cobertor] Cobertor leve [fonte: defesacivil-pr-o-que-fazer-desastres]
 
