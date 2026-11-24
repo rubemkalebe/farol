@@ -83,7 +83,7 @@ void main() {
     await voltar(tester);
 
     // Busca
-    await tester.drag(find.byType(Scrollable).last, const Offset(0, 3000));
+    await tester.drag(find.byType(Scrollable).last, const Offset(0, 20000));
     await tester.pumpAndSettle();
     await tocar(tester, find.byKey(const ValueKey('botao-busca')));
     await tester.enterText(find.byType(TextField), 'escorpião');

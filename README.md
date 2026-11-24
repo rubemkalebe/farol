@@ -25,7 +25,7 @@ Prioridade para o celular: num apagão de dias, o que fica ligado é o celular c
 
 ### Por que o Farol
 
-- **Tudo funciona sem sinal:** os guias e os telefones vêm dentro do app. Internet só para baixar extras, quando a pessoa pede.
+- **Tudo funciona sem sinal:** os guias e os telefones vêm dentro do app. Internet só para baixar extras, quando a pessoa pede, e para conferir uma vez por semana se saiu versão nova (só consulta a página pública de versões no GitHub, sem mandar nada seu).
 - **Fonte oficial em cada orientação:** Ministério da Saúde, Defesa Civil, Corpo de Bombeiros, Sociedade Brasileira de Pediatria, CDC e NHS. Toque em "fonte" e veja de onde veio.
 - **Para a hora do aperto:** o botão "O que está acontecendo?" leva direto ao que fazer, com botão grande de ligar, e a busca entende o jeito que a gente fala ("engasgou", "picou", "faltou luz").
 - **Para um apagão longo:** Wikipédia (Medicina e mais), livros em domínio público, guias de conserto e manuais da Embrapa, Funasa e Ministério da Saúde para plantar, tratar água e construir.
@@ -73,7 +73,13 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 
 **Onde ser atendido:** hospitais com pronto-socorro e UPAs 24 horas de cada cidade, com telefone e um botão que abre o endereço no app de mapas do celular.
 
-**Mapa sem internet:** o Farol não tem mapa próprio. Ele ensina a guardar o mapa da cidade no Google Maps ou nos Mapas da Apple e lembra de conferir de tempos em tempos.
+**Mapa sem internet:** o Farol não tem mapa próprio. Ele indica o Organic Maps (livre, com rota a pé, de bicicleta e de carro sem internet), ensina a baixar a região, as vizinhas e o caminho até a família, e lembra de conferir de tempos em tempos. Google Maps e Mapas da Apple ficam como alternativa.
+
+**Sair de casa:** quando sair, mochila de emergência, o que fazer antes de fechar a porta, abrigo, estrada e carro na água, reencontrar a família e atravessar a fronteira (documentos no Mercosul e autorização de viagem para crianças).
+
+**Emergência no próprio celular:** como pôr as informações médicas na tela de bloqueio, configurar o SOS de emergência e compartilhar a localização com a família, no Android, no Samsung e no iPhone.
+
+**Aviso de versão nova:** quem instalou o APK vê um aviso quando sai versão nova e baixa pela página de versões; instala por cima sem perder nada.
 
 **Biblioteca sem internet:** o app baixa, a pedido, pacotes em português feitos pelo Kiwix e lê tudo sem internet. Wikipédia (Medicina, 116 MB; artigos principais; a Wikipédia inteira), com busca pelo título também na busca geral. E uma biblioteca para um apagão longo: Vikidia (enciclopédia para crianças), quase mil livros em domínio público do Projeto Gutenberg, Wikilivros, Wikiversidade, Wikivoyage, Wikcionário e Wikisource. Em inglês, a Appropedia (tecnologia simples: água, energia solar, saneamento), os guias de conserto do iFixit (3,4 GB, menu em português) e a Low-tech Magazine (uns 500 artigos sobre viver com pouca energia). Nos pacotes que trazem fotos (Vikidia, Appropedia), o leitor mostra as imagens. O leitor do formato ZIM é do próprio Farol, em Dart, sem app extra.
 

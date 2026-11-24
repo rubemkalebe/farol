@@ -186,6 +186,35 @@ Instale com internet, antes de precisar, e teste com o celular no modo avião. [
 
 ---
 
+## Emergência no próprio celular
+
+O celular já traz recursos de emergência, mas só funcionam se você configurar antes. [fonte: android-emergencia] [fonte: apple-ficha-medica]
+
+### Informações médicas na tela de bloqueio
+
+Quem socorre você consegue ver, **sem a senha**, o tipo sanguíneo, as alergias, os remédios e os contatos da família. Qualquer pessoa que pegar o celular também vê: ponha só o que ajuda no socorro. [fonte: android-emergencia] [fonte: apple-ficha-medica]
+
+- [marcar: cel-info-android] **Android:** abra o app **Emergência** (no Pixel, **Emergência pessoal**) e preencha **Informações de saúde** e **Contatos de emergência**. Em **Acesso a informações de emergência**, ligue **Mostrar quando bloqueado**. [fonte: android-emergencia] [fonte: pixel-emergencia]
+- **Samsung:** em **Configurações > Segurança e emergência > Informações médicas**, preencha, salve e ligue a opção de mostrar na tela bloqueada. Os contatos ficam em **Contatos de emergência**, no mesmo menu. [fonte: samsung-info-medica]
+- [marcar: cel-info-iphone] **iPhone:** abra o app **Saúde**, toque na sua foto e depois em **Ficha Médica**. Preencha, adicione os **Contatos de Emergência** e ligue **Mostrar Quando Bloqueado**. [fonte: apple-ficha-medica]
+- **Para ver no celular de outra pessoa:** na tela bloqueada, deslize para cima e toque em **Emergência**. No Android, toque em **Ver informações de emergência** (no Samsung, **Ver informações médicas**). No iPhone, toque em **Ficha Médica**. [fonte: android-emergencia] [fonte: samsung-info-medica] [fonte: apple-ficha-medica]
+
+### SOS de emergência
+
+- [marcar: cel-sos-android] **Android 12 ou mais novo:** em **Configurações > Segurança e emergência > SOS de emergência**, toque em **Iniciar configuração**. Depois, apertar o **botão de ligar 5 vezes** liga para a emergência e pode mandar a sua localização para os contatos. Não funciona no modo avião nem na economia de bateria. [fonte: android-emergencia]
+- [marcar: cel-sos-iphone] **iPhone:** segure o **botão lateral e um botão de volume** até a contagem acabar. Depois da ligação, o iPhone manda uma mensagem para os seus contatos de emergência com a sua localização, se disponível. Para usar 5 toques no botão lateral, ligue **Ajustes > SOS de Emergência > Pressionar 5 Vezes para Ligar**. [fonte: apple-sos]
+- Sem chip, a ligação de emergência talvez funcione, mas a mensagem para os contatos não vai. [fonte: android-emergencia] [fonte: apple-sos]
+- **SOS por satélite não funciona no Brasil**, nem no iPhone nem no Pixel. [fonte: apple-satelite-paises] [fonte: pixel-emergencia]
+
+### Localização com a família
+
+Combine antes com quem vai ver a sua localização. **Precisa de internet** para atualizar. [fonte: google-maps-requisitos-local] [fonte: android-emergencia]
+
+- [marcar: cel-local] **Google Maps:** toque na sua foto > **Compartilhamento de local** > **Novo compartilhamento**, escolha **Até você desativar** e a pessoa. Quem recebe precisa de uma conta Google. [fonte: google-maps-compartilhar-local]
+- **iPhone:** no app **Buscar**, aba **Pessoas**, toque em **+** e em **Compartilhar Localização**. Na família, use **Ajustes > Família > Compartilhamento de Localização**. [fonte: apple-buscar-pessoas] [fonte: apple-familia-local]
+
+---
+
 ## Cadastros e combinados (faça uma vez)
 
 - [marcar: cad-40199] **Alertas da Defesa Civil:** mande o seu CEP por SMS para **40199** [fonte: midr-cadastro-alertas-sms]

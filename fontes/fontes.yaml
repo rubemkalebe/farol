@@ -174,7 +174,7 @@ fontes:
     publicado: null
     licenca: desconhecida
     redistribuir: verificar
-    usado_em: [durante-apagao, preparacao]
+    usado_em: [durante-apagao, preparacao, sair-de-casa]
     notas: |
       "Água – 2litros por pessoa, por dia"
       "Comida não perecível (Ex.: frutas secas, barras de cereais, biscoitos)"
@@ -521,7 +521,7 @@ fontes:
     publicado: 2025-12-15
     licenca: "CC BY-ND 3.0"
     redistribuir: sim
-    usado_em: [durante-apagao, preparacao, contatos]
+    usado_em: [durante-apagao, preparacao, contatos, sair-de-casa]
     notas: |
       "Envie mensagem para o número 40199, com o CEP da área de interesse."
       WhatsApp: "61 2034-4611" (https://wa.me/556120344611). Telegram: "Defesa Civil Alertas".
@@ -790,7 +790,7 @@ fontes:
     publicado: 2026-07-01
     licenca: desconhecida (governo federal dos EUA)
     redistribuir: verificar
-    usado_em: [durante-apagao, preparacao]
+    usado_em: [durante-apagao, preparacao, sair-de-casa]
     notas: |
       "Battery-powered or hand crank radio and a NOAA Weather Radio with tone alert"
       "Extra batteries"; "Flashlight"; "Cell phone with chargers and a backup battery"
@@ -1498,7 +1498,7 @@ fontes:
     publicado: null
     licenca: desconhecida
     redistribuir: verificar
-    usado_em: [preparacao]
+    usado_em: [preparacao, sair-de-casa]
     notas: |
       Kit para três dias: água e comida não perecível; roupas e calçados; remédios prescritos e equipamentos médicos; itens dos pets; lanternas fáceis de achar; documentos em sacos plásticos; pilhas e carregadores extras; lista de contatos com cópia para cada pessoa.
       Conferir a validade dos itens a cada seis meses.
@@ -2398,7 +2398,7 @@ fontes:
     publicado: 2022
     licenca: "portal gov.br: CC BY-ND 3.0"
     redistribuir: sim
-    usado_em: [outros-desastres]
+    usado_em: [outros-desastres, sair-de-casa]
     notas: |
       "Se houver qualquer sinal de movimentação no terreno, procure local seguro."
 
@@ -2596,7 +2596,7 @@ fontes:
     publicado: null
     licenca: "desconhecida (governo federal dos EUA)"
     redistribuir: verificar
-    usado_em: [outros-desastres]
+    usado_em: [outros-desastres, sair-de-casa]
     notas: |
       "Turn Around. Don't Drown!"; "just six inches of moving water can knock you down, and one foot of moving water can sweep your vehicle away." (15 cm derrubam; 30 cm arrastam um carro)
       "Return home only when authorities say it is safe."
@@ -5005,3 +5005,341 @@ fontes:
       Khan Academy (Português - Brasil): 14.690 recursos, cerca de 31 GB.
       Outros em português: Khan Academy (Portugal) ~8,9 GB, Sikana pt-BR ~9,6 GB,
       PhET simulações ~0,14 GB, Ciênsação ~0,12 GB.
+
+  # ─────────────────── Emergência no próprio celular ───────────────────
+
+  - id: android-emergencia
+    tema: comunicacao
+    titulo: "Gerenciar as configurações de emergência no Android"
+    orgao: Google (Central de Ajuda do Android)
+    url: https://support.google.com/android/answer/9319337?hl=pt-BR
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      App Emergência > Suas informações > Informações de saúde; Contatos de emergência.
+      Acesso a informações de emergência > "Mostrar quando bloqueado". Quem pega o celular vê.
+      Ver: tela bloqueada, deslizar para cima > Emergência > Ver informações de emergência.
+      SOS de emergência: botão liga/desliga 5 vezes ou mais; Configurações > Segurança e
+      emergência > SOS de emergência > Iniciar configuração. Liga para a emergência, compartilha
+      local com contatos, vídeo opcional. Android 12+. Não funciona em modo avião nem economia
+      de bateria. Sem chip, "talvez" ligue para a emergência, mas não avisa os contatos.
+      Compartilhamento de local e alertas precisam de Wi-Fi ou dados.
+      Página lida por resumo da ferramenta: nomes de menu conferir no aparelho.
+
+  - id: pixel-emergencia
+    tema: comunicacao
+    titulo: "Emergência pessoal no Pixel"
+    orgao: Google (Central de Ajuda do Pixel)
+    url: https://support.google.com/pixelphone/answer/7055029?hl=pt-BR
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      No Pixel o app se chama "Emergência pessoal". SOS por satélite só nos EUA (sem Havaí e
+      Alasca), Pixel 9 em diante.
+
+  - id: samsung-info-medica
+    tema: comunicacao
+    titulo: "Como utilizar o dispositivo Galaxy para aceder a contactos de emergência e informação médica"
+    orgao: Samsung (suporte oficial, Portugal)
+    url: https://www.samsung.com/pt/support/mobile-devices/como-utilizar-o-dispositivo-galaxy-para-aceder-a-contactos-de-emergencia-e-informacao-medica/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Samsung"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Definições > Segurança e emergência > Informações médicas > Guardar > "Mostrar no ecrã
+      bloqueado". Contactos de emergência no mesmo menu. Ver: Chamada de emergência > Ver
+      informações médicas. Página de Portugal (não há página Samsung Brasil): no Brasil o
+      menu diz "Configurações". Conferir no aparelho.
+
+  - id: apple-ficha-medica
+    tema: comunicacao
+    titulo: "Configurar e visualizar sua Ficha Médica no iPhone"
+    orgao: Apple (Manual do Usuário do iPhone)
+    url: https://support.apple.com/pt-br/guide/iphone/iph08022b192/ios
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Saúde > foto > Ficha Médica > Começar a Usar/Editar > Contatos de Emergência.
+      "Mostrar Quando Bloqueado". Ver: tela de código > Emergência > Ficha Médica.
+      Envio automático da ficha na ligação: "somente EUA e Canadá" (não citado).
+
+  - id: apple-sos
+    tema: comunicacao
+    titulo: "Fazer ligações de emergência no iPhone"
+    orgao: Apple (Manual do Usuário do iPhone)
+    url: https://support.apple.com/pt-br/guide/iphone/iph3c99374c/ios
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Botão lateral + volume até a contagem; ou Ajustes > SOS de Emergência > "Pressionar 5
+      Vezes para Ligar". Depois da ligação, mensagem aos contatos de emergência com a
+      localização "se disponível". Sem chip, algumas redes podem recusar a ligação.
+
+  - id: apple-satelite-paises
+    tema: comunicacao
+    titulo: "Disponibilidade do SOS de Emergência via satélite"
+    orgao: Apple (Suporte)
+    url: https://support.apple.com/pt-br/101573
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Lista de países não inclui o Brasil. iPhone 14 ou mais novo.
+
+  - id: google-maps-compartilhar-local
+    tema: comunicacao
+    titulo: "Compartilhar sua localização em tempo real (Google Maps, Android)"
+    orgao: Google (Central de Ajuda do Google Maps)
+    url: https://support.google.com/maps/answer/15437054?hl=pt-BR&co=GENIE.Platform%3DAndroid
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Foto do perfil > Compartilhamento de local > Novo compartilhamento > "Até você
+      desativar" > pessoa > Compartilhar. Quem recebe precisa de conta Google; sem ela, link
+      de até 24 horas.
+
+  - id: google-maps-requisitos-local
+    tema: comunicacao
+    titulo: "Requisitos do compartilhamento de local"
+    orgao: Google (Central de Ajuda do Google Maps)
+    url: https://support.google.com/maps/answer/7326816?hl=pt-BR
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Exige "Ter uma conexão de internet ativa".
+
+  - id: apple-buscar-pessoas
+    tema: comunicacao
+    titulo: "Compartilhar sua localização no app Buscar do iPhone"
+    orgao: Apple (Manual do Usuário do iPhone)
+    url: https://support.apple.com/pt-br/guide/iphone/iph01954dc44/ios
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Buscar > Eu > Compartilhar Localização; Pessoas > + > Compartilhar Localização.
+
+  - id: apple-familia-local
+    tema: comunicacao
+    titulo: "Compartilhar localização com a família no iPhone"
+    orgao: Apple (Manual do Usuário do iPhone)
+    url: https://support.apple.com/pt-br/guide/iphone/iph6231f621a/ios
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Apple"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Ajustes > Família > Compartilhamento de Localização.
+
+  # ─────────────────────────── Sair de casa ───────────────────────────
+
+  - id: defesacivil-pr-sms
+    tema: seguranca
+    titulo: "Veja como proceder ao receber um SMS para os eventos meteorológicos"
+    orgao: Defesa Civil do Paraná
+    url: https://www.defesacivil.pr.gov.br/Pagina/Veja-como-proceder-ao-receber-um-SMS-para-os-eventos-metereologicos-abaixo
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [sair-de-casa]
+    notas: |
+      Deslizamento: "Saia de casa e vá para um lugar seguro se você perceber uma movimentação
+      de terra por perto"; "postes ou árvores inclinadas, e cicatrizes no terreno".
+      Água infiltrando com barulhos ou rachaduras: "abandone imediatamente sua residência".
+      "Não tente atravessar vias com água acima da metade da roda" (o Farol diz "nunca",
+      pela regra da fonte mais segura). Carro: "Se o nível da água atingir o batente inferior
+      da porta é hora de abandonar o veículo"; sem conseguir sair, ligar 193/199 e esperar no
+      teto (paráfrase). Abrigo ou ponto de encontro definido; 199 Defesa Civil.
+
+  - id: sedec-enxurradas
+    tema: seguranca
+    titulo: "Enxurradas"
+    orgao: Defesa Civil Nacional (SEDEC/MIDR)
+    url: https://www.gov.br/mdr/pt-br/assuntos/protecao-e-defesa-civil/informacoes-uteis/centro-nacional-de-gerenciamento-de-riscos-e-desastres-cenad/Enxurradas.pdf
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      "Retire os animais domésticos de casa." "Coloque documentos e objetos de valor em sacos
+      plásticos bem fechados". "Desligue aparelhos elétricos, quadro geral de energia e feche o
+      registro de entrada de água." "Feche bem portas e janelas." "Não volte para casa até as
+      águas baixarem e o caminho estar seguro." Gás aparece só no "Depois".
+
+  - id: readygov-evacuation
+    tema: seguranca
+    titulo: "Evacuation"
+    orgao: Ready.gov (FEMA, EUA)
+    url: https://www.ready.gov/evacuation
+    acessado: 2026-11-24
+    publicado: 2026-03-20
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      Sair na hora quando mandarem; sair cedo para não ficar preso pelo tempo.
+      "If there is damage to your home and you are instructed to do so, shut off water, gas and
+      electricity before leaving." "Leave a note telling others when you left and where you are
+      going." "Secure your home by closing and locking doors and windows."
+      "Keep a half tank of gas in it at all times". "Follow recommended evacuation routes. Do not
+      take shortcuts". Abrigo público pode aceitar só animal de serviço (prática dos EUA: o
+      Farol manda perguntar à Defesa Civil).
+
+  - id: defesacivil-ms-faq
+    tema: seguranca
+    titulo: "Perguntas frequentes"
+    orgao: Defesa Civil de Mato Grosso do Sul
+    url: https://www.defesacivil.ms.gov.br/fale-conosco/perguntas-frequentes/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [sair-de-casa]
+    notas: |
+      "Dirija-se aos pontos de apoio ou abrigos indicados pela Defesa Civil." "Leve apenas itens
+      essenciais." "Não atravesse ruas ou pontes com correnteza."
+
+  - id: corumba-simulado-barragem
+    tema: seguranca
+    titulo: "Prefeitura realiza ações e simulados de emergência em barragens de mineração"
+    orgao: Prefeitura de Corumbá (MS)
+    url: https://corumba.ms.gov.br/noticias/prefeitura-realiza-acoes-e-simulados-de-emergencia-em-barragens-de-mineracao
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [sair-de-casa]
+    notas: |
+      Ao soar a sirene, seguir a rota de fuga sinalizada até o ponto de encontro e não voltar
+      à área de risco até a liberação oficial. CONFERIR: lido por resumo de busca.
+
+  - id: readygov-plan
+    tema: seguranca
+    titulo: "Make a Plan"
+    orgao: Ready.gov (FEMA, EUA)
+    url: https://www.ready.gov/plan
+    acessado: 2026-11-24
+    publicado: 2026-09-01
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      "Establish a family meeting place that's familiar and easy to find." "Know how you'll
+      contact one another and reconnect if separated."
+
+  - id: readygov-kids-plan
+    tema: seguranca
+    titulo: "Make a Plan (Ready Kids)"
+    orgao: Ready.gov (FEMA, EUA)
+    url: https://www.ready.gov/kids/make-a-plan
+    acessado: 2026-11-24
+    publicado: 2026-04-29
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      "Pick someone out of town—they may be easier to reach in a disaster." "Text, don't talk.
+      In an emergency, phone lines may be tied up." "write down your contacts and plans".
+
+  - id: pf-viagem-mercosul
+    tema: seguranca
+    titulo: "Posso viajar sem passaporte para países do Mercosul?"
+    orgao: Polícia Federal
+    url: https://www.gov.br/pf/pt-br/assuntos/passaporte/suporte/duvidas_/inicio/mercosul
+    acessado: 2026-11-24
+    publicado: 2023
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      Argentina, Bolívia, Chile, Colômbia, Equador, Guiana, Paraguai, Peru, Suriname, Uruguai,
+      Venezuela. Turismo: "o passaporte é dispensado desde que seja apresentada cédula de
+      identidade", emitida há menos de 10 anos, com foto que identifique. Outro motivo:
+      "a apresentação de passaporte é obrigatória". CNH, OAB, CRM e certidão não valem.
+      Divergência: página do Itamaraty na Argentina diz que o RG não vence; usamos os 10 anos
+      da PF (regra da fonte mais segura).
+
+  - id: cin-viagem-acordos
+    tema: seguranca
+    titulo: "A CIN pode ser utilizada para viajar?"
+    orgao: Governo Digital (gov.br)
+    url: https://www.gov.br/governodigital/pt-br/identidade/identificacao-do-cidadao-e-carteira-de-identidade-nacional/perguntas-frequentes-sobre-a-cin/a-cin-pode-ser-utilizada
+    acessado: 2026-11-24
+    publicado: 2026-07-16
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      MRZ "permitindo que o documento seja lido e aceito nos países em que o Brasil possui
+      acordo de viagens"; "a CIN não substitui o passaporte nos demais países."
+
+  - id: sc-cin-fisica-mercosul
+    tema: seguranca
+    titulo: "Carteira de identidade física ainda é exigida para viagens internacionais em países do Mercosul"
+    orgao: Polícia Científica de Santa Catarina
+    url: https://www.policiacientifica.sc.gov.br/2026/02/10/carteira-de-identidade-fisica-ainda-e-exigida-para-viagens-internacionais-em-paises-do-mercosul/
+    acessado: 2026-11-24
+    publicado: 2026-02-10
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [sair-de-casa]
+    notas: |
+      A CIN digital não é aceita na fronteira; vale a física. CONFERIR: lido por resumo de busca.
+
+  - id: cnj-viagem-menor-exterior
+    tema: seguranca
+    titulo: "Cartilha: viagem de criança ou adolescente ao exterior (Resolução CNJ 131/2011)"
+    orgao: Conselho Nacional de Justiça
+    url: https://www.cnj.jus.br/wp-content/uploads/2024/04/cartilha-viagem-de-menor-ao-exterior-correcao-2024-04-05.pdf
+    acessado: 2026-11-24
+    publicado: 2024-04-05
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [sair-de-casa]
+    notas: |
+      Com um dos pais: "devem levar autorização por escrito do outro." Com outros adultos ou
+      sozinho: "autorização escrita de ambos os pais ou responsáveis." "Caso não seja indicado,
+      será válida por dois anos." "Firma reconhecida em cartório por autenticidade ou
+      semelhança." "Duas vias (uma ficará na Polícia Federal)."
+
+  - id: pf-autorizacao-menor
+    tema: seguranca
+    titulo: "Autorização para menor viajar: informações"
+    orgao: Polícia Federal
+    url: https://www.gov.br/pf/pt-br/assuntos/passaporte/ajuda/duvidas_/documentacao/documentacao-autorizacao-para-menor-informacoes-e
+    acessado: 2026-11-24
+    publicado: 2024-01-29
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [sair-de-casa]
+    notas: |
+      Exigida "sempre que o menor estiver viajando sem algum dos genitores ou sozinho", na saída
+      do Brasil. A validade de 1 ano citada na página parece ser da autorização para emitir
+      passaporte; para a viagem, usamos os 2 anos do CNJ.

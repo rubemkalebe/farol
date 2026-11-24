@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../dados/conteudo.dart';
 import '../dados/locais.dart';
+import '../dados/atualizacao.dart';
 import '../dados/mapa_offline.dart';
 import '../dados/passar_adiante.dart';
 import '../dados/preferencias.dart';
@@ -25,6 +27,7 @@ const _icones = <String, IconData>{
   'phone': Icons.phone_in_talk_outlined,
   'power': Icons.power_outlined,
   'storm': Icons.thunderstorm_outlined,
+  'exit': Icons.directions_walk,
 };
 
 class TelaInicio extends StatefulWidget {
@@ -41,6 +44,8 @@ class _TelaInicioState extends State<TelaInicio> {
   LembreteMapa _lembreteMapa = LembreteMapa.nenhum;
   bool _semWikipedia = false;
   bool _podeEnviar = false;
+  Atualizacao? _atualizacao;
+  String? _versaoNova;
 
   @override
   void initState() {
@@ -54,6 +59,7 @@ class _TelaInicioState extends State<TelaInicio> {
         _lembreteMapa = mapa.lembrete();
       });
       _conferirWikipedia();
+      _conferirAtualizacao();
       apkInteiro().then((v) {
         if (mounted && v) setState(() => _podeEnviar = true);
       });
@@ -74,6 +80,23 @@ class _TelaInicioState extends State<TelaInicio> {
     );
     final mapa = await MapaOffline.abrir();
     if (mounted) setState(() => _lembreteMapa = mapa.lembrete());
+  }
+
+  Future<void> _conferirAtualizacao() async {
+    final a = await Atualizacao.abrir();
+    final v = await a?.versaoNova();
+    if (!mounted || v == null) return;
+    setState(() {
+      _atualizacao = a;
+      _versaoNova = v;
+    });
+  }
+
+  Future<void> _dispensarAtualizacao() async {
+    final v = _versaoNova;
+    if (v == null) return;
+    setState(() => _versaoNova = null);
+    await _atualizacao?.dispensar(v);
   }
 
   Future<void> _conferirWikipedia() async {
@@ -155,6 +178,17 @@ class _TelaInicioState extends State<TelaInicio> {
                         MaterialPageRoute(builder: (_) => const TelaBusca()),
                       ),
                     ),
+                    if (_versaoNova case final v?) ...[
+                      const SizedBox(height: 12),
+                      _AvisoAtualizacao(
+                        versao: v,
+                        aoBaixar: () => launchUrl(
+                          paginaVersoes,
+                          mode: LaunchMode.externalApplication,
+                        ),
+                        aoDispensar: _dispensarAtualizacao,
+                      ),
+                    ],
                     if (_lembreteMapa != LembreteMapa.nenhum) ...[
                       const SizedBox(height: 12),
                       _AvisoMapa(
@@ -671,6 +705,82 @@ class _CartaoFerramenta extends StatelessWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Saiu versão nova do Farol. Baixar abre a página de versões; o APK
+/// novo instala por cima, sem perder nada.
+class _AvisoAtualizacao extends StatelessWidget {
+  const _AvisoAtualizacao({
+    required this.versao,
+    required this.aoBaixar,
+    required this.aoDispensar,
+  });
+
+  final String versao;
+  final VoidCallback aoBaixar;
+  final VoidCallback aoDispensar;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      key: const ValueKey('aviso-atualizacao'),
+      padding: const EdgeInsets.fromLTRB(14, 14, 14, 6),
+      decoration: BoxDecoration(
+        color: corSuperficie,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: corFeixe.withValues(alpha: 0.6)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.system_update, color: corFeixe, size: 28),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Versão nova do Farol: $versao',
+                      style: const TextStyle(
+                        fontWeight: FontWeight.w800,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    const Text(
+                      'Baixe com internet e instale por cima. Os guias, a '
+                      'ficha e a biblioteca continuam no celular.',
+                      style: TextStyle(color: corTextoSuave, fontSize: 13),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Wrap(
+              spacing: 4,
+              children: [
+                TextButton(
+                  key: const ValueKey('atualizacao-agora-nao'),
+                  onPressed: aoDispensar,
+                  child: const Text('Agora não'),
+                ),
+                FilledButton.tonal(
+                  key: const ValueKey('atualizacao-baixar'),
+                  onPressed: aoBaixar,
+                  child: const Text('Baixar'),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

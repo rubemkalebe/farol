@@ -29,6 +29,9 @@ class MainActivity : FlutterActivity() {
                         window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
                     }
                     result.success(null)
+                } else if (call.method == "versao") {
+                    // Para avisar quando sai versão nova do Farol.
+                    result.success(packageManager.getPackageInfo(packageName, 0).versionName)
                 } else {
                     result.notImplemented()
                 }

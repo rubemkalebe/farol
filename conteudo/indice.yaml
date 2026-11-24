@@ -21,6 +21,10 @@ capitulos:
     titulo: Quando a energia voltar
     resumo: Religar aparelhos, descarte de alimentos, conferir remédios
     icone: power
+  - id: sair-de-casa
+    titulo: Sair de casa
+    resumo: Quando sair, mochila de emergência, abrigo, estrada, família e fronteira
+    icone: exit
   - id: outros-desastres
     titulo: Outros desastres
     resumo: Enchente, deslizamento, raio, calor, fumaça, tremor de terra, ressaca, ciclone e seca
