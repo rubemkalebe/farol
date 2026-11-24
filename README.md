@@ -20,7 +20,7 @@ Prioridade para o celular: num apagão de dias, o que fica ligado é o celular c
 
 - **Plataformas:** Android primeiro. O mesmo código gera Windows, Linux, macOS e web (PWA); iOS depois.
 - **Idioma:** português do Brasil.
-- **Instalar:** por enquanto, gere o APK (veja [Rodar](#rodar)) ou receba de quem já tem: o Farol passa a si mesmo de celular para celular, sem internet.
+- **Instalar (Android):** baixe o APK na [página de versões](https://github.com/rubemkalebe/farol/releases/latest) (`arm64` serve para a maioria dos celulares; `armv7` para os mais antigos) ou receba de quem já tem: o Farol passa a si mesmo de celular para celular, sem internet.
 - **Código aberto:** use, adapte para a sua cidade ou contribua (veja [Contribuir](#contribuir)).
 
 ### Por que o Farol
