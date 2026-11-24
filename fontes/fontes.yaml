@@ -4789,3 +4789,219 @@ fontes:
     usado_em: [durante-apagao]
     notas: |
       "Rádio IFRN FM iniciou transmissões no dial 95,3 FM". Retransmite a programação nacional da EBC.
+
+  # ─────────────────── Apps para ter no celular ───────────────────
+
+  - id: organicmaps-site
+    tema: comunicacao
+    titulo: "Organic Maps: mapas offline"
+    orgao: Organic Maps (site oficial do app)
+    url: https://organicmaps.app/pt-BR/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Organic Maps"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Gratuito, código aberto (Apache 2.0), sem anúncios e sem rastreamento.
+      "Busca rápida offline" e navegação "sem conexão com a internet" depois de baixar os mapas.
+      Lojas: App Store, Google Play, F-Droid, AppGallery, Obtainium, Accrescent (link get.omaps.org).
+
+  - id: organicmaps-faq-rota
+    tema: comunicacao
+    titulo: "Como criar uma rota e iniciar a navegação"
+    orgao: Organic Maps (perguntas frequentes)
+    url: https://organicmaps.app/pt-BR/faq/map/como-criar-uma-rota-e-iniciar-a-navegação/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Organic Maps"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Tipos de rota: "Carro, Pedestre, Metrô, Bicicleta ou Régua".
+      Transporte público aparece no site, mas sem dizer se funciona offline: não citado.
+
+  - id: organicmaps-faq-busca
+    tema: comunicacao
+    titulo: "A pesquisa não pode encontrar um lugar no mapa"
+    orgao: Organic Maps (perguntas frequentes)
+    url: https://organicmaps.app/pt-BR/faq/map/a-pesquisa-não-pode-encontrar-um-lugar-no-mapa/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Organic Maps"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Para buscar numa área é preciso ter baixado o mapa dela.
+
+  - id: organicmaps-faq-atualizar
+    tema: comunicacao
+    titulo: "Não consigo baixar/atualizar mapas"
+    orgao: Organic Maps (perguntas frequentes)
+    url: https://organicmaps.app/pt-BR/faq/map/não-consigo-baixar-atualizar-mapas/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Organic Maps"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Mapa antigo que não atualiza: "excluir mapas desatualizados e baixá-los novamente".
+
+  - id: organicmaps-regioes
+    tema: comunicacao
+    titulo: "Lista de mapas para baixar (countries.txt)"
+    orgao: Organic Maps (código-fonte oficial)
+    url: https://codeberg.org/organicmaps/organicmaps/raw/branch/master/data/countries.txt
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "Apache 2.0"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      O Brasil é dividido em partes regionais: alguns estados inteiros (Bahia, Santa Catarina,
+      Mato Grosso), grupos de estados (AC/AM/RO/RR juntos) e estados em partes (São Paulo:
+      capital, Campinas, oeste). Por isso o texto diz "por regiões; estados grandes podem vir em partes".
+
+  - id: google-tradutor-offline-android
+    tema: comunicacao
+    titulo: "Traduzir sem conexão com a Internet (Android)"
+    orgao: Google (Central de Ajuda do Google Tradutor)
+    url: https://support.google.com/translate/answer/6142473?hl=pt-BR&co=GENIE.Platform%3DAndroid
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Com Wi-Fi: abrir o app, escolher o idioma, tocar em Download. Sem ícone de download,
+      o idioma não pode ser baixado. Texto digitado funciona sem internet.
+      Espanhol não aparece nominalmente na página: o texto manda conferir o ícone.
+
+  - id: google-tradutor-offline-ios
+    tema: comunicacao
+    titulo: "Traduzir sem conexão com a Internet (iPhone e iPad)"
+    orgao: Google (Central de Ajuda do Google Tradutor)
+    url: https://support.google.com/translate/answer/6142473?hl=pt-BR&co=GENIE.Platform%3DiOS
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Com Wi-Fi: tocar no nome do idioma, em Download e confirmar.
+
+  - id: google-tradutor-camera
+    tema: comunicacao
+    titulo: "Traduzir imagens com a câmera"
+    orgao: Google (Central de Ajuda do Google Tradutor)
+    url: https://support.google.com/translate/answer/6142483?hl=pt-BR&co=GENIE.Platform%3DAndroid
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "© Google"
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      A câmera traduz sem internet nos idiomas baixados.
+      Conversa ao vivo offline só em Pixel 9/10/11 (answer/6142474): não citado.
+
+  - id: gov-cnh-do-brasil
+    tema: comunicacao
+    titulo: "Obter a CNH do Brasil (antiga Carteira Digital de Trânsito)"
+    orgao: Governo Federal (gov.br)
+    url: https://www.gov.br/pt-br/servicos/obter-carteira-digital-de-transito
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      "Os documentos digitais têm a mesma validade dos documentos impressos".
+      A página atual não fala de uso sem internet (ver serpro-cdt-offline).
+
+  - id: serpro-cdt-offline
+    tema: comunicacao
+    titulo: "CRLV digital na Carteira Digital de Trânsito"
+    orgao: Serpro
+    url: https://serpro.gov.br/menu/noticias/noticias-2020/crlv-digital-cdt
+    acessado: 2026-11-24
+    publicado: 2020
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [preparacao]
+    notas: |
+      "Após serem baixadas, as versões eletrônicas dos documentos ficam disponíveis no
+      dispositivo móvel mesmo sem internet". Notícia de 2020, do app antigo: por isso o
+      texto manda conferir no modo avião.
+
+  - id: meususdigital-sem-internet
+    tema: comunicacao
+    titulo: "O aplicativo exige conexão com a internet?"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/s/saude-da-crianca/caderneta-digital-da-crianca/perguntas-frequentes/o-aplicativo-exige-conexao-com
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      Sem internet, só o conteúdo público (orientações, cartilhas). Dados pessoais, como o
+      histórico clínico e a Caderneta Digital da Criança, exigem internet e login gov.br.
+
+  - id: meususdigital-vacinas
+    tema: comunicacao
+    titulo: "Quer consultar suas vacinas? Saiba como acessar a carteira de vacinação pelo Meu SUS Digital"
+    orgao: Ministério da Saúde
+    url: https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/outubro/quer-consultar-suas-vacinas-saiba-como-acessar-a-carteira-de-vacinacao-pelo-meu-sus-digital
+    acessado: 2026-11-24
+    publicado: 2026-10
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      Vacinas em Minha Saúde > Vacinas. Alguns documentos podem ser exportados "em formato digital".
+
+
+
+
+  - id: kolibri-android
+    tema: educacao
+    titulo: "Install Kolibri on Android"
+    orgao: Learning Equality (documentação oficial do Kolibri)
+    url: https://kolibri.readthedocs.io/en/latest/install/android.html
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Google Play (org.learningequality.Kolibri), Android 8.0 ou mais novo (o site "about"
+      diz 6; usamos 8 por segurança). Modo "por conta própria" importa canais do Kolibri Studio.
+
+  - id: kolibri-sobre
+    tema: educacao
+    titulo: "About Kolibri"
+    orgao: Learning Equality
+    url: https://learningequality.org/kolibri/about-kolibri/
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Feito para ensinar e aprender "without the Internet". O conteúdo baixado pode ser
+      passado offline para outros aparelhos.
+
+  - id: kolibri-canais
+    tema: educacao
+    titulo: "Canais públicos do Kolibri Studio"
+    orgao: Learning Equality (Kolibri Studio)
+    url: https://studio.learningequality.org/api/public/v1/channels
+    acessado: 2026-11-24
+    publicado: null
+    licenca: desconhecida
+    redistribuir: nao
+    usado_em: [preparacao]
+    notas: |
+      Khan Academy (Português - Brasil): 14.690 recursos, cerca de 31 GB.
+      Outros em português: Khan Academy (Portugal) ~8,9 GB, Sikana pt-BR ~9,6 GB,
+      PhET simulações ~0,14 GB, Ciênsação ~0,12 GB.

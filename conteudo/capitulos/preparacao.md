@@ -121,16 +121,27 @@ Quem amamenta deve **continuar amamentando**. [fonte: cofen-nt-56-2024-bebes-eme
 - [marcar: vespera-termometro] Se tiver, coloque um termômetro na geladeira e outro no freezer [fonte: cdc-keep-food-safe-after-emergency]
 - [marcar: vespera-dinheiro] Saque dinheiro [fonte: readygov-financial-preparedness]
 - [marcar: vespera-carro] Encha o tanque do carro [geral]
-- [marcar: vespera-mapas] Confira se o **mapa offline** da sua cidade está no celular e atualizado (veja "Mapa offline da sua cidade", neste guia) [geral]
+- [marcar: vespera-mapas] Confira se o **mapa offline** da sua cidade está no celular e atualizado (veja "Mapa sem internet", neste guia) [geral]
 - [marcar: vespera-remedios] Confira se os remédios dão para os próximos dias [fonte: readygov-disability]
 
 ---
 
-## Mapa offline da sua cidade
+## Mapa sem internet
 
-O Farol não tem mapa. Quem guarda o mapa é o app de mapas do celular, mas **só se você baixar a área antes**, com internet. Sem sinal, o GPS continua mostrando onde você está. [fonte: google-maps-offline-android] [fonte: apple-maps-offline]
+O Farol não tem mapa. Quem guarda o mapa é um app de mapas, mas **só se você baixar a área antes**, com internet. Sem sinal, o GPS continua mostrando onde você está. [fonte: google-maps-offline-android] [fonte: apple-maps-offline]
 
-### Google Maps (Android e iPhone)
+Numa emergência grande, pode ser preciso ir para longe: para a casa de parentes em outro estado ou até para a fronteira. Baixe mais do que a sua cidade. [geral]
+
+### Organic Maps (Android e iPhone): o mais completo sem internet
+
+É gratuito, de código aberto e sem anúncios. Nas áreas baixadas, faz rota de **carro, a pé e de bicicleta** e acha endereços, tudo sem internet. [fonte: organicmaps-site] [fonte: organicmaps-faq-rota] [fonte: organicmaps-faq-busca]
+
+1. Instale pela **Play Store**, pelo **F-Droid** ou pela **App Store**. [fonte: organicmaps-site]
+2. Com Wi-Fi, baixe o mapa da sua região. O Brasil vem dividido em regiões, e estados grandes podem vir em partes. [fonte: organicmaps-regioes]
+3. Baixe também as regiões vizinhas, o caminho até a família e, se fizer sentido, os países de fronteira mais próximos. [geral]
+4. Se um mapa não atualizar, apague e baixe de novo. [fonte: organicmaps-faq-atualizar]
+
+### Se preferir: Google Maps (Android e iPhone)
 
 1. Abra o Google Maps e toque na **sua foto**, no canto de cima.
 2. Toque em **Mapas off-line** e depois em **Selecione seu mapa**.
@@ -142,7 +153,7 @@ O Farol não tem mapa. Quem guarda o mapa é o app de mapas do celular, mas **s�
 - **O mapa baixado vence.** Com a atualização automática ligada, ele se renova sozinho no Wi-Fi, 15 dias antes de vencer. [fonte: google-maps-offline-android]
 - Sem internet, o Google Maps faz **só rota de carro**, sem trânsito, e o caminho todo precisa estar dentro da área baixada. **A pé, de bicicleta e de ônibus não funciona.** [fonte: google-maps-offline-android]
 
-### Mapas da Apple (iPhone com iOS 17 ou mais novo)
+### Se preferir: Mapas da Apple (iPhone com iOS 17 ou mais novo)
 
 1. Abra o app **Mapas** e toque na **sua foto** ou nas suas iniciais.
 2. Toque em **Mapas Off-line** e depois em **Adicionar Mapa Off-line**.
@@ -160,6 +171,18 @@ O Farol não tem mapa. Quem guarda o mapa é o app de mapas do celular, mas **s�
 - **Teste:** ligue o modo avião e abra o mapa. Se aparecer a sua rua, está pronto. [geral]
 - Baixe também a cidade de parentes ou o caminho até eles. [geral]
 - O mapa ocupa espaço. Confira se o celular tem espaço livre antes de baixar. [geral]
+
+---
+
+## Apps para ter no celular
+
+Instale com internet, antes de precisar, e teste com o celular no modo avião. [geral]
+
+- [marcar: app-mapa] **Mapa:** Organic Maps com a sua região baixada (veja "Mapa sem internet", neste guia) [fonte: organicmaps-site]
+- [marcar: app-tradutor] **Tradutor:** no **Google Tradutor**, com Wi-Fi, escolha o **espanhol** e toque em **Baixar**. Se o ícone de download não aparecer, aquele idioma não funciona sem internet. Sem internet, ele traduz o que você digita e o que a câmera mostra. [fonte: google-tradutor-offline-android] [fonte: google-tradutor-offline-ios] [fonte: google-tradutor-camera] O espanhol serve em quase toda a América do Sul. [geral]
+- [marcar: app-cnh] **CNH no celular:** instale o **CNH do Brasil** e abra com internet uma vez. O documento digital vale o mesmo que o impresso e, depois de baixado, abre sem internet. Confira no modo avião. [fonte: gov-cnh-do-brasil] [fonte: serpro-cdt-offline]
+- [marcar: app-vacinas] **Carteira de vacinação:** o **Meu SUS Digital** não mostra os seus dados sem internet. Com internet, abra **Minha Saúde > Vacinas** e guarde uma cópia da carteira de cada pessoa da família. [fonte: meususdigital-sem-internet] [fonte: meususdigital-vacinas] Um print da tela já serve. [geral]
+- [marcar: app-kolibri] **Aulas sem internet:** o **Kolibri** (Android 8 ou mais novo, pela Play Store) guarda aulas para estudar sem internet. Na instalação, escolha usar por conta própria e importe um canal em português, como **Khan Academy (Português - Brasil)**. O canal inteiro tem cerca de 31 GB: escolha só as matérias que vai usar. [fonte: kolibri-android] [fonte: kolibri-sobre] [fonte: kolibri-canais]
 
 ---
 

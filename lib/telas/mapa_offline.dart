@@ -8,7 +8,7 @@ import '../tema.dart';
 import 'texto_farol.dart';
 
 /// Título da seção do guia "Antes de cair" que ensina a baixar o mapa.
-const secaoMapaOffline = 'preparacao/Mapa offline da sua cidade';
+const secaoMapaOffline = 'preparacao/Mapa sem internet';
 
 /// Passo a passo do mapa offline, com "Já baixei" e "Agora não".
 /// Devolve true se a pessoa marcou que baixou.
@@ -58,7 +58,8 @@ class _TelaMapaOfflineState extends State<TelaMapaOffline> {
               Padding(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
                 child: Text(
-                  'Baixe o mapa $onde enquanto tem internet. Na falta de '
+                  'Baixe o mapa $onde e o caminho até a família enquanto tem '
+                  'internet. Na falta de '
                   'sinal, o GPS continua funcionando e o mapa aparece.',
                   style: t.bodyLarge?.copyWith(fontWeight: FontWeight.w700),
                 ),

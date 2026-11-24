@@ -187,7 +187,7 @@ class _TelaInicioState extends State<TelaInicio> {
                     _CartaoFerramenta(
                       icone: Icons.map_outlined,
                       titulo: 'Mapa sem internet',
-                      texto: 'Como deixar o mapa da cidade guardado no app de mapas do celular.',
+                      texto: 'Como deixar o mapa da sua região guardado no celular.',
                       onTap: _abrirMapaOffline,
                     ),
                     const SizedBox(height: 10),
