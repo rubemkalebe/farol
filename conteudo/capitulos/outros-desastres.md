@@ -1,6 +1,6 @@
 # Outros desastres
 
-> Chuva forte, enchente, deslizamento, raio, vento, calor, ar seco, fumaça, incêndio, barragem, falta d'água, tremor de terra, tsunami, ressaca, ciclone, seca e apoio emocional.
+> Chuva forte, enchente, documentos perdidos, deslizamento, raio, vento, calor, ar seco, fumaça, incêndio, barragem, falta d'água, tremor de terra, tsunami, ressaca, ciclone, seca e apoio emocional.
 >
 > **Defesa Civil: [199](tel:199) · Bombeiros: [193](tel:193) · Energia: [116](tel:116)**
 
@@ -48,6 +48,21 @@ Uns **15 cm** de água correndo já derrubam uma pessoa, e **30 cm** arrastam um
 
 **Leptospirose:** os sintomas aparecem normalmente **7 a 14 dias depois**: febre, dor de cabeça e **dor na batata da perna**. Procure o posto de saúde, conte que teve contato com água de enchente e não tome remédio por conta própria. [fonte: ms-leptospirose]
 Diarreia 3 vezes ou mais em 24 horas também é motivo para procurar atendimento. [fonte: ms-enchentes-hub]
+
+---
+
+## Perdi os documentos
+
+Comece pelo que sai pela internet, com a conta gov.br. Para a identidade, tire primeiro a certidão. [fonte: gov-cpf-comprovante] [fonte: rs-certidoes-enchente-2024]
+
+- **Cadastro na prefeitura:** em calamidade, a prefeitura cadastra as famílias atingidas, mesmo sem documento. Peça também a **declaração de atingido** à Defesa Civil do município: alguns estados aceitam essa declaração para dar a identidade de graça. [fonte: midr-auxilio-reconstrucao-duvidas] [fonte: ba-cin-gratuita-desastres]
+- **CPF:** o comprovante sai de graça pela internet, em gov.br, e vale como o cartão. [fonte: gov-cpf-comprovante]
+- **Certidão de nascimento ou casamento:** peça a segunda via no cartório. Na enchente do RS, em 2024, saiu de graça para os atingidos. [fonte: agencia-brasil-certidoes-rs-2024] [fonte: rs-certidoes-enchente-2024]
+- **Identidade (CIN):** com a certidão, peça no órgão de identificação do seu estado. A CIN usa o número do CPF. A primeira via é gratuita; a segunda pode ser cobrada, mas em calamidade costuma haver mutirão gratuito. Pergunte no órgão do seu estado. [fonte: gov-cin] [fonte: rs-mutirao-documentos-2024] [fonte: ba-cin-gratuita-desastres]
+- **CNH:** se ela tiver QR Code (emitida a partir de maio de 2017), a CNH digital no app **CNH do Brasil** vale o mesmo que a de papel e é gratuita. A segunda via de papel é pelo Detran. [fonte: gov-cnh-digital]
+- **Carteira de trabalho:** desde 2019 ela é digital, no app Carteira de Trabalho Digital. A de papel ainda serve para provar empregos antigos. [fonte: mte-carteiras-fisicas]
+- **Tempo de contribuição no INSS:** o extrato do CNIS sai de graça pelo **Meu INSS**, sem ir à agência. [fonte: gov-cnis]
+- **Carteira de vacinação:** veja no **Meu SUS Digital**, em Minha Saúde > Vacinas. Se faltar alguma dose, procure o posto onde tomou a vacina. [fonte: meususdigital-vacinas]
 
 ---
 

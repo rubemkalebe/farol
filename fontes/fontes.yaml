@@ -4956,7 +4956,7 @@ fontes:
     publicado: 2026-10
     licenca: "CC BY-ND 3.0"
     redistribuir: sim
-    usado_em: [preparacao]
+    usado_em: [preparacao, outros-desastres]
     notas: |
       Vacinas em Minha Saúde > Vacinas. Alguns documentos podem ser exportados "em formato digital".
 
@@ -5186,7 +5186,7 @@ fontes:
     publicado: null
     licenca: "CC BY-ND 3.0"
     redistribuir: sim
-    usado_em: [sair-de-casa]
+    usado_em: [sair-de-casa, preparacao]
     notas: |
       "Retire os animais domésticos de casa." "Coloque documentos e objetos de valor em sacos
       plásticos bem fechados". "Desligue aparelhos elétricos, quadro geral de energia e feche o
@@ -5343,3 +5343,167 @@ fontes:
       Exigida "sempre que o menor estiver viajando sem algum dos genitores ou sozinho", na saída
       do Brasil. A validade de 1 ano citada na página parece ser da autorização para emitir
       passaporte; para a viagem, usamos os 2 anos do CNJ.
+
+  # ─────────────────── Documentos perdidos e lembranças ───────────────────
+
+  - id: fema-safeguard-documents
+    tema: seguranca
+    titulo: "Safeguard Critical Documents and Valuables (FEMA P-1096)"
+    orgao: FEMA / Ready.gov (EUA)
+    url: https://www.ready.gov/sites/default/files/2020-03/fema_safeguard-critical-documents-and-valuables_0.pdf
+    acessado: 2026-11-24
+    publicado: 2018-07
+    licenca: "Domínio público (governo dos EUA)"
+    redistribuir: sim
+    usado_em: [preparacao]
+    notas: |
+      Entre os valores: "Priceless personal mementos, family photos, and keepsakes".
+      "Store electronic copies of important documents in a password-protected format on a
+      removable flash or external hard drive … or consider using a secure cloud-based service."
+      Cópias em papel "with a trusted friend or relative". "move them to a higher location and
+      put them in waterproof containers to avoid water damage." Nenhuma fonte brasileira oficial
+      fala de cópia digital de fotos.
+
+  - id: gov-cpf-comprovante
+    tema: seguranca
+    titulo: "Obter cartão de CPF"
+    orgao: Receita Federal (gov.br)
+    url: https://www.gov.br/pt-br/servicos/obter-cartao-de-cpf
+    acessado: 2026-11-24
+    publicado: 2026-08-06
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Obtenha o seu cartão de CPF (comprovante de inscrição) para impressão." "Este serviço é
+      gratuito para o cidadão." O comprovante impresso ou digital tem a mesma validade do cartão.
+      Pede conta gov.br prata ou ouro (há opção sem gov.br para quem não declarou IR em 2 anos).
+
+  - id: gov-cin
+    tema: seguranca
+    titulo: "Carteira de Identidade Nacional"
+    orgao: Governo Digital (gov.br)
+    url: https://www.gov.br/governodigital/pt-br/identidade/cin
+    acessado: 2026-11-24
+    publicado: null
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "A primeira emissão em papel da CIN é gratuita." Usa o CPF "como número único, válido em
+      todo Brasil". A emissão é feita pelo órgão de identificação de cada estado.
+
+  - id: rs-certidoes-enchente-2024
+    tema: seguranca
+    titulo: "Tudo Fácil participa de ação para solicitação de certidões de nascimento e casamento"
+    orgao: Governo do Rio Grande do Sul
+    url: https://www.estado.rs.gov.br/tudo-facil-participa-de-acao-para-solicitacao-de-certidoes-de-nascimento-e-casamento
+    acessado: 2026-11-24
+    publicado: 2024-05-14
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      "Obter as certidões é necessário para que os cidadãos, em seguida, possam solicitar a
+      segunda via da carteira de identidade."
+
+  - id: rs-mutirao-documentos-2024
+    tema: seguranca
+    titulo: "Governo firma acordo para garantir que vítimas das enchentes tenham acesso a documentos gratuitos"
+    orgao: Governo do Rio Grande do Sul
+    url: https://www.estado.rs.gov.br/governo-firma-acordo-para-garantir-que-vitimas-das-enchentes-tenham-acesso-a-documentos-gratuitos
+    acessado: 2026-11-24
+    publicado: 2024-06-10
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Mutirões gratuitos com "segundas vias de certidões de nascimento e casamento, da carteira
+      de identidade", CPF e CNH. Gratuidade por evento, não regra nacional.
+
+  - id: ba-cin-gratuita-desastres
+    tema: seguranca
+    titulo: "Nova lei garante emissão gratuita da Carteira de Identidade Nacional para população em situação de vulnerabilidade na Bahia"
+    orgao: Governo da Bahia
+    url: https://www.ba.gov.br/comunicacao/noticias/2025-09/373706/nova-lei-garante-emissao-gratuita-da-carteira-de-identidade-nacional-para
+    acessado: 2026-11-24
+    publicado: 2025-09-23
+    licenca: desconhecida
+    redistribuir: verificar
+    usado_em: [outros-desastres]
+    notas: |
+      Atingidos "por desastres em contextos de calamidade pública tenham direito à emissão
+      gratuita do documento"; "podem levar declaração emitida pela Defesa Civil ou pelo
+      município".
+
+  - id: agencia-brasil-certidoes-rs-2024
+    tema: seguranca
+    titulo: "RS: veja onde pedir 2ª via de certidões perdidas nas enchentes"
+    orgao: Agência Brasil (EBC)
+    url: https://agenciabrasil.ebc.com.br/geral/noticia/2024-05/rs-veja-onde-pedir-2a-de-certidoes-perdidas-nas-enchentes
+    acessado: 2026-11-24
+    publicado: 2024-05-18
+    licenca: "CC BY 4.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Os atingidos pelas chuvas não terão de pagar pelo serviço." Módulo "SOS RS" da Central
+      de Registro Civil.
+
+  - id: midr-auxilio-reconstrucao-duvidas
+    tema: seguranca
+    titulo: "Auxílio Reconstrução: tire todas as suas dúvidas"
+    orgao: Ministério da Integração e do Desenvolvimento Regional
+    url: https://www.gov.br/mdr/pt-br/noticias/auxilio-reconstrucao-tire-todas-as-suas-duvidas
+    acessado: 2026-11-24
+    publicado: 2024-06-06
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "O papel do prefeito é cadastrar as famílias residentes nas áreas inundadas ou
+      danificadas". Sem documento, a prefeitura busca a família nas bases do município.
+
+  - id: gov-cnh-digital
+    tema: seguranca
+    titulo: "Emitir a Carteira Nacional de Habilitação Digital (CNH-e)"
+    orgao: Governo Federal (gov.br)
+    url: https://www.gov.br/pt-br/servicos/emitir-a-carteira-nacional-de-habilitacao-digital-cnh-e
+    acessado: 2026-11-24
+    publicado: 2026-09-01
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      App "CNH do Brasil", "a mesma validade jurídica do documento físico em todo o território
+      nacional", gratuito. Exige CNH com QR Code emitida a partir de maio de 2017 e gov.br prata
+      ou ouro. Segunda via física pelo Detran, com taxa estadual.
+
+  - id: mte-carteiras-fisicas
+    tema: seguranca
+    titulo: "MTE disponibiliza consulta a 39 mil carteiras de trabalho físicas perdidas ou roubadas"
+    orgao: Ministério do Trabalho e Emprego
+    url: https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/agosto/mte-disponibiliza-consulta-a-39-mil-carteiras-de-trabalho-fisicas-perdidas-ou-roubadas
+    acessado: 2026-11-24
+    publicado: 2025-08-12
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "Desde 2019, a Carteira de Trabalho Digital substituiu a versão física na maioria das
+      contratações." "Muitos trabalhadores precisam da carteira física para comprovar registros
+      de trabalho junto ao INSS".
+
+  - id: gov-cnis
+    tema: seguranca
+    titulo: "Emitir extrato de contribuição (CNIS)"
+    orgao: INSS (gov.br)
+    url: https://www.gov.br/pt-br/servicos/emitir-extrato-de-contribuicao-cnis
+    acessado: 2026-11-24
+    publicado: 2026-08-13
+    licenca: "CC BY-ND 3.0"
+    redistribuir: sim
+    usado_em: [outros-desastres]
+    notas: |
+      "É o documento que informa todos os seus vínculos, remunerações e contribuições
+      previdenciárias". Gratuito, pelo Meu INSS: "você não precisa ir ao INSS". Conta gov.br bronze.

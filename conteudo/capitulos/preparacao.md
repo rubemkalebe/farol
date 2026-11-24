@@ -76,6 +76,8 @@ Escolha comida que **não precisa de geladeira nem de fogão**. [fonte: readygov
 
 - [marcar: documentos] **Cópias** dos documentos (RG, CPF, cartão do SUS, certidões) num saco plástico fechado [fonte: defesacivil-pr-o-que-fazer-desastres] [fonte: sp-sempre-alerta-plano-familiar]
 - [marcar: documentos-digital] Foto dos documentos guardada também no celular ou na nuvem [fonte: readygov-financial-preparedness]
+- [marcar: fotos-nuvem] **Fotos da família** copiadas para a nuvem ou para um pen drive guardado fora de casa. Fotos e lembranças não se compram de novo. [fonte: fema-safeguard-documents]
+- [marcar: originais-alto] **Originais** dos documentos, álbuns e lembranças em saco plástico bem fechado, num lugar alto. Se houver aviso de chuva forte, deixe tudo junto para levar. [fonte: sedec-enxurradas] [fonte: fema-safeguard-documents]
 - [marcar: dinheiro] **Dinheiro em espécie, em notas pequenas.** Caixa eletrônico e cartão podem não funcionar. [fonte: readygov-financial-preparedness] [fonte: maceio-defesa-civil-kit-72h]
 - [marcar: contatos-papel] **Lista de contatos em papel**, com uma cópia para cada pessoa da casa [fonte: sp-sempre-alerta-plano-familiar]
 
