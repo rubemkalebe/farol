@@ -116,6 +116,12 @@ class Estante extends ChangeNotifier {
   Future<File> arquivo(ManualPdf m) async =>
       File('${(await pasta()).path}/${m.id}.pdf');
 
+  /// Põe no lugar um manual recebido de outro celular, já conferido.
+  Future<void> guardarRecebido(ManualPdf m, File recebido) async {
+    await recebido.rename((await arquivo(m)).path);
+    notifyListeners();
+  }
+
   /// Ids dos manuais já baixados.
   Future<Set<String>> baixados() async {
     try {
@@ -235,7 +241,6 @@ class Estante extends ChangeNotifier {
 }
 
 /// Todo PDF começa com "%PDF".
-@visibleForTesting
 Future<bool> ehPdf(File f) async {
   final r = await f.open();
   try {

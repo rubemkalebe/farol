@@ -260,6 +260,17 @@ class Wikipedia extends ChangeNotifier {
   Future<File> _arquivo(PacoteWiki p) async =>
       File('${(await pasta()).path}/${p.id}.zim');
 
+  /// Onde fica o arquivo do pacote no aparelho (baixado ou não).
+  Future<File> arquivo(PacoteWiki p) => _arquivo(p);
+
+  /// Põe no lugar um pacote recebido de outro celular, já conferido.
+  Future<void> guardarRecebido(PacoteWiki p, File recebido) async {
+    final zim = _abertos.remove(p.id);
+    if (zim != null) await (await zim).fechar();
+    await recebido.rename((await _arquivo(p)).path);
+    notifyListeners();
+  }
+
   /// Pacotes já baixados e conferidos, na ordem da lista.
   Future<List<PacoteWiki>> instalados() async {
     try {

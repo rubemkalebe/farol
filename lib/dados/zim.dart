@@ -5,6 +5,7 @@ import 'dart:isolate';
 import 'dart:typed_data';
 
 import 'package:archive/archive.dart';
+import 'package:crypto/crypto.dart';
 
 /// Leitor de arquivos ZIM (o formato do Kiwix), em Dart puro.
 /// Especificação: https://wiki.openzim.org/wiki/ZIM_file_format
@@ -310,6 +311,38 @@ class EntradaZim {
   String get tituloLegivel =>
       titulo.replaceFirst(_sufixoLivro, '').replaceFirst(_sufixoSite, '');
   String get chave => '$namespace/$url';
+}
+
+/// Confere se o arquivo ZIM chegou inteiro: o próprio arquivo traz, no
+/// fim, o MD5 de tudo o que vem antes. Lê o arquivo todo; rode fora da
+/// tela (num Isolate) quando for grande.
+Future<bool> zimInteiro(String caminho) async {
+  final f = File(caminho);
+  final r = await f.open();
+  final int pos;
+  final List<int> guardado;
+  try {
+    final b = ByteData.sublistView(await r.read(80));
+    if (b.lengthInBytes < 80 || b.getUint32(0, Endian.little) != 72173914) {
+      return false;
+    }
+    pos = b.getUint64(72, Endian.little);
+    if (await r.length() != pos + 16) return false;
+    await r.setPosition(pos);
+    guardado = await r.read(16);
+  } finally {
+    await r.close();
+  }
+  final calculado = await md5.bind(f.openRead(0, pos)).first;
+  return _iguais(calculado.bytes, guardado);
+}
+
+bool _iguais(List<int> a, List<int> b) {
+  if (a.length != b.length) return false;
+  for (var i = 0; i < a.length; i++) {
+    if (a[i] != b[i]) return false;
+  }
+  return true;
 }
 
 final _capaOuArquivo = RegExp(

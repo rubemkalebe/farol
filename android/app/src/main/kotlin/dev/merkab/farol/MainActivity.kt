@@ -1,5 +1,6 @@
 package dev.merkab.farol
 
+import android.view.WindowManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -19,6 +20,15 @@ class MainActivity : FlutterActivity() {
                             "dividido" to !info.splitSourceDirs.isNullOrEmpty(),
                         )
                     )
+                } else if (call.method == "telaAcesa") {
+                    // Passar a biblioteca para outro celular: com a tela
+                    // apagada, o Wi-Fi pode cair no meio.
+                    if (call.arguments == true) {
+                        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                    } else {
+                        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+                    }
+                    result.success(null)
                 } else {
                     result.notImplemented()
                 }

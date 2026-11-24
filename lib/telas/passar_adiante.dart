@@ -141,8 +141,9 @@ class _TelaPassarAdianteState extends State<TelaPassarAdiante> {
                 padding: const EdgeInsets.all(14),
                 child: Text(
                   'Só funciona entre celulares Android: o iPhone não instala '
-                  'app fora da App Store. Os pacotes da Wikipédia não vão '
-                  'junto; cada celular baixa os seus.',
+                  'app fora da App Store. A biblioteca e os manuais não vão '
+                  'junto: depois de instalar, passe pela Biblioteca, em '
+                  '"Passar para outro celular".',
                   style: t.bodyMedium?.copyWith(color: corTextoSuave),
                 ),
               ),

@@ -8,6 +8,7 @@ import '../dados/artigo_wiki.dart';
 import '../dados/wikipedia.dart';
 import '../dados/zim.dart';
 import '../tema.dart';
+import 'compartilhar.dart';
 import 'estante.dart';
 import 'largura.dart';
 
@@ -178,6 +179,26 @@ class _TelaWikipediaState extends State<TelaWikipedia> {
                     trailing: const Icon(Icons.chevron_right),
                     onTap: () => Navigator.of(context).push(
                       MaterialPageRoute(builder: (_) => const TelaEstante()),
+                    ),
+                  ),
+                ),
+                Card(
+                  child: ListTile(
+                    key: const ValueKey('abrir-compartilhar'),
+                    leading: const Icon(Icons.wifi_tethering, color: corFeixe),
+                    title: const Text(
+                      'Passar para outro celular',
+                      style: TextStyle(fontWeight: FontWeight.w800),
+                    ),
+                    subtitle: const Text(
+                      'Sem internet: manda ou recebe a biblioteca e os '
+                      'manuais pelo Wi-Fi do celular.',
+                    ),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const TelaCompartilhar(),
+                      ),
                     ),
                   ),
                 ),

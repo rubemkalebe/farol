@@ -45,6 +45,8 @@ Ferramentas no app: **Ficha da família** (tipo sanguíneo, alergias, remédios 
 
 **Passar o Farol adiante** (Android): o app manda a si mesmo, como arquivo .apk, para outro celular por Quick Share ou Bluetooth, sem internet.
 
+**Passar a biblioteca para outro celular:** sem internet, um celular manda para o outro os pacotes da biblioteca e os manuais já baixados, pelo roteador Wi-Fi do próprio celular ou por um Wi-Fi em comum. O que manda mostra um endereço; o que recebe digita esse endereço no Farol, e cada arquivo é conferido ao chegar (o MD5 que vem dentro do ZIM; o começo do PDF). Se a conexão cair, continua de onde parou. Quem ainda não tem o Farol lê um QR code com a câmera e baixa o app e os arquivos pelo navegador. O servidor só entrega os arquivos da lista e fica ligado só enquanto a tela "Mandar" está aberta.
+
 **Onde ser atendido:** hospitais com pronto-socorro e UPAs 24 horas de cada cidade, com telefone e um botão que abre o endereço no app de mapas do celular.
 
 **Mapa sem internet:** o Farol não tem mapa próprio. Ele ensina a guardar o mapa da cidade no Google Maps ou nos Mapas da Apple e lembra de conferir de tempos em tempos.
